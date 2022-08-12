@@ -64,6 +64,10 @@ namespace QFramework
             }
         }
 
+        public void Awake()
+        {
+            DontDestroyOnLoad(gameObject);
+        }
 
         public Camera Camera
         {

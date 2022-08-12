@@ -1,3 +1,4 @@
+using QFramework;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,14 +17,16 @@ namespace HotFix
         public static int Main()
         {
 #if !UNITY_EDITOR
- Debug.LogError("UNITY_EDITOR");
             LoadMetadataForAOTAssembly();
             Debug.Log("ydd-- AOT程序集加载完毕!");
 #endif
             // 测试补充元数据后使用 AOT泛型
             TestAOTGeneric();
 
+            UIKit.OpenPanel<Init>(UILevel.Common, null, "CommonRes", "HotFixEntry");
+
             LoadScene();
+            
             return 0;
         }
 
@@ -34,6 +37,8 @@ namespace HotFix
         {
             var handler = await Addressables.LoadSceneAsync("MainScene").Task;
             handler.ActivateAsync();
+            UIKit.ClosePanel("HotFixEntry");
+            UIKit.OpenPanel<Init>(UILevel.Common, null, "CommonRes", "Test");
         }
 
 
