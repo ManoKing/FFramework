@@ -34,7 +34,6 @@ public class LoadDll : MonoBehaviour
     void Start()
     {
 #if PLATFORM_ANDROID
-        Debug.LogError("请求麦克风");
         Permission.RequestUserPermission(Permission.Microphone);
 #endif
         LoadGameDll();
