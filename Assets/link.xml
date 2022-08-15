@@ -54,6 +54,7 @@
 		<type fullname="UnityEngine.AudioListener" preserve="all" />
 		<type fullname="UnityEngine.AudioClip" preserve="all" />
 		<type fullname="UnityEngine.AudioSource" preserve="all" />
+		<type fullname="UnityEngine.Microphone" preserve="all" />
 	</assembly>
 	<assembly fullname="Unity.WwisePlay">
 		<type fullname="WwisePlayHelper" preserve="all" />
@@ -81,6 +82,7 @@
 	<assembly fullname="UnityEngine.AndroidJNIModule">
 		<type fullname="UnityEngine.AndroidJavaObject" preserve="all" />
 		<type fullname="UnityEngine.AndroidJavaClass" preserve="all" />
+		<type fullname="UnityEngine.Android.Permission" preserve="all" />
 	</assembly>
 	<assembly fullname="UnityEngine.ImageConversionModule">
 		<type fullname="UnityEngine.ImageConversion" preserve="all" />

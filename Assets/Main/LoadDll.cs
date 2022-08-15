@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using UnityEngine;
+# if PLATFORM_ANDROID
+using UnityEngine.Android;
+# endif
 #if !UNITY_EDITOR
 using UnityEngine.AddressableAssets;
 #endif
@@ -30,6 +33,10 @@ public class LoadDll : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+#if PLATFORM_ANDROID
+        Debug.LogError("请求麦克风");
+        Permission.RequestUserPermission(Permission.Microphone);
+#endif
         LoadGameDll();
         RunMain();
     }

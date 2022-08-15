@@ -23,10 +23,9 @@ namespace HotFix
             // 测试补充元数据后使用 AOT泛型
             TestAOTGeneric();
 
-            UIKit.OpenPanel<Init>(UILevel.Common, null, "CommonRes", "HotFixEntry");
-
             LoadScene();
-            
+
+            MicrophoneManager.RequestUserPermission();
             return 0;
         }
 
@@ -37,8 +36,7 @@ namespace HotFix
         {
             var handler = await Addressables.LoadSceneAsync("MainScene").Task;
             handler.ActivateAsync();
-            UIKit.ClosePanel("HotFixEntry");
-            UIKit.OpenPanel<Init>(UILevel.Common, null, "CommonRes", "Test");
+            UIKit.OpenPanel<Test>(UILevel.Common, null, "CommonRes", "Test");
         }
 
 

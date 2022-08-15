@@ -19,6 +19,7 @@ namespace HotFix
 		{
             LoadPrefab.onClick.AddListener(() =>
             {
+                UIKit.ClosePanel("Test");
                 UIKit.OpenPanel<Init>(UILevel.Common, null, "CommonRes", "Init");
             });
         }
