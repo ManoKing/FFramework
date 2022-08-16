@@ -590,7 +590,7 @@ GameObject:
   - component: {fileID: 8785668500595258314}
   - component: {fileID: -5467591365212456835}
   m_Layer: 5
-  m_Name: HotFixEntry
+  m_Name: GameOver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

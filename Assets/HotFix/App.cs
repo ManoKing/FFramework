@@ -24,8 +24,8 @@ namespace HotFix
             TestAOTGeneric();
 
             LoadScene();
-
-            MicrophoneManager.RequestUserPermission();
+            // 热更代码，测试获取权限，失败
+            // MicrophoneManager.RequestUserPermission();
             return 0;
         }
 
@@ -36,7 +36,7 @@ namespace HotFix
         {
             var handler = await Addressables.LoadSceneAsync("MainScene").Task;
             handler.ActivateAsync();
-            UIKit.OpenPanel<Test>(UILevel.Common, null, "CommonRes", "Test");
+            UIKit.OpenPanel<GameLobby>(UILevel.Common, null, "GameLobby", "GameLobby");
         }
 
 
@@ -61,7 +61,6 @@ namespace HotFix
 
             /// 注意，补充元数据是给AOT dll补充元数据，而不是给热更新dll补充元数据。
             /// 热更新dll不缺元数据，不需要补充，如果调用LoadMetadataForAOTAssembly会返回错误
-
             foreach (var dllBytes in LoadDll.aotDllBytes)
             {
                 fixed (byte* ptr = dllBytes.bytes)

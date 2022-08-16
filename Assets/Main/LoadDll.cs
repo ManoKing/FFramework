@@ -4,9 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using UnityEngine;
-# if PLATFORM_ANDROID
-using UnityEngine.Android;
-# endif
 #if !UNITY_EDITOR
 using UnityEngine.AddressableAssets;
 #endif
@@ -19,23 +16,20 @@ public class LoadDll : MonoBehaviour
     Assembly gameAss;
     public static TextAsset[] aotDllBytes;
     public static readonly List<string> aotDlls = new List<string>()
-            {
-                "mscorlib.dll",
-                "System.dll",
-                "System.Core.dll",// 如果使用了Linq，需要这个
-                // "Newtonsoft.Json.dll",
-                // "protobuf-net.dll",
-                // "Google.Protobuf.dll",
-                // "MongoDB.Bson.dll",
-                // "DOTween.Modules.dll",
-                // "UniTask.dll",
-            };
-    // Start is called before the first frame update
+    {
+        "mscorlib.dll",
+        "System.dll",
+        "System.Core.dll",// 如果使用了Linq，需要这个
+        // "Newtonsoft.Json.dll",
+        // "protobuf-net.dll",
+        // "Google.Protobuf.dll",
+        // "MongoDB.Bson.dll",
+        // "DOTween.Modules.dll",
+        // "UniTask.dll",
+    };
+
     void Start()
     {
-#if PLATFORM_ANDROID
-        Permission.RequestUserPermission(Permission.Microphone);
-#endif
         LoadGameDll();
         RunMain();
     }
@@ -60,7 +54,7 @@ public class LoadDll : MonoBehaviour
     {
         if (gameAss == null)
         {
-            UnityEngine.Debug.LogError("dll未加载");
+            Debug.LogError("dll未加载");
             return;
         }
         var appType = gameAss.GetType("HotFix.App");

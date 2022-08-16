@@ -358,7 +358,7 @@ GameObject:
   - component: {fileID: 7364919352855214099}
   - component: {fileID: 8974883689193205225}
   m_Layer: 5
-  m_Name: Test
+  m_Name: GameLobby
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -7,7 +7,7 @@ using UnityEngine.AddressableAssets;
 // 2.命名空间更改后，生成代码之后，需要把逻辑代码文件（非 Designer）的命名空间手动更改
 namespace HotFix
 {
-	public partial class Init : UIPanel
+	public partial class GameInit : UIPanel
 	{
         private AudioClip micRecord;
         private string deviceName;
@@ -97,7 +97,7 @@ namespace HotFix
                 if (floor.transform.localPosition.y > player.transform.localPosition.y)
                 {
                     Debug.LogError("Game Over");
-                    UIKit.OpenPanel<HotFixEntry>(UILevel.Common, null, "CommonRes", "HotFixEntry");
+                    UIKit.OpenPanel<GameOver>(UILevel.Common, null, "GameOver", "GameOver");
                     isOver = true;
                 }
                 time++;
