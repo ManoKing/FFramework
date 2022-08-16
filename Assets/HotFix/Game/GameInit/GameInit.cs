@@ -22,6 +22,7 @@ namespace HotFix
         private Vector2 localPos;
         private Vector2 initPos;
         private bool isOver;
+        public Image localTest;
 
         // 定义每帧累加时间
         private float totalTimer;
@@ -49,6 +50,9 @@ namespace HotFix
                 player.transform.localPosition = new Vector3(localPos.x, localPos.y + 5);
                 localPos = player.transform.localPosition;
             });
+            var local = Addressables.LoadAssetAsync<Sprite>("fbs-45");
+            local.WaitForCompletion();
+            localTest.sprite = local.Result;
         }
 
         public void Restart()
