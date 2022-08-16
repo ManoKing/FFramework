@@ -14,10 +14,11 @@
 ## 项目包含一个完整的小游戏实例  
 #### 游戏介绍
 游戏通过监听麦克风音量，来控制角色上下移动，角色掉到最下面则游戏结束。  
+游戏资源全部来源于 OpenGameArt.org   
 
-![Image](https://github.com/ManoKing/FFramework/blob/main/Assets/Res/Art/Image/flappy_beans/sample/fbs.screen-52.png)
-![Image](https://github.com/ManoKing/FFramework/blob/main/Assets/Res/Art/Image/flappy_beans/sample/fbs.screen-53.png)
-![Image](https://github.com/ManoKing/FFramework/blob/main/Assets/Res/Art/Image/flappy_beans/sample/fbs.screen-54.png)
+![Image](https://github.com/ManoKing/FFramework/blob/main/Assets/Res/Art/Sprite/FlappyBeans/Sample/fbs.screen-52.png)
+![Image](https://github.com/ManoKing/FFramework/blob/main/Assets/Res/Art/Sprite/FlappyBeans/Sample/fbs.screen-53.png)
+![Image](https://github.com/ManoKing/FFramework/blob/main/Assets/Res/Art/Sprite/FlappyBeans/Sample/fbs.screen-54.png)
 
 #### UI框架基于QFramework  
 使用框架的UI工具集，并加以改进
