@@ -25,3 +25,22 @@
 #### 渲染基于URP
 因为URP对2D光照和阴影的支持，选择了URP  
 
+## 如何让小游戏运行并实现热更  
+
+#### HybridCLR
+参考 https://github.com/focus-creative-games/hybridclr_trial 实例项目的README  
+
+#### Addressable  
+需要利用Addressables Hosting搭建一个本地服务器，并把电脑的防火墙关闭，确保手机和电脑处于同一网络，便可实现热更
+
+#### 其他
+(1)如需做新的界面，需要对QFramework进行简单了解，可快速实现;  
+(2)Shader编写，需要基于URP,使用HLSL;  
+(3)Unity 版本使用是2020.3.26f1c1，使用3.xx版本都可以
+
+## FAQ
+
+#### 代码剪切
+(1)TypeLoadException:Could not load type 'UnityEngine.Microphone' frome assembly 'UnityEngine.AudioModule', 出现类似问题，需要修改Assets文件夹下的link文件，添加相应Assembly;  
+(2)Android 权限获取，参考Unity官方文档 平台开发/Android/Device features and permissions;  
+
