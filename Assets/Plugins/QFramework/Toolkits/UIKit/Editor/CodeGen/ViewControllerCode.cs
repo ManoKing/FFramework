@@ -108,7 +108,7 @@ namespace QFramework
             {
                 var assemblies = AppDomain.CurrentDomain.GetAssemblies();
 
-                var defaultAssembly = assemblies.First(assembly => assembly.GetName().Name == "Assembly-CSharp");
+                var defaultAssembly = assemblies.First(assembly => assembly.GetName().Name == "HotFix");
 
                 var typeName = generateNamespace + "." + generateClassName;
 

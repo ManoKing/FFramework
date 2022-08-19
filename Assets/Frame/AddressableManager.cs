@@ -93,7 +93,7 @@ public class AddressableManager : Singleton<AddressableManager>
     {
         handle.Completed += (result) =>
         {
-            if (result.Status == UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationStatus.Succeeded)
+            if (result.Status == AsyncOperationStatus.Succeeded)
             {
                 var obj = result.Result as T;
                 if (onComplete != null)

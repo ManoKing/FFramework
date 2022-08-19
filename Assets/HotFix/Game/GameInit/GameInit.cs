@@ -43,8 +43,7 @@ namespace HotFix
                 Debug.LogError("没有麦克风");
             }
             restar.onClick.AddListener(()=> {
-                Restart();
-                UIKit.ClosePanel("HotFixEntry");
+                
             });
             floorBtn.onClick.AddListener(()=> {
                 player.transform.localPosition = new Vector3(localPos.x, localPos.y + 5);
