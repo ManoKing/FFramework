@@ -12,9 +12,20 @@ using System;
 
 public class AddressableWindow : EditorWindow
 {
+    // 如果文件地址修改，只需该此路径
+    public const string filePath = "/Res";
     private static AddressableAssetSettings setting;
+    public static Dictionary<string, List<string>> addressDic = new Dictionary<string, List<string>>();
+    // 打包策略为，相同文件打包到相同包体
+    public static Dictionary<string, string> nameMap = new Dictionary<string, string>()
+    {
+        [".prefab"] = "Prefab",
+        [".spriteatlas"] = "Atals",
+        [".wav"] = "Audio",
+        [".shader"] = "Shader"
+    };
 
-    [MenuItem("BuildTools/自动标记资源地址")]
+    [MenuItem("Tools/自动标记资源地址")]
     public static void AutoMarkAddress()
     {
         setting = AssetDatabase.LoadAssetAtPath<AddressableAssetSettings>("Assets/AddressableAssetsData/AddressableAssetSettings.asset");
@@ -22,85 +33,76 @@ public class AddressableWindow : EditorWindow
         EditorUtility.DisplayDialog("自动标记", "自动标记成功", "确定");
     }
 
-    public static Dictionary<string, List<string>> addressDic = new Dictionary<string, List<string>>();
-
     public static void Mark()
     {
         addressDic.Clear();
-
-        ///创建分组
-        string loaclRoot = Application.dataPath + "/Romantory/Art";
-        DirectoryInfo[] dirs = new DirectoryInfo(loaclRoot).GetDirectories();
-        foreach (var info in dirs)
-        {
-            AutoMarkRootAddress(info);
-        }
-
-        string rolePrefab = Application.dataPath + "/RemoteRes/RolePrefab";
-        DirectoryInfo[] roleDirs = new DirectoryInfo(rolePrefab).GetDirectories();
-        foreach (var info in roleDirs)
-        {
-            AutoMarkRootAddress(info);
-        }
+        GetFileFull(Application.dataPath + filePath);
 
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
     }
 
-    public static void AutoMarkRootAddress(DirectoryInfo dir)
+    public static void GetFileFull(string dirs)
     {
-        var files = GetAllFileInfo(dir);
-        //var files = dir.GetFiles();
-        if (files != null && files.Length > 0)
-        {
-            foreach (var file in files)
-            {
-                if (file.Extension == ".prefab")
-                {
-                    string address = file.Name;
-                    int index = address.IndexOf(".");
-                    address = address.Remove(index, address.Length - index);
-                    string group_name = dir.Name;
-                    string assetPath = file.FullName;
+        DirectoryInfo dir = new DirectoryInfo(dirs);
+        FileSystemInfo[] fsinfos = dir.GetFileSystemInfos();
 
-                    string[] sArray = assetPath.Split(new string[] { "Assets" }, StringSplitOptions.RemoveEmptyEntries);
-                    assetPath = "Assets" + sArray[1];
-                    var guid = AssetDatabase.AssetPathToGUID(assetPath);
-                    //Debug.LogError(guid);
-                    var group = setting.FindGroup("Prefab");
-                    if (group != null && guid != "")
-                    {
-                        var entry = setting.CreateOrMoveEntry(guid, group);
-                        if (entry.address != address)
-                        {
-                            entry.SetAddress(address);
-                            addAddressInfo(group_name, address);
-                            List<string> oldLabels = new List<string>();
-                            foreach (var item in entry.labels)
-                            {
-                                oldLabels.Add(item);
-                            }
-                            for (int i = 0; i < oldLabels.Count; i++)
-                            {
-                                entry.SetLabel(oldLabels[i], false);
-                                setting.RemoveLabel(oldLabels[i]);
-                            }
-                            if (!setting.GetLabels().Contains(dir.Name))
-                            {
-                                setting.AddLabel(dir.Name);
-                            }
-                            entry.SetLabel(dir.Name, true);
-                        }
-                    }
-                }
+        foreach (FileSystemInfo fsinfo in fsinfos)
+        {
+            //判断是否为空文件夹　　
+            if (fsinfo is DirectoryInfo)
+            {
+                GetFileFull(fsinfo.FullName);
+            }
+            else
+            {
+                AutoMarkRootAddress(fsinfo);
             }
         }
     }
 
-    private static FileInfo[] GetAllFileInfo(DirectoryInfo dir)
+    public static void AutoMarkRootAddress(FileSystemInfo file)
     {
-        return dir.GetFiles(".", SearchOption.AllDirectories);
+        string groupName = string.Empty;
+        if (nameMap.ContainsKey(file.Extension))
+        {
+            //Debug.LogError(file);
+            string address = file.Name;
+            int index = address.IndexOf(".");
+            address = address.Remove(index, address.Length - index);
+            groupName = nameMap[file.Extension];
+            string assetPath = file.FullName;
 
+            string[] sArray = assetPath.Split(new string[] { "Assets" }, StringSplitOptions.RemoveEmptyEntries);
+            assetPath = "Assets" + sArray[1];
+            var guid = AssetDatabase.AssetPathToGUID(assetPath);
+            //Debug.LogError(guid);
+            var group = setting.FindGroup(groupName);
+            if (group != null && guid != "")
+            {
+                var entry = setting.CreateOrMoveEntry(guid, group);
+                if (entry.address != address)
+                {
+                    entry.SetAddress(address);
+                    addAddressInfo(groupName, address);
+                    List<string> oldLabels = new List<string>();
+                    foreach (var item in entry.labels)
+                    {
+                        oldLabels.Add(item);
+                    }
+                    for (int i = 0; i < oldLabels.Count; i++)
+                    {
+                        entry.SetLabel(oldLabels[i], false);
+                        setting.RemoveLabel(oldLabels[i]);
+                    }
+                    if (!setting.GetLabels().Contains(groupName))
+                    {
+                        setting.AddLabel(groupName);
+                    }
+                    entry.SetLabel(groupName, true);
+                }
+            }
+        }
     }
 
     private static void addAddressInfo(string group, string _address)
@@ -116,7 +118,6 @@ public class AddressableWindow : EditorWindow
             {
                 Debug.LogError("命名重复\n在" + group + "中已经存在" + _address);
             }
-
         }
         else
         {

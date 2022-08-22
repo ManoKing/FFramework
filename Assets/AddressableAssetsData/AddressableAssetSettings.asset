@@ -45,6 +45,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 15dc786ad74321b4e8846a1f58f4ccee, type: 2}
   - {fileID: 11400000, guid: 831e167b3c812fd4181332316e7f9981, type: 2}
   - {fileID: 11400000, guid: 8618dc7bbb1a81440a3e8c5848af1ab2, type: 2}
+  - {fileID: 11400000, guid: 05c7c4ebaf924694f812eab69773b7d7, type: 2}
+  - {fileID: 11400000, guid: 4858ed4a9c2f9d341abe51d645f9beda, type: 2}
+  - {fileID: 11400000, guid: 9f5c848b1ba31f74da2b5508f417b29a, type: 2}
+  - {fileID: 11400000, guid: b157a74643d67d84bbffe096eab1d193, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -86,6 +90,10 @@ MonoBehaviour:
   m_LabelTable:
     m_LabelNames:
     - default
+    - Prefab
+    - Shader
+    - Atals
+    - Audio
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: ae4279a604ab4d8469fd90d12aaaf2f6, type: 2}

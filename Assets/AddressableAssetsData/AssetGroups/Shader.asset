@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Shader
+  m_EditorClassIdentifier: 
+  m_GroupName: Shader
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 3ba89ed371e132a42b7eb1b9877d0b4f
+  m_SerializeEntries:
+  - m_GUID: b4ed0ead8b2ef05468733ab1e89d9641
+    m_Address: UIScrollingBackground
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Shader
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 32a30a11181288f4f94296f523e8b7a7, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 1f1789795060bd94a84145da56eeb8ed, type: 2}
+    - {fileID: 11400000, guid: 5adef89140e67094d8ccb5b9dae7e7ef, type: 2}
