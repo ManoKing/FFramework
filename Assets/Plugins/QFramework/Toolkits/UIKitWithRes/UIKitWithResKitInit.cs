@@ -18,10 +18,9 @@ namespace QFramework
     {
         public class ResKitPanelLoader : IPanelLoader
         {
-
+            private string loadName;
             public GameObject LoadPanelPrefab(PanelSearchKeys panelSearchKeys)
             {
-                string loadName = string.Empty;
                 if (panelSearchKeys.AssetBundleName.IsNotNullAndEmpty())
                 {
                     loadName = panelSearchKeys.GameObjName;
@@ -32,14 +31,13 @@ namespace QFramework
                     loadName =panelSearchKeys.PanelType.Name;
                 }
                 Debug.LogWarning(loadName);
-                var op = Addressables.LoadAssetAsync<GameObject>(loadName);
-                var obj = op.WaitForCompletion();
+                var obj = AddressableManager.Instance.LoadAsset<GameObject>(loadName);
                 return obj;
             }
 
             public void Unload()
             {
-                
+                AddressableManager.Instance.UnloadAsset(loadName);
             }
         }
 

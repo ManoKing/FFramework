@@ -134,4 +134,17 @@ public class AddressableManager : Singleton<AddressableManager>
             }
         };
     }
+
+    public void UnloadAsset(string address)
+    {
+        if (caches.ContainsKey(address))
+        {
+            Addressables.ReleaseInstance(caches[address]);
+            caches.Remove(address);
+        }
+        else
+        {
+            Debug.LogWarning("卸载无效，缓存中没有该资源");
+        }
+    }
 }
