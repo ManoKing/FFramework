@@ -8,6 +8,7 @@ namespace HotFix
 	public partial class GameOver : UIPanel
 	{
 		public Button Restart;
+
 		void Start()
 		{
 			Restart.onClick.AddListener(() => {

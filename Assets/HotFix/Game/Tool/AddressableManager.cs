@@ -5,6 +5,28 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using QFramework;
+using UnityEngine.UI;
+using UnityEngine.U2D;
+
+public static class AddressableExtension
+{
+    public static void SetSprite(this Image self, string atlasName, string spriteName)
+    {
+        var atals = AddressableManager.Instance.LoadAsset<SpriteAtlas>(atlasName);
+        self.sprite = atals.GetSprite(spriteName);
+    }
+
+    public static void SetSprite(this Image self, string spriteName)
+    {
+        self.sprite = AddressableManager.Instance.LoadAsset<Sprite>(spriteName);
+    }
+
+    public static void SetTexture(this RawImage self, string textureName)
+    {
+        self.texture = AddressableManager.Instance.LoadAsset<Texture>(textureName);
+    }
+
+}
 public class AddressableManager : Singleton<AddressableManager>
 {
     private AddressableManager() { }
