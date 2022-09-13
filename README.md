@@ -49,4 +49,6 @@
 #### 代码剪切
 (1)TypeLoadException:Could not load type 'UnityEngine.Microphone' frome assembly 'UnityEngine.AudioModule', 出现类似问题，需要修改Assets文件夹下的link文件，添加相应Assembly;  
 (2)Android 权限获取，参考Unity官方文档 平台开发/Android/Device features and permissions;  
+(3)CDN服务器缓存问题，不能及时获取到hash, json;
+(4)Addressables版本问题，进入游戏卡住一段时间;
 
