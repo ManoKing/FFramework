@@ -28,6 +28,11 @@
 
 ## 如何让小游戏运行并实现热更  
 
+#### 游戏入口
+(1)在UIRoot/Bg/PreLoadAssets下，对资源进行预下载，关闭了Addressable的自动加载（自动加载，进入游戏的时候会卡顿一会，很影响用户体验）;  
+(2)加载完资源会调用初始化LoadDll,加载热更DLL;  
+(3)加载完DLL才会切换场景;  
+
 #### HybridCLR
 参考 https://github.com/focus-creative-games/hybridclr_trial 实例项目的README  
 
