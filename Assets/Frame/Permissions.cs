@@ -7,25 +7,18 @@ using UnityEngine.Android;
 
 public class Permissions : MonoBehaviour
 {
-    // <summary>录制的音频源</summary>
     protected AudioClip mResultClip = null;
-    /// <summary>是否正在计时</summary>
     protected bool mIsTiming = false;
-    /// <summary>开始计时（录音）的应用时间</summary>
     protected float mStartTime;
-    /// <summary>音频数据长度</summary>
     protected readonly int mSamplesLength;
 
-    /// <summary>设备名麦克风</summary>
     protected string mDeviceNameMIC;
-    /// <summary>录音产生的AudioClip的长度</summary>
     public int LengthSec { get; set; }
-    /// <summary>由录音产生的AudioClip的采样率</summary>
     public int Frequency { get; set; }
     public void Start()
     {
         mDeviceNameMIC = null;
-        LengthSec = 60;//ASR最长60秒
+        LengthSec = 60;
         Frequency = 16000;
         RequestUserPermission();
     }
@@ -41,8 +34,6 @@ public class Permissions : MonoBehaviour
 #endif
     }
 
-    /// <summary>获取麦克风音量</summary>
-    /// <returns>麦克风的音量数值</returns>
     public float GetVolume()
     {
         float levelMax = 0;
@@ -51,7 +42,7 @@ public class Permissions : MonoBehaviour
             float[] samples = new float[mSamplesLength];
             int startPosition = Microphone.GetPosition(mDeviceNameMIC) - mSamplesLength + 1;
             if (startPosition >= 0)
-            {//当麦克风还未正式启动时，该值会为负值，AudioClip.GetData函数会报错
+            {
                 mResultClip.GetData(samples, startPosition);
                 for (int i = 0; i < mSamplesLength; i++)
                 {
