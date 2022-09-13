@@ -13,6 +13,7 @@ using UnityEngine.AddressableAssets;
 /// </summary>
 public class LoadDll : MonoBehaviour
 {
+    public Action loadScene;
     Assembly gameAss;
     public static TextAsset[] aotDllBytes;
     public static readonly List<string> aotDlls = new List<string>()
@@ -32,6 +33,7 @@ public class LoadDll : MonoBehaviour
     {
         LoadGameDll();
         RunMain();
+        loadScene();
     }
 
     void LoadGameDll()

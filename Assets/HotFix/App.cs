@@ -18,7 +18,6 @@ namespace HotFix
         {
 #if !UNITY_EDITOR
             LoadMetadataForAOTAssembly();
-            Debug.Log("ydd-- AOT���򼯼������!");
 #endif
             // 测试补充元数据后使用 AOT泛型
             TestAOTGeneric();
@@ -28,20 +27,14 @@ namespace HotFix
             return 0;
         }
 
-        /// <summary>
-        /// �л�����
-        /// </summary>
         static async void LoadScene()
         {
-            var handler = await Addressables.LoadSceneAsync("MainScene").Task;
+            var handler = await Addressables.LoadSceneAsync("Main").Task;
             handler.ActivateAsync();
             UIKit.OpenPanel<GameLobby>(UILevel.Common, null, "GameLobby", "GameLobby");
         }
 
 
-        /// <summary>
-        /// ���� aot����
-        /// </summary>
         public static void TestAOTGeneric()
         {
             var arr = new List<MyValue>();
