@@ -30,7 +30,7 @@ namespace QFramework
                 {
                     loadName =panelSearchKeys.PanelType.Name;
                 }
-                Debug.LogWarning(loadName);
+                //Debug.LogWarning(loadName);
                 var obj = AddressableManager.Instance.LoadAsset<GameObject>(loadName);
                 return obj;
             }
