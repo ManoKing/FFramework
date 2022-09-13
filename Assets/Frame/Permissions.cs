@@ -4,7 +4,7 @@ using UnityEngine;
 #if PLATFORM_ANDROID
 using UnityEngine.Android;
 #endif
-
+// 获取权限问题，临时添加脚本获取Android权限
 public class Permissions : MonoBehaviour
 {
     protected AudioClip mResultClip = null;
