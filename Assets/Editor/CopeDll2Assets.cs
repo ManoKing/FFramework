@@ -7,28 +7,28 @@ using System.IO;
 
 public class CopeDll2Assets : Editor
 {
-    [MenuItem("Tools/¸´ÖÆDllµ½Assets/ActiveBuildTarget")]
+    [MenuItem("Tools/å¤åˆ¶Dllåˆ°Assets/ActiveBuildTarget")]
     static void CopeByActive()
     {
         Copy(EditorUserBuildSettings.activeBuildTarget);
     }
-    [MenuItem("Tools/¸´ÖÆDllµ½Assets/Win32")]
+    [MenuItem("Tools/å¤åˆ¶Dllåˆ°Assets/Win32")]
     static void CopeByStandaloneWindows32()
     {
         Copy(BuildTarget.StandaloneWindows);
     }
-    [MenuItem("Tools/¸´ÖÆDllµ½Assets/Win64")]
+    [MenuItem("Tools/å¤åˆ¶Dllåˆ°Assets/Win64")]
     static void CopeByStandaloneWindows64()
     {
         Copy(BuildTarget.StandaloneWindows64);
     }
 
-    [MenuItem("Tools/¸´ÖÆDllµ½Assets/Android")]
+    [MenuItem("Tools/å¤åˆ¶Dllåˆ°Assets/Android")]
     static void CopeByAndroid()
     {
         Copy(BuildTarget.Android);
     }
-    [MenuItem("Tools/¸´ÖÆDllµ½Assets/IOS")]
+    [MenuItem("Tools/å¤åˆ¶Dllåˆ°Assets/IOS")]
     static void CopeByIOS()
     {
         Copy(BuildTarget.iOS);
@@ -39,7 +39,7 @@ public class CopeDll2Assets : Editor
         List<string> copyDlls = new List<string>()
         {
             "HotFix.dll",
-        }; 
+        };
         string outDir = BuildConfig.GetHotFixDllsOutputDirByTarget(target);
         string exportDir = Application.dataPath + "/Res/Dlls";
         if (!Directory.Exists(exportDir))
@@ -57,13 +57,13 @@ public class CopeDll2Assets : Editor
             string dllPath = $"{aotDllDir}/{dll}";
             if (!File.Exists(dllPath))
             {
-                Debug.LogError($"abÖĞÌí¼ÓAOT²¹³äÔªÊı¾İdll:{dllPath} Ê±·¢Éú´íÎó,ÎÄ¼ş²»´æÔÚ¡£ĞèÒª¹¹½¨Ò»´ÎÖ÷°üºó²ÅÄÜÉú³É²Ã¼ôºóµÄAOT dll");
+                Debug.LogError($"abä¸­æ·»åŠ AOTè¡¥å……å…ƒæ•°æ®dll:{dllPath} æ—¶å‘ç”Ÿé”™è¯¯,æ–‡ä»¶ä¸å­˜åœ¨ã€‚éœ€è¦æ„å»ºä¸€æ¬¡ä¸»åŒ…åæ‰èƒ½ç”Ÿæˆè£å‰ªåçš„AOT dll");
                 continue;
             }
             string dllBytesPath = $"{exportDir}/{dll}.bytes";
             File.Copy(dllPath, dllBytesPath, true);
         }
         AssetDatabase.Refresh();
-        Debug.Log("ÈÈ¸üDll¸´ÖÆ³É¹¦£¡");
+        Debug.Log("çƒ­æ›´Dllå¤åˆ¶æˆåŠŸï¼");
     }
 }
