@@ -144,7 +144,7 @@ public class AddressableManager : Singleton<AddressableManager>
         }
         else
         {
-            Debug.LogWarning("卸载无效，缓存中没有该资源");
+            Debug.LogWarning("璇ヨ祫婧愭湭缂撳瓨");
         }
     }
 }
