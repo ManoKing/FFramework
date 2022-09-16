@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Effects/Hall/Example.unity
-    guid: d091518d81e592d4090e30fad1a49975
+    path: Assets/Scenes/Entry.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects:
     addressableimportsettings: {fileID: 11400000, guid: 796ab01bc7fb8604eb2395dc94670ee8, type: 2}
     com.unity.addressableassets: {fileID: 11400000, guid: 3593737976adb134d91f14e402a24ea7, type: 2}
