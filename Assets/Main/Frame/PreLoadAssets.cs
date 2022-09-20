@@ -37,8 +37,8 @@ public class PreLoadAssets : MonoBehaviour
                 catalogUpdatesHandle.CompletedTypeless += _ => {
                     LoadScene();
                     //Addressables.Release(catalogUpdatesHandle);
-                    Debug.LogError("服务器获取catalog失败，CDN是否连接,将使用之前资源");
-                    
+                    Debug.LogWarning("服务器获取catalog失败，CDN是否连接，将使用之前资源");
+
                 };
                 catalogUpdatesHandle.Completed += _ => {
                     Debug.Log("check catalog status " + catalogUpdatesHandle.Status);
