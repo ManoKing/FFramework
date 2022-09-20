@@ -21,6 +21,7 @@ public class PreLoadAssets : MonoBehaviour
     private AsyncOperationHandle<List<string>> catalogUpdatesHandle;
     private AsyncOperationHandle<List<IResourceLocator>> updateHandle;
     private AsyncOperationHandle<long> getDownloadSizeHandle;
+    private bool isFirstLoad;
 
     void Start()
     {
@@ -34,9 +35,10 @@ public class PreLoadAssets : MonoBehaviour
                 Addressables.Release(initHandle);
                 catalogUpdatesHandle = Addressables.CheckForCatalogUpdates(false);
                 catalogUpdatesHandle.CompletedTypeless += _ => {
-                    Addressables.Release(catalogUpdatesHandle);
-                    Debug.LogError("服务器获取catalog失败，CDN是否连接,将使用之前资源");
                     LoadScene();
+                    //Addressables.Release(catalogUpdatesHandle);
+                    Debug.LogError("服务器获取catalog失败，CDN是否连接,将使用之前资源");
+                    
                 };
                 catalogUpdatesHandle.Completed += _ => {
                     Debug.Log("check catalog status " + catalogUpdatesHandle.Status);
@@ -99,6 +101,8 @@ public class PreLoadAssets : MonoBehaviour
 
     void LoadScene()
     {
+        if (isFirstLoad) return;
+        isFirstLoad = true;
         var go = new GameObject("LoadDll");
         var temp = go.AddComponent<LoadDll>();
         DontDestroyOnLoad(go);
