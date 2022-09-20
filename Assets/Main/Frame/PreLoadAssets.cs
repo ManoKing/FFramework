@@ -33,6 +33,11 @@ public class PreLoadAssets : MonoBehaviour
             {
                 Addressables.Release(initHandle);
                 catalogUpdatesHandle = Addressables.CheckForCatalogUpdates(false);
+                catalogUpdatesHandle.CompletedTypeless += _ => {
+                    Addressables.Release(catalogUpdatesHandle);
+                    Debug.LogError("服务器获取catalog失败，CDN是否连接,将使用之前资源");
+                    LoadScene();
+                };
                 catalogUpdatesHandle.Completed += _ => {
                     Debug.Log("check catalog status " + catalogUpdatesHandle.Status);
                     if (catalogUpdatesHandle.Status == AsyncOperationStatus.Succeeded)
@@ -50,15 +55,7 @@ public class PreLoadAssets : MonoBehaviour
                             updateHandle = Addressables.UpdateCatalogs(catalogs, false);
                             updateHandle.Completed += _ => {
                                 if (updateHandle.Status == AsyncOperationStatus.Succeeded)
-                                {/*
-                                    foreach (var item in updateHandle.Result)
-                                    {
-                                        Debug.LogError("catalog result " + item.LocatorId);
-                                        foreach (var key in item.Keys)
-                                        {
-                                            Debug.LogError("catalog key " + key);
-                                        }
-                                    }*/
+                                {
                                     Debug.LogError("download catalog finish " + updateHandle.Status);
                                     GetDownloadSize();
                                 }
