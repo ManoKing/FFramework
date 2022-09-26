@@ -34,14 +34,15 @@ public class PreLoadAssets : MonoBehaviour
             {
                 Addressables.Release(initHandle);
                 catalogUpdatesHandle = Addressables.CheckForCatalogUpdates(false);
-                catalogUpdatesHandle.CompletedTypeless += _ => {
-                    LoadScene();
-                    //Addressables.Release(catalogUpdatesHandle);
-                    Debug.LogWarning("服务器获取catalog失败，CDN是否连接，将使用之前资源");
 
-                };
                 catalogUpdatesHandle.Completed += _ => {
                     Debug.Log("check catalog status " + catalogUpdatesHandle.Status);
+ 
+                    if (catalogUpdatesHandle.OperationException != null)
+                    {
+                        LoadScene();
+                        Debug.LogError("服务器获取catalog失败，CDN是否连接，将使用之前资源");
+                    }
                     if (catalogUpdatesHandle.Status == AsyncOperationStatus.Succeeded)
                     {
                         List<string> catalogs = new List<string>();
