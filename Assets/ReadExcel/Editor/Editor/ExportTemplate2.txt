@@ -32,9 +32,9 @@ public class $ExportTemplate$ : AssetPostprocessor
 				}
 
 
-					if (!Directory.Exists("Assets/ReadExcel/Config/Resources/DataConfig/"))
+					if (!Directory.Exists("Assets/ReadExcel/Config/Res/DataConfig/"))
             	    {
-            	        Directory.CreateDirectory("Assets/ReadExcel/Config/Resources/DataConfig/");
+            	        Directory.CreateDirectory("Assets/ReadExcel/Config/Res/DataConfig/");
             	    }
                     var exportPath = "$ExportAssetDirectry$" + ".asset";
                     

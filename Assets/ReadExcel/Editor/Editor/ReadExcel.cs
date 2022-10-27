@@ -11,12 +11,6 @@ using NPOI.XSSF.UserModel;
 using UnityEditor;
 using UnityEngine;
 
-/// <summary>
-///     BanMing 
-///     banming729@163.com
-///     2017/1/3
-///     load excel data
-/// </summary>
 public class ReadExcel : EditorWindow
 {
     private readonly Dictionary<string, List<DataInfo>> dataTitleDic = new Dictionary<string, List<DataInfo>>(); //titledata
@@ -317,7 +311,7 @@ public class ReadExcel : EditorWindow
             ? "Assets/ReadExcel/Editor/Editor/EntityTemplate2.txt"
             : "Assets/ReadExcel/Editor/Editor/EntityTemplate.txt";
 
-        Directory.CreateDirectory("Assets/ReadExcel/Config/Resources/DataEntity/");
+        Directory.CreateDirectory("Assets/ReadExcel/Config/Res/DataEntity/");
         if (isSeparated)
         {
             foreach (var sheet in sheetList)
@@ -332,7 +326,7 @@ public class ReadExcel : EditorWindow
                 var param = CreatEntityParam(sheet.name);
                 sb.Replace("$Types$", param.ToString());
                 sb.Replace("$ExcelData$", SN);
-                File.WriteAllText("Assets/ReadExcel/Config/Resources/DataEntity/" + SN + ".cs",
+                File.WriteAllText("Assets/ReadExcel/Config/Res/DataEntity/" + SN + ".cs",
                     sb.ToString());
             }
         }
@@ -356,7 +350,7 @@ public class ReadExcel : EditorWindow
                     sb.Replace("$Types$", param.ToString());
                     sb.Replace("$ExcelData$", scriptName);
                     sb.Replace("$SheetName$", sheetEnum.ToString());
-                    File.WriteAllText("Assets/ReadExcel/Config/Resources/DataEntity/" + scriptName + ".cs",
+                    File.WriteAllText("Assets/ReadExcel/Config/Res/DataEntity/" + scriptName + ".cs",
                         sb.ToString());
                     return;
                 }
@@ -417,7 +411,7 @@ public class ReadExcel : EditorWindow
                 }
                 var copyScript = File.ReadAllText(copyFilePath);
                 var SN = scriptName + "_" + sheet.name;
-                var exportAssetDirectry = "Assets/ReadExcel/Config/Resources/DataConfig/" + SN;
+                var exportAssetDirectry = "Assets/ReadExcel/Config/Res/DataConfig/" + SN;
                 var builder = CreatImporterBuilder(sheet.name);
 
                 copyScript = copyScript.Replace("$IMPORT_PATH$", excelFile.filePath);
@@ -437,7 +431,7 @@ public class ReadExcel : EditorWindow
                 if (sheet.isEnable)
                 {
                     var copyScript = File.ReadAllText(copyFilePath);
-                    var exportAssetDirectry = "Assets/ReadExcel/Config/Resources/DataConfig/" + scriptName;
+                    var exportAssetDirectry = "Assets/ReadExcel/Config/Res/DataConfig/" + scriptName;
                     var builder = CreatImporterBuilder(sheet.name);
                     copyScript = copyScript.Replace("$IMPORT_PATH$", excelFile.filePath);
                     var sb = new StringBuilder();
@@ -588,8 +582,8 @@ public class ReadExcel : EditorWindow
 
     public static void CreatDataInitCs()
     {
-        var scriptObjs = Directory.GetFiles("Assets/ReadExcel/Config/Resources/DataConfig/", "*.asset");
-        var scriptEntity = Directory.GetFiles("Assets/ReadExcel/Config/Resources/DataEntity/", "*.cs");
+        var scriptObjs = Directory.GetFiles("Assets/ReadExcel/Config/Res/DataConfig/", "*.asset");
+        var scriptEntity = Directory.GetFiles("Assets/ReadExcel/Config/Res/DataEntity/", "*.cs");
         for (int i = 0, iMax = scriptEntity.Length; i < iMax; i++)
         {
             scriptEntity[i] = Path.GetFileNameWithoutExtension(scriptEntity[i]);
@@ -597,12 +591,12 @@ public class ReadExcel : EditorWindow
         var replaceSB = new StringBuilder();
         for (int i = 0, iMax = scriptObjs.Length; i < iMax; i++)
         {
-            replaceSB.AppendLine(string.Format(" Resources.Load<{0}>(\"DataConfig/{1}\").SetDic();",
+            replaceSB.AppendLine(string.Format("AddressableManager.Instance.LoadSystemAsset<{0}>(\"{1}\").SetDic();",
                 scriptEntity[i], Path.GetFileNameWithoutExtension(scriptObjs[i])));
         }
         var sb = new StringBuilder(File.ReadAllText("Assets/ReadExcel/Editor/Editor/ExcelDataInit.txt"));
         sb.Replace("$ResourcesScriptObject$", replaceSB.ToString());
-        File.WriteAllText("Assets/ReadExcel/Config/Resources/" + "ExcelDataInit" + ".cs", sb.ToString());
+        File.WriteAllText("Assets/ReadExcel/Config/Res/" + "ExcelDataInit" + ".cs", sb.ToString());
         AssetDatabase.Refresh(ImportAssetOptions.ForceUpdate);
     }
 }

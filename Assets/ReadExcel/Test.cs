@@ -5,12 +5,6 @@ public class Test : MonoBehaviour, INotification
     // 动态多语言示例
     public Text textCom;
 
-    private void Awake()
-    {
-        LocalizationMgr.Instance.Init();
-
-    }
-
     private void Start()
     {
         // 动态绑定语言

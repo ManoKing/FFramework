@@ -48,6 +48,14 @@ public class AddressableManager : Singleton<AddressableManager>
         }
     }
 
+    public T LoadSystemAsset<T>(string address) where T : ScriptableObject
+    {
+        var handle = Addressables.LoadAssetAsync<System.Object>(address);
+        var obj = handle.WaitForCompletion();
+
+        return obj as T;
+    }
+
     public void LoadAsset<T>(string address, Action<T> onComplete, Action onFailed = null) where T : UnityEngine.Object
     {
         if (caches.ContainsKey(address))

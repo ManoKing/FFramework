@@ -32,11 +32,11 @@ public class Localization_Russian_Importer : AssetPostprocessor
 				}
 
 
-					if (!Directory.Exists("Assets/ReadExcel/Config/Resources/DataConfig/"))
+					if (!Directory.Exists("Assets/ReadExcel/Config/Res/DataConfig/"))
             	    {
-            	        Directory.CreateDirectory("Assets/ReadExcel/Config/Resources/DataConfig/");
+            	        Directory.CreateDirectory("Assets/ReadExcel/Config/Res/DataConfig/");
             	    }
-                    var exportPath = "Assets/ReadExcel/Config/Resources/DataConfig/Localization_Russian" + ".asset";
+                    var exportPath = "Assets/ReadExcel/Config/Res/DataConfig/Localization_Russian" + ".asset";
                     
                     // check scriptable object
                     var data = (Localization_Russian)AssetDatabase.LoadAssetAtPath(exportPath, typeof(Localization_Russian));

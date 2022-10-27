@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class ExcelDataInit
 {
@@ -10,7 +10,9 @@ public class ExcelDataInit
             return;
         }
         isInit=true;
-		$ResourcesScriptObject$
+		AddressableManager.Instance.LoadSystemAsset<Localization_English>("Localization_English").SetDic();
+AddressableManager.Instance.LoadSystemAsset<Localization_Russian>("Localization_Russian").SetDic();
+
         //Resources.UnloadUnusedAssets();
     }
 }
