@@ -10,6 +10,8 @@ namespace HotFix
     {
         private void Start()
         {
+            UIKitWithResKitInit.Init();
+            Debug.Log("进入热更新界面");
             UIKit.OpenPanel<GameLobby>(UILevel.Common, null, "GameLobby", "GameLobby");
         }
 

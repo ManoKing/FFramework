@@ -12,5 +12,77 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee4bc21567f434b598a3c96ba4946372, type: 3}
   m_Name: AssetReferenceDB
   m_EditorClassIdentifier: 
-  m_assets: []
+  m_assets:
+  - m_assetDatabaseId: b1afefbfe85a2424e86dad120a32f57c
+    m_importFrom: Assets/AssetGraph/AssetBundles/Cache/TemporalSettingFiles/AssetReferenceDB.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 67e43180e80813d459f18ad7a6c9c28a
+    m_importFrom: Assets/Res/Dlls/HotFix.dll.bytes
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: bcd00095a14c9c542b3d7384f86ca29c
+    m_importFrom: Assets/AddressableAssetsData/Android/addressables_content_state.bin
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b95da2741c7254343be90ea6c5a2d752
+    m_importFrom: Assets/StreamingAssets/build_info
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c82fc243fac494f45a373ea2e0863331
+    m_importFrom: Assets/HotFix/App.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2cda990e2423bbf4892e6590ba056729
+    m_importFrom: Assets/Scenes/Main.unity
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 33e20f0c8fc9dd2499d246603d27ab5d
+    m_importFrom: Assets/Res/Dlls/Unity.ResourceManager.dll.bytes
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: dca996ce7599720499eaafb123bdc348
+    m_importFrom: Assets/Res/Dlls/UIKit.dll.bytes
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 71644925d2420864b912829807b9ccce
+    m_importFrom: Assets/Res/Dlls/Unity.Addressables.dll.bytes
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6af94cf76ac6e6b4084a2501da5f7cb5
+    m_importFrom: Assets/Res/Dlls/UnityEngine.CoreModule.dll.bytes
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e336623d47507964bb1e38dbcf5632df
+    m_importFrom: Assets/Res/Dlls/ExtensionKit.dll.bytes
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e4348ba3b7c0445488e8a87a799963d4
+    m_importFrom: Assets/Res/Dlls/mscorlib.dll.bytes
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0da9ad1cebaaee249bb413f10e4dd7ac
+    m_importFrom: Assets/Res/Dlls/SingletonKit.dll.bytes
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ef3c2fc9a5e618340afde0fbb5c05ba6
+    m_importFrom: Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 20fd932914f92c744ac4bc0a2095a203
+    m_importFrom: Assets/Main/LoadDll.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 00000000000000004000000000000000
+    m_importFrom: ProjectSettings/ProjectSettings.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a80124834c907f34bbd7325efd550c55
+    m_importFrom: Assets/Scenes/HotUpdateScene.unity
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6acb2ed9e1a821c4699bf90b09e6cef4
+    m_importFrom: Assets/HotFix/Game/GameInit/GameInit.cs
+    m_exportTo: 
+    m_variantName: 
   m_version: 2

@@ -23,7 +23,7 @@ namespace HotFix
         private Vector2 initPos;
         private bool isOver;
         public Image localTest;
-
+        private bool isMicrophone;
         // 定义每帧累加时间
         private float totalTimer;
 
@@ -37,9 +37,11 @@ namespace HotFix
             {
                 deviceName = Microphone.devices[0];
                 micRecord = Microphone.Start(deviceName, true, 999, 44100);
+                isMicrophone = true;
             }
             else
             {
+                isMicrophone = false;
                 Debug.LogError("没有麦克风");
             }
             restar.onClick.AddListener(()=> {
@@ -137,6 +139,10 @@ namespace HotFix
         /// <returns>麦克风的音量数值</returns>
         private float GetVolume()
         {
+            if (!isMicrophone)
+            {
+                return 0;
+            }
             float levelMax = 0;
             if (Microphone.IsRecording(deviceName))
             {
