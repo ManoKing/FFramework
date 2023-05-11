@@ -3,6 +3,7 @@
 /obj
 /Build
 /Temp
+/HybridCLRData
 /Build-Release
 /.vs
 /Build-Win64
