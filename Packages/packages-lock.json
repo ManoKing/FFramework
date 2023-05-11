@@ -99,6 +99,13 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.unity.assetgraph": {
+      "version": "1.7.2-preview",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
     "com.unity.collab-proxy": {
       "version": "1.17.7",
       "depth": 0,
