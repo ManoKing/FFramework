@@ -104,15 +104,15 @@ public class PreLoadAssets : MonoBehaviour
     {
         if (isFirstLoad) return;
         isFirstLoad = true;
-        var go = new GameObject("LoadDll");
-        var temp = go.AddComponent<LoadDll>();
-        DontDestroyOnLoad(go);
-        temp.loadScene = () => {
+        //var go = new GameObject("LoadDll");
+        //var temp = go.AddComponent<LoadDll>();
+        //DontDestroyOnLoad(go);
+        //temp.loadScene = () => {
             sceneHandle = Addressables.LoadSceneAsync("Main");
             sceneHandle.Completed += _ => {
                 GameObject.Destroy(gameObject);
             };
-        };
+        //};
     }
 
     private void GetDownloadSize()
