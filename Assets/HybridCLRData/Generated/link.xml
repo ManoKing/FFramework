@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<linker>
+  <assembly fullname="ExtensionKit">
+    <type fullname="QFramework.CSharpObjectExtension" preserve="all" />
+    <type fullname="QFramework.StringExtention" preserve="all" />
+  </assembly>
+  <assembly fullname="mscorlib">
+    <type fullname="System.Action" preserve="all" />
+    <type fullname="System.Action`1" preserve="all" />
+    <type fullname="System.Collections.Generic.Dictionary`2" preserve="all" />
+    <type fullname="System.Diagnostics.DebuggableAttribute" preserve="all" />
+    <type fullname="System.Diagnostics.DebuggableAttribute/DebuggingModes" preserve="all" />
+    <type fullname="System.Diagnostics.DebuggerHiddenAttribute" preserve="all" />
+    <type fullname="System.Exception" preserve="all" />
+    <type fullname="System.Int32" preserve="all" />
+    <type fullname="System.Object" preserve="all" />
+    <type fullname="System.Reflection.MemberInfo" preserve="all" />
+    <type fullname="System.Runtime.CompilerServices.AsyncStateMachineAttribute" preserve="all" />
+    <type fullname="System.Runtime.CompilerServices.AsyncVoidMethodBuilder" preserve="all" />
+    <type fullname="System.Runtime.CompilerServices.CompilationRelaxationsAttribute" preserve="all" />
+    <type fullname="System.Runtime.CompilerServices.CompilerGeneratedAttribute" preserve="all" />
+    <type fullname="System.Runtime.CompilerServices.ExtensionAttribute" preserve="all" />
+    <type fullname="System.Runtime.CompilerServices.IAsyncStateMachine" preserve="all" />
+    <type fullname="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute" preserve="all" />
+    <type fullname="System.Runtime.CompilerServices.TaskAwaiter`1" preserve="all" />
+    <type fullname="System.Security.Permissions.SecurityAction" preserve="all" />
+    <type fullname="System.Security.Permissions.SecurityPermissionAttribute" preserve="all" />
+    <type fullname="System.Security.UnverifiableCodeAttribute" preserve="all" />
+    <type fullname="System.Single" preserve="all" />
+    <type fullname="System.String" preserve="all" />
+    <type fullname="System.Threading.Tasks.Task`1" preserve="all" />
+    <type fullname="System.Type" preserve="all" />
+    <type fullname="System.ValueType" preserve="all" />
+  </assembly>
+  <assembly fullname="SingletonKit">
+    <type fullname="QFramework.Singleton`1" preserve="all" />
+  </assembly>
+  <assembly fullname="UIKit">
+    <type fullname="QFramework.AbstractPanelLoaderPool" preserve="all" />
+    <type fullname="QFramework.IPanelLoader" preserve="all" />
+    <type fullname="QFramework.IPanelLoaderPool" preserve="all" />
+    <type fullname="QFramework.IUIData" preserve="all" />
+    <type fullname="QFramework.PanelSearchKeys" preserve="all" />
+    <type fullname="QFramework.UIKit" preserve="all" />
+    <type fullname="QFramework.UIKitConfig" preserve="all" />
+    <type fullname="QFramework.UILevel" preserve="all" />
+    <type fullname="QFramework.UIPanel" preserve="all" />
+  </assembly>
+  <assembly fullname="Unity.Addressables">
+    <type fullname="UnityEngine.AddressableAssets.Addressables" preserve="all" />
+  </assembly>
+  <assembly fullname="Unity.ResourceManager">
+    <type fullname="UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle" preserve="all" />
+    <type fullname="UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle`1" preserve="all" />
+    <type fullname="UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationStatus" preserve="all" />
+    <type fullname="UnityEngine.ResourceManagement.ResourceProviders.SceneInstance" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.AudioModule">
+    <type fullname="UnityEngine.AudioClip" preserve="all" />
+    <type fullname="UnityEngine.Microphone" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.CoreModule">
+    <type fullname="UnityEngine.Application" preserve="all" />
+    <type fullname="UnityEngine.AsyncOperation" preserve="all" />
+    <type fullname="UnityEngine.Component" preserve="all" />
+    <type fullname="UnityEngine.Debug" preserve="all" />
+    <type fullname="UnityEngine.Events.UnityAction" preserve="all" />
+    <type fullname="UnityEngine.Events.UnityEvent" preserve="all" />
+    <type fullname="UnityEngine.GameObject" preserve="all" />
+    <type fullname="UnityEngine.MonoBehaviour" preserve="all" />
+    <type fullname="UnityEngine.Object" preserve="all" />
+    <type fullname="UnityEngine.RuntimeInitializeLoadType" preserve="all" />
+    <type fullname="UnityEngine.RuntimeInitializeOnLoadMethodAttribute" preserve="all" />
+    <type fullname="UnityEngine.SceneManagement.LoadSceneMode" preserve="all" />
+    <type fullname="UnityEngine.ScriptableObject" preserve="all" />
+    <type fullname="UnityEngine.Sprite" preserve="all" />
+    <type fullname="UnityEngine.Texture" preserve="all" />
+    <type fullname="UnityEngine.Time" preserve="all" />
+    <type fullname="UnityEngine.Transform" preserve="all" />
+    <type fullname="UnityEngine.U2D.SpriteAtlas" preserve="all" />
+    <type fullname="UnityEngine.UserAuthorization" preserve="all" />
+    <type fullname="UnityEngine.Vector2" preserve="all" />
+    <type fullname="UnityEngine.Vector3" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.UI">
+    <type fullname="UnityEngine.UI.Button" preserve="all" />
+    <type fullname="UnityEngine.UI.Button/ButtonClickedEvent" preserve="all" />
+    <type fullname="UnityEngine.UI.Image" preserve="all" />
+    <type fullname="UnityEngine.UI.RawImage" preserve="all" />
+    <type fullname="UnityEngine.UI.Text" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.UIModule">
+    <type fullname="UnityEngine.CanvasGroup" preserve="all" />
+  </assembly>
+</linker>
