@@ -4,17 +4,17 @@
 
 此工程热更模块基于 HybridCLR + Addressable 
 
-HybridCLR: https://github.com/focus-creative-games/HybridCLR 
-Addressable: https://docs.unity3d.com/Packages/com.unity.addressables@1.21/manual/index.html 
+1, https://github.com/focus-creative-games/HybridCLR  HybridCLR  
+2, https://docs.unity3d.com/Packages/com.unity.addressables@1.21/manual/index.html  Addressable  
 
-主要展示资源和逻辑热更的基础工程。  
+主要展示资源和逻辑热更的基础工程。   
 
-资源管理基于Asset Graph: https://docs.unity3d.com/Packages/com.unity.assetgraph@1.7/manual/index.html  
+资源管理基于Asset Graph: https://docs.unity3d.com/Packages/com.unity.assetgraph@1.7/manual/index.html   
 
-AssetGraph is a tool that aims to reduce the workload needed to build workflows around asset importing,   
-building Asset Bundles and building Player Apps. With this tool, you can build workflows to create, modify,   
-and change asset settings graphically, and even automate them, thus freeing designers and artists from   
-repetitive tasks during game development.
+AssetGraph is a tool that aims to reduce the workload needed to build workflows around asset importing,    
+building Asset Bundles and building Player Apps. With this tool, you can build workflows to create, modify,    
+and change asset settings graphically, and even automate them, thus freeing designers and artists from    
+repetitive tasks during game development.  
 
 
 ---
