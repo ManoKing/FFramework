@@ -4,10 +4,18 @@
 
 此工程热更模块基于 HybridCLR + Addressable 
 
-1. https://github.com/focus-creative-games/HybridCLR 原Huatuo
-2. https://docs.unity3d.com/Packages/com.unity.addressables@1.20/manual/index.html Addressables
+HybridCLR: https://github.com/focus-creative-games/HybridCLR 
+Addressable: https://docs.unity3d.com/Packages/com.unity.addressables@1.21/manual/index.html 
 
-同时支持资源和逻辑热更的基础工程
+主要展示资源和逻辑热更的基础工程。  
+
+资源管理基于Asset Graph: https://docs.unity3d.com/Packages/com.unity.assetgraph@1.7/manual/index.html  
+
+AssetGraph is a tool that aims to reduce the workload needed to build workflows around asset importing,   
+building Asset Bundles and building Player Apps. With this tool, you can build workflows to create, modify,   
+and change asset settings graphically, and even automate them, thus freeing designers and artists from   
+repetitive tasks during game development.
+
 
 ---
 
@@ -24,25 +32,25 @@
 使用框架的UI工具集，并加以改进
 
 #### 渲染基于URP
-因为URP对2D光照和阴影的支持，选择了URP  
+基于URP定制相关功能  
 
 ## 如何让小游戏运行并实现热更  
 
 #### 游戏入口
-(1)在UIRoot/Bg/PreLoadAssets下，对资源进行预下载，关闭了Addressable的自动加载（自动加载，进入游戏的时候会卡顿一会，很影响用户体验）;  
+(1)在Main场景下，对资源进行预下载，关闭了Addressable的自动加载（自动加载，进入游戏的时候会卡顿一会，很影响用户体验）;  
 (2)加载完资源会调用初始化LoadDll,加载热更DLL;  
-(3)加载完DLL才会切换场景;  
+(3)加载完DLL切换热更场景，进入热更模块;  
 
 #### HybridCLR
 参考 https://github.com/focus-creative-games/hybridclr_trial 实例项目的README  
 
 #### Addressable  
-需要利用Addressables Hosting搭建一个本地服务器，并把电脑的防火墙关闭，确保手机和电脑处于同一网络，便可实现热更
+需要利用Addressables Hosting搭建一个本地服务器，确保手机和电脑处于同一网络，便可实现热更
 
 #### 其他
 (1)如需做新的界面，需要对QFramework进行简单了解，可快速实现;  
-(2)Shader编写，需要基于URP,使用HLSL;  
-(3)Unity 版本使用是2020.3.26f1c1，使用3.xx版本都可以
+(2)Shader编写，需要基于URP;  
+(3)Unity 版本使用是2020.3.44f1
 
 ## FAQ
 

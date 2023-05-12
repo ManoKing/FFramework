@@ -38,7 +38,7 @@ public class PermissionTool : MonoBehaviour
             float[] samples = new float[128];
             int startPosition = Microphone.GetPosition(deviceName) - (128 + 1);
             if (startPosition >= 0)
-            {//当麦克风还未正式启动时，该值会为负值，AudioClip.GetData函数会报错
+            {
                 micRecord.GetData(samples, startPosition);
                 for (int i = 0; i < 128; i++)
                 {
@@ -49,7 +49,7 @@ public class PermissionTool : MonoBehaviour
                     }
                 }
                 levelMax = levelMax * 99;
-                // Debug.Log("麦克风音量：" + levelMax);
+                // Debug.Log("Microphone volume:" + levelMax);
             }
         }
         return levelMax;

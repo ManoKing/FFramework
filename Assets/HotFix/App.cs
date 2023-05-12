@@ -11,7 +11,7 @@ namespace HotFix
         private void Start()
         {
             UIKitWithResKitInit.Init();
-            Debug.Log("进入热更新界面");
+            Debug.Log("Enter the hot update interface");
             UIKit.OpenPanel<GameLobby>(UILevel.Common, null, "GameLobby", "GameLobby");
         }
 

@@ -49,4 +49,8 @@ MonoBehaviour:
     m_importFrom: Assets/HybridCLRData/Generated/link.xml
     m_exportTo: 
     m_variantName: 
+  - m_assetDatabaseId: c82fc243fac494f45a373ea2e0863331
+    m_importFrom: Assets/HotFix/App.cs
+    m_exportTo: 
+    m_variantName: 
   m_version: 2
