@@ -10,16 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Default Local Group
+  m_Name: Atlas
   m_EditorClassIdentifier: 
-  m_GroupName: Default Local Group
+  m_GroupName: Atlas
   m_Data:
     m_SerializedData: []
-  m_GUID: 661ccb3dc7140594fb202ab85d08ce17
-  m_SerializeEntries: []
+  m_GUID: 0b12e3ccb27b2084c839089cf57b26d3
+  m_SerializeEntries:
+  - m_GUID: e0c8da80b9777564f814aa2ec76c2eb1
+    m_Address: Png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Atlas
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 1470d3bd838b88244952159e263d8fed, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: 43c6fd6fba1e98349835c4e982b75aad, type: 2}
-    - {fileID: 11400000, guid: 9afc04e8f92e5c043b2217b419251ecb, type: 2}
+    - {fileID: 11400000, guid: fd51b70fdd11cab4483130763eec1be9, type: 2}
+    - {fileID: 11400000, guid: 8bf4d310591836046b476ba5b7f86c78, type: 2}

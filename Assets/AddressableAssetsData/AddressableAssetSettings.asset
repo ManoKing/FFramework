@@ -43,6 +43,12 @@ MonoBehaviour:
   m_GroupAssets:
   - {fileID: 11400000, guid: aa715235a0e779d4286b156e95436c0e, type: 2}
   - {fileID: 11400000, guid: ef3c2fc9a5e618340afde0fbb5c05ba6, type: 2}
+  - {fileID: 11400000, guid: e3044bbfd762a3746b0cb363784a5f02, type: 2}
+  - {fileID: 11400000, guid: 221443bfbbfafca43be8d1a190adc6b1, type: 2}
+  - {fileID: 11400000, guid: 9aaa08b6861633943873b90a0733d03b, type: 2}
+  - {fileID: 11400000, guid: 04716f6b1de0f15479cbcbb8cfac7d45, type: 2}
+  - {fileID: 11400000, guid: 832a02e09051d9c4ca60d55b317e228f, type: 2}
+  - {fileID: 11400000, guid: ba827292cb589a647b26794f6c5a736f, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -85,6 +91,12 @@ MonoBehaviour:
     m_LabelNames:
     - default
     - Pre
+    - Prefab
+    - Scene
+    - Atlas
+    - Audio
+    - Number
+    - Dll
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 3d78503c53cf77c43a33e765d35750d3, type: 2}

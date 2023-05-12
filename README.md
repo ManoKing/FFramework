@@ -2,12 +2,10 @@
 
 ## 工程介绍  
 
-此工程热更模块基于 HybridCLR + Addressable 
+此工程热更模块基于 HybridCLR + Addressable， 主要展示资源和逻辑热更的基础工程。 
 
 [HybridCLR跳转](https://github.com/focus-creative-games/HybridCLR)  
-[Addressable跳转](https://docs.unity3d.com/Packages/com.unity.addressables@1.21/manual/index.html)   
-
-主要展示资源和逻辑热更的基础工程。   
+[Addressable跳转](https://docs.unity3d.com/Packages/com.unity.addressables@1.21/manual/index.html)     
 
 资源管理基于[Asset Graph跳转](https://docs.unity3d.com/Packages/com.unity.assetgraph@1.7/manual/index.html)   
 

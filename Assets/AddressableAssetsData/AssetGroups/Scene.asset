@@ -10,16 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Default Local Group
+  m_Name: Scene
   m_EditorClassIdentifier: 
-  m_GroupName: Default Local Group
+  m_GroupName: Scene
   m_Data:
     m_SerializedData: []
-  m_GUID: 661ccb3dc7140594fb202ab85d08ce17
-  m_SerializeEntries: []
+  m_GUID: 9aa6a6e2a26e3cb438f84c94741de628
+  m_SerializeEntries:
+  - m_GUID: a80124834c907f34bbd7325efd550c55
+    m_Address: HotUpdateScene
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Pre
+    - Scene
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 1470d3bd838b88244952159e263d8fed, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: 43c6fd6fba1e98349835c4e982b75aad, type: 2}
-    - {fileID: 11400000, guid: 9afc04e8f92e5c043b2217b419251ecb, type: 2}
+    - {fileID: 11400000, guid: 762ced0a2d953404b8f40ccb64d9f7fd, type: 2}
+    - {fileID: 11400000, guid: 7ba5922385131cd43a521c45c8ddca71, type: 2}
