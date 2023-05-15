@@ -165,4 +165,20 @@ MonoBehaviour:
     m_importFrom: Assets/AddressableAssetsData/AssetGroups/Atlas.asset
     m_exportTo: 
     m_variantName: 
+  - m_assetDatabaseId: b25fbace43f8f9644a19e17c222b0ce2
+    m_importFrom: Assets/Plugins/QFramework/QFrameworkData/ProjectConfig
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b9857b7805a980d47b74a5bdcf11fefe
+    m_importFrom: Assets/Plugins/QFramework
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c1aef28cd3c7b2f40a298246fb091ec6
+    m_importFrom: Assets/Plugins/QFramework/QFrameworkData
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3a611f99cd1bd314b81da85205ef6f11
+    m_importFrom: Assets/Plugins/QFramework/QFrameworkData/ProjectConfig/ProjectConfig.json
+    m_exportTo: 
+    m_variantName: 
   m_version: 2

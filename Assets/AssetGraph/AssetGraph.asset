@@ -35,7 +35,7 @@ MonoBehaviour:
         height: 23
   - m_name: Set Asset Dll Group
     m_id: 5a38cd89-7927-402e-b19a-5bc014a63b8b
-    m_x: 888
+    m_x: 912
     m_y: 132
     m_nodeInstance:
       m_className: UnityEngine.AssetGraph.AddressableAssetGroup, Unity.AssetGraph.Editor,
@@ -65,7 +65,7 @@ MonoBehaviour:
         height: 23
   - m_name: Set Asset Label
     m_id: 471ae74e-61fb-4443-8a84-61974e40e8a6
-    m_x: 660
+    m_x: 684
     m_y: 132
     m_nodeInstance:
       m_className: UnityEngine.AssetGraph.AddressableAssetLabel, Unity.AssetGraph.Editor,
@@ -175,7 +175,7 @@ MonoBehaviour:
         height: 23
   - m_name: Set Asset Label
     m_id: 8db2ad4d-da3d-4c7d-9d5b-e65197e975bb
-    m_x: 672
+    m_x: 696
     m_y: 264
     m_nodeInstance:
       m_className: UnityEngine.AssetGraph.AddressableAssetLabel, Unity.AssetGraph.Editor,
@@ -255,7 +255,7 @@ MonoBehaviour:
         height: 23
   - m_name: Set Asset Scene Group
     m_id: bc37025d-34d4-485e-bfe1-a292e1a1cfd2
-    m_x: 912
+    m_x: 900
     m_y: 408
     m_nodeInstance:
       m_className: UnityEngine.AssetGraph.AddressableAssetGroup, Unity.AssetGraph.Editor,
