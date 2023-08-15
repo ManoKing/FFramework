@@ -13,60 +13,8 @@ MonoBehaviour:
   m_Name: AssetReferenceDB
   m_EditorClassIdentifier: 
   m_assets:
-  - m_assetDatabaseId: 2a1183bf04c13df4eb7e33350f6c2bae
-    m_importFrom: Assets/Res/Art/Sprite/Number/6.png
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: a865f78f487eadd429dd1ac420a06460
-    m_importFrom: Assets/Res/Art/Sprite/Number/7.png
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 37ff406e12b763044bb328ce51a34a90
-    m_importFrom: Assets/Res/Art/Sprite/Number/Fbs/fbs-46.png
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 3b89dc4717682264f95b1aabe4e6023f
-    m_importFrom: Assets/Res/Art/Sprite/Number/Fbs/fbs-45.png
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 86c511393d31e7647972410f2addaf20
-    m_importFrom: Assets/Res/Art/Sprite/Number/9.png
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: bf8f6358a5b016948b6fb7482452f244
-    m_importFrom: Assets/Res/Art/Sprite/Number/3.png
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 2d10952af9778c746b6bc353a4917d67
-    m_importFrom: Assets/Res/Art/Sprite/Number/8.png
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 0bd28031a3075fc4e9559554a2574f61
-    m_importFrom: Assets/Res/Art/Sprite/Number/Fbs/fbs-47.png
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: b95da2741c7254343be90ea6c5a2d752
-    m_importFrom: Assets/StreamingAssets/build_info
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 4e7211d68e052a243827a5ad6c1a3c64
-    m_importFrom: Assets/Res/Art/Sprite/Number/2.png
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: ab20fd7ffefa626409509254a1459bb6
-    m_importFrom: Assets/Res/Art/Sprite/Number/0.png
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 3603cd726f32c7b4c8318f71fe9004b1
-    m_importFrom: Assets/Res/Art/Sprite/Number/1.png
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 8edccf8b35016244c809d225f41c60f2
-    m_importFrom: Assets/Res/Art/Sprite/Number/4.png
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: d45007cf74bb46e4bb1a69bbae24c9c1
-    m_importFrom: Assets/Res/Art/Sprite/Number/5.png
+  - m_assetDatabaseId: b1afefbfe85a2424e86dad120a32f57c
+    m_importFrom: Assets/AssetGraph/AssetBundles/Cache/TemporalSettingFiles/AssetReferenceDB.asset
     m_exportTo: 
     m_variantName: 
   - m_assetDatabaseId: e336623d47507964bb1e38dbcf5632df
@@ -101,6 +49,10 @@ MonoBehaviour:
     m_importFrom: Assets/Res/Dlls/UnityEngine.CoreModule.dll.bytes
     m_exportTo: 
     m_variantName: 
+  - m_assetDatabaseId: b95da2741c7254343be90ea6c5a2d752
+    m_importFrom: Assets/StreamingAssets/build_info
+    m_exportTo: 
+    m_variantName: 
   - m_assetDatabaseId: 65df99579b755094c9739908c066797d
     m_importFrom: Assets/Res/Art/Prefab/GameInit.prefab
     m_exportTo: 
@@ -125,60 +77,64 @@ MonoBehaviour:
     m_importFrom: Assets/Res/Art/Audio/Juhani.wav
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: e3044bbfd762a3746b0cb363784a5f02
-    m_importFrom: Assets/AddressableAssetsData/AssetGroups/Dll.asset
+  - m_assetDatabaseId: ab20fd7ffefa626409509254a1459bb6
+    m_importFrom: Assets/Res/Art/Sprite/Number/0.png
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: ba827292cb589a647b26794f6c5a736f
-    m_importFrom: Assets/AddressableAssetsData/AssetGroups/Number.asset
+  - m_assetDatabaseId: 3603cd726f32c7b4c8318f71fe9004b1
+    m_importFrom: Assets/Res/Art/Sprite/Number/1.png
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: 04716f6b1de0f15479cbcbb8cfac7d45
-    m_importFrom: Assets/AddressableAssetsData/AssetGroups/Scene.asset
+  - m_assetDatabaseId: 4e7211d68e052a243827a5ad6c1a3c64
+    m_importFrom: Assets/Res/Art/Sprite/Number/2.png
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: 221443bfbbfafca43be8d1a190adc6b1
-    m_importFrom: Assets/AddressableAssetsData/AssetGroups/Prefab.asset
+  - m_assetDatabaseId: bf8f6358a5b016948b6fb7482452f244
+    m_importFrom: Assets/Res/Art/Sprite/Number/3.png
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: 832a02e09051d9c4ca60d55b317e228f
-    m_importFrom: Assets/AddressableAssetsData/AssetGroups/Audio.asset
+  - m_assetDatabaseId: 8edccf8b35016244c809d225f41c60f2
+    m_importFrom: Assets/Res/Art/Sprite/Number/4.png
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: 1404f40ef7dd0df4093e8476827fbddd
-    m_importFrom: Assets/AssetGraph/Cache/AssetBundleBuildMap.asset
+  - m_assetDatabaseId: d45007cf74bb46e4bb1a69bbae24c9c1
+    m_importFrom: Assets/Res/Art/Sprite/Number/5.png
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: b1afefbfe85a2424e86dad120a32f57c
-    m_importFrom: Assets/AssetGraph/AssetBundles/Cache/TemporalSettingFiles/AssetReferenceDB.asset
+  - m_assetDatabaseId: 2a1183bf04c13df4eb7e33350f6c2bae
+    m_importFrom: Assets/Res/Art/Sprite/Number/6.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a865f78f487eadd429dd1ac420a06460
+    m_importFrom: Assets/Res/Art/Sprite/Number/7.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2d10952af9778c746b6bc353a4917d67
+    m_importFrom: Assets/Res/Art/Sprite/Number/8.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 86c511393d31e7647972410f2addaf20
+    m_importFrom: Assets/Res/Art/Sprite/Number/9.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3b89dc4717682264f95b1aabe4e6023f
+    m_importFrom: Assets/Res/Art/Sprite/Number/Fbs/fbs-45.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 37ff406e12b763044bb328ce51a34a90
+    m_importFrom: Assets/Res/Art/Sprite/Number/Fbs/fbs-46.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0bd28031a3075fc4e9559554a2574f61
+    m_importFrom: Assets/Res/Art/Sprite/Number/Fbs/fbs-47.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 84d94bd340dec1c4ca328b68b9f59153
+    m_importFrom: Assets/AssetGraph/DLLAssetGraph.asset
     m_exportTo: 
     m_variantName: 
   - m_assetDatabaseId: 82eaf41ac07bb06458b3c64a8028e43e
-    m_importFrom: Assets/AssetGraph.asset
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 1470d3bd838b88244952159e263d8fed
-    m_importFrom: Assets/AddressableAssetsData/AddressableAssetSettings.asset
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 9aaa08b6861633943873b90a0733d03b
-    m_importFrom: Assets/AddressableAssetsData/AssetGroups/Atlas.asset
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: b25fbace43f8f9644a19e17c222b0ce2
-    m_importFrom: Assets/Plugins/QFramework/QFrameworkData/ProjectConfig
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: b9857b7805a980d47b74a5bdcf11fefe
-    m_importFrom: Assets/Plugins/QFramework
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: c1aef28cd3c7b2f40a298246fb091ec6
-    m_importFrom: Assets/Plugins/QFramework/QFrameworkData
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 3a611f99cd1bd314b81da85205ef6f11
-    m_importFrom: Assets/Plugins/QFramework/QFrameworkData/ProjectConfig/ProjectConfig.json
+    m_importFrom: Assets/AssetGraph/AssetGraph.asset
     m_exportTo: 
     m_variantName: 
   m_version: 2
