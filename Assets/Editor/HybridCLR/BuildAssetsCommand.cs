@@ -77,11 +77,7 @@ namespace HybridCLR.Editor
 
             string hotfixDllSrcDir = SettingsUtil.GetHotUpdateDllsOutputDirByTarget(target);
             string hotfixAssembliesDstDir = Application.dataPath + "/Res/Dlls";
-#if NEW_HYBRIDCLR_API
             foreach (var dll in SettingsUtil.HotUpdateAssemblyFilesExcludePreserved)
-#else
-            foreach (var dll in SettingsUtil.HotUpdateAssemblyFiles)
-#endif
             {
                 string dllPath = $"{hotfixDllSrcDir}/{dll}";
                 string dllBytesPath = $"{hotfixAssembliesDstDir}/{dll}.bytes";
