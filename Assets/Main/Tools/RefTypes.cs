@@ -4,7 +4,7 @@ using UnityEngine;
 #if PLATFORM_ANDROID
 using UnityEngine.Android;
 #endif
-public class PermissionTool : MonoBehaviour
+public class RefTypes : MonoBehaviour
 {
     private string deviceName;
     private AudioClip micRecord;

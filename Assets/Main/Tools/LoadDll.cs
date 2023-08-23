@@ -55,7 +55,14 @@ public class LoadDll : MonoBehaviour
             var dllBytes = Addressables.LoadAssetAsync<TextAsset>(aotDllName).WaitForCompletion();
             // 加载assembly对应的dll，会自动为它hook。一旦aot泛型函数的native函数不存在，用解释器版本代码
             LoadImageErrorCode err = RuntimeApi.LoadMetadataForAOTAssembly(dllBytes.bytes, mode);
-            Debug.Log($"LoadMetadataForAOTAssembly:{aotDllName}. mode:{mode} ret:{err}");
+            if (err == LoadImageErrorCode.OK)
+            {
+                Debug.Log($"LoadMetadataForAOTAssembly:{aotDllName}. mode:{mode} ret:{err}");
+            }
+            else
+            {
+                Debug.LogError($"LoadMetadataForAOTAssembly:{aotDllName}. mode:{mode} ret:{err}");
+            }
         }
     }
 }
