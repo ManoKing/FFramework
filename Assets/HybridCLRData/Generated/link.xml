@@ -4,26 +4,6 @@
     <type fullname="QFramework.CSharpObjectExtension" preserve="all" />
     <type fullname="QFramework.StringExtention" preserve="all" />
   </assembly>
-  <assembly fullname="mscorlib">
-    <type fullname="System.Action" preserve="all" />
-    <type fullname="System.Action`1" preserve="all" />
-    <type fullname="System.Collections.Generic.Dictionary`2" preserve="all" />
-    <type fullname="System.Diagnostics.DebuggableAttribute" preserve="all" />
-    <type fullname="System.Diagnostics.DebuggableAttribute/DebuggingModes" preserve="all" />
-    <type fullname="System.Int32" preserve="all" />
-    <type fullname="System.Object" preserve="all" />
-    <type fullname="System.Reflection.MemberInfo" preserve="all" />
-    <type fullname="System.Runtime.CompilerServices.CompilationRelaxationsAttribute" preserve="all" />
-    <type fullname="System.Runtime.CompilerServices.CompilerGeneratedAttribute" preserve="all" />
-    <type fullname="System.Runtime.CompilerServices.ExtensionAttribute" preserve="all" />
-    <type fullname="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute" preserve="all" />
-    <type fullname="System.Security.Permissions.SecurityAction" preserve="all" />
-    <type fullname="System.Security.Permissions.SecurityPermissionAttribute" preserve="all" />
-    <type fullname="System.Security.UnverifiableCodeAttribute" preserve="all" />
-    <type fullname="System.Single" preserve="all" />
-    <type fullname="System.String" preserve="all" />
-    <type fullname="System.Type" preserve="all" />
-  </assembly>
   <assembly fullname="SingletonKit">
     <type fullname="QFramework.Singleton`1" preserve="all" />
   </assembly>
@@ -81,5 +61,25 @@
   </assembly>
   <assembly fullname="UnityEngine.UIModule">
     <type fullname="UnityEngine.CanvasGroup" preserve="all" />
+  </assembly>
+  <assembly fullname="mscorlib">
+    <type fullname="System.Action" preserve="all" />
+    <type fullname="System.Action`1" preserve="all" />
+    <type fullname="System.Collections.Generic.Dictionary`2" preserve="all" />
+    <type fullname="System.Diagnostics.DebuggableAttribute" preserve="all" />
+    <type fullname="System.Diagnostics.DebuggableAttribute/DebuggingModes" preserve="all" />
+    <type fullname="System.Int32" preserve="all" />
+    <type fullname="System.Object" preserve="all" />
+    <type fullname="System.Reflection.MemberInfo" preserve="all" />
+    <type fullname="System.Runtime.CompilerServices.CompilationRelaxationsAttribute" preserve="all" />
+    <type fullname="System.Runtime.CompilerServices.CompilerGeneratedAttribute" preserve="all" />
+    <type fullname="System.Runtime.CompilerServices.ExtensionAttribute" preserve="all" />
+    <type fullname="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute" preserve="all" />
+    <type fullname="System.Security.Permissions.SecurityAction" preserve="all" />
+    <type fullname="System.Security.Permissions.SecurityPermissionAttribute" preserve="all" />
+    <type fullname="System.Security.UnverifiableCodeAttribute" preserve="all" />
+    <type fullname="System.Single" preserve="all" />
+    <type fullname="System.String" preserve="all" />
+    <type fullname="System.Type" preserve="all" />
   </assembly>
 </linker>
