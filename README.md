@@ -14,10 +14,10 @@
 
 ### HybridCLR编辑器操作
 (1)点击执行HybridCLR/Installer打开一个窗体，点击Install等待安装完成  
-(2)点击执行HybridCLR/Generate/All, 等待执行完毕
+(2)点击执行HybridCLR/Generate/All, 等待执行完毕    
 (3)点击执行HybridCLR/Build/BuildAssetsAndCopyToRes,将Dll生成并拷贝到资源文件夹中  
 
-### 资源管理
+### 资源管理操作
 双击打开AssetGraph/AssetGraph.asset文件，执行右上角的Execute，自动将资源导入Addressables Groups中   
 
 ### 游戏入口流程
@@ -29,7 +29,7 @@
 需要利用Addressables Hosting搭建一个本地服务器，确保手机和电脑处于同一网络，便可实现热更
 
 ### 其他
-(1)Unity 版本使用是2020.3.47f1
+(1)Unity 版本使用是2020.3.47f1  
 (2)基于URP渲染管线  
 
 ---
