@@ -1,18 +1,14 @@
 ---
 
-## 工程介绍  
+## 工程介绍   
 
-此工程热更模块基于 HybridCLR + Addressable， 主要展示资源和逻辑热更的基础工程。 
+此工程热更模块基于 HybridCLR + Addressable， 主要展示资源和代码热更的基础工程。 
 
 [HybridCLR跳转](https://github.com/focus-creative-games/HybridCLR)  
 [Addressable跳转](https://docs.unity3d.com/Packages/com.unity.addressables@1.21/manual/index.html)     
 
 资源管理基于[Asset Graph跳转](https://docs.unity3d.com/Packages/com.unity.assetgraph@1.7/manual/index.html)   
-
-AssetGraph is a tool that aims to reduce the workload needed to build workflows around asset importing,    
-building Asset Bundles and building Player Apps. With this tool, you can build workflows to create, modify,    
-and change asset settings graphically, and even automate them, thus freeing designers and artists from    
-repetitive tasks during game development.  
+双击打开AssetGraph/AssetGraph.asset文件，执行右上角的Execute，自动将资源导入Addressables Groups中  
 
 
 ---
@@ -30,31 +26,33 @@ repetitive tasks during game development.
 使用框架的UI工具集，并加以改进
 
 #### 渲染基于URP
-基于URP定制相关功能  
+基于URP渲染管线
 
 ## 如何让小游戏运行并实现热更  
 
-#### 游戏入口
-(1)在Main场景下，对资源进行预下载，关闭了Addressable的自动加载（自动加载，进入游戏的时候会卡顿一会，很影响用户体验）;  
-(2)加载完资源会调用初始化LoadDll,加载热更DLL;  
-(3)加载完DLL切换热更场景，进入热更模块;  
+#### HybridCLR编辑器操作
+(1)点击执行HybridCLR/Installer打开一个窗体，点击Install等待安装完成  
+(2)点击执行HybridCLR/Generate/All, 等待执行完毕
+(3)点击执行HybridCLR/Build/BuildAssetsAndCopyToRes,将Dll生成并拷贝到资源文件夹中  
 
-#### HybridCLR
-参考 https://github.com/focus-creative-games/hybridclr_trial 实例项目的README  
 
-#### Addressable  
+#### 游戏入口流程
+(1)在Main场景下，对资源进行预下载，关闭了Addressable的自动加载（方便添加白名单测试）    
+(2)加载完资源会调用初始化LoadDll,加载热更DLL   
+(3)加载完DLL切换热更场景，进入热更模块   
+
+
+#### Addressable 实现本地模拟
 需要利用Addressables Hosting搭建一个本地服务器，确保手机和电脑处于同一网络，便可实现热更
 
 #### 其他
-(1)如需做新的界面，需要对QFramework进行简单了解，可快速实现;  
-(2)Shader编写，需要基于URP;  
-(3)Unity 版本使用是2020.3.44f1
+(1)Unity 版本使用是2020.3.47f1
+(2)如需做新的界面，需要对QFramework进行简单了解，可快速实现    
+(3)Shader编写，需要基于URP  
 
 ## FAQ
 
-#### 代码剪切
-(1)TypeLoadException:Could not load type 'UnityEngine.Microphone' frome assembly 'UnityEngine.AudioModule', 出现类似问题，需要修改Assets文件夹下的link文件，添加相应Assembly;  
-(2)Android 权限获取，参考Unity官方文档 平台开发/Android/Device features and permissions;  
-(3)CDN服务器缓存问题，不能及时获取到hash, json;  
-(4)Addressables版本问题，进入游戏卡住一段时间;  
+#### 问题
+(1)CDN服务器缓存问题，不能及时获取到hash, json   
+(2)Addressables版本问题，资源依赖问题，不能实现增量更新（升级版本后解决）    
 
