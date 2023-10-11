@@ -29,6 +29,7 @@ namespace HotFix
 
         void Start()
 		{
+
             initPos = player.transform.localPosition;
             isOver = false;
             time = 0;
@@ -54,6 +55,15 @@ namespace HotFix
             var local = Addressables.LoadAssetAsync<Sprite>("fbs-45");
             local.WaitForCompletion();
             localTest.sprite = local.Result;
+
+            // 测试事件
+            RegisterEvent(3003);
+            SendEvent(3003);
+        }
+
+        protected override void ProcessMsg(int eventId, QMsg msg)
+        {
+            Debug.LogError(eventId);
         }
 
         public void Restart()
