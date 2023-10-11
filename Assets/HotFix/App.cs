@@ -15,10 +15,5 @@ namespace HotFix
             UIKit.OpenPanel<GameLobby>(UILevel.Common, null, "GameLobby", "GameLobby");
         }
 
-        //static async void LoadScene()
-        //{
-        //    var handler = await Addressables.LoadSceneAsync("Main").Task;
-        //    handler.ActivateAsync();
-        //}
     }
 }

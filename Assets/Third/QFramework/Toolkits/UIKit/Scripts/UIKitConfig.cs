@@ -30,6 +30,8 @@ namespace QFramework
 {
     public class UIKitConfig
     {
+        public IPanelLoaderPool PanelLoaderPool = new DefaultPanelLoaderPool();
+
         public virtual UIRoot Root
         {
             get { return UIRoot.Instance; }
@@ -38,7 +40,6 @@ namespace QFramework
         public virtual IPanel LoadPanel(PanelSearchKeys panelSearchKeys)
         {
             var panelLoader = PanelLoaderPool.AllocateLoader();
-            
 
             panelLoader.LoadPanelPrefab(panelSearchKeys);
 
@@ -56,10 +57,6 @@ namespace QFramework
             return retScript;
         }
 
-        
-
-        public  IPanelLoaderPool PanelLoaderPool = new DefaultPanelLoaderPool();
-
         public virtual void SetDefaultSizeOfPanel(IPanel panel)
         {
             var panelRectTrans = panel.Transform as RectTransform;
@@ -73,7 +70,7 @@ namespace QFramework
             panelRectTrans.localScale = Vector3.one;
         }
     }
-    
+
     /// <summary>
     /// 如果想要定制自己的加载器，自定义 IPanelLoader 以及
     /// </summary>
@@ -84,21 +81,19 @@ namespace QFramework
         void Unload();
     }
 
-
-    
     public interface IPanelLoaderPool
     {
         IPanelLoader AllocateLoader();
         void RecycleLoader(IPanelLoader panelLoader);
     }
-        
+
     public abstract class AbstractPanelLoaderPool : IPanelLoaderPool
     {
         private Stack<IPanelLoader> mPool = new Stack<IPanelLoader>(16);
 
         public IPanelLoader AllocateLoader()
         {
-            return mPool.Count > 0 ? mPool.Pop() :CreatePanelLoader();
+            return mPool.Count > 0 ? mPool.Pop() : CreatePanelLoader();
         }
 
         protected abstract IPanelLoader CreatePanelLoader();
@@ -108,10 +103,10 @@ namespace QFramework
             mPool.Push(panelLoader);
         }
     }
-        
+
     public class DefaultPanelLoaderPool : AbstractPanelLoaderPool
     {
-            
+
         /// <summary>
         /// Default
         /// </summary>
@@ -128,13 +123,13 @@ namespace QFramework
 
             public void Unload()
             {
-             
+
             }
         }
         protected override IPanelLoader CreatePanelLoader()
         {
             return new DefaultPanelLoader();
         }
-            
+
     }
 }

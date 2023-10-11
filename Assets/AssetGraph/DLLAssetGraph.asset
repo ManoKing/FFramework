@@ -95,8 +95,8 @@ MonoBehaviour:
         height: 23
   - m_name: Set Asset Label
     m_id: 8dbe7c1d-54f4-4ff8-8405-4250d5ea5aa3
-    m_x: 704
-    m_y: 152
+    m_x: 708
+    m_y: 156
     m_nodeInstance:
       m_className: UnityEngine.AssetGraph.AddressableAssetLabel, Unity.AssetGraph.Editor,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null

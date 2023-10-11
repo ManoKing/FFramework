@@ -8,7 +8,7 @@ namespace QFramework
 {
     public class UIKitWithResKitInit
     {
-        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         public static void Init()
         {
             UIKit.Config.PanelLoaderPool = new ResKitPanelLoaderPool();
