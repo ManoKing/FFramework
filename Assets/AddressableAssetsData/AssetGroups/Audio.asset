@@ -16,13 +16,7 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 135418ba01295ef42bfd1d11d62ea45a
-  m_SerializeEntries:
-  - m_GUID: 96cad69fa18eee445a1c84f4553adecd
-    m_Address: Juhani
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Audio
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 1470d3bd838b88244952159e263d8fed, type: 2}
   m_SchemaSet:

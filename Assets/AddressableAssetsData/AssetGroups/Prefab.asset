@@ -16,25 +16,7 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 6daf7cfbedceff8499bb2cd69c188bc5
-  m_SerializeEntries:
-  - m_GUID: 65df99579b755094c9739908c066797d
-    m_Address: GameInit
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Prefab
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c56ab8b5805778249908518ef179f57f
-    m_Address: GameLobby
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Prefab
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 78e9282013398564d86f76b7ef69b70d
-    m_Address: GameOver
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Prefab
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 1470d3bd838b88244952159e263d8fed, type: 2}
   m_SchemaSet:

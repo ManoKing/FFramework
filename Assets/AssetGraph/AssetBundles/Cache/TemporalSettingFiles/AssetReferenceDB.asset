@@ -13,8 +13,40 @@ MonoBehaviour:
   m_Name: AssetReferenceDB
   m_EditorClassIdentifier: 
   m_assets:
+  - m_assetDatabaseId: e3044bbfd762a3746b0cb363784a5f02
+    m_importFrom: Assets/AddressableAssetsData/AssetGroups/Dll.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ba827292cb589a647b26794f6c5a736f
+    m_importFrom: Assets/AddressableAssetsData/AssetGroups/Number.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 04716f6b1de0f15479cbcbb8cfac7d45
+    m_importFrom: Assets/AddressableAssetsData/AssetGroups/Scene.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 221443bfbbfafca43be8d1a190adc6b1
+    m_importFrom: Assets/AddressableAssetsData/AssetGroups/Prefab.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 832a02e09051d9c4ca60d55b317e228f
+    m_importFrom: Assets/AddressableAssetsData/AssetGroups/Audio.asset
+    m_exportTo: 
+    m_variantName: 
   - m_assetDatabaseId: b1afefbfe85a2424e86dad120a32f57c
     m_importFrom: Assets/AssetGraph/AssetBundles/Cache/TemporalSettingFiles/AssetReferenceDB.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9aaa08b6861633943873b90a0733d03b
+    m_importFrom: Assets/AddressableAssetsData/AssetGroups/Atlas.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2cda990e2423bbf4892e6590ba056729
+    m_importFrom: Assets/Scenes/Main.unity
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b95da2741c7254343be90ea6c5a2d752
+    m_importFrom: Assets/StreamingAssets/build_info
     m_exportTo: 
     m_variantName: 
   m_version: 2
