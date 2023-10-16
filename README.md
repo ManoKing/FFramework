@@ -1,6 +1,6 @@
 ---
 
-## 工程介绍   
+## 工程介绍   (改造中，开始时间23/10/19.)
 
 此工程热更模块基于 HybridCLR + Addressable， 主要展示资源和代码热更的基础工程。 
 
@@ -35,13 +35,13 @@
 ---
 
 ## 项目包含一个完整的小游戏实例  
-#### 游戏介绍
-游戏通过监听麦克风音量，来控制角色上下移动，角色掉到最下面则游戏结束。  
-游戏资源全部来源于 OpenGameArt.org   
 
-![Image](https://github.com/ManoKing/FFramework/blob/main/Assets/Res/Art/Sprite/FlappyBeans/Sample/fbs.screen-52.png)
-![Image](https://github.com/ManoKing/FFramework/blob/main/Assets/Res/Art/Sprite/FlappyBeans/Sample/fbs.screen-53.png)
-![Image](https://github.com/ManoKing/FFramework/blob/main/Assets/Res/Art/Sprite/FlappyBeans/Sample/fbs.screen-54.png)
+#### 游戏介绍  
+改造中。。。  
+
+![Image](ReadMe/1.png)
+![Image](ReadMe/2.png)
+![Image](ReadMe/3.png)
 
 ### UI框架基于QFramework  
 使用框架的UI工具集，并加以改进，如需做新的界面，需要对QFramework进行简单了解，可快速实现    
