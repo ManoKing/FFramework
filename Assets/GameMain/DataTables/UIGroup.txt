@@ -1,0 +1,12 @@
+﻿#	UI组配置表			
+#	Id		Name	Depth
+#	int		string	int
+#	配置编号	策划备注	UI组名字	深度
+	1001	主菜单	MainMenu	1
+	1002	关卡主界面	LevelMainInfo	1
+	1003	炮塔列表	TowerList	2
+	1004	暂停界面	PausePanel	3
+	1005	游戏结束	GameOver	4
+	1006	UI遮罩	UIMask	5
+	1007	炮塔控制面板	TowerController	6
+	1008	下载速度界面	DownloadForm	7
