@@ -24,12 +24,11 @@ MonoBehaviour:
   externalHotUpdateAssembliyDirs: []
   strippedAOTDllOutputRootDir: HybridCLRData/AssembliesPostIl2CppStrip
   patchAOTAssemblies:
-  - ExtensionKit
-  - SingletonKit
-  - UIKit
-  - Unity.Addressables
-  - Unity.ResourceManager
+  - GameFramework
+  - LitJson
+  - System
   - UnityEngine.CoreModule
+  - UnityGameFramework.Runtime
   - mscorlib
   outputLinkFile: HybridCLRData/Generated/link.xml
   outputAOTGenericReferenceFile: HybridCLRData/Generated/AOTGenericReferences.cs

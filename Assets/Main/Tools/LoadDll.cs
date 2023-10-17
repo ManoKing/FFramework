@@ -37,12 +37,11 @@ public class LoadDll : MonoBehaviour
     {
         List<string> aotMetaAssemblyFiles = new List<string>()
         {
-            "ExtensionKit.dll",
-            "SingletonKit.dll",
-            "UIKit.dll",
-            "Unity.Addressables.dll",
-            "Unity.ResourceManager.dll",
+            "GameFramework.dll",
+            "LitJson.dll",
+            "System.dll",
             "UnityEngine.CoreModule.dll",
+            "UnityGameFramework.Runtime.dll",
             "mscorlib.dll",
         };
         /// 注意，补充元数据是给AOT dll补充元数据，而不是给热更新dll补充元数据。
