@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Configs
+  m_EditorClassIdentifier: 
+  m_GroupName: Configs
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 04fa59a8812c39d429b1d548a8674674
+  m_SerializeEntries:
+  - m_GUID: 247c6b81e258656418deff7861816d33
+    m_Address: Assets/GameMain/Configs/BuildInfo.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Configs
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d191c02f4deca7e479836315aabf3e8d
+    m_Address: Assets/GameMain/Configs/BuildSettings.xml
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Configs
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 929976fcb9cccfc4dbaf192a4a663890
+    m_Address: Assets/GameMain/Configs/DataTableCodeTemplate.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Configs
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9649279ea3b34d141b0aac3f46d82aef
+    m_Address: Assets/GameMain/Configs/Default.json
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Configs
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cc044ae1c50f8dd4aaa0aacec3101b3e
+    m_Address: Assets/GameMain/Configs/DefaultConfig.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Configs
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 284643d7281fe704ea3551e44bdabd0c
+    m_Address: Assets/GameMain/Configs/EnumTemplate.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Configs
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f772b8f1351f69b40ade4dc0ed08d3c5
+    m_Address: Assets/GameMain/Configs/ResourceBuilder.xml
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Configs
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1670b8a21444fa04b9c5fcc41434ee64
+    m_Address: Assets/GameMain/Configs/ResourceCollection.xml
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Configs
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f6927b16a6efa8745b11b984cb514a99
+    m_Address: Assets/GameMain/Configs/ResourceEditor.xml
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Configs
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 1470d3bd838b88244952159e263d8fed, type: 2}
+  m_SchemaSet:
+    m_Schemas: []

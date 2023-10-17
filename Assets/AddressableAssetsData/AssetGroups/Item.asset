@@ -10,13 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Atlas
+  m_Name: Item
   m_EditorClassIdentifier: 
-  m_GroupName: Atlas
+  m_GroupName: Item
   m_Data:
     m_SerializedData: []
   m_GUID: 0b12e3ccb27b2084c839089cf57b26d3
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: c707bc95ab948454ca1e378dce5e9358
+    m_Address: Assets/GameMain/Item/PlacementTile.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Item
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: faa270e3d0214c242bcbde40d8acb7a9
+    m_Address: Assets/GameMain/Item/SinglePlacementTile.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Item
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 1470d3bd838b88244952159e263d8fed, type: 2}
   m_SchemaSet:

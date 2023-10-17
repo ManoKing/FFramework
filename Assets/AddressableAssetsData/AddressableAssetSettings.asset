@@ -49,6 +49,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 04716f6b1de0f15479cbcbb8cfac7d45, type: 2}
   - {fileID: 11400000, guid: 832a02e09051d9c4ca60d55b317e228f, type: 2}
   - {fileID: 11400000, guid: ba827292cb589a647b26794f6c5a736f, type: 2}
+  - {fileID: 11400000, guid: efff683bc32780649bac864765788f32, type: 2}
+  - {fileID: 11400000, guid: 4506e41d911157f4d84bef5b286859c3, type: 2}
+  - {fileID: 11400000, guid: e3c79a4cd7948dc48a292dbd0dcdcf96, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -97,6 +100,11 @@ MonoBehaviour:
     - Audio
     - Number
     - Dll
+    - Localization
+    - Item
+    - Entity
+    - DataTables
+    - Configs
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 3d78503c53cf77c43a33e765d35750d3, type: 2}

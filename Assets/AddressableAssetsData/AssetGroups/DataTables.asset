@@ -1,0 +1,253 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: DataTables
+  m_EditorClassIdentifier: 
+  m_GroupName: DataTables
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 0cd6027227986cd49ae0129e68e66e26
+  m_SerializeEntries:
+  - m_GUID: 610dea3bfb715434483f0da8284fc96e
+    m_Address: Assets/GameMain/DataTables/AssetsPath.bytes
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTables
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f8398c2b9577f20419edef86a339196e
+    m_Address: Assets/GameMain/DataTables/AssetsPath.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTables
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 654ac13bf998f464189815de72434588
+    m_Address: Assets/GameMain/DataTables/Enemy.bytes
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTables
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a3d0f7c2b11ba0848a581a6015436823
+    m_Address: Assets/GameMain/DataTables/Enemy.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTables
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e70d3ffc3d68f294388ba19573669874
+    m_Address: Assets/GameMain/DataTables/Entity.bytes
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTables
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fc34b2df551505b41b3bbfa52ff7d60f
+    m_Address: Assets/GameMain/DataTables/Entity.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTables
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 74f7712c01fbe59418a236f0a575ae0c
+    m_Address: Assets/GameMain/DataTables/EntityGroup.bytes
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTables
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ecf1757ff857e1546a72edf3a793fa9e
+    m_Address: Assets/GameMain/DataTables/EntityGroup.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTables
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 89d3180f8b763bc45a73f70e294b0aec
+    m_Address: Assets/GameMain/DataTables/Item.bytes
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTables
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 982f85434985666488385481fdbcdbd3
+    m_Address: Assets/GameMain/DataTables/Item.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTables
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 80c018f4dc6c4454d881705d0e1e63be
+    m_Address: Assets/GameMain/DataTables/ItemGroup.bytes
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTables
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5702bcb57aafbda4e8a837eaf4f9badd
+    m_Address: Assets/GameMain/DataTables/ItemGroup.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTables
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bd48eea0ced6c45419b418dcfe222495
+    m_Address: Assets/GameMain/DataTables/Level.bytes
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTables
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7f284d01de25da8438055609f4ac94f6
+    m_Address: Assets/GameMain/DataTables/Level.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTables
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6b0f6e2d35e637e4cb97cc619c129118
+    m_Address: Assets/GameMain/DataTables/PoolParam.bytes
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTables
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 401e63db8f9e9e744ad2d7e0be48639c
+    m_Address: Assets/GameMain/DataTables/PoolParam.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTables
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 43ae2a440a3f03a428445a47c0b749b5
+    m_Address: Assets/GameMain/DataTables/Projectile.bytes
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTables
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b0483ef4b4c8f8b428f785463d7ab666
+    m_Address: Assets/GameMain/DataTables/Projectile.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTables
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5035a572b6f50414c93745e0ca4e3a01
+    m_Address: Assets/GameMain/DataTables/Scene.bytes
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTables
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7937df34063046b46bc9720e70a0e44a
+    m_Address: Assets/GameMain/DataTables/Scene.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTables
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: da473c16b9ad5474cb0d410ba45f691a
+    m_Address: Assets/GameMain/DataTables/Sound.bytes
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTables
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ee66d3503830bc04a99f256b39d2164a
+    m_Address: Assets/GameMain/DataTables/Sound.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTables
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 54f2752d08d923946bc84fe79ef27860
+    m_Address: Assets/GameMain/DataTables/SoundGroup.bytes
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTables
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1a11d57dbb3a22d4a89c91b50b5f4c1d
+    m_Address: Assets/GameMain/DataTables/SoundGroup.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTables
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5dbdfd0a67d92474e974c3a4e7f5ce88
+    m_Address: Assets/GameMain/DataTables/SoundPlayParam.bytes
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTables
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 977445ef583620e48ae137dc4dc5eb66
+    m_Address: Assets/GameMain/DataTables/SoundPlayParam.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTables
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0b333bfceb3d4934d9e68b22ee836b09
+    m_Address: Assets/GameMain/DataTables/Tower.bytes
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTables
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2d2f0465a18347148b6749ab7c5e0e86
+    m_Address: Assets/GameMain/DataTables/Tower.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTables
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 14b4165fcc6426f40844fbeccb0cb0cf
+    m_Address: Assets/GameMain/DataTables/TowerLevel.bytes
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTables
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5070759bc3d66ad45818950f29c4bfcd
+    m_Address: Assets/GameMain/DataTables/TowerLevel.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTables
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f1faaa7f89244084f8723904918d06eb
+    m_Address: Assets/GameMain/DataTables/UIForm.bytes
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTables
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d0969c9350b528b4588681c35a437324
+    m_Address: Assets/GameMain/DataTables/UIForm.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTables
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e0d13eeff961a9f48aa1eca9722fcf23
+    m_Address: Assets/GameMain/DataTables/UIGroup.bytes
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTables
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 125b35f3db6d90942b8717d3b2d02d66
+    m_Address: Assets/GameMain/DataTables/UIGroup.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTables
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c7f59e0c0be460e4bbdeb2128cbc1752
+    m_Address: Assets/GameMain/DataTables/Wave.bytes
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTables
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b0ab402280c12e8449d0064805eb5a6b
+    m_Address: Assets/GameMain/DataTables/Wave.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTables
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7a835e50914362e49acff264d5ce41ca
+    m_Address: Assets/GameMain/DataTables/WaveElement.bytes
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTables
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 17bd2ff83be514547aaec37e6a665bc8
+    m_Address: Assets/GameMain/DataTables/WaveElement.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTables
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 1470d3bd838b88244952159e263d8fed, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 03c8056c769760445b16db03e797575f, type: 2}
+    - {fileID: 11400000, guid: f342ced35d9b0f24faf236a68c467f54, type: 2}
