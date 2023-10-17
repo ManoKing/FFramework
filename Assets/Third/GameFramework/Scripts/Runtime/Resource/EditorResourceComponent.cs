@@ -15,6 +15,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Runtime.InteropServices;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 using UnityEngine.SceneManagement;
 
 namespace UnityGameFramework.Runtime
@@ -979,6 +980,12 @@ namespace UnityGameFramework.Runtime
         /// <param name="userData">用户自定义数据。</param>
         public void LoadAsset(string assetName, Type assetType, int priority, LoadAssetCallbacks loadAssetCallbacks, object userData)
         {
+            var startTime = DateTime.UtcNow;
+            Addressables.LoadAssetAsync<UnityEngine.Object>(assetName).Completed += result => {
+                float elapseSeconds = (float)(DateTime.UtcNow - startTime).TotalSeconds;
+                loadAssetCallbacks.LoadAssetSuccessCallback(assetName, result.Result, elapseSeconds, userData);
+            };
+            /*
             if (loadAssetCallbacks == null)
             {
                 Log.Error("Load asset callbacks is invalid.");
@@ -1016,6 +1023,7 @@ namespace UnityGameFramework.Runtime
             }
 
             m_LoadAssetInfos.AddLast(new LoadAssetInfo(assetName, assetType, priority, DateTime.UtcNow, m_MinLoadAssetRandomDelaySeconds + (float)Utility.Random.GetRandomDouble() * (m_MaxLoadAssetRandomDelaySeconds - m_MinLoadAssetRandomDelaySeconds), loadAssetCallbacks, userData));
+            */
         }
 
         /// <summary>
