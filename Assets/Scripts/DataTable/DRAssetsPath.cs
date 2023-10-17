@@ -5,7 +5,7 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 // 此文件由工具自动生成，请勿直接修改。
-// 生成时间：2020-08-22 00:54:14.801
+// 生成时间：2023-10-17 11:04:41.560
 //------------------------------------------------------------
 
 using GameFramework;
@@ -45,6 +45,15 @@ namespace Flower
             private set;
         }
 
+        /// <summary>
+        /// 获取资源组Id。
+        /// </summary>
+        public string ResourceGroupIndexs
+        {
+            get;
+            private set;
+        }
+
         public override bool ParseDataRow(string dataRowString, object userData)
         {
             string[] columnStrings = dataRowString.Split(DataTableExtension.DataSplitSeparators);
@@ -58,6 +67,7 @@ namespace Flower
             m_Id = int.Parse(columnStrings[index++]);
             index++;
             AssetPath = columnStrings[index++];
+            ResourceGroupIndexs = columnStrings[index++];
 
             GeneratePropertyArray();
             return true;
@@ -71,6 +81,7 @@ namespace Flower
                 {
                     m_Id = binaryReader.Read7BitEncodedInt32();
                     AssetPath = binaryReader.ReadString();
+                    ResourceGroupIndexs = binaryReader.ReadString();
                 }
             }
 

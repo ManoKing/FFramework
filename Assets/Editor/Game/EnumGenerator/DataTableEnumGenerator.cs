@@ -13,7 +13,7 @@ namespace Flower
     public static class DataTableEnumGenerator
     {
         private readonly static string EnumTemplateFileName = "Assets/GameMain/Configs/EnumTemplate.txt";
-        private readonly static string GeneratePath = "Assets/GameMain/Scripts/Enum";
+        private readonly static string GeneratePath = "Assets/Scripts/Enum";
 
         private readonly static string[] GenerateDataTables = {
             "UIForm",

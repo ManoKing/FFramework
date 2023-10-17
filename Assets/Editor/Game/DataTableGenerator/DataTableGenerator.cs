@@ -18,7 +18,7 @@ namespace Flower.Editor.DataTableTools
     public sealed class DataTableGenerator
     {
         private const string DataTablePath = "Assets/GameMain/DataTables";
-        private const string CSharpCodePath = "Assets/GameMain/Scripts/DataTable";
+        private const string CSharpCodePath = "Assets/Scripts/DataTable";
         private const string CSharpCodeTemplateFileName = "Assets/GameMain/Configs/DataTableCodeTemplate.txt";
         private static readonly Regex EndWithNumberRegex = new Regex(@"\d+$");
         private static readonly Regex NameRegex = new Regex(@"^[A-Z][A-Za-z0-9_]*$");
