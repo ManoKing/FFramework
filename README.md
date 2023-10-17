@@ -1,5 +1,4 @@
 ---
-# 改造中，暂时不可用，可以切到改造前提交，开始时间23/10/16.
 
 ## 工程介绍   
 
@@ -38,11 +37,9 @@
 ## 项目包含一个完整的小游戏实例  
 
 #### 游戏介绍  
-改造中。。。  
+基于GameFramework框架实现的塔防游戏，将资源模块改为Addressable，并接入HybridCLR代码热更。  
 
-![Image](ReadMe/1.png)
-![Image](ReadMe/2.png)
-![Image](ReadMe/3.png)
+![Image](ReadMe/TowerDefense.png)
 
 ### UI框架基于QFramework  
 使用框架的UI工具集，并加以改进，如需做新的界面，需要对QFramework进行简单了解，可快速实现    
