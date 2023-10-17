@@ -37,6 +37,7 @@
     <type fullname="GameFramework.Utility/Path" preserve="all" />
     <type fullname="GameFramework.Utility/Text" preserve="all" />
     <type fullname="GameFramework.Variable`1" preserve="all" />
+    <type fullname="GameFramework.Version" preserve="all" />
   </assembly>
   <assembly fullname="LitJson">
     <type fullname="LitJson.JsonMapper" preserve="all" />
@@ -170,6 +171,7 @@
     <type fullname="UnityGameFramework.Runtime.LoadSceneSuccessEventArgs" preserve="all" />
     <type fullname="UnityGameFramework.Runtime.LoadSceneUpdateEventArgs" preserve="all" />
     <type fullname="UnityGameFramework.Runtime.LocalizationComponent" preserve="all" />
+    <type fullname="UnityGameFramework.Runtime.Log" preserve="all" />
     <type fullname="UnityGameFramework.Runtime.NetworkComponent" preserve="all" />
     <type fullname="UnityGameFramework.Runtime.ObjectPoolComponent" preserve="all" />
     <type fullname="UnityGameFramework.Runtime.OpenUIFormSuccessEventArgs" preserve="all" />
@@ -211,6 +213,7 @@
     <type fullname="System.Collections.Generic.Dictionary`2/ValueCollection/Enumerator" preserve="all" />
     <type fullname="System.Collections.Generic.IEnumerable`1" preserve="all" />
     <type fullname="System.Collections.Generic.IEnumerator`1" preserve="all" />
+    <type fullname="System.Collections.Generic.IReadOnlyList`1" preserve="all" />
     <type fullname="System.Collections.Generic.KeyValuePair`2" preserve="all" />
     <type fullname="System.Collections.Generic.List`1" preserve="all" />
     <type fullname="System.Collections.Generic.List`1/Enumerator" preserve="all" />

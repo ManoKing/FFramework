@@ -12,5 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee4bc21567f434b598a3c96ba4946372, type: 3}
   m_Name: AssetReferenceDB
   m_EditorClassIdentifier: 
-  m_assets: []
+  m_assets:
+  - m_assetDatabaseId: b1afefbfe85a2424e86dad120a32f57c
+    m_importFrom: Assets/AssetGraph/AssetBundles/Cache/TemporalSettingFiles/AssetReferenceDB.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b95da2741c7254343be90ea6c5a2d752
+    m_importFrom: Assets/StreamingAssets/build_info
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b13da774a1c144b498cc82fc5cb01e73
+    m_importFrom: Assets/GameMain/Scenes/GameStart/GameStart.unity
+    m_exportTo: 
+    m_variantName: 
   m_version: 2

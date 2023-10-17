@@ -7,6 +7,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class LoadDll : MonoBehaviour
 {
@@ -19,14 +20,15 @@ public class LoadDll : MonoBehaviour
     {
         LoadMetadataForAOTAssemblies();
 #if !UNITY_EDITOR
-        var handleHotFix = Addressables.LoadAssetAsync<TextAsset>("HotFix.dll").WaitForCompletion();
+        var handleHotFix = Addressables.LoadAssetAsync<TextAsset>("Assembly-CSharp.dll").WaitForCompletion();
         System.Reflection.Assembly.Load(handleHotFix.bytes);
 #endif
         HotUpdatePrefab();
     }
     void HotUpdatePrefab()
     {
-        Addressables.LoadSceneAsync("HotUpdateScene");
+        //Addressables.LoadSceneAsync("HotUpdateScene");
+        SceneManager.LoadScene(0);
     }
 
     /// <summary>
