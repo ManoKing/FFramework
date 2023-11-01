@@ -13,16 +13,192 @@ MonoBehaviour:
   m_Name: AssetReferenceDB
   m_EditorClassIdentifier: 
   m_assets:
-  - m_assetDatabaseId: b1afefbfe85a2424e86dad120a32f57c
-    m_importFrom: Assets/AssetGraph/AssetBundles/Cache/TemporalSettingFiles/AssetReferenceDB.asset
+  - m_assetDatabaseId: 820e4fdcb4c95ef4095ae722cbd3277b
+    m_importFrom: Assets/GameMain/Entity/MissileArray/MissileArrayPreview.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8c96726848dd838449d38ebe49a4af04
+    m_importFrom: Assets/GameMain/Entity/MissileArray/MissileArray.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b1dd30f2294c3d64e86a37c8a3e142ad
+    m_importFrom: Assets/GameMain/Entity/EMPGenerator/EMPGenerator.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4db00e1153a3ba24b83c8aa44e59bcb2
+    m_importFrom: Assets/GameMain/Entity/RocketPlatform/RocketPlatform_Level2.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8459948c5a0088248a727f510f5ae681
+    m_importFrom: Assets/GameMain/Entity/PlasmaLance/PlasmaLance_Level1.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8b31927881dde1540b137b7f89bd0cdc
+    m_importFrom: Assets/GameMain/Entity/Enemies/Hoverboss.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e3e1ee90c7762ff4e8c79a4b1a712402
+    m_importFrom: Assets/GameMain/Entity/MissileArray/SuperTowerProjectile.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 91e34a761e6547a4fb2b6376f4034214
+    m_importFrom: Assets/GameMain/Entity/PlasmaLance/PlasmaLance_Level2.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: af0927bda82e7134f8087223e68e6c2c
+    m_importFrom: Assets/GameMain/Entity/Enemies/SuperHovertank.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 16a99d0a844afa843b94afffc73b5162
+    m_importFrom: Assets/GameMain/Entity/RocketPlatform/RocketPlatformPreview.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: aec58fc4be56e5c42b13d4363f8cd283
+    m_importFrom: Assets/GameMain/Entity/EnergyPylon/EnergyPylonPreview.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 18678a28cef624aeb89c5717c46be35b
+    m_importFrom: Packages/com.unity.assetgraph/Editor/SettingTemplate/setting.fbx
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: adb3eb1c35fcff14f89fba7b05c9d71c
+    m_importFrom: Assets/Third/GameFramework/Prefabs/GameFramework.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 49a3969d998dbff4bb8afbb1715b580f
+    m_importFrom: Assets/GameMain/Entity/EnergyPylon/EnergyPylon_Level2.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9a7040bd5c6b20a4887fa5e4588a4f3e
+    m_importFrom: Assets/GameMain/Entity/AssaultCannon/AssaultCannon_Level1.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2684a1c4db9d69d41b3f07c6d26ea92d
+    m_importFrom: Assets/GameMain/Entity/Enemies/SuperHoverboss.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7d93ef64014fd6a4d9bb47a39a3a20e3
+    m_importFrom: Assets/GameMain/Entity/EnemyProjectile.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0da5d1fab0b4f5f4c9c2354b9a121259
+    m_importFrom: Assets/GameMain/Entity/RocketPlatform/RocketProjectile.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f13500b418c84db489bb75d7234cd343
+    m_importFrom: Assets/GameMain/Entity/EnergyPylon/EnergyPylon_Level1.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c707bc95ab948454ca1e378dce5e9358
+    m_importFrom: Assets/GameMain/Item/PlacementTile.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 293df2a6d0c1fe2419f7fead8f64d9ad
+    m_importFrom: Assets/GameMain/Entity/PlasmaLance/LaserProjectile.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d95e38fd6f021674d83ba81cc0554ff1
+    m_importFrom: Assets/GameMain/Entity/RocketPlatform/RocketPlatform_Level3.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: faa270e3d0214c242bcbde40d8acb7a9
+    m_importFrom: Assets/GameMain/Item/SinglePlacementTile.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 87b1bb64b83880c4580ca412e0ca5f90
+    m_importFrom: Assets/GameMain/Entity/MissileArray/MissileArray_Level1.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7e1550d1279a6a04fb4fc06d48a5c41d
+    m_importFrom: Assets/GameMain/Entity/Enemies/Hoverbuggy.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 47d081471431a6141abbd27d8b6b36aa
+    m_importFrom: Assets/GameMain/Entity/AssaultCannon/MachineGunProjectile.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 35ea3d79e6d719b4fbbae5f68e64f43b
+    m_importFrom: Assets/GameMain/Entity/RocketPlatform/RocketPlatform.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ef4461c923b09994584fdb6563d3faf1
+    m_importFrom: Assets/GameMain/Entity/EntityPlayer.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d07ecebe09082a54b9f4a0d6b2bf91e4
+    m_importFrom: Assets/GameMain/Entity/RocketPlatform/RocketPlatform_Level1.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a2c2a6ec392666d43bc1904741758f04
+    m_importFrom: Assets/GameMain/Entity/Enemies/SuperHoverbuggy.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4361f589f95c04c42bdcf4793b7353dc
+    m_importFrom: Assets/GameMain/Entity/EnergyPylon/EnergyPylon_Level3.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e7ea0259da0ad1040aea7b4d864fe206
+    m_importFrom: Assets/GameMain/Entity/HPBar.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7292d1ebf364bd9409fd4b6fc6ee75fe
+    m_importFrom: Assets/GameMain/Entity/PlasmaLance/PlasmaLance_Level3.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 073ca2ed003aedf4cb608d9ce2d58514
+    m_importFrom: Assets/GameMain/Entity/Enemies/SuperHovercopter.prefab
     m_exportTo: 
     m_variantName: 
   - m_assetDatabaseId: b95da2741c7254343be90ea6c5a2d752
     m_importFrom: Assets/StreamingAssets/build_info
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: b13da774a1c144b498cc82fc5cb01e73
-    m_importFrom: Assets/GameMain/Scenes/GameStart/GameStart.unity
+  - m_assetDatabaseId: 6c63b4e8a9a78b94da4eb0497f842615
+    m_importFrom: Assets/GameMain/Entity/EnergyPylon/EnergyPylon.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 541ab289e59da4e4281d981b7f31ea13
+    m_importFrom: Assets/GameMain/Entity/Enemies/Hovercopter.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5a4b7618f48551643aaceba542fed0af
+    m_importFrom: Assets/GameMain/Entity/PlasmaLance/PlasmaLance.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b452648877e07ee4390ebd4f9803dcd8
+    m_importFrom: Assets/GameMain/Entity/RadiusVisualiser.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9f73f2e992c8e844bb2579ebcb3dfcf4
+    m_importFrom: Assets/GameMain/Entity/AssaultCannon/AssaultCannon_Level3.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 474ea29b517c95848bbe596875ca0593
+    m_importFrom: Assets/GameMain/Entity/AssaultCannon/AssaultCannon.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: fb6cc224229e9f04b84157a6dfed7851
+    m_importFrom: Assets/GameMain/Entity/Enemies/Hovertank.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6383895fc3769164d90be5679dea0cc2
+    m_importFrom: Assets/GameMain/Entity/PlasmaLance/PlasmaLancePreview.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 21b3cf78465345e4e88545e54ca54c2a
+    m_importFrom: Assets/GameMain/Entity/EMPGenerator/EMPGeneratorPreview.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3be5d87b18055e3458fd11ba66cfa94f
+    m_importFrom: Assets/GameMain/Entity/AssaultCannon/AssaultCannon_Level2.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 917941f1d8862ff4a8dbcd474757c151
+    m_importFrom: Assets/GameMain/Entity/AssaultCannon/AssaultCannonPreview.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0d28baceb98e4cd42ac0bdfe85ab7997
+    m_importFrom: Assets/Editor/Game/GameFrameworkConfigs.cs
     m_exportTo: 
     m_variantName: 
   m_version: 2
