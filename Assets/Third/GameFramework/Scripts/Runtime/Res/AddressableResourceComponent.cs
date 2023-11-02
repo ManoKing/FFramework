@@ -8,84 +8,205 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using UnityGameFramework.Runtime;
 
-public class AddressableResourceComponent : MonoBehaviour, IResourceManager
+/// <summary>
+/// Addressable资源组件。
+/// </summary>
+[DisallowMultipleComponent]
+[AddComponentMenu("Game Framework/AddressableResource")]
+public class AddressableResourceComponent : GameFrameworkComponent, IResourceManager
 {
-    public string ReadOnlyPath => throw new NotImplementedException();
+    private const int DefaultPriority = 0;
+    private IResourceManager m_ResourceManager = null;
 
-    public string ReadWritePath => throw new NotImplementedException();
+    public event EventHandler<GameFramework.Resource.ResourceApplySuccessEventArgs> ResourceApplySuccess;
+    public event EventHandler<GameFramework.Resource.ResourceApplyFailureEventArgs> ResourceApplyFailure;
+    public event EventHandler<GameFramework.Resource.ResourceUpdateStartEventArgs> ResourceUpdateStart;
+    public event EventHandler<GameFramework.Resource.ResourceUpdateChangedEventArgs> ResourceUpdateChanged;
+    public event EventHandler<GameFramework.Resource.ResourceUpdateSuccessEventArgs> ResourceUpdateSuccess;
+    public event EventHandler<GameFramework.Resource.ResourceUpdateFailureEventArgs> ResourceUpdateFailure;
 
-    public ResourceMode ResourceMode => throw new NotImplementedException();
+    /// <summary>
+    /// 卸载资源。
+    /// </summary>
+    /// <param name="asset">要卸载的资源。</param>
+    public void UnloadAsset(object asset)
+    {
+        m_ResourceManager.UnloadAsset(asset);
+    }
 
-    public string CurrentVariant => throw new NotImplementedException();
+    /// <summary>
+    /// 游戏框架组件初始化。
+    /// </summary>
+    protected override void Awake()
+    {
+        base.Awake();
+    }
 
-    public PackageVersionListSerializer PackageVersionListSerializer => throw new NotImplementedException();
+    private void Start()
+    {
+        BaseComponent baseComponent = GameEntry.GetComponent<BaseComponent>();
+        if (baseComponent == null)
+        {
+            Log.Fatal("Base component is invalid.");
+            return;
+        }
 
-    public UpdatableVersionListSerializer UpdatableVersionListSerializer => throw new NotImplementedException();
+        var m_EditorResourceMode = baseComponent.EditorResourceMode;
+        m_ResourceManager = m_EditorResourceMode ? baseComponent.EditorResourceHelper : GameFrameworkEntry.GetModule<IResourceManager>();
+        if (m_ResourceManager == null)
+        {
+            Log.Fatal("Resource manager is invalid.");
+            return;
+        }
+    }
 
-    public ReadOnlyVersionListSerializer ReadOnlyVersionListSerializer => throw new NotImplementedException();
+    /// <summary>
+    /// 强制执行释放未被使用的资源。
+    /// </summary>
+    /// <param name="performGCCollect">是否使用垃圾回收。</param>
+    public void ForceUnloadUnusedAssets(bool performGCCollect)
+    {
+        throw new NotSupportedException("ForceUnloadUnusedAssets");
+    }
 
-    public ReadWriteVersionListSerializer ReadWriteVersionListSerializer => throw new NotImplementedException();
+    /// <summary>
+    /// 使用单机模式并初始化资源。
+    /// </summary>
+    /// <param name="initResourcesCompleteCallback">使用单机模式并初始化资源完成时的回调函数。</param>
+    public void InitResources(InitResourcesCompleteCallback initResourcesCompleteCallback)
+    {
+        throw new NotSupportedException("InitResources");
+    }
 
-    public ResourcePackVersionListSerializer ResourcePackVersionListSerializer => throw new NotImplementedException();
+    /// <summary>
+    /// 获取正在更新的资源组。
+    /// </summary>
+    public IResourceGroup UpdatingResourceGroup
+    {
+        get
+        {
+            throw new NotSupportedException("UpdatingResourceGroup");
+        }
+    }
 
-    public string ApplicableGameVersion => throw new NotImplementedException();
+    /// <summary>
+    /// 使用可更新模式并检查资源。
+    /// </summary>
+    /// <param name="ignoreOtherVariant">是否忽略处理其它变体的资源，若不忽略，将会移除其它变体的资源。</param>
+    /// <param name="checkResourcesCompleteCallback">使用可更新模式并检查资源完成时的回调函数。</param>
+    public void CheckResources(CheckResourcesCompleteCallback checkResourcesCompleteCallback)
+    {
+        throw new NotSupportedException("CheckResources");
+    }
 
-    public int InternalResourceVersion => throw new NotImplementedException();
+    /// <summary>
+    /// 获取资源组。
+    /// </summary>
+    /// <param name="resourceGroupName">要获取的资源组名称。</param>
+    /// <returns>要获取的资源组。</returns>
+    public IResourceGroup GetResourceGroup(string resourceGroupName)
+    {
+        throw new NotSupportedException("GetResourceGroup");
+    }
 
-    public int AssetCount => throw new NotImplementedException();
 
-    public int ResourceCount => throw new NotImplementedException();
+    /// <summary>
+    /// 获取资源模式。
+    /// </summary>
+    public ResourceMode ResourceMode
+    {
+        get
+        {
+            return ResourceMode.Unspecified;
+        }
+    }
 
-    public int ResourceGroupCount => throw new NotImplementedException();
+    /// <summary>
+    /// 使用可更新模式并更新版本资源列表。
+    /// </summary>
+    /// <param name="versionListLength">版本资源列表大小。</param>
+    /// <param name="versionListHashCode">版本资源列表哈希值。</param>
+    /// <param name="versionListZipLength">版本资源列表压缩后大小。</param>
+    /// <param name="versionListZipHashCode">版本资源列表压缩后哈希值。</param>
+    /// <param name="updateVersionListCallbacks">版本资源列表更新回调函数集。</param>
+    public void UpdateVersionList(int versionListLength, int versionListHashCode, int versionListZipLength, int versionListZipHashCode, UpdateVersionListCallbacks updateVersionListCallbacks)
+    {
+        throw new NotSupportedException("UpdateVersionList");
+    }
 
-    public string UpdatePrefixUri { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    public int GenerateReadWriteVersionListLength { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    /// <summary>
+    /// 设置当前变体。
+    /// </summary>
+    /// <param name="currentVariant">当前变体。</param>
+    public void SetCurrentVariant(string currentVariant)
+    {
+        throw new NotSupportedException("SetCurrentVariant");
+    }
 
-    public string ApplyingResourcePackPath => throw new NotImplementedException();
 
-    public int ApplyWaitingCount => throw new NotImplementedException();
+    /// <summary>
+    /// 使用可更新模式并更新指定资源组的资源。
+    /// </summary>
+    /// <param name="resourceGroupName">要更新的资源组名称。</param>
+    /// <param name="updateResourcesCompleteCallback">使用可更新模式并更新指定资源组完成时的回调函数。</param>
+    public void UpdateResources(string resourceGroupName, UpdateResourcesCompleteCallback updateResourcesCompleteCallback)
+    {
+        throw new NotSupportedException("UpdateResources");
+    }
 
-    public int UpdateRetryCount { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    /// <summary>
+    /// 检查版本资源列表。
+    /// </summary>
+    /// <param name="latestInternalResourceVersion">最新的内部资源版本号。</param>
+    /// <returns>检查版本资源列表结果。</returns>
+    public CheckVersionListResult CheckVersionList(int latestInternalResourceVersion)
+    {
+        throw new NotSupportedException("CheckVersionList");
+    }
 
-    public IResourceGroup UpdatingResourceGroup => throw new NotImplementedException();
-
-    public int UpdateWaitingCount => throw new NotImplementedException();
-
-    public int UpdateCandidateCount => throw new NotImplementedException();
-
-    public int UpdatingCount => throw new NotImplementedException();
-
-    public int LoadTotalAgentCount => throw new NotImplementedException();
-
-    public int LoadFreeAgentCount => throw new NotImplementedException();
-
-    public int LoadWorkingAgentCount => throw new NotImplementedException();
-
-    public int LoadWaitingTaskCount => throw new NotImplementedException();
-
-    public float AssetAutoReleaseInterval { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    public int AssetCapacity { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    public float AssetExpireTime { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    public int AssetPriority { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    public float ResourceAutoReleaseInterval { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    public int ResourceCapacity { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    public float ResourceExpireTime { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    public int ResourcePriority { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-
-    public event EventHandler<ResourceApplySuccessEventArgs> ResourceApplySuccess;
-    public event EventHandler<ResourceApplyFailureEventArgs> ResourceApplyFailure;
-    public event EventHandler<ResourceUpdateStartEventArgs> ResourceUpdateStart;
-    public event EventHandler<ResourceUpdateChangedEventArgs> ResourceUpdateChanged;
-    public event EventHandler<ResourceUpdateSuccessEventArgs> ResourceUpdateSuccess;
-    public event EventHandler<ResourceUpdateFailureEventArgs> ResourceUpdateFailure;
-
-    public void AddLoadResourceAgentHelper(ILoadResourceAgentHelper loadResourceAgentHelper)
+    public void SetReadOnlyPath(string readOnlyPath)
     {
         throw new NotImplementedException();
     }
 
-    public void ApplyResources(string resourcePackPath, ApplyResourcesCompleteCallback applyResourcesCompleteCallback)
+    public void SetReadWritePath(string readWritePath)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void SetResourceMode(ResourceMode resourceMode)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void SetObjectPoolManager(IObjectPoolManager objectPoolManager)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void SetFileSystemManager(IFileSystemManager fileSystemManager)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void SetDownloadManager(IDownloadManager downloadManager)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void SetDecryptResourceCallback(DecryptResourceCallback decryptResourceCallback)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void SetResourceHelper(IResourceHelper resourceHelper)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void AddLoadResourceAgentHelper(ILoadResourceAgentHelper loadResourceAgentHelper)
     {
         throw new NotImplementedException();
     }
@@ -95,17 +216,147 @@ public class AddressableResourceComponent : MonoBehaviour, IResourceManager
         throw new NotImplementedException();
     }
 
-    public CheckVersionListResult CheckVersionList(int latestInternalResourceVersion)
+    public void ApplyResources(string resourcePackPath, ApplyResourcesCompleteCallback applyResourcesCompleteCallback)
     {
         throw new NotImplementedException();
     }
 
-    public TaskInfo[] GetAllLoadAssetInfos()
+    public void UpdateResources(UpdateResourcesCompleteCallback updateResourcesCompleteCallback)
     {
         throw new NotImplementedException();
     }
 
-    public int GetBinaryLength(string binaryAssetName)
+    public bool VerifyResourcePack(string resourcePackPath)
+    {
+        throw new NotImplementedException();
+    }
+
+    public HasAssetResult HasAsset(string assetName)
+    {
+        throw new NotImplementedException();
+    }
+    /// <summary>
+    /// 异步加载资源。
+    /// </summary>
+    /// <param name="assetName">要加载资源的名称。</param>
+    /// <param name="loadAssetCallbacks">加载资源回调函数集。</param>
+    public void LoadAsset(string assetName, LoadAssetCallbacks loadAssetCallbacks)
+    {
+        LoadAsset(assetName, null, DefaultPriority, loadAssetCallbacks, null);
+    }
+
+    /// <summary>
+    /// 异步加载资源。
+    /// </summary>
+    /// <param name="assetName">要加载资源的名称。</param>
+    /// <param name="assetType">要加载资源的类型。</param>
+    /// <param name="loadAssetCallbacks">加载资源回调函数集。</param>
+    public void LoadAsset(string assetName, Type assetType, LoadAssetCallbacks loadAssetCallbacks)
+    {
+        LoadAsset(assetName, assetType, DefaultPriority, loadAssetCallbacks, null);
+    }
+
+    /// <summary>
+    /// 异步加载资源。
+    /// </summary>
+    /// <param name="assetName">要加载资源的名称。</param>
+    /// <param name="priority">加载资源的优先级。</param>
+    /// <param name="loadAssetCallbacks">加载资源回调函数集。</param>
+    public void LoadAsset(string assetName, int priority, LoadAssetCallbacks loadAssetCallbacks)
+    {
+        LoadAsset(assetName, null, priority, loadAssetCallbacks, null);
+    }
+
+    /// <summary>
+    /// 异步加载资源。
+    /// </summary>
+    /// <param name="assetName">要加载资源的名称。</param>
+    /// <param name="loadAssetCallbacks">加载资源回调函数集。</param>
+    /// <param name="userData">用户自定义数据。</param>
+    public void LoadAsset(string assetName, LoadAssetCallbacks loadAssetCallbacks, object userData)
+    {
+        LoadAsset(assetName, null, DefaultPriority, loadAssetCallbacks, userData);
+    }
+
+    /// <summary>
+    /// 异步加载资源。
+    /// </summary>
+    /// <param name="assetName">要加载资源的名称。</param>
+    /// <param name="assetType">要加载资源的类型。</param>
+    /// <param name="priority">加载资源的优先级。</param>
+    /// <param name="loadAssetCallbacks">加载资源回调函数集。</param>
+    public void LoadAsset(string assetName, Type assetType, int priority, LoadAssetCallbacks loadAssetCallbacks)
+    {
+        LoadAsset(assetName, assetType, priority, loadAssetCallbacks, null);
+    }
+
+    /// <summary>
+    /// 异步加载资源。
+    /// </summary>
+    /// <param name="assetName">要加载资源的名称。</param>
+    /// <param name="assetType">要加载资源的类型。</param>
+    /// <param name="loadAssetCallbacks">加载资源回调函数集。</param>
+    /// <param name="userData">用户自定义数据。</param>
+    public void LoadAsset(string assetName, Type assetType, LoadAssetCallbacks loadAssetCallbacks, object userData)
+    {
+        LoadAsset(assetName, assetType, DefaultPriority, loadAssetCallbacks, userData);
+    }
+
+    /// <summary>
+    /// 异步加载资源。
+    /// </summary>
+    /// <param name="assetName">要加载资源的名称。</param>
+    /// <param name="priority">加载资源的优先级。</param>
+    /// <param name="loadAssetCallbacks">加载资源回调函数集。</param>
+    /// <param name="userData">用户自定义数据。</param>
+    public void LoadAsset(string assetName, int priority, LoadAssetCallbacks loadAssetCallbacks, object userData)
+    {
+        LoadAsset(assetName, null, priority, loadAssetCallbacks, userData);
+    }
+
+    /// <summary>
+    /// 异步加载资源。
+    /// </summary>
+    /// <param name="assetName">要加载资源的名称。</param>
+    /// <param name="assetType">要加载资源的类型。</param>
+    /// <param name="priority">加载资源的优先级。</param>
+    /// <param name="loadAssetCallbacks">加载资源回调函数集。</param>
+    /// <param name="userData">用户自定义数据。</param>
+    public void LoadAsset(string assetName, Type assetType, int priority, LoadAssetCallbacks loadAssetCallbacks, object userData)
+    {
+        var startTime = DateTime.UtcNow;
+        Addressables.LoadAssetAsync<UnityEngine.Object>(assetName).Completed += result => {
+            float elapseSeconds = (float)(DateTime.UtcNow - startTime).TotalSeconds;
+            loadAssetCallbacks.LoadAssetSuccessCallback(assetName, result.Result, elapseSeconds, userData);
+        };
+    }
+
+    public void LoadScene(string sceneAssetName, LoadSceneCallbacks loadSceneCallbacks)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void LoadScene(string sceneAssetName, int priority, LoadSceneCallbacks loadSceneCallbacks)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void LoadScene(string sceneAssetName, LoadSceneCallbacks loadSceneCallbacks, object userData)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void LoadScene(string sceneAssetName, int priority, LoadSceneCallbacks loadSceneCallbacks, object userData)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void UnloadScene(string sceneAssetName, UnloadSceneCallbacks unloadSceneCallbacks)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void UnloadScene(string sceneAssetName, UnloadSceneCallbacks unloadSceneCallbacks, object userData)
     {
         throw new NotImplementedException();
     }
@@ -120,77 +371,10 @@ public class AddressableResourceComponent : MonoBehaviour, IResourceManager
         throw new NotImplementedException();
     }
 
-    public IResourceGroup GetResourceGroup()
+    public int GetBinaryLength(string binaryAssetName)
     {
         throw new NotImplementedException();
     }
-
-    public IResourceGroup GetResourceGroup(string resourceGroupName)
-    {
-        throw new NotImplementedException();
-    }
-
-    public HasAssetResult HasAsset(string assetName)
-    {
-        throw new NotImplementedException();
-    }
-
-    public bool HasResourceGroup(string resourceGroupName)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void InitResources(InitResourcesCompleteCallback initResourcesCompleteCallback)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void LoadAsset(string assetName, LoadAssetCallbacks loadAssetCallbacks)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void LoadAsset(string assetName, Type assetType, LoadAssetCallbacks loadAssetCallbacks)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void LoadAsset(string assetName, int priority, LoadAssetCallbacks loadAssetCallbacks)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void LoadAsset(string assetName, LoadAssetCallbacks loadAssetCallbacks, object userData)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void LoadAsset(string assetName, Type assetType, int priority, LoadAssetCallbacks loadAssetCallbacks)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void LoadAsset(string assetName, Type assetType, LoadAssetCallbacks loadAssetCallbacks, object userData)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void LoadAsset(string assetName, int priority, LoadAssetCallbacks loadAssetCallbacks, object userData)
-    {
-        var startTime = DateTime.UtcNow;
-        Addressables.LoadAssetAsync<GameObject>(assetName).Completed += result => {
-            float elapseSeconds = (float)(DateTime.UtcNow - startTime).TotalSeconds;
-            loadAssetCallbacks.LoadAssetSuccessCallback(assetName, result, elapseSeconds, userData);
-        };
-    }
-
-    public void LoadAsset(string assetName, Type assetType, int priority, LoadAssetCallbacks loadAssetCallbacks, object userData)
-    {
-        throw new NotImplementedException();
-    }
-
-    
-
 
     public void LoadBinary(string binaryAssetName, LoadBinaryCallbacks loadBinaryCallbacks)
     {
@@ -262,103 +446,109 @@ public class AddressableResourceComponent : MonoBehaviour, IResourceManager
         throw new NotImplementedException();
     }
 
-    public void LoadScene(string sceneAssetName, LoadSceneCallbacks loadSceneCallbacks)
+    public bool HasResourceGroup(string resourceGroupName)
     {
         throw new NotImplementedException();
     }
 
-    public void LoadScene(string sceneAssetName, int priority, LoadSceneCallbacks loadSceneCallbacks)
+    public IResourceGroup GetResourceGroup()
     {
         throw new NotImplementedException();
     }
 
-    public void LoadScene(string sceneAssetName, LoadSceneCallbacks loadSceneCallbacks, object userData)
+    public TaskInfo[] GetAllLoadAssetInfos()
     {
         throw new NotImplementedException();
     }
 
-    public void LoadScene(string sceneAssetName, int priority, LoadSceneCallbacks loadSceneCallbacks, object userData)
+    /// <summary>
+    /// 获取或设置资源更新下载地址。
+    /// </summary>
+    public string UpdatePrefixUri
     {
-        throw new NotImplementedException();
+        get
+        {
+            throw new NotSupportedException("UpdatePrefixUri");
+        }
+        set
+        {
+            throw new NotSupportedException("UpdatePrefixUri");
+        }
     }
 
-    public void SetCurrentVariant(string currentVariant)
+
+    /// <summary>
+    /// 获取当前资源适用的游戏版本号。
+    /// </summary>
+    public string ApplicableGameVersion
     {
-        throw new NotImplementedException();
+        get
+        {
+            throw new NotSupportedException("ApplicableGameVersion");
+        }
     }
 
-    public void SetDecryptResourceCallback(DecryptResourceCallback decryptResourceCallback)
+    /// <summary>
+    /// 获取当前内部资源版本号。
+    /// </summary>
+    public int InternalResourceVersion
     {
-        throw new NotImplementedException();
+        get
+        {
+            throw new NotSupportedException("InternalResourceVersion");
+        }
     }
 
-    public void SetDownloadManager(IDownloadManager downloadManager)
-    {
-        throw new NotImplementedException();
-    }
+    public string ReadOnlyPath => throw new NotImplementedException();
 
-    public void SetFileSystemManager(IFileSystemManager fileSystemManager)
-    {
-        throw new NotImplementedException();
-    }
+    public string ReadWritePath => throw new NotImplementedException();
 
-    public void SetObjectPoolManager(IObjectPoolManager objectPoolManager)
-    {
-        throw new NotImplementedException();
-    }
+    public string CurrentVariant => throw new NotImplementedException();
 
-    public void SetReadOnlyPath(string readOnlyPath)
-    {
-        throw new NotImplementedException();
-    }
+    public PackageVersionListSerializer PackageVersionListSerializer => throw new NotImplementedException();
 
-    public void SetReadWritePath(string readWritePath)
-    {
-        throw new NotImplementedException();
-    }
+    public UpdatableVersionListSerializer UpdatableVersionListSerializer => throw new NotImplementedException();
 
-    public void SetResourceHelper(IResourceHelper resourceHelper)
-    {
-        throw new NotImplementedException();
-    }
+    public ReadOnlyVersionListSerializer ReadOnlyVersionListSerializer => throw new NotImplementedException();
 
-    public void SetResourceMode(ResourceMode resourceMode)
-    {
-        throw new NotImplementedException();
-    }
+    public ReadWriteVersionListSerializer ReadWriteVersionListSerializer => throw new NotImplementedException();
 
-    public void UnloadAsset(object asset)
-    {
-        throw new NotImplementedException();
-    }
+    public ResourcePackVersionListSerializer ResourcePackVersionListSerializer => throw new NotImplementedException();
 
-    public void UnloadScene(string sceneAssetName, UnloadSceneCallbacks unloadSceneCallbacks)
-    {
-        throw new NotImplementedException();
-    }
+    public int AssetCount => throw new NotImplementedException();
 
-    public void UnloadScene(string sceneAssetName, UnloadSceneCallbacks unloadSceneCallbacks, object userData)
-    {
-        throw new NotImplementedException();
-    }
+    public int ResourceCount => throw new NotImplementedException();
 
-    public void UpdateResources(UpdateResourcesCompleteCallback updateResourcesCompleteCallback)
-    {
-        throw new NotImplementedException();
-    }
+    public int ResourceGroupCount => throw new NotImplementedException();
 
-    public void UpdateResources(string resourceGroupName, UpdateResourcesCompleteCallback updateResourcesCompleteCallback)
-    {
-        throw new NotImplementedException();
-    }
+    public int GenerateReadWriteVersionListLength { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
-    public void UpdateVersionList(int versionListLength, int versionListHashCode, int versionListZipLength, int versionListZipHashCode, UpdateVersionListCallbacks updateVersionListCallbacks)
-    {
-        throw new NotImplementedException();
-    }
+    public string ApplyingResourcePackPath => throw new NotImplementedException();
 
-    public bool VerifyResourcePack(string resourcePackPath)
-    {
-        throw new NotImplementedException();
-    }
+    public int ApplyWaitingCount => throw new NotImplementedException();
+
+    public int UpdateRetryCount { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+    public int UpdateWaitingCount => throw new NotImplementedException();
+
+    public int UpdateCandidateCount => throw new NotImplementedException();
+
+    public int UpdatingCount => throw new NotImplementedException();
+
+    public int LoadTotalAgentCount => throw new NotImplementedException();
+
+    public int LoadFreeAgentCount => throw new NotImplementedException();
+
+    public int LoadWorkingAgentCount => throw new NotImplementedException();
+
+    public int LoadWaitingTaskCount => throw new NotImplementedException();
+
+    public float AssetAutoReleaseInterval { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    public int AssetCapacity { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    public float AssetExpireTime { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    public int AssetPriority { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    public float ResourceAutoReleaseInterval { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    public int ResourceCapacity { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    public float ResourceExpireTime { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    public int ResourcePriority { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 }

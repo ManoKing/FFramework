@@ -144,7 +144,7 @@ namespace Flower
         /// <summary>
         /// 获取资源组件。
         /// </summary>
-        public static ResourceComponent Resource
+        public static AddressableResourceComponent Resource
         {
             get;
             private set;
@@ -211,7 +211,7 @@ namespace Flower
             Network = UnityGameFramework.Runtime.GameEntry.GetComponent<NetworkComponent>();
             ObjectPool = UnityGameFramework.Runtime.GameEntry.GetComponent<ObjectPoolComponent>();
             Procedure = UnityGameFramework.Runtime.GameEntry.GetComponent<ProcedureComponent>();
-            Resource = UnityGameFramework.Runtime.GameEntry.GetComponent<ResourceComponent>();
+            Resource = UnityGameFramework.Runtime.GameEntry.GetComponent<AddressableResourceComponent>();
             Scene = UnityGameFramework.Runtime.GameEntry.GetComponent<SceneComponent>();
             Setting = UnityGameFramework.Runtime.GameEntry.GetComponent<SettingComponent>();
             Sound = UnityGameFramework.Runtime.GameEntry.GetComponent<SoundComponent>();

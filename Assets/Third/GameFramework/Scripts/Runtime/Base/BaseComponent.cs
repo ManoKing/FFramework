@@ -387,7 +387,7 @@ namespace UnityGameFramework.Runtime
                 objectPoolComponent.ReleaseAllUnused();
             }
 
-            ResourceComponent resourceCompoent = GameEntry.GetComponent<ResourceComponent>();
+            AddressableResourceComponent resourceCompoent = GameEntry.GetComponent<AddressableResourceComponent>();
             if (resourceCompoent != null)
             {
                 resourceCompoent.ForceUnloadUnusedAssets(true);
