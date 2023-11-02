@@ -1045,7 +1045,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1747513118}
-  - component: {fileID: 1753286758}
+  - component: {fileID: 1747967789}
   m_Layer: 0
   m_Name: Resource
   m_TagString: Untagged
@@ -1053,6 +1053,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1747967789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747967788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2299f2e28f354c4885a746ca6ab3566, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1747968940
 GameObject:
   m_ObjectHideFlags: 0
@@ -1307,38 +1319,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67038fd9feefc894aa31ae3869a45b72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1753286758
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1747967788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eff66e40586ec14d8a301d416f17f1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ResourceMode: 2
-  m_ReadWritePathType: 0
-  m_UnloadUnusedAssetsInterval: 60
-  m_AssetAutoReleaseInterval: 60
-  m_AssetCapacity: 64
-  m_AssetExpireTime: 60
-  m_AssetPriority: 10000
-  m_ResourceAutoReleaseInterval: 60
-  m_ResourceCapacity: 16
-  m_ResourceExpireTime: 60
-  m_ResourcePriority: 20000
-  m_UpdatePrefixUri: 
-  m_GenerateReadWriteVersionListLength: 1048576
-  m_UpdateRetryCount: 3
-  m_InstanceRoot: {fileID: 0}
-  m_ResourceHelperTypeName: UnityGameFramework.Runtime.DefaultResourceHelper
-  m_CustomResourceHelper: {fileID: 0}
-  m_LoadResourceAgentHelperTypeName: UnityGameFramework.Runtime.DefaultLoadResourceAgentHelper
-  m_CustomLoadResourceAgentHelper: {fileID: 0}
-  m_LoadResourceAgentHelperCount: 71
 --- !u!114 &1753288672
 MonoBehaviour:
   m_ObjectHideFlags: 0
