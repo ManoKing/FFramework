@@ -39,7 +39,10 @@
 #### 游戏介绍  
 基于GameFramework框架实现的塔防游戏，将资源模块改为Addressable，并接入HybridCLR代码热更。  
 
-![Image](ReadMe/TowerDefense.png)
+![Image](ReadMe/TowerDefense.png)   
+   
+   
+![Image](ReadMe/TowerGame.png)
 
 ### UI框架基于QFramework  
 使用框架的UI工具集，并加以改进，如需做新的界面，需要对QFramework进行简单了解，可快速实现    
