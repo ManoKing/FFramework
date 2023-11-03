@@ -48,12 +48,14 @@
 ### 框架基于GameFramework  
 使用框架的架构思想，并加以改进，如需扩展开发，只需要对GameFramework进行简单了解，可快速实现    
 
-### 渲染基于URP
+### 渲染基于URP  
 基于URP渲染管线（开发中）  
 
-### Jenkins自动打包流程
+### Jenkins自动打包流程  
 只需在Jenkins配置，Choice Parameter，即可实现打包自动化（开发中）   
 HotFixResources：热更资源；  ChannelPack：渠道包；  LocalPack：本地包；  FirstPack：首包；（渠道包和本地包基于首包的.bin输出）  
+
+   
 ---
 
 ## FAQ
