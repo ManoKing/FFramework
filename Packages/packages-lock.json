@@ -5,7 +5,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "1f9faf49a3ac4b6b5417188cd7579084d7563514"
+      "hash": "410bb9b542664e9288588b5c23d3300e01e5936e"
     },
     "com.sharelib.logviewer": {
       "version": "file:Unity-Logs-Viewer",
@@ -86,11 +86,11 @@
       "dependencies": {}
     },
     "com.unity.addressables": {
-      "version": "1.21.12",
+      "version": "1.21.19",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.scriptablebuildpipeline": "1.21.5",
+        "com.unity.scriptablebuildpipeline": "1.21.21",
         "com.unity.modules.assetbundle": "1.0.0",
         "com.unity.modules.imageconversion": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0",
@@ -175,7 +175,7 @@
       "url": "https://packages.unity.cn"
     },
     "com.unity.scriptablebuildpipeline": {
-      "version": "1.21.5",
+      "version": "1.21.21",
       "depth": 1,
       "source": "registry",
       "dependencies": {},

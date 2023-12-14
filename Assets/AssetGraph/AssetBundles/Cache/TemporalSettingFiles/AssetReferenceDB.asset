@@ -201,4 +201,752 @@ MonoBehaviour:
     m_importFrom: Assets/Editor/Game/GameFrameworkConfigs.cs
     m_exportTo: 
     m_variantName: 
+  - m_assetDatabaseId: c12aa33a1926c1140a14e23b736a37fc
+    m_importFrom: Assets/HybridCLRData/Generated/link.xml
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b1afefbfe85a2424e86dad120a32f57c
+    m_importFrom: Assets/AssetGraph/AssetBundles/Cache/TemporalSettingFiles/AssetReferenceDB.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 94a061db0b960634c995d928535999b6
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/AssetInspectorGUIGroupsPopup.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 574e95015bf14c12b33dfbb98168cbfc
+    m_importFrom: Packages/com.unity.scriptablebuildpipeline/Tests/Editor/ContentPipelineTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 28a940f3bb234e34baec3af2b61b8d67
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/DetailsPanel/DetailsSummaryView.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: bf5e6ef0e57ead045be2e03ae1ec38b0
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/AddressablesIntegrationTestsImpl.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c5676580c9e682d4da654a6c5440b917
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/DynamicContentUpdateTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e2bbbc81002ad3642a2b1e7857a3f11a
+    m_importFrom: Packages/com.unity.scriptablebuildpipeline/Editor/Utilities/BuildCache.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e2d5a57757fc0cc4eb4f2fade47b59dd
+    m_importFrom: Packages/com.unity.scriptablebuildpipeline/Editor/Tasks/CalculateSceneDependencyData.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 715a1813af334a6db7f3c47daec400af
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Profiler/AddressablesProfilerDetailsDataInspector.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ae38715d198830145a8bf7fa7adf9ee1
+    m_importFrom: Packages/com.unity.addressables/Runtime/Addressables.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3f0645bd0f9b0ea46a9bec32c403ab9e
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/AddressablesIntegrationTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e14d3e528f112e445aa46b7870f93944
+    m_importFrom: Packages/com.unity.scriptablebuildpipeline/Editor/Utilities/Preferences.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 49f93c268e0343869a5a30defb8e5d51
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/CcdBuildEvents.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e5d17a21594effb4e9591490b009e7aa
+    m_importFrom: Packages/com.unity.addressables/Editor/Settings/GroupSchemas/BundledAssetGroupSchema.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5102485b735d4d0439d6da999841b9c8
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/AddressableAssetsSettingsGroupTreeView.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 62d523cfe47d64e43a6d72011ad4a7ca
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/GUI/EventViewerWindow.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c8e7a7789891dd440b809c2cfab69ccc
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/AddressableAssetsSettingsGroupEditor.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3b68615e65d03ce49becfd9eb02f7fa2
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/AddressableAssetSettingsInspector.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6b4a4e229baaa2544a4d681cc0dc5dea
+    m_importFrom: Packages/com.unity.addressables/Editor/Settings/AddressableAssetEntry.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7b6713137edb6b2439d3ff26eb990180
+    m_importFrom: Packages/com.unity.addressables/Runtime/AddressablesImpl.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6a7a6cf901dabe64586a9bd99395189a
+    m_importFrom: Packages/com.unity.scriptablebuildpipeline/Tests/Editor/WriteSerializedFileTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 70c658661ab7843829cea681cc9c9319
+    m_importFrom: Packages/com.unity.addressables/Runtime/AssemblyInfo.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 86a4f4dd6530757418ab820c2c781436
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/ResourceProviders/AssetBundleProvider.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b8e58c37b4da2490c9d0a789a70df844
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/LabelWindow.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: cd396e02e0371554e9bfc4ebb8035318
+    m_importFrom: Packages/com.unity.scriptablebuildpipeline/Tests/Editor/BuildCacheTestBase.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 58d7919bd300ea94c8bc969913548cd8
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/AddressablesTestUtilities.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9847c86f230bc2e4d8f60483d345704c
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/SceneTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 680fb597e686741c7a2e225708f654d2
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/AssemblyInfo.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 40e93d78541d2664e8424875bca4e041
+    m_importFrom: Packages/com.unity.scriptablebuildpipeline/Editor/Tasks/CalculateAssetDependencyData.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1095566ae23dbab4985b87dc92390bc2
+    m_importFrom: Packages/com.unity.addressables/Runtime/Initialization/InitializationObjectsOperation.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ea375d4d72197e143ba4ebfe5d21ed7c
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/AddressableAssetUtilityTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3a6ea556a4c75be4a88f236f22eec817
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/AddressableAnalytics.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6ff8a38d580a5e34c818334c22c6afef
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/MainToolbar.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0cc816be7de984cd8ba3ef6b19370a30
+    m_importFrom: Packages/com.unity.addressables/Runtime/Utility/ResourceManagerEventCollector.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: cfcdca687c6d4574928e2741e1fb9287
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/AddressablesImplTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d34ce007ffbd4e74c9151022c3fb56df
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/BuildPipelineTasks/BuildLayoutGenerationTask.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6a881c35c9c8410fa42113c516121903
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/Diagnostics/Profiling/ProfilerFrameData.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3805f04aa43306c4590ee741451aefe3
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/Diagnostics/ProfilerTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3ba8763d94231c9459f5a2d2aae30cfa
+    m_importFrom: Packages/com.unity.scriptablebuildpipeline/Editor/ContentPipeline.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: fe634a3decf6743b4918c03e2ae2642c
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/Diagnostics/Profiling/ProfilerRuntime.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a2fd90a1deed549a584e3a4b33bd7404
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/AddressablesGUIUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 541f73e53f31a9c45aada1a7441da18a
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/CleanBundleCacheTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 10fd20f634856da4a8adcac07d018d68
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceProviders/ContentCatalogProvider.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b28e4f74756c9e3418600f517d56e9f2
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/AsyncOperations/ProviderOperation.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 69a3d9bdf64896044a9fdb61df07a1f8
+    m_importFrom: Packages/com.unity.scriptablebuildpipeline/Editor/Tasks/UpdateBundleObjectLayout.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 722d9658f4892ba47a7a9db5fdf152d6
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/ResourceProviders/SceneProvider.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d5db91ce60c3e4e44907fbbadd68e6f4
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/ContentUpdatePreviewWindow.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9ec0ed3a7d1ee3c4e808cd29000a5b70
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/AssetInspectorGUI.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 82bbdcbf8b70eda4e80f931393924ac1
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DomainReloadTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f498126c527f05c4f9202c95abf8ba3d
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/AddressableAssetsSettingsLabelMaskPopup.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 834e2bdb5fd1336429e26ec5bcbb77f7
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/AddressablesPlayerBuildProcessor.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e3e97670d537e784e9f104552b533056
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/Build/BuildScriptTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1f2eff97e91ec624b8d35cecfb1ccf38
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/Build/BuildScriptPackedTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 850aa6537906d2342a70d728ad6e8245
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/DetailsPanel/DetailsContentView.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 155a61777399d7f48800d1791751daab
+    m_importFrom: Packages/com.unity.scriptablebuildpipeline/Tests/Editor/CalculateAssetDependencyTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 28e27e70c0f8cee45a62f86887957a0f
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/Build/GenerateLocationListsTaskTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1b50529888cb4f042b2f830c893efc9c
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Profiler/AddressablesProfilerViewController.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b19f99025db4a1e44a095aa3f1284c54
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/BuildPipelineTasks/GenerateLocationListsTask.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f4d7d9f74fa394649b729102066b4b96
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/AddressableAssetSettingsLocatorTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 832363b0cc1d7e44dbd8750e91343bd1
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/ResourceProviders/ContentCatalogProviderTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f9fa130dc1a674f38a215c4f52e2b420
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/AsyncOperations/AsyncOperationBase.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 468a46d0ae32c3544b7d98094e6448a9
+    m_importFrom: Packages/com.unity.addressables/Editor/Settings/AddressableAssetSettings.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 48d49afb756d3456da9e2b0b66b2221d
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/ResourceManager.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d6c85b3ea86fd7d45a0284311e03aa02
+    m_importFrom: Packages/com.unity.scriptablebuildpipeline/Tests/Editor/CalculateSceneDependencyTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 25cef95ed1a3d0a47bb7058b90931cd0
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/Util/BinaryStorageBuffer.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d415d633eb1c9d44c854bac7bdc6d17f
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceLocators/ContentCatalogData.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ce10b9a173f68e7439b96557cb1bc223
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/InitializationObjectsAsyncTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9c9765ad9de06ee4193e087e7732d756
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/AssetBundleProviderTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f94d20840f3378647ba2c0da3686e517
+    m_importFrom: Packages/com.unity.addressables/Runtime/Initialization/CleanBundleCacheOperation.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3e2e0ffa088c91d41a086d0b8cb16bdc
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/DataBuilders/BuildScriptPackedMode.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: be36d66973700384fbeb7fc898581fbb
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/AddressableAssetGroupInspector.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: eb7f165f4002c4f4bb7cf6eb7f1166d9
+    m_importFrom: Packages/com.unity.scriptablebuildpipeline/CHANGELOG.md
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c499a2a91e3095b4c8e10d8f7de9bbb5
+    m_importFrom: Packages/com.unity.addressables/package.json
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5efb62e6f1c6da94e8d016720d9761dc
+    m_importFrom: Packages/com.unity.scriptablebuildpipeline/ValidationExceptions.json
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 85f61fd61986b405dbd5bc38da39f73d
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Profiler/UXML/InspectorPane.uxml
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6f6c277bb5d2a164e8c95a7f0754c0f6
+    m_importFrom: Packages/com.unity.addressables/CHANGELOG.md
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d79503fa30e4e47f7a80231b74f76eab
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Profiler/UXML/TreeViewPane.uxml
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 62587f30b7ab6b44e97cab2ebbbc1a5b
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Profiler/UXML/MissingReport.uxml
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d38d5a5256466c349a81338d02621916
+    m_importFrom: Packages/com.unity.scriptablebuildpipeline/package.json
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b9f06ff0612105b4ea20e0309e759e24
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/ABI/PlatformABI.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 46bc62d5236f5e941850776c435a9560
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Commands/MethodBridgeGeneratorCommand.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a6d5e365e1b7d9742bee023ea54b31f2
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Runtime
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 13ba8ce62aa80c74598530029cb2d649
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Runtime/HybridCLR.Runtime.asmdef
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2c7d5b71981fba643b4c21ed01bcb675
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Runtime/LoadImageErrorCode.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8bff6cadf0b8db54b87ba51b24d080f6
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/BuildProcessors/MsvcStdextWorkaround.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c95ff173013909548bd9e2008812f9ff
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Meta/GenericClass.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e092a73910a69894daea44290d7292f6
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/3rds/UnityHook/Plugins/silicon/libMonoHookUtils_OSX.dylib
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d8373e0cb30c4894db7cd4d0b77a7a48
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Settings/SettingsPresetReceiver.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 21fb0a02f23185141a4a3df67fe61789
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Commands/StripAOTDllCommand.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9af6345cc5ab1ae4a81262ab4b537911
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Template
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: cf42c4f20b8a1b94baa04a1a5c6b8beb
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/3rds/UnityHook/HybridCLRHooks/CopyStrippedAOTAssembliesHook.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b4071bf66ac9c544487ae88b5ee9b20a
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/AOT
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 07595a9b5b2f54c44a67022ae3e077d4
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Meta/GenericArgumentContext.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b93c6604eb031674b80de14cd4458dc0
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Plugins/dnlib.dll
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: cc89a9041ab48ac41975fbd1e00b9b98
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/3rds/UnityHook/HybridCLRHooks/PatchScriptingAssembliesJsonHook.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f99dd22d9d81b2540b4663b3bcdf0a79
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Runtime/ReversePInvokeWrapperGenerationAttribute.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 121d574bf01969444aa6619a8f6dbb4c
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Meta/PathAssemblyResolver.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4455f7304f8678f408dd6cf21734f55e
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/BuildProcessors/ScriptingAssembliesJsonPatcher.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 590419ee7e82ac24cbac9b8a48891fe0
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Il2CppDef/Il2CppDefGenerator.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 15d4563ad83546c42bc65c99be9bd54a
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Template/FileRegionReplace.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 97cc0d26f72fc4148b8370b2252d1585
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/3rds/UnityHook/CodePatcher.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ee1ec106190e514489c7ba32bc7bc2e7
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/MethodBridge/Analyzer.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f3dbfe2e8b6a92742b18e287c5d281dd
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Meta/MetaUtil.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a26873724919287449e2c9eec68ef1da
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Plugins
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5165a065d05497c43a2fff885f31ed07
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Commands/Il2CppDefGeneratorCommand.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f80d2287f01c89642a74b0a60f7a3305
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/BuildProcessors
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4adb23596911347faa69537b900c9f5e
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/3rds/UnityHook/Plugins/x86_64/libMonoHookUtils_OSX.dylib
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 61948fcb1bc40ba47b8c10b0ae801ebb
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/BuildProcessors/AddLil2cppSourceCodeToXcodeproj2021OrOlder.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 13fe0cab0b357464d889de45c8d98850
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/3rds/UnityHook
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3c561c9729c367e4fbef63f4ec56f268
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/3rds/UnityHook/LDasm.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: da46bc9f1a4dece41a5c193166be9a30
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Il2CppDef
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6b7421e47f0ae1e4ebb72bf18d1d7d48
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/3rds/UnityHook/HookPool.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 96c2bc28db69e1644892219abef3d4b5
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/3rds/UnityHook/HybridCLRHooks/GetIl2CppFolderHook.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d796fc01daee1964586621890988a5ae
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/3rds/UnityHook/HybridCLRHooks
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2b464872c07f6ba4f9a4e4a02ca9a28c
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Commands/AOTReferenceGeneratorCommand.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0b1df5760b488fa43a68843c46fda63a
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/ABI/TypeCreator.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0d58bdc22b6d6b54ab6791baf16a0a3d
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Runtime/RuntimeApi.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 28e06667d06f37b4990b16f54f903a35
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/ABI/MethodDesc.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 093a9e6c1e7399244bbcd8983fdbfdee
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Settings/EditorStatusWatcher.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e189374413a3f00468e49d51d8b27a09
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Settings/HybridCLRSettings.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5f8d48774b790364cbd36f1f68fd6614
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Meta/AssemblyResolverBase.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 959fbf0bb06629542969354505189240
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Installer/InstallerWindow.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5230adaa2ea5d567f4c80a8d464fd84b
+    m_importFrom: Packages/com.code-philosophy.hybridclr
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7db18e1736f593c4089c85d764cf8620
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Commands/ReversePInvokeWrapperGeneratorCommand.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5d4ae4a5c0bba49469c525887d812717
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/HashUtil.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 30bbf4a80a6cf3a43b3f489747d9dd6a
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/AOT/Analyzer.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 960a0257c3a17f64b810193308ce1558
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Installer/BashUtil.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 92f51c069d2607447ae2f61de80540fb
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Commands
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0c2444f09010bce41a52d951b7100c49
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/MethodBridge
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 80682e47c38a2f04f8af94d356688cf0
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/ABI/ParamOrReturnType.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7adba4475cf0bdc4fa7995c0d748f480
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/3rds/UnityHook/Plugins/silicon
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d5cc4ae4adc319b4bb1e115567d7613e
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Link/LinkXmlWriter.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: efda6e010e5c6594081c4a62861d469f
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/3rds/UnityHook/HookUtils_OSX.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: edeb86f4b5b13ca4cb0fe9d87ce509bb
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/ABI/ABIUtil.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c3fabc41cf17c444995fc01a76c5dbe6
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e84139b42a6164e4c93ce4df1be6dcfb
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/3rds/UnityHook/HookUtils.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9dec2922e3df5464aa047b636eb19e0d
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/BuildProcessors/FilterHotFixAssemblies.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b7af32bdf1cf55c42bfc449820d401cb
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/ABI/ValueTypeSizeAligmentCalculator.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: fb4ba063068b17247b2d0233420aa5f0
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/BuildProcessors/CheckSettings.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1c644b0c018fb87498d69c3202439d21
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Meta/MethodReferenceAnalyzer.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3708ee1d4035cb14abaa4d64a8ec8148
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Settings
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d1243cf04685361478972f93b5ca868a
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/AOT/GenericReferenceWriter.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e42a0f3bcbc5ddf438a85ae16c1b3116
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/MethodBridge/Generator.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: fa4650e79a52228488aa85e0690ca52c
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Meta/AssemblyCache.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0342c7d8575fdea49896260c77285286
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Meta/AssemblyReferenceDeepCollector.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: bd0b8071cf434d6498160259e3829980
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/3rds/UnityHook/MethodHook.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ffafce7f1f0bf614d95b48ca39385377
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/ABI/TypeInfo.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2373f786d14518f44b0f475db77ba4de
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/HybridCLR.Editor.asmdef
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f135accd10f42c64b9735c3aa8cb1e77
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Meta/FixedSetAssemblyResolver.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 89b83906438c52d4b9af4aaef055f177
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Meta/CombinedAssemblyResolver.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 56b28b5583a184c669dcb968d175544c
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/3rds/UnityHook/Plugins/Utils.cpp
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4f5b96abdbc4c424eb1bc3bc34b3a1a4
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Commands/LinkGeneratorCommand.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 88ecf3d52ec393b4cac142518944e487
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Meta/GenericMethod.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: bf11b6c8bbc5afd4cb4a11921e5bd81e
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Commands/CompileDllCommand.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 16b9dc031f67b4fe5ad79c230f75768c
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/3rds/UnityHook/Plugins
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 31f6a810e38e66f4c832b135770a04bb
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/3rds/UnityHook/Plugins/x86_64
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 259c1cb7fe681f74eb435ab8f268890d
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/ReversePInvokeWrap
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c20f09bfbe3f32143aae872d3813d9e9
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Commands/PrebuildCommand.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a475a5f281298b84da32373694704c68
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Settings/MenuProvider.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: daa1e09af240aae4da0741843cb2b3f3
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/3rds
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3787c7d8b775c754aa4ae06bf78e96ea
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Meta
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a4ce072f7e4a17248a3d9ebfd011356b
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/BuildProcessors/AddLil2cppSourceCodeToXcodeproj2022OrNewer.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 851c44a8da67a9742a7ea68815383f27
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Settings/ScriptableSignleton.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d2bd1694fedc8b54c88bb9f6c67907d3
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Settings/HybridCLRSettingProvider.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: fd3dd4871efd10e46947cb61c13797fd
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Link/Analyzer.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7d883f182f206fa4db31f4085ce0ecdc
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/ReversePInvokeWrap/Generator.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 812d81a75b690394bbe16ef5f0bcbc46
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/AOT/ConstraintContext.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 381c08faeafbc004f97504eeba87380d
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/SettingsUtil.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0f0351553ad90e74aa586746b5965ded
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Runtime/HomologousImageMode.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f7884710ec2f8e545b3fe9aa05def5a8
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/BuildProcessors/CopyStrippedAOTAssemblies.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f962a018018dbb945a19f82d2e098686
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Meta/IAssemblyResolver.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d26c8b77c84f09442a05f2c67e5e09b8
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/ABI
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 44c8627d126b30d4e9560b1f738264ca
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Installer/InstallerController.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3b01fa99119e72141bfee5628c0ffce1
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Meta/AssemblyCacheBase.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a2c8f84b297371d4cbcd5ca655bf360d
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Installer
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c172068b408c0e349b2ceee4c4635085
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/ReversePInvokeWrap/Analyzer.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f2ba16cf4bf82374c814789b6ced3abd
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/ABI/ParamInfo.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5186a137e0258034cb3832bdf6b16a70
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Link
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9bb6e2908d8948648979c9ff6bb7937d
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/BuildProcessors/PatchScriptingAssemblyList.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 69eeb734e262a0a4fbe0887249198f73
+    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/3rds/UnityHook/Plugins/build_libMonoHookUtils_OSX.dylib.sh
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 52688f4469ff9454e8c3d8aaf045d9f4
+    m_importFrom: Packages/com.code-philosophy.hybridclr/README_zh.md
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b4b6051e2483d664facc72a5102dcffc
+    m_importFrom: Packages/com.code-philosophy.hybridclr/README.md
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f09e582706a5776448316f6c584e63a6
+    m_importFrom: Packages/com.code-philosophy.hybridclr/LICENSE
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8e53ce54bd8e88c4785c625555308dba
+    m_importFrom: Packages/com.code-philosophy.hybridclr/RELEASELOG.md
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8ea8eca3a387d9d4988a2fca1036f2e7
+    m_importFrom: Packages/com.code-philosophy.hybridclr/package.json
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6b9888f00b7f4384e9cd0e2c88cf4d17
+    m_importFrom: Assets/HybridCLRData/Generated/AOTGenericReferences.cs
+    m_exportTo: 
+    m_variantName: 
   m_version: 2
