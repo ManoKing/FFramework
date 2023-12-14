@@ -14,14 +14,15 @@ namespace UnityGameFramework.Editor
     /// <summary>
     /// 类型相关的实用函数。
     /// </summary>
-    internal static class Type
+    public static class Type
     {
         private static readonly string[] AssemblyNames =
         {
 #if UNITY_2017_3_OR_NEWER
             "UnityGameFramework.Runtime",
 #endif
-            "Assembly-CSharp"
+            "Assembly-CSharp",
+            "HotFix"
         };
 
         private static readonly string[] EditorAssemblyNames =
@@ -37,7 +38,7 @@ namespace UnityGameFramework.Editor
         /// </summary>
         /// <typeparam name="T">配置类型。</typeparam>
         /// <returns>配置路径。</returns>
-        internal static string GetConfigurationPath<T>() where T : ConfigPathAttribute
+        public static string GetConfigurationPath<T>() where T : ConfigPathAttribute
         {
             foreach (System.Type type in Utility.Assembly.GetTypes())
             {
