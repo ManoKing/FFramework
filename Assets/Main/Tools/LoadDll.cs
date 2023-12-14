@@ -20,7 +20,7 @@ public class LoadDll : MonoBehaviour
     {
         LoadMetadataForAOTAssemblies();
 #if !UNITY_EDITOR
-        var handleHotFix = Addressables.LoadAssetAsync<TextAsset>("Assembly-CSharp.dll").WaitForCompletion();
+        var handleHotFix = Addressables.LoadAssetAsync<TextAsset>("HotFix.dll").WaitForCompletion();
         System.Reflection.Assembly.Load(handleHotFix.bytes);
 #endif
         HotUpdatePrefab();

@@ -13,48 +13,749 @@ MonoBehaviour:
   m_Name: AssetReferenceDB
   m_EditorClassIdentifier: 
   m_assets:
-  - m_assetDatabaseId: 820e4fdcb4c95ef4095ae722cbd3277b
-    m_importFrom: Assets/GameMain/Entity/MissileArray/MissileArrayPreview.prefab
+  - m_assetDatabaseId: b1afefbfe85a2424e86dad120a32f57c
+    m_importFrom: Assets/AssetGraph/AssetBundles/Cache/TemporalSettingFiles/AssetReferenceDB.asset
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: 8c96726848dd838449d38ebe49a4af04
-    m_importFrom: Assets/GameMain/Entity/MissileArray/MissileArray.prefab
+  - m_assetDatabaseId: b95da2741c7254343be90ea6c5a2d752
+    m_importFrom: Assets/StreamingAssets/build_info
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c12aa33a1926c1140a14e23b736a37fc
+    m_importFrom: Assets/HybridCLRData/Generated/link.xml
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6b9888f00b7f4384e9cd0e2c88cf4d17
+    m_importFrom: Assets/HybridCLRData/Generated/AOTGenericReferences.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5f81224f9c2105d439fa1d0bccfe2d28
+    m_importFrom: Assets/GameMain/UI/Dynamic/LevelSelectionButton.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ea4d23971c755a8428965bc49024c813
+    m_importFrom: Assets/GameMain/UI/Dynamic/TowerBuildButton.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 56fbb0c4526becf4c91c0e5e14ff492b
+    m_importFrom: Assets/GameMain/UI/UIForms/UIDownloadForm.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a40e18b36a1177c44945d4812b7c9d45
+    m_importFrom: Assets/GameMain/UI/UIForms/UIGameOverForm.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f4a1b9dd197e70840a959476d5cd1e29
+    m_importFrom: Assets/GameMain/UI/UIForms/UILevelMainInfoForm.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9a808201ed47c54458dca12e2c41a018
+    m_importFrom: Assets/GameMain/UI/UIForms/UILevelSelectForm.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 97e58792ffd96ee44a8cda8fda0dd30e
+    m_importFrom: Assets/GameMain/UI/UIForms/UIMainMenuForm.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4f7608bbbc6b81346bcfde1e8a65c6ad
+    m_importFrom: Assets/GameMain/UI/UIForms/UIMask.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ab7fe05f924ed8346833726831cefc20
+    m_importFrom: Assets/GameMain/UI/UIForms/UIOptionsForm.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 91e0d08e16df6f7418b8769badf6468c
+    m_importFrom: Assets/GameMain/UI/UIForms/UIPausePanelForm.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6e3fa86cb35f69045bb379bab5dde150
+    m_importFrom: Assets/GameMain/UI/UIForms/UITowerControllerForm.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2231750fbe379494fa73ba554ad0be2d
+    m_importFrom: Assets/GameMain/UI/UIForms/UITowerListForm.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 065453d18e51b5940b16de60e8f371f9
+    m_importFrom: Assets/GameMain/UI/UIForms/UIUpdateResourceForm.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e3a7c37db43d01046a0f853676853726
+    m_importFrom: Assets/GameMain/Sounds/GameMix.mixer
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6ce6d7c4d4f6140f68d2c18955f02e8c
+    m_importFrom: Assets/GameMain/Sounds/Music/Game Music.mp3
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1e8f5015922b04dd1b862cf76c53775a
+    m_importFrom: Assets/GameMain/Sounds/Music/Menu Music.mp3
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 35e7666ce1d5bdf45a46447e9c108f62
+    m_importFrom: Assets/GameMain/Sounds/SFX/Base Attack/base_attack.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 154fba15a6072fb4db21704a44e7fb05
+    m_importFrom: Assets/GameMain/Sounds/SFX/Base Attack/zone_enter.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 01befc377d267aa47a659fd688128509
+    m_importFrom: Assets/GameMain/Sounds/SFX/Enemies Exploding/Enemies Exploding
+      1.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3553810b91eba5440b10f0abdfcd2bab
+    m_importFrom: Assets/GameMain/Sounds/SFX/Enemies Exploding/Enemies Exploding
+      2.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6c61621905bdcec4b960f2f6fd92ee86
+    m_importFrom: Assets/GameMain/Sounds/SFX/Enemies Exploding/Enemies Exploding
+      3.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4f88d4301ee8ad14d86c544dced13f23
+    m_importFrom: Assets/GameMain/Sounds/SFX/Enemies Exploding/Enemies Exploding
+      4.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3697436845ba744408916597c5b5c50c
+    m_importFrom: Assets/GameMain/Sounds/SFX/Enemies Exploding/Enemies Exploding
+      5.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8c39c07e09be28e4dbbc18bbf5bb3f86
+    m_importFrom: Assets/GameMain/Sounds/SFX/Enemy Fire.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8acb99492380aeb49bb25d43dec1e648
+    m_importFrom: Assets/GameMain/Sounds/SFX/Macross Placement.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 52813b4616870d743a86e8917a87b42a
+    m_importFrom: Assets/GameMain/Sounds/SFX/Tower Destruction/Destruction 1.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 994878880e02bc4459198aaec0a5ebfe
+    m_importFrom: Assets/GameMain/Sounds/SFX/Tower Destruction/Destruction 2.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 190a86d0a03bbbb42bc98caf6c500483
+    m_importFrom: Assets/GameMain/Sounds/SFX/Tower Destruction/Destruction 3.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e97249d7f37fcb140bad429afb8c1018
+    m_importFrom: Assets/GameMain/Sounds/SFX/Tower Destruction/Destruction 4.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ede4a4cc95325d44183336d9f166acbe
+    m_importFrom: Assets/GameMain/Sounds/SFX/Tower Destruction/Destruction 5.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d9bc94d3d05608248a02a1b06ad2358a
+    m_importFrom: Assets/GameMain/Sounds/SFX/Towers/Laser/LaserFire.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: da00db877b7e8ec41bf83dcc6ba0edc8
+    m_importFrom: Assets/GameMain/Sounds/SFX/Towers/MachineGun/MG 1.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ababca0ffcf5c2245b287ea882bbf20c
+    m_importFrom: Assets/GameMain/Sounds/SFX/Towers/MachineGun/MG 2.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f4cf204343b91944aa36cf75ce6f4d19
+    m_importFrom: Assets/GameMain/Sounds/SFX/Towers/MachineGun/MG 3.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 24361001568ff6043bed9d103572addb
+    m_importFrom: Assets/GameMain/Sounds/SFX/Towers/MachineGun/MG 4.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 767e541ba9b8d154ba3e8a45aba8ff6b
+    m_importFrom: Assets/GameMain/Sounds/SFX/Towers/MachineGun/MG 5.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ea66f874b31107f4497509197a5ea34e
+    m_importFrom: Assets/GameMain/Sounds/SFX/Towers/MachineGun/MG 6.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 345d5c19a669de74caf5dd5c61c1e8b3
+    m_importFrom: Assets/GameMain/Sounds/SFX/Towers/MachineGun/MG 7.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 43777447cf66e7e4a9acc74a83035555
+    m_importFrom: Assets/GameMain/Sounds/SFX/Towers/MachineGun/MG 8.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2937e46b4cc55fd4891f3f3ab8c3f18b
+    m_importFrom: Assets/GameMain/Sounds/SFX/Towers/MachineGun/MG 9.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1e64f1602ed529546b5d624245ad27b4
+    m_importFrom: Assets/GameMain/Sounds/SFX/Towers/MachineGun/MG 10.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 27155cca3c0c5a5419d4c3c11f4a4060
+    m_importFrom: Assets/GameMain/Sounds/SFX/Towers/MachineGun/MG 11.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 26f3a8e13948f6f45a8743289c6f25dd
+    m_importFrom: Assets/GameMain/Sounds/SFX/Towers/MachineGun/MG 12.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: fff1ab3c8467b5647bd28d0233d308a5
+    m_importFrom: Assets/GameMain/Sounds/SFX/Towers/MachineGun/MG 13.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f8ac83d6dce50644bb8d1a34fc5b287e
+    m_importFrom: Assets/GameMain/Sounds/SFX/Towers/MachineGun/MG 14.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c73fe5387e987544ba174c742865ed84
+    m_importFrom: Assets/GameMain/Sounds/SFX/Towers/RocketLauncher/Rocket Tower Shoot.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ceed5926a63a2244085adb17f49b3b89
+    m_importFrom: Assets/GameMain/Sounds/SFX/Towers/SuperTower/Super Tower Shot 1.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 610cc044cb888b74b9e4bb0114340538
+    m_importFrom: Assets/GameMain/Sounds/SFX/Towers/SuperTower/Super Tower Shot 2.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ea02aff524dd2a44883d5a4f80892790
+    m_importFrom: Assets/GameMain/Sounds/SFX/Towers/SuperTower/Super Tower Shot 3.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 57b31c5335be7fb41a1b4b1fa098785b
+    m_importFrom: Assets/GameMain/Sounds/SFX/Towers/SuperTower/Super Tower Shot 4.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0d8eea74c36e49b4bbec75045042d923
+    m_importFrom: Assets/GameMain/Sounds/SFX/Towers/SuperTower/Super Tower Shot 5.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 06f4152eb680617479812853ed8a581f
+    m_importFrom: Assets/GameMain/Sounds/SFX/Towers/SuperTower/Super Tower Shot 6.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 80635ad12c1cfb34fad5483bfe75459d
+    m_importFrom: Assets/GameMain/Sounds/SFX/Towers/SuperTower/Super Tower Shot 7.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7112532e3e9e3c246b2fe456781a9c28
+    m_importFrom: Assets/GameMain/Sounds/SFX/UI/TD Currency.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f6bad708ea84eb74e8b328d6e6fa98a4
+    m_importFrom: Assets/GameMain/Sounds/SFX/UI/TD Defeat .wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 728fbe3d625a4d249ae167a2f8a7f077
+    m_importFrom: Assets/GameMain/Sounds/SFX/UI/TD EMP Idle.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 73badf10872f4af4396837e26b708838
+    m_importFrom: Assets/GameMain/Sounds/SFX/UI/TD Tower Sell.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7725ecb5bd0093c43969275f1109042d
+    m_importFrom: Assets/GameMain/Sounds/SFX/UI/TD Tower Upgrade.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 02c80739782053b46a95a7fc5da4de3b
+    m_importFrom: Assets/GameMain/Sounds/SFX/UI/TD Victory.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2b49d6465fc4f394ab85c3513cd52ec2
+    m_importFrom: Assets/GameMain/Sounds/SFX/Weapon Placement 1.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5285fc074b525804aba3a58a1ecfc345
+    m_importFrom: Assets/GameMain/Sounds/SFX/Weapon Placement 2.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 567f4800fefa8d843835478dc75616af
+    m_importFrom: Assets/GameMain/Sounds/UI/ui_sound_back.mp3
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 88d3ee3b94fdb764a9577770cbf88ae3
+    m_importFrom: Assets/GameMain/Sounds/UI/ui_sound_forward.mp3
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c2d4e2ee7b56bf24e9d4b651be4950e7
+    m_importFrom: Assets/GameMain/Localization/ChineseSimplified/Dictionaries/Default.json
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: bee7b15a9e66ce0419c4d7a7be10a5e1
+    m_importFrom: Assets/GameMain/Localization/ChineseTraditional/Dictionaries/Default.json
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e63c9c0622200794095d8095800730bf
+    m_importFrom: Assets/GameMain/Localization/English/Dictionaries/Default.json
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c707bc95ab948454ca1e378dce5e9358
+    m_importFrom: Assets/GameMain/Item/PlacementTile.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: faa270e3d0214c242bcbde40d8acb7a9
+    m_importFrom: Assets/GameMain/Item/SinglePlacementTile.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 474ea29b517c95848bbe596875ca0593
+    m_importFrom: Assets/GameMain/Entity/AssaultCannon/AssaultCannon.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9a7040bd5c6b20a4887fa5e4588a4f3e
+    m_importFrom: Assets/GameMain/Entity/AssaultCannon/AssaultCannon_Level1.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3be5d87b18055e3458fd11ba66cfa94f
+    m_importFrom: Assets/GameMain/Entity/AssaultCannon/AssaultCannon_Level2.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9f73f2e992c8e844bb2579ebcb3dfcf4
+    m_importFrom: Assets/GameMain/Entity/AssaultCannon/AssaultCannon_Level3.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 917941f1d8862ff4a8dbcd474757c151
+    m_importFrom: Assets/GameMain/Entity/AssaultCannon/AssaultCannonPreview.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 47d081471431a6141abbd27d8b6b36aa
+    m_importFrom: Assets/GameMain/Entity/AssaultCannon/MachineGunProjectile.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 811cd4b23353a924cacfc442592c5db9
+    m_importFrom: Assets/GameMain/Entity/BigDeathExplosionPfx.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 534a05923a7ddbe4a8f7c7519f73778a
+    m_importFrom: Assets/GameMain/Entity/BuildPfx.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3d3a3a9531758ac4085f59930022c426
+    m_importFrom: Assets/GameMain/Entity/BulletHit.prefab
     m_exportTo: 
     m_variantName: 
   - m_assetDatabaseId: b1dd30f2294c3d64e86a37c8a3e142ad
     m_importFrom: Assets/GameMain/Entity/EMPGenerator/EMPGenerator.prefab
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: 4db00e1153a3ba24b83c8aa44e59bcb2
-    m_importFrom: Assets/GameMain/Entity/RocketPlatform/RocketPlatform_Level2.prefab
+  - m_assetDatabaseId: e36205a3385eb6144be0c524b88ddcb3
+    m_importFrom: Assets/GameMain/Entity/EMPGenerator/EMPGenerator_Level1.prefab
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: 8459948c5a0088248a727f510f5ae681
-    m_importFrom: Assets/GameMain/Entity/PlasmaLance/PlasmaLance_Level1.prefab
+  - m_assetDatabaseId: 9186dc5f0afedc347afe444cef4b486a
+    m_importFrom: Assets/GameMain/Entity/EMPGenerator/EMPGenerator_Level2.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f280ba1d06344f54891778e91627ebf6
+    m_importFrom: Assets/GameMain/Entity/EMPGenerator/EMPGenerator_Level3.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 21b3cf78465345e4e88545e54ca54c2a
+    m_importFrom: Assets/GameMain/Entity/EMPGenerator/EMPGeneratorPreview.prefab
     m_exportTo: 
     m_variantName: 
   - m_assetDatabaseId: 8b31927881dde1540b137b7f89bd0cdc
     m_importFrom: Assets/GameMain/Entity/Enemies/Hoverboss.prefab
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: e3e1ee90c7762ff4e8c79a4b1a712402
-    m_importFrom: Assets/GameMain/Entity/MissileArray/SuperTowerProjectile.prefab
+  - m_assetDatabaseId: 7e1550d1279a6a04fb4fc06d48a5c41d
+    m_importFrom: Assets/GameMain/Entity/Enemies/Hoverbuggy.prefab
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: 91e34a761e6547a4fb2b6376f4034214
-    m_importFrom: Assets/GameMain/Entity/PlasmaLance/PlasmaLance_Level2.prefab
+  - m_assetDatabaseId: 541ab289e59da4e4281d981b7f31ea13
+    m_importFrom: Assets/GameMain/Entity/Enemies/Hovercopter.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: fb6cc224229e9f04b84157a6dfed7851
+    m_importFrom: Assets/GameMain/Entity/Enemies/Hovertank.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2684a1c4db9d69d41b3f07c6d26ea92d
+    m_importFrom: Assets/GameMain/Entity/Enemies/SuperHoverboss.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a2c2a6ec392666d43bc1904741758f04
+    m_importFrom: Assets/GameMain/Entity/Enemies/SuperHoverbuggy.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 073ca2ed003aedf4cb608d9ce2d58514
+    m_importFrom: Assets/GameMain/Entity/Enemies/SuperHovercopter.prefab
     m_exportTo: 
     m_variantName: 
   - m_assetDatabaseId: af0927bda82e7134f8087223e68e6c2c
     m_importFrom: Assets/GameMain/Entity/Enemies/SuperHovertank.prefab
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: 16a99d0a844afa843b94afffc73b5162
-    m_importFrom: Assets/GameMain/Entity/RocketPlatform/RocketPlatformPreview.prefab
+  - m_assetDatabaseId: 7d93ef64014fd6a4d9bb47a39a3a20e3
+    m_importFrom: Assets/GameMain/Entity/EnemyProjectile.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 472ed7c77852d9246b992f343f81a8f2
+    m_importFrom: Assets/GameMain/Entity/EnemyShootEffect.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6c63b4e8a9a78b94da4eb0497f842615
+    m_importFrom: Assets/GameMain/Entity/EnergyPylon/EnergyPylon.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f13500b418c84db489bb75d7234cd343
+    m_importFrom: Assets/GameMain/Entity/EnergyPylon/EnergyPylon_Level1.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 49a3969d998dbff4bb8afbb1715b580f
+    m_importFrom: Assets/GameMain/Entity/EnergyPylon/EnergyPylon_Level2.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4361f589f95c04c42bdcf4793b7353dc
+    m_importFrom: Assets/GameMain/Entity/EnergyPylon/EnergyPylon_Level3.prefab
     m_exportTo: 
     m_variantName: 
   - m_assetDatabaseId: aec58fc4be56e5c42b13d4363f8cd283
     m_importFrom: Assets/GameMain/Entity/EnergyPylon/EnergyPylonPreview.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ef4461c923b09994584fdb6563d3faf1
+    m_importFrom: Assets/GameMain/Entity/EntityPlayer.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e7ea0259da0ad1040aea7b4d864fe206
+    m_importFrom: Assets/GameMain/Entity/HPBar.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0a1acdd7bb5a0534881a7db04fbea0b6
+    m_importFrom: Assets/GameMain/Entity/LaserImpactPFX.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8c96726848dd838449d38ebe49a4af04
+    m_importFrom: Assets/GameMain/Entity/MissileArray/MissileArray.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 87b1bb64b83880c4580ca412e0ca5f90
+    m_importFrom: Assets/GameMain/Entity/MissileArray/MissileArray_Level1.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 820e4fdcb4c95ef4095ae722cbd3277b
+    m_importFrom: Assets/GameMain/Entity/MissileArray/MissileArrayPreview.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e3e1ee90c7762ff4e8c79a4b1a712402
+    m_importFrom: Assets/GameMain/Entity/MissileArray/SuperTowerProjectile.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 293df2a6d0c1fe2419f7fead8f64d9ad
+    m_importFrom: Assets/GameMain/Entity/PlasmaLance/LaserProjectile.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5a4b7618f48551643aaceba542fed0af
+    m_importFrom: Assets/GameMain/Entity/PlasmaLance/PlasmaLance.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8459948c5a0088248a727f510f5ae681
+    m_importFrom: Assets/GameMain/Entity/PlasmaLance/PlasmaLance_Level1.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 91e34a761e6547a4fb2b6376f4034214
+    m_importFrom: Assets/GameMain/Entity/PlasmaLance/PlasmaLance_Level2.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7292d1ebf364bd9409fd4b6fc6ee75fe
+    m_importFrom: Assets/GameMain/Entity/PlasmaLance/PlasmaLance_Level3.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6383895fc3769164d90be5679dea0cc2
+    m_importFrom: Assets/GameMain/Entity/PlasmaLance/PlasmaLancePreview.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b452648877e07ee4390ebd4f9803dcd8
+    m_importFrom: Assets/GameMain/Entity/RadiusVisualiser.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 098e32d1faf93fe40918be076db3b5ae
+    m_importFrom: Assets/GameMain/Entity/RocketExplosionPfx.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 35ea3d79e6d719b4fbbae5f68e64f43b
+    m_importFrom: Assets/GameMain/Entity/RocketPlatform/RocketPlatform.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d07ecebe09082a54b9f4a0d6b2bf91e4
+    m_importFrom: Assets/GameMain/Entity/RocketPlatform/RocketPlatform_Level1.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4db00e1153a3ba24b83c8aa44e59bcb2
+    m_importFrom: Assets/GameMain/Entity/RocketPlatform/RocketPlatform_Level2.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d95e38fd6f021674d83ba81cc0554ff1
+    m_importFrom: Assets/GameMain/Entity/RocketPlatform/RocketPlatform_Level3.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 16a99d0a844afa843b94afffc73b5162
+    m_importFrom: Assets/GameMain/Entity/RocketPlatform/RocketPlatformPreview.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0da5d1fab0b4f5f4c9c2354b9a121259
+    m_importFrom: Assets/GameMain/Entity/RocketPlatform/RocketProjectile.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e62cab01a56d60544ab7f8ea2d194834
+    m_importFrom: Assets/GameMain/Entity/RocketTrail.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5b558de65359c1a4d9b394817d76bfa8
+    m_importFrom: Assets/GameMain/Entity/SlowFx.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8e62aad79aa61b046bccf48c741b9e29
+    m_importFrom: Assets/GameMain/Entity/SmallDeathExplosionPfx.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6a343bb1046518e43aff8354326dec45
+    m_importFrom: Assets/GameMain/Entity/SupertowerMissileTrail.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1380728d7d4c6c6459c823647dd4c7d3
+    m_importFrom: Assets/GameMain/Entity/TowerDeathExplosion.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 610dea3bfb715434483f0da8284fc96e
+    m_importFrom: Assets/GameMain/DataTables/AssetsPath.bytes
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f8398c2b9577f20419edef86a339196e
+    m_importFrom: Assets/GameMain/DataTables/AssetsPath.txt
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 654ac13bf998f464189815de72434588
+    m_importFrom: Assets/GameMain/DataTables/Enemy.bytes
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a3d0f7c2b11ba0848a581a6015436823
+    m_importFrom: Assets/GameMain/DataTables/Enemy.txt
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e70d3ffc3d68f294388ba19573669874
+    m_importFrom: Assets/GameMain/DataTables/Entity.bytes
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: fc34b2df551505b41b3bbfa52ff7d60f
+    m_importFrom: Assets/GameMain/DataTables/Entity.txt
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 74f7712c01fbe59418a236f0a575ae0c
+    m_importFrom: Assets/GameMain/DataTables/EntityGroup.bytes
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ecf1757ff857e1546a72edf3a793fa9e
+    m_importFrom: Assets/GameMain/DataTables/EntityGroup.txt
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 89d3180f8b763bc45a73f70e294b0aec
+    m_importFrom: Assets/GameMain/DataTables/Item.bytes
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 982f85434985666488385481fdbcdbd3
+    m_importFrom: Assets/GameMain/DataTables/Item.txt
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 80c018f4dc6c4454d881705d0e1e63be
+    m_importFrom: Assets/GameMain/DataTables/ItemGroup.bytes
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5702bcb57aafbda4e8a837eaf4f9badd
+    m_importFrom: Assets/GameMain/DataTables/ItemGroup.txt
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: bd48eea0ced6c45419b418dcfe222495
+    m_importFrom: Assets/GameMain/DataTables/Level.bytes
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7f284d01de25da8438055609f4ac94f6
+    m_importFrom: Assets/GameMain/DataTables/Level.txt
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6b0f6e2d35e637e4cb97cc619c129118
+    m_importFrom: Assets/GameMain/DataTables/PoolParam.bytes
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 401e63db8f9e9e744ad2d7e0be48639c
+    m_importFrom: Assets/GameMain/DataTables/PoolParam.txt
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 43ae2a440a3f03a428445a47c0b749b5
+    m_importFrom: Assets/GameMain/DataTables/Projectile.bytes
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b0483ef4b4c8f8b428f785463d7ab666
+    m_importFrom: Assets/GameMain/DataTables/Projectile.txt
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5035a572b6f50414c93745e0ca4e3a01
+    m_importFrom: Assets/GameMain/DataTables/Scene.bytes
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7937df34063046b46bc9720e70a0e44a
+    m_importFrom: Assets/GameMain/DataTables/Scene.txt
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: da473c16b9ad5474cb0d410ba45f691a
+    m_importFrom: Assets/GameMain/DataTables/Sound.bytes
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ee66d3503830bc04a99f256b39d2164a
+    m_importFrom: Assets/GameMain/DataTables/Sound.txt
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 54f2752d08d923946bc84fe79ef27860
+    m_importFrom: Assets/GameMain/DataTables/SoundGroup.bytes
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1a11d57dbb3a22d4a89c91b50b5f4c1d
+    m_importFrom: Assets/GameMain/DataTables/SoundGroup.txt
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5dbdfd0a67d92474e974c3a4e7f5ce88
+    m_importFrom: Assets/GameMain/DataTables/SoundPlayParam.bytes
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 977445ef583620e48ae137dc4dc5eb66
+    m_importFrom: Assets/GameMain/DataTables/SoundPlayParam.txt
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0b333bfceb3d4934d9e68b22ee836b09
+    m_importFrom: Assets/GameMain/DataTables/Tower.bytes
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2d2f0465a18347148b6749ab7c5e0e86
+    m_importFrom: Assets/GameMain/DataTables/Tower.txt
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 14b4165fcc6426f40844fbeccb0cb0cf
+    m_importFrom: Assets/GameMain/DataTables/TowerLevel.bytes
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5070759bc3d66ad45818950f29c4bfcd
+    m_importFrom: Assets/GameMain/DataTables/TowerLevel.txt
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f1faaa7f89244084f8723904918d06eb
+    m_importFrom: Assets/GameMain/DataTables/UIForm.bytes
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d0969c9350b528b4588681c35a437324
+    m_importFrom: Assets/GameMain/DataTables/UIForm.txt
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e0d13eeff961a9f48aa1eca9722fcf23
+    m_importFrom: Assets/GameMain/DataTables/UIGroup.bytes
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 125b35f3db6d90942b8717d3b2d02d66
+    m_importFrom: Assets/GameMain/DataTables/UIGroup.txt
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c7f59e0c0be460e4bbdeb2128cbc1752
+    m_importFrom: Assets/GameMain/DataTables/Wave.bytes
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b0ab402280c12e8449d0064805eb5a6b
+    m_importFrom: Assets/GameMain/DataTables/Wave.txt
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7a835e50914362e49acff264d5ce41ca
+    m_importFrom: Assets/GameMain/DataTables/WaveElement.bytes
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 17bd2ff83be514547aaec37e6a665bc8
+    m_importFrom: Assets/GameMain/DataTables/WaveElement.txt
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 247c6b81e258656418deff7861816d33
+    m_importFrom: Assets/GameMain/Configs/BuildInfo.txt
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d191c02f4deca7e479836315aabf3e8d
+    m_importFrom: Assets/GameMain/Configs/BuildSettings.xml
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 929976fcb9cccfc4dbaf192a4a663890
+    m_importFrom: Assets/GameMain/Configs/DataTableCodeTemplate.txt
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9649279ea3b34d141b0aac3f46d82aef
+    m_importFrom: Assets/GameMain/Configs/Default.json
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: cc044ae1c50f8dd4aaa0aacec3101b3e
+    m_importFrom: Assets/GameMain/Configs/DefaultConfig.txt
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 284643d7281fe704ea3551e44bdabd0c
+    m_importFrom: Assets/GameMain/Configs/EnumTemplate.txt
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f772b8f1351f69b40ade4dc0ed08d3c5
+    m_importFrom: Assets/GameMain/Configs/ResourceBuilder.xml
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1670b8a21444fa04b9c5fcc41434ee64
+    m_importFrom: Assets/GameMain/Configs/ResourceCollection.xml
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f6927b16a6efa8745b11b984cb514a99
+    m_importFrom: Assets/GameMain/Configs/ResourceEditor.xml
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 82eaf41ac07bb06458b3c64a8028e43e
+    m_importFrom: Assets/AssetGraph/AssetGraph.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e3044bbfd762a3746b0cb363784a5f02
+    m_importFrom: Assets/AddressableAssetsData/AssetGroups/Dll.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: efff683bc32780649bac864765788f32
+    m_importFrom: Assets/AddressableAssetsData/AssetGroups/Entity.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ba827292cb589a647b26794f6c5a736f
+    m_importFrom: Assets/AddressableAssetsData/AssetGroups/Localization.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 221443bfbbfafca43be8d1a190adc6b1
+    m_importFrom: Assets/AddressableAssetsData/AssetGroups/Prefab.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 832a02e09051d9c4ca60d55b317e228f
+    m_importFrom: Assets/AddressableAssetsData/AssetGroups/Audio.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1404f40ef7dd0df4093e8476827fbddd
+    m_importFrom: Assets/AssetGraph/Cache/AssetBundleBuildMap.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ef3c2fc9a5e618340afde0fbb5c05ba6
+    m_importFrom: Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e3c79a4cd7948dc48a292dbd0dcdcf96
+    m_importFrom: Assets/AddressableAssetsData/AssetGroups/Configs.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4506e41d911157f4d84bef5b286859c3
+    m_importFrom: Assets/AddressableAssetsData/AssetGroups/DataTables.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9aaa08b6861633943873b90a0733d03b
+    m_importFrom: Assets/AddressableAssetsData/AssetGroups/Item.asset
     m_exportTo: 
     m_variantName: 
   - m_assetDatabaseId: 18678a28cef624aeb89c5717c46be35b
@@ -65,156 +766,96 @@ MonoBehaviour:
     m_importFrom: Assets/Third/GameFramework/Prefabs/GameFramework.prefab
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: 49a3969d998dbff4bb8afbb1715b580f
-    m_importFrom: Assets/GameMain/Entity/EnergyPylon/EnergyPylon_Level2.prefab
+  - m_assetDatabaseId: 76b219059ebd59042b468c8a4bf64cff
+    m_importFrom: Assets/GameMain/Dlls/System.dll.bytes
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: 9a7040bd5c6b20a4887fa5e4588a4f3e
-    m_importFrom: Assets/GameMain/Entity/AssaultCannon/AssaultCannon_Level1.prefab
+  - m_assetDatabaseId: 0faece4011ef67e4ea8a8fea45109648
+    m_importFrom: Assets/GameMain/Dlls/HotFix.dll.bytes
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: 2684a1c4db9d69d41b3f07c6d26ea92d
-    m_importFrom: Assets/GameMain/Entity/Enemies/SuperHoverboss.prefab
+  - m_assetDatabaseId: 0ff00d66c9d9b3c48968d6041ca62ba6
+    m_importFrom: Assets/GameMain/Dlls/UnityEngine.CoreModule.dll.bytes
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: 7d93ef64014fd6a4d9bb47a39a3a20e3
-    m_importFrom: Assets/GameMain/Entity/EnemyProjectile.prefab
+  - m_assetDatabaseId: e216014128141c346bd9a71369ca23f0
+    m_importFrom: Assets/GameMain/Dlls/UnityGameFramework.Runtime.dll.bytes
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: 0da5d1fab0b4f5f4c9c2354b9a121259
-    m_importFrom: Assets/GameMain/Entity/RocketPlatform/RocketProjectile.prefab
+  - m_assetDatabaseId: 1cb863bac0515e04dba9591f70747e94
+    m_importFrom: Assets/GameMain/Dlls/LitJson.dll.bytes
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: f13500b418c84db489bb75d7234cd343
-    m_importFrom: Assets/GameMain/Entity/EnergyPylon/EnergyPylon_Level1.prefab
+  - m_assetDatabaseId: ff6a46ced8b26604da3ff971ff47cb50
+    m_importFrom: Assets/GameMain/Dlls/GameFramework.dll.bytes
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: c707bc95ab948454ca1e378dce5e9358
-    m_importFrom: Assets/GameMain/Item/PlacementTile.prefab
+  - m_assetDatabaseId: 13d1af0b53cd30449a64985aa182d812
+    m_importFrom: Assets/GameMain/Dlls/mscorlib.dll.bytes
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: 293df2a6d0c1fe2419f7fead8f64d9ad
-    m_importFrom: Assets/GameMain/Entity/PlasmaLance/LaserProjectile.prefab
+  - m_assetDatabaseId: bcd00095a14c9c542b3d7384f86ca29c
+    m_importFrom: Assets/AddressableAssetsData/Android/addressables_content_state.bin
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: d95e38fd6f021674d83ba81cc0554ff1
-    m_importFrom: Assets/GameMain/Entity/RocketPlatform/RocketPlatform_Level3.prefab
+  - m_assetDatabaseId: 1470d3bd838b88244952159e263d8fed
+    m_importFrom: Assets/AddressableAssetsData/AddressableAssetSettings.asset
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: faa270e3d0214c242bcbde40d8acb7a9
-    m_importFrom: Assets/GameMain/Item/SinglePlacementTile.prefab
+  - m_assetDatabaseId: 3805f04aa43306c4590ee741451aefe3
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/Diagnostics/ProfilerTests.cs
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: 87b1bb64b83880c4580ca412e0ca5f90
-    m_importFrom: Assets/GameMain/Entity/MissileArray/MissileArray_Level1.prefab
+  - m_assetDatabaseId: e2d5a57757fc0cc4eb4f2fade47b59dd
+    m_importFrom: Packages/com.unity.scriptablebuildpipeline/Editor/Tasks/CalculateSceneDependencyData.cs
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: 7e1550d1279a6a04fb4fc06d48a5c41d
-    m_importFrom: Assets/GameMain/Entity/Enemies/Hoverbuggy.prefab
+  - m_assetDatabaseId: 722d9658f4892ba47a7a9db5fdf152d6
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/ResourceProviders/SceneProvider.cs
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: 47d081471431a6141abbd27d8b6b36aa
-    m_importFrom: Assets/GameMain/Entity/AssaultCannon/MachineGunProjectile.prefab
+  - m_assetDatabaseId: d6c85b3ea86fd7d45a0284311e03aa02
+    m_importFrom: Packages/com.unity.scriptablebuildpipeline/Tests/Editor/CalculateSceneDependencyTests.cs
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: 35ea3d79e6d719b4fbbae5f68e64f43b
-    m_importFrom: Assets/GameMain/Entity/RocketPlatform/RocketPlatform.prefab
+  - m_assetDatabaseId: 9847c86f230bc2e4d8f60483d345704c
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/SceneTests.cs
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: ef4461c923b09994584fdb6563d3faf1
-    m_importFrom: Assets/GameMain/Entity/EntityPlayer.prefab
+  - m_assetDatabaseId: eb7f165f4002c4f4bb7cf6eb7f1166d9
+    m_importFrom: Packages/com.unity.scriptablebuildpipeline/CHANGELOG.md
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: d07ecebe09082a54b9f4a0d6b2bf91e4
-    m_importFrom: Assets/GameMain/Entity/RocketPlatform/RocketPlatform_Level1.prefab
+  - m_assetDatabaseId: c499a2a91e3095b4c8e10d8f7de9bbb5
+    m_importFrom: Packages/com.unity.addressables/package.json
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: a2c2a6ec392666d43bc1904741758f04
-    m_importFrom: Assets/GameMain/Entity/Enemies/SuperHoverbuggy.prefab
+  - m_assetDatabaseId: 5efb62e6f1c6da94e8d016720d9761dc
+    m_importFrom: Packages/com.unity.scriptablebuildpipeline/ValidationExceptions.json
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: 4361f589f95c04c42bdcf4793b7353dc
-    m_importFrom: Assets/GameMain/Entity/EnergyPylon/EnergyPylon_Level3.prefab
+  - m_assetDatabaseId: 6f6c277bb5d2a164e8c95a7f0754c0f6
+    m_importFrom: Packages/com.unity.addressables/CHANGELOG.md
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: e7ea0259da0ad1040aea7b4d864fe206
-    m_importFrom: Assets/GameMain/Entity/HPBar.prefab
+  - m_assetDatabaseId: d38d5a5256466c349a81338d02621916
+    m_importFrom: Packages/com.unity.scriptablebuildpipeline/package.json
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: 7292d1ebf364bd9409fd4b6fc6ee75fe
-    m_importFrom: Assets/GameMain/Entity/PlasmaLance/PlasmaLance_Level3.prefab
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 073ca2ed003aedf4cb608d9ce2d58514
-    m_importFrom: Assets/GameMain/Entity/Enemies/SuperHovercopter.prefab
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: b95da2741c7254343be90ea6c5a2d752
-    m_importFrom: Assets/StreamingAssets/build_info
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 6c63b4e8a9a78b94da4eb0497f842615
-    m_importFrom: Assets/GameMain/Entity/EnergyPylon/EnergyPylon.prefab
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 541ab289e59da4e4281d981b7f31ea13
-    m_importFrom: Assets/GameMain/Entity/Enemies/Hovercopter.prefab
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 5a4b7618f48551643aaceba542fed0af
-    m_importFrom: Assets/GameMain/Entity/PlasmaLance/PlasmaLance.prefab
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: b452648877e07ee4390ebd4f9803dcd8
-    m_importFrom: Assets/GameMain/Entity/RadiusVisualiser.prefab
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 9f73f2e992c8e844bb2579ebcb3dfcf4
-    m_importFrom: Assets/GameMain/Entity/AssaultCannon/AssaultCannon_Level3.prefab
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 474ea29b517c95848bbe596875ca0593
-    m_importFrom: Assets/GameMain/Entity/AssaultCannon/AssaultCannon.prefab
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: fb6cc224229e9f04b84157a6dfed7851
-    m_importFrom: Assets/GameMain/Entity/Enemies/Hovertank.prefab
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 6383895fc3769164d90be5679dea0cc2
-    m_importFrom: Assets/GameMain/Entity/PlasmaLance/PlasmaLancePreview.prefab
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 21b3cf78465345e4e88545e54ca54c2a
-    m_importFrom: Assets/GameMain/Entity/EMPGenerator/EMPGeneratorPreview.prefab
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 3be5d87b18055e3458fd11ba66cfa94f
-    m_importFrom: Assets/GameMain/Entity/AssaultCannon/AssaultCannon_Level2.prefab
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 917941f1d8862ff4a8dbcd474757c151
-    m_importFrom: Assets/GameMain/Entity/AssaultCannon/AssaultCannonPreview.prefab
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 0d28baceb98e4cd42ac0bdfe85ab7997
-    m_importFrom: Assets/Editor/Game/GameFrameworkConfigs.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: c12aa33a1926c1140a14e23b736a37fc
-    m_importFrom: Assets/HybridCLRData/Generated/link.xml
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: b1afefbfe85a2424e86dad120a32f57c
-    m_importFrom: Assets/AssetGraph/AssetBundles/Cache/TemporalSettingFiles/AssetReferenceDB.asset
+  - m_assetDatabaseId: ce10b9a173f68e7439b96557cb1bc223
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/InitializationObjectsAsyncTests.cs
     m_exportTo: 
     m_variantName: 
   - m_assetDatabaseId: 94a061db0b960634c995d928535999b6
     m_importFrom: Packages/com.unity.addressables/Editor/GUI/AssetInspectorGUIGroupsPopup.cs
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: 574e95015bf14c12b33dfbb98168cbfc
-    m_importFrom: Packages/com.unity.scriptablebuildpipeline/Tests/Editor/ContentPipelineTests.cs
+  - m_assetDatabaseId: 3c6caf6db0f23fb459226c679978683d
+    m_importFrom: Packages/com.unity.scriptablebuildpipeline/Editor/Utilities/CacheServerDownloader.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: cde708facb1abd24cb7b42fedf436309
+    m_importFrom: Packages/com.unity.scriptablebuildpipeline/Tests/Editor/CacheServerBuildCacheTests.cs
     m_exportTo: 
     m_variantName: 
   - m_assetDatabaseId: 28a940f3bb234e34baec3af2b61b8d67
@@ -233,20 +874,32 @@ MonoBehaviour:
     m_importFrom: Packages/com.unity.scriptablebuildpipeline/Editor/Utilities/BuildCache.cs
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: e2d5a57757fc0cc4eb4f2fade47b59dd
-    m_importFrom: Packages/com.unity.scriptablebuildpipeline/Editor/Tasks/CalculateSceneDependencyData.cs
+  - m_assetDatabaseId: f94d20840f3378647ba2c0da3686e517
+    m_importFrom: Packages/com.unity.addressables/Runtime/Initialization/CleanBundleCacheOperation.cs
     m_exportTo: 
     m_variantName: 
   - m_assetDatabaseId: 715a1813af334a6db7f3c47daec400af
     m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Profiler/AddressablesProfilerDetailsDataInspector.cs
     m_exportTo: 
     m_variantName: 
+  - m_assetDatabaseId: a0c7d049419ae46f19ead59b45d622fb
+    m_importFrom: Packages/com.unity.scriptablebuildpipeline/Editor/CacheServer/Util.cs
+    m_exportTo: 
+    m_variantName: 
   - m_assetDatabaseId: ae38715d198830145a8bf7fa7adf9ee1
     m_importFrom: Packages/com.unity.addressables/Runtime/Addressables.cs
     m_exportTo: 
     m_variantName: 
+  - m_assetDatabaseId: 27fb11404301449859aa664f4cb020e0
+    m_importFrom: Packages/com.unity.scriptablebuildpipeline/Editor/CacheServer/UnityEditor.CacheServer.asmdef
+    m_exportTo: 
+    m_variantName: 
   - m_assetDatabaseId: 3f0645bd0f9b0ea46a9bec32c403ab9e
     m_importFrom: Packages/com.unity.addressables/Tests/Runtime/AddressablesIntegrationTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e766efa9ccaf441728f810262e5ca359
+    m_importFrom: Packages/com.unity.scriptablebuildpipeline/Editor/CacheServer/CacheServerUploader.cs
     m_exportTo: 
     m_variantName: 
   - m_assetDatabaseId: e14d3e528f112e445aa46b7870f93944
@@ -267,6 +920,10 @@ MonoBehaviour:
     m_variantName: 
   - m_assetDatabaseId: 62d523cfe47d64e43a6d72011ad4a7ca
     m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/GUI/EventViewerWindow.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1b623084ee8eb4b9199e34858add3cac
+    m_importFrom: Packages/com.unity.scriptablebuildpipeline/Tests/Editor/CacheServer/LocalCacheServer.cs
     m_exportTo: 
     m_variantName: 
   - m_assetDatabaseId: c8e7a7789891dd440b809c2cfab69ccc
@@ -309,10 +966,6 @@ MonoBehaviour:
     m_importFrom: Packages/com.unity.addressables/Tests/Runtime/AddressablesTestUtilities.cs
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: 9847c86f230bc2e4d8f60483d345704c
-    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/SceneTests.cs
-    m_exportTo: 
-    m_variantName: 
   - m_assetDatabaseId: 680fb597e686741c7a2e225708f654d2
     m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/AssemblyInfo.cs
     m_exportTo: 
@@ -323,6 +976,14 @@ MonoBehaviour:
     m_variantName: 
   - m_assetDatabaseId: 1095566ae23dbab4985b87dc92390bc2
     m_importFrom: Packages/com.unity.addressables/Runtime/Initialization/InitializationObjectsOperation.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 429f5bce8a9b4ba4295f2d48eebd9639
+    m_importFrom: Packages/com.unity.scriptablebuildpipeline/Editor/Utilities/CacheServerUploader.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 493e67a6e86284a8681aab6f10d05c34
+    m_importFrom: Packages/com.unity.scriptablebuildpipeline/Tests/Editor/CacheServer/Utils.cs
     m_exportTo: 
     m_variantName: 
   - m_assetDatabaseId: ea375d4d72197e143ba4ebfe5d21ed7c
@@ -341,6 +1002,10 @@ MonoBehaviour:
     m_importFrom: Packages/com.unity.addressables/Runtime/Utility/ResourceManagerEventCollector.cs
     m_exportTo: 
     m_variantName: 
+  - m_assetDatabaseId: 012e8bc53e96d4c638db9f5b04ef84de
+    m_importFrom: Packages/com.unity.scriptablebuildpipeline/Tests/Editor/CacheServer/Tests.cs
+    m_exportTo: 
+    m_variantName: 
   - m_assetDatabaseId: cfcdca687c6d4574928e2741e1fb9287
     m_importFrom: Packages/com.unity.addressables/Tests/Runtime/AddressablesImplTests.cs
     m_exportTo: 
@@ -353,10 +1018,6 @@ MonoBehaviour:
     m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/Diagnostics/Profiling/ProfilerFrameData.cs
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: 3805f04aa43306c4590ee741451aefe3
-    m_importFrom: Packages/com.unity.addressables/Tests/Editor/Diagnostics/ProfilerTests.cs
-    m_exportTo: 
-    m_variantName: 
   - m_assetDatabaseId: 3ba8763d94231c9459f5a2d2aae30cfa
     m_importFrom: Packages/com.unity.scriptablebuildpipeline/Editor/ContentPipeline.cs
     m_exportTo: 
@@ -365,12 +1026,20 @@ MonoBehaviour:
     m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/Diagnostics/Profiling/ProfilerRuntime.cs
     m_exportTo: 
     m_variantName: 
+  - m_assetDatabaseId: 5b2102a42c1d8884989d74c98d4442b4
+    m_importFrom: Packages/com.unity.scriptablebuildpipeline/Tests/Editor/LocalCacheServer.cs
+    m_exportTo: 
+    m_variantName: 
   - m_assetDatabaseId: a2fd90a1deed549a584e3a4b33bd7404
     m_importFrom: Packages/com.unity.addressables/Editor/GUI/AddressablesGUIUtility.cs
     m_exportTo: 
     m_variantName: 
   - m_assetDatabaseId: 541f73e53f31a9c45aada1a7441da18a
     m_importFrom: Packages/com.unity.addressables/Tests/Runtime/CleanBundleCacheTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: af24b50f4a1bf85459001d38afa5850e
+    m_importFrom: Packages/com.unity.scriptablebuildpipeline/Editor/CacheServer
     m_exportTo: 
     m_variantName: 
   - m_assetDatabaseId: 10fd20f634856da4a8adcac07d018d68
@@ -385,8 +1054,8 @@ MonoBehaviour:
     m_importFrom: Packages/com.unity.scriptablebuildpipeline/Editor/Tasks/UpdateBundleObjectLayout.cs
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: 722d9658f4892ba47a7a9db5fdf152d6
-    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/ResourceProviders/SceneProvider.cs
+  - m_assetDatabaseId: c18f0df0496b5418bbb5a34c4c30d6e8
+    m_importFrom: Packages/com.unity.scriptablebuildpipeline/Editor/CacheServer/CacheServerUploaderWindow.cs
     m_exportTo: 
     m_variantName: 
   - m_assetDatabaseId: d5db91ce60c3e4e44907fbbadd68e6f4
@@ -399,6 +1068,14 @@ MonoBehaviour:
     m_variantName: 
   - m_assetDatabaseId: 82bbdcbf8b70eda4e80f931393924ac1
     m_importFrom: Packages/com.unity.addressables/Tests/Editor/DomainReloadTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c655781b9e2c70945bf8e3f232c54d6e
+    m_importFrom: Packages/com.unity.scriptablebuildpipeline/Tests/Editor/CacheServer
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e253c6be7d9134114a9b533965c2b45f
+    m_importFrom: Packages/com.unity.scriptablebuildpipeline/Editor/CacheServer/FileDownloadItem.cs
     m_exportTo: 
     m_variantName: 
   - m_assetDatabaseId: f498126c527f05c4f9202c95abf8ba3d
@@ -425,6 +1102,10 @@ MonoBehaviour:
     m_importFrom: Packages/com.unity.scriptablebuildpipeline/Tests/Editor/CalculateAssetDependencyTests.cs
     m_exportTo: 
     m_variantName: 
+  - m_assetDatabaseId: de0adf19d0a2a46a19acaa82fcb5a988
+    m_importFrom: Packages/com.unity.scriptablebuildpipeline/Tests/Editor/CacheServer/UnityEditor.CacheServerTests.asmdef
+    m_exportTo: 
+    m_variantName: 
   - m_assetDatabaseId: 28e27e70c0f8cee45a62f86887957a0f
     m_importFrom: Packages/com.unity.addressables/Tests/Editor/Build/GenerateLocationListsTaskTests.cs
     m_exportTo: 
@@ -433,12 +1114,20 @@ MonoBehaviour:
     m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Profiler/AddressablesProfilerViewController.cs
     m_exportTo: 
     m_variantName: 
+  - m_assetDatabaseId: 31314932afa7e4ce3ab642bfbc2dd8ff
+    m_importFrom: Packages/com.unity.scriptablebuildpipeline/Editor/CacheServer/IDownloadItem.cs
+    m_exportTo: 
+    m_variantName: 
   - m_assetDatabaseId: b19f99025db4a1e44a095aa3f1284c54
     m_importFrom: Packages/com.unity.addressables/Editor/Build/BuildPipelineTasks/GenerateLocationListsTask.cs
     m_exportTo: 
     m_variantName: 
   - m_assetDatabaseId: f4d7d9f74fa394649b729102066b4b96
     m_importFrom: Packages/com.unity.addressables/Tests/Editor/AddressableAssetSettingsLocatorTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b734b613791eb4b0381013f84745a995
+    m_importFrom: Packages/com.unity.scriptablebuildpipeline/Tests/Editor/CacheServer/TestDownloadItem.cs
     m_exportTo: 
     m_variantName: 
   - m_assetDatabaseId: 832363b0cc1d7e44dbd8750e91343bd1
@@ -457,10 +1146,6 @@ MonoBehaviour:
     m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/ResourceManager.cs
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: d6c85b3ea86fd7d45a0284311e03aa02
-    m_importFrom: Packages/com.unity.scriptablebuildpipeline/Tests/Editor/CalculateSceneDependencyTests.cs
-    m_exportTo: 
-    m_variantName: 
   - m_assetDatabaseId: 25cef95ed1a3d0a47bb7058b90931cd0
     m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/Util/BinaryStorageBuffer.cs
     m_exportTo: 
@@ -469,16 +1154,16 @@ MonoBehaviour:
     m_importFrom: Packages/com.unity.addressables/Runtime/ResourceLocators/ContentCatalogData.cs
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: ce10b9a173f68e7439b96557cb1bc223
-    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/InitializationObjectsAsyncTests.cs
-    m_exportTo: 
-    m_variantName: 
   - m_assetDatabaseId: 9c9765ad9de06ee4193e087e7732d756
     m_importFrom: Packages/com.unity.addressables/Tests/Runtime/AssetBundleProviderTests.cs
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: f94d20840f3378647ba2c0da3686e517
-    m_importFrom: Packages/com.unity.addressables/Runtime/Initialization/CleanBundleCacheOperation.cs
+  - m_assetDatabaseId: 8cce051c0b60040d68cd27a80e58f787
+    m_importFrom: Packages/com.unity.scriptablebuildpipeline/Tests/Editor/CacheServer/ByteArrayStream.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 02aa99c7f5d8f4c77810419ebddad96d
+    m_importFrom: Packages/com.unity.scriptablebuildpipeline/Editor/CacheServer/Client.cs
     m_exportTo: 
     m_variantName: 
   - m_assetDatabaseId: 3e2e0ffa088c91d41a086d0b8cb16bdc
@@ -489,24 +1174,8 @@ MonoBehaviour:
     m_importFrom: Packages/com.unity.addressables/Editor/GUI/AddressableAssetGroupInspector.cs
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: eb7f165f4002c4f4bb7cf6eb7f1166d9
-    m_importFrom: Packages/com.unity.scriptablebuildpipeline/CHANGELOG.md
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: c499a2a91e3095b4c8e10d8f7de9bbb5
-    m_importFrom: Packages/com.unity.addressables/package.json
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 5efb62e6f1c6da94e8d016720d9761dc
-    m_importFrom: Packages/com.unity.scriptablebuildpipeline/ValidationExceptions.json
-    m_exportTo: 
-    m_variantName: 
   - m_assetDatabaseId: 85f61fd61986b405dbd5bc38da39f73d
     m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Profiler/UXML/InspectorPane.uxml
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 6f6c277bb5d2a164e8c95a7f0754c0f6
-    m_importFrom: Packages/com.unity.addressables/CHANGELOG.md
     m_exportTo: 
     m_variantName: 
   - m_assetDatabaseId: d79503fa30e4e47f7a80231b74f76eab
@@ -517,436 +1186,8 @@ MonoBehaviour:
     m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Profiler/UXML/MissingReport.uxml
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: d38d5a5256466c349a81338d02621916
-    m_importFrom: Packages/com.unity.scriptablebuildpipeline/package.json
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: b9f06ff0612105b4ea20e0309e759e24
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/ABI/PlatformABI.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 46bc62d5236f5e941850776c435a9560
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Commands/MethodBridgeGeneratorCommand.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: a6d5e365e1b7d9742bee023ea54b31f2
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Runtime
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 13ba8ce62aa80c74598530029cb2d649
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Runtime/HybridCLR.Runtime.asmdef
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 2c7d5b71981fba643b4c21ed01bcb675
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Runtime/LoadImageErrorCode.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 8bff6cadf0b8db54b87ba51b24d080f6
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/BuildProcessors/MsvcStdextWorkaround.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: c95ff173013909548bd9e2008812f9ff
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Meta/GenericClass.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: e092a73910a69894daea44290d7292f6
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/3rds/UnityHook/Plugins/silicon/libMonoHookUtils_OSX.dylib
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: d8373e0cb30c4894db7cd4d0b77a7a48
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Settings/SettingsPresetReceiver.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 21fb0a02f23185141a4a3df67fe61789
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Commands/StripAOTDllCommand.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 9af6345cc5ab1ae4a81262ab4b537911
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Template
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: cf42c4f20b8a1b94baa04a1a5c6b8beb
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/3rds/UnityHook/HybridCLRHooks/CopyStrippedAOTAssembliesHook.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: b4071bf66ac9c544487ae88b5ee9b20a
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/AOT
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 07595a9b5b2f54c44a67022ae3e077d4
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Meta/GenericArgumentContext.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: b93c6604eb031674b80de14cd4458dc0
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Plugins/dnlib.dll
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: cc89a9041ab48ac41975fbd1e00b9b98
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/3rds/UnityHook/HybridCLRHooks/PatchScriptingAssembliesJsonHook.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: f99dd22d9d81b2540b4663b3bcdf0a79
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Runtime/ReversePInvokeWrapperGenerationAttribute.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 121d574bf01969444aa6619a8f6dbb4c
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Meta/PathAssemblyResolver.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 4455f7304f8678f408dd6cf21734f55e
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/BuildProcessors/ScriptingAssembliesJsonPatcher.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 590419ee7e82ac24cbac9b8a48891fe0
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Il2CppDef/Il2CppDefGenerator.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 15d4563ad83546c42bc65c99be9bd54a
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Template/FileRegionReplace.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 97cc0d26f72fc4148b8370b2252d1585
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/3rds/UnityHook/CodePatcher.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: ee1ec106190e514489c7ba32bc7bc2e7
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/MethodBridge/Analyzer.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: f3dbfe2e8b6a92742b18e287c5d281dd
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Meta/MetaUtil.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: a26873724919287449e2c9eec68ef1da
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Plugins
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 5165a065d05497c43a2fff885f31ed07
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Commands/Il2CppDefGeneratorCommand.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: f80d2287f01c89642a74b0a60f7a3305
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/BuildProcessors
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 4adb23596911347faa69537b900c9f5e
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/3rds/UnityHook/Plugins/x86_64/libMonoHookUtils_OSX.dylib
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 61948fcb1bc40ba47b8c10b0ae801ebb
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/BuildProcessors/AddLil2cppSourceCodeToXcodeproj2021OrOlder.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 13fe0cab0b357464d889de45c8d98850
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/3rds/UnityHook
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 3c561c9729c367e4fbef63f4ec56f268
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/3rds/UnityHook/LDasm.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: da46bc9f1a4dece41a5c193166be9a30
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Il2CppDef
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 6b7421e47f0ae1e4ebb72bf18d1d7d48
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/3rds/UnityHook/HookPool.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 96c2bc28db69e1644892219abef3d4b5
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/3rds/UnityHook/HybridCLRHooks/GetIl2CppFolderHook.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: d796fc01daee1964586621890988a5ae
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/3rds/UnityHook/HybridCLRHooks
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 2b464872c07f6ba4f9a4e4a02ca9a28c
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Commands/AOTReferenceGeneratorCommand.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 0b1df5760b488fa43a68843c46fda63a
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/ABI/TypeCreator.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 0d58bdc22b6d6b54ab6791baf16a0a3d
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Runtime/RuntimeApi.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 28e06667d06f37b4990b16f54f903a35
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/ABI/MethodDesc.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 093a9e6c1e7399244bbcd8983fdbfdee
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Settings/EditorStatusWatcher.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: e189374413a3f00468e49d51d8b27a09
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Settings/HybridCLRSettings.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 5f8d48774b790364cbd36f1f68fd6614
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Meta/AssemblyResolverBase.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 959fbf0bb06629542969354505189240
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Installer/InstallerWindow.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 5230adaa2ea5d567f4c80a8d464fd84b
-    m_importFrom: Packages/com.code-philosophy.hybridclr
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 7db18e1736f593c4089c85d764cf8620
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Commands/ReversePInvokeWrapperGeneratorCommand.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 5d4ae4a5c0bba49469c525887d812717
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/HashUtil.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 30bbf4a80a6cf3a43b3f489747d9dd6a
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/AOT/Analyzer.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 960a0257c3a17f64b810193308ce1558
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Installer/BashUtil.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 92f51c069d2607447ae2f61de80540fb
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Commands
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 0c2444f09010bce41a52d951b7100c49
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/MethodBridge
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 80682e47c38a2f04f8af94d356688cf0
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/ABI/ParamOrReturnType.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 7adba4475cf0bdc4fa7995c0d748f480
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/3rds/UnityHook/Plugins/silicon
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: d5cc4ae4adc319b4bb1e115567d7613e
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Link/LinkXmlWriter.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: efda6e010e5c6594081c4a62861d469f
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/3rds/UnityHook/HookUtils_OSX.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: edeb86f4b5b13ca4cb0fe9d87ce509bb
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/ABI/ABIUtil.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: c3fabc41cf17c444995fc01a76c5dbe6
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: e84139b42a6164e4c93ce4df1be6dcfb
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/3rds/UnityHook/HookUtils.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 9dec2922e3df5464aa047b636eb19e0d
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/BuildProcessors/FilterHotFixAssemblies.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: b7af32bdf1cf55c42bfc449820d401cb
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/ABI/ValueTypeSizeAligmentCalculator.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: fb4ba063068b17247b2d0233420aa5f0
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/BuildProcessors/CheckSettings.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 1c644b0c018fb87498d69c3202439d21
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Meta/MethodReferenceAnalyzer.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 3708ee1d4035cb14abaa4d64a8ec8148
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Settings
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: d1243cf04685361478972f93b5ca868a
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/AOT/GenericReferenceWriter.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: e42a0f3bcbc5ddf438a85ae16c1b3116
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/MethodBridge/Generator.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: fa4650e79a52228488aa85e0690ca52c
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Meta/AssemblyCache.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 0342c7d8575fdea49896260c77285286
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Meta/AssemblyReferenceDeepCollector.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: bd0b8071cf434d6498160259e3829980
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/3rds/UnityHook/MethodHook.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: ffafce7f1f0bf614d95b48ca39385377
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/ABI/TypeInfo.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 2373f786d14518f44b0f475db77ba4de
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/HybridCLR.Editor.asmdef
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: f135accd10f42c64b9735c3aa8cb1e77
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Meta/FixedSetAssemblyResolver.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 89b83906438c52d4b9af4aaef055f177
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Meta/CombinedAssemblyResolver.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 56b28b5583a184c669dcb968d175544c
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/3rds/UnityHook/Plugins/Utils.cpp
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 4f5b96abdbc4c424eb1bc3bc34b3a1a4
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Commands/LinkGeneratorCommand.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 88ecf3d52ec393b4cac142518944e487
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Meta/GenericMethod.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: bf11b6c8bbc5afd4cb4a11921e5bd81e
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Commands/CompileDllCommand.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 16b9dc031f67b4fe5ad79c230f75768c
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/3rds/UnityHook/Plugins
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 31f6a810e38e66f4c832b135770a04bb
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/3rds/UnityHook/Plugins/x86_64
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 259c1cb7fe681f74eb435ab8f268890d
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/ReversePInvokeWrap
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: c20f09bfbe3f32143aae872d3813d9e9
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Commands/PrebuildCommand.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: a475a5f281298b84da32373694704c68
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Settings/MenuProvider.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: daa1e09af240aae4da0741843cb2b3f3
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/3rds
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 3787c7d8b775c754aa4ae06bf78e96ea
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Meta
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: a4ce072f7e4a17248a3d9ebfd011356b
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/BuildProcessors/AddLil2cppSourceCodeToXcodeproj2022OrNewer.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 851c44a8da67a9742a7ea68815383f27
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Settings/ScriptableSignleton.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: d2bd1694fedc8b54c88bb9f6c67907d3
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Settings/HybridCLRSettingProvider.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: fd3dd4871efd10e46947cb61c13797fd
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Link/Analyzer.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 7d883f182f206fa4db31f4085ce0ecdc
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/ReversePInvokeWrap/Generator.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 812d81a75b690394bbe16ef5f0bcbc46
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/AOT/ConstraintContext.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 381c08faeafbc004f97504eeba87380d
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/SettingsUtil.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 0f0351553ad90e74aa586746b5965ded
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Runtime/HomologousImageMode.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: f7884710ec2f8e545b3fe9aa05def5a8
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/BuildProcessors/CopyStrippedAOTAssemblies.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: f962a018018dbb945a19f82d2e098686
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Meta/IAssemblyResolver.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: d26c8b77c84f09442a05f2c67e5e09b8
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/ABI
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 44c8627d126b30d4e9560b1f738264ca
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Installer/InstallerController.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 3b01fa99119e72141bfee5628c0ffce1
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Meta/AssemblyCacheBase.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: a2c8f84b297371d4cbcd5ca655bf360d
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Installer
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: c172068b408c0e349b2ceee4c4635085
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/ReversePInvokeWrap/Analyzer.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: f2ba16cf4bf82374c814789b6ced3abd
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/ABI/ParamInfo.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 5186a137e0258034cb3832bdf6b16a70
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/Link
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 9bb6e2908d8948648979c9ff6bb7937d
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/BuildProcessors/PatchScriptingAssemblyList.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 69eeb734e262a0a4fbe0887249198f73
-    m_importFrom: Packages/com.code-philosophy.hybridclr/Editor/3rds/UnityHook/Plugins/build_libMonoHookUtils_OSX.dylib.sh
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 52688f4469ff9454e8c3d8aaf045d9f4
-    m_importFrom: Packages/com.code-philosophy.hybridclr/README_zh.md
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: b4b6051e2483d664facc72a5102dcffc
-    m_importFrom: Packages/com.code-philosophy.hybridclr/README.md
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: f09e582706a5776448316f6c584e63a6
-    m_importFrom: Packages/com.code-philosophy.hybridclr/LICENSE
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 8e53ce54bd8e88c4785c625555308dba
-    m_importFrom: Packages/com.code-philosophy.hybridclr/RELEASELOG.md
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 8ea8eca3a387d9d4988a2fca1036f2e7
-    m_importFrom: Packages/com.code-philosophy.hybridclr/package.json
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 6b9888f00b7f4384e9cd0e2c88cf4d17
-    m_importFrom: Assets/HybridCLRData/Generated/AOTGenericReferences.cs
+  - m_assetDatabaseId: 20fd932914f92c744ac4bc0a2095a203
+    m_importFrom: Assets/Main/Tools/LoadDll.cs
     m_exportTo: 
     m_variantName: 
   m_version: 2

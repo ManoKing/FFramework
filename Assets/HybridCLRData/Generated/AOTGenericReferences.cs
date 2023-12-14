@@ -29,13 +29,10 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// GameFramework.GameFrameworkMultiDictionary.Enumerator<int,object>
 	// GameFramework.GameFrameworkMultiDictionary<int,object>
 	// GameFramework.Variable<int>
-	// System.Action<UnityEngine.UIVertex>
 	// System.Action<int>
 	// System.Action<object>
-	// System.Collections.Generic.ArraySortHelper<UnityEngine.UIVertex>
 	// System.Collections.Generic.ArraySortHelper<int>
 	// System.Collections.Generic.ArraySortHelper<object>
-	// System.Collections.Generic.Comparer<UnityEngine.UIVertex>
 	// System.Collections.Generic.Comparer<int>
 	// System.Collections.Generic.Comparer<object>
 	// System.Collections.Generic.Dictionary.Enumerator<int,GameFramework.GameFrameworkLinkedListRange<object>>
@@ -75,7 +72,6 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Collections.Generic.Dictionary<object,byte>
 	// System.Collections.Generic.Dictionary<object,object>
 	// System.Collections.Generic.EqualityComparer<GameFramework.GameFrameworkLinkedListRange<object>>
-	// System.Collections.Generic.EqualityComparer<UnityEngine.UIVertex>
 	// System.Collections.Generic.EqualityComparer<byte>
 	// System.Collections.Generic.EqualityComparer<float>
 	// System.Collections.Generic.EqualityComparer<int>
@@ -86,10 +82,8 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<int,object>>
 	// System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<object,byte>>
 	// System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<object,object>>
-	// System.Collections.Generic.ICollection<UnityEngine.UIVertex>
 	// System.Collections.Generic.ICollection<int>
 	// System.Collections.Generic.ICollection<object>
-	// System.Collections.Generic.IComparer<UnityEngine.UIVertex>
 	// System.Collections.Generic.IComparer<int>
 	// System.Collections.Generic.IComparer<object>
 	// System.Collections.Generic.IDictionary<object,LitJson.ArrayMetadata>
@@ -102,7 +96,6 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<int,object>>
 	// System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<object,byte>>
 	// System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<object,object>>
-	// System.Collections.Generic.IEnumerable<UnityEngine.UIVertex>
 	// System.Collections.Generic.IEnumerable<int>
 	// System.Collections.Generic.IEnumerable<object>
 	// System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<int,GameFramework.GameFrameworkLinkedListRange<object>>>
@@ -111,12 +104,10 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<int,object>>
 	// System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<object,byte>>
 	// System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<object,object>>
-	// System.Collections.Generic.IEnumerator<UnityEngine.UIVertex>
 	// System.Collections.Generic.IEnumerator<int>
 	// System.Collections.Generic.IEnumerator<object>
 	// System.Collections.Generic.IEqualityComparer<int>
 	// System.Collections.Generic.IEqualityComparer<object>
-	// System.Collections.Generic.IList<UnityEngine.UIVertex>
 	// System.Collections.Generic.IList<int>
 	// System.Collections.Generic.IList<object>
 	// System.Collections.Generic.KeyValuePair<int,GameFramework.GameFrameworkLinkedListRange<object>>
@@ -128,38 +119,28 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Collections.Generic.LinkedList.Enumerator<object>
 	// System.Collections.Generic.LinkedList<object>
 	// System.Collections.Generic.LinkedListNode<object>
-	// System.Collections.Generic.List.Enumerator<UnityEngine.UIVertex>
 	// System.Collections.Generic.List.Enumerator<int>
 	// System.Collections.Generic.List.Enumerator<object>
-	// System.Collections.Generic.List.SynchronizedList<UnityEngine.UIVertex>
 	// System.Collections.Generic.List.SynchronizedList<int>
 	// System.Collections.Generic.List.SynchronizedList<object>
-	// System.Collections.Generic.List<UnityEngine.UIVertex>
 	// System.Collections.Generic.List<int>
 	// System.Collections.Generic.List<object>
-	// System.Collections.Generic.ObjectComparer<UnityEngine.UIVertex>
 	// System.Collections.Generic.ObjectComparer<int>
 	// System.Collections.Generic.ObjectComparer<object>
 	// System.Collections.Generic.ObjectEqualityComparer<GameFramework.GameFrameworkLinkedListRange<object>>
-	// System.Collections.Generic.ObjectEqualityComparer<UnityEngine.UIVertex>
 	// System.Collections.Generic.ObjectEqualityComparer<byte>
 	// System.Collections.Generic.ObjectEqualityComparer<float>
 	// System.Collections.Generic.ObjectEqualityComparer<int>
 	// System.Collections.Generic.ObjectEqualityComparer<object>
 	// System.Collections.Generic.Queue.Enumerator<object>
 	// System.Collections.Generic.Queue<object>
-	// System.Collections.Generic.Stack.Enumerator<object>
-	// System.Collections.Generic.Stack<object>
-	// System.Collections.ObjectModel.ReadOnlyCollection<UnityEngine.UIVertex>
 	// System.Collections.ObjectModel.ReadOnlyCollection<int>
 	// System.Collections.ObjectModel.ReadOnlyCollection<object>
-	// System.Comparison<UnityEngine.UIVertex>
 	// System.Comparison<int>
 	// System.Comparison<object>
 	// System.EventHandler<object>
 	// System.IEquatable<Flower.IntVector2>
 	// System.Nullable<int>
-	// System.Predicate<UnityEngine.UIVertex>
 	// System.Predicate<int>
 	// System.Predicate<object>
 	// System.Runtime.CompilerServices.ConditionalWeakTable.CreateValueCallback<object,object>

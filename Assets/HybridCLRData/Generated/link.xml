@@ -44,7 +44,6 @@
   </assembly>
   <assembly fullname="System">
     <type fullname="System.Collections.Generic.Queue`1" preserve="all" />
-    <type fullname="System.Collections.Generic.Stack`1" preserve="all" />
   </assembly>
   <assembly fullname="UnityEngine.AIModule">
     <type fullname="UnityEngine.AI.NavMesh" preserve="all" />
@@ -56,7 +55,6 @@
     <type fullname="UnityEngine.Animation" preserve="all" />
   </assembly>
   <assembly fullname="UnityEngine.CoreModule">
-    <type fullname="UnityEngine.AddComponentMenu" preserve="all" />
     <type fullname="UnityEngine.Application" preserve="all" />
     <type fullname="UnityEngine.Behaviour" preserve="all" />
     <type fullname="UnityEngine.Camera" preserve="all" />
@@ -119,18 +117,13 @@
   </assembly>
   <assembly fullname="UnityEngine.TextRenderingModule">
     <type fullname="UnityEngine.Font" preserve="all" />
-    <type fullname="UnityEngine.UIVertex" preserve="all" />
   </assembly>
   <assembly fullname="UnityEngine.UI">
-    <type fullname="UnityEngine.EventSystems.PointerEventData" preserve="all" />
-    <type fullname="UnityEngine.EventSystems.UIBehaviour" preserve="all" />
-    <type fullname="UnityEngine.UI.BaseMeshEffect" preserve="all" />
     <type fullname="UnityEngine.UI.Button" preserve="all" />
     <type fullname="UnityEngine.UI.Button/ButtonClickedEvent" preserve="all" />
     <type fullname="UnityEngine.UI.Graphic" preserve="all" />
     <type fullname="UnityEngine.UI.GraphicRaycaster" preserve="all" />
     <type fullname="UnityEngine.UI.Image" preserve="all" />
-    <type fullname="UnityEngine.UI.Image/Type" preserve="all" />
     <type fullname="UnityEngine.UI.ScrollRect" preserve="all" />
     <type fullname="UnityEngine.UI.Selectable" preserve="all" />
     <type fullname="UnityEngine.UI.Slider" preserve="all" />
@@ -138,8 +131,6 @@
     <type fullname="UnityEngine.UI.Text" preserve="all" />
     <type fullname="UnityEngine.UI.Toggle" preserve="all" />
     <type fullname="UnityEngine.UI.Toggle/ToggleEvent" preserve="all" />
-    <type fullname="UnityEngine.UI.ToggleGroup" preserve="all" />
-    <type fullname="UnityEngine.UI.VertexHelper" preserve="all" />
   </assembly>
   <assembly fullname="UnityEngine.UIModule">
     <type fullname="UnityEngine.Canvas" preserve="all" />
@@ -210,9 +201,7 @@
   <assembly fullname="mscorlib">
     <type fullname="System.Action" preserve="all" />
     <type fullname="System.Action`1" preserve="all" />
-    <type fullname="System.Activator" preserve="all" />
     <type fullname="System.ArgumentOutOfRangeException" preserve="all" />
-    <type fullname="System.AsyncCallback" preserve="all" />
     <type fullname="System.Boolean" preserve="all" />
     <type fullname="System.Byte" preserve="all" />
     <type fullname="System.Char" preserve="all" />
@@ -224,7 +213,6 @@
     <type fullname="System.Collections.Generic.Dictionary`2/ValueCollection/Enumerator" preserve="all" />
     <type fullname="System.Collections.Generic.IEnumerable`1" preserve="all" />
     <type fullname="System.Collections.Generic.IEnumerator`1" preserve="all" />
-    <type fullname="System.Collections.Generic.IReadOnlyList`1" preserve="all" />
     <type fullname="System.Collections.Generic.KeyValuePair`2" preserve="all" />
     <type fullname="System.Collections.Generic.List`1" preserve="all" />
     <type fullname="System.Collections.Generic.List`1/Enumerator" preserve="all" />
@@ -237,7 +225,6 @@
     <type fullname="System.Enum" preserve="all" />
     <type fullname="System.EventHandler`1" preserve="all" />
     <type fullname="System.Exception" preserve="all" />
-    <type fullname="System.IAsyncResult" preserve="all" />
     <type fullname="System.IDisposable" preserve="all" />
     <type fullname="System.IEquatable`1" preserve="all" />
     <type fullname="System.IO.BinaryReader" preserve="all" />
@@ -246,7 +233,6 @@
     <type fullname="System.Int32" preserve="all" />
     <type fullname="System.Int64" preserve="all" />
     <type fullname="System.Math" preserve="all" />
-    <type fullname="System.MulticastDelegate" preserve="all" />
     <type fullname="System.NotSupportedException" preserve="all" />
     <type fullname="System.Nullable`1" preserve="all" />
     <type fullname="System.Object" preserve="all" />

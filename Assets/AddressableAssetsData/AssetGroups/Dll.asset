@@ -17,14 +17,8 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 1bfca6017e1fad44dbd724cc9bb93e25
   m_SerializeEntries:
-  - m_GUID: edf76deb11e865a49aefa913f0294528
-    m_Address: Assembly-CSharp.dll
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Dll
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ff6a46ced8b26604da3ff971ff47cb50
-    m_Address: GameFramework.dll
+  - m_GUID: 0faece4011ef67e4ea8a8fea45109648
+    m_Address: HotFix.dll
     m_ReadOnly: 0
     m_SerializedLabels:
     - Dll
@@ -35,8 +29,14 @@ MonoBehaviour:
     m_SerializedLabels:
     - Dll
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 13d1af0b53cd30449a64985aa182d812
-    m_Address: mscorlib.dll
+  - m_GUID: ff6a46ced8b26604da3ff971ff47cb50
+    m_Address: GameFramework.dll
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Dll
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e216014128141c346bd9a71369ca23f0
+    m_Address: UnityGameFramework.Runtime.dll
     m_ReadOnly: 0
     m_SerializedLabels:
     - Dll
@@ -47,14 +47,14 @@ MonoBehaviour:
     m_SerializedLabels:
     - Dll
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0ff00d66c9d9b3c48968d6041ca62ba6
-    m_Address: UnityEngine.CoreModule.dll
+  - m_GUID: 13d1af0b53cd30449a64985aa182d812
+    m_Address: mscorlib.dll
     m_ReadOnly: 0
     m_SerializedLabels:
     - Dll
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e216014128141c346bd9a71369ca23f0
-    m_Address: UnityGameFramework.Runtime.dll
+  - m_GUID: 0ff00d66c9d9b3c48968d6041ca62ba6
+    m_Address: UnityEngine.CoreModule.dll
     m_ReadOnly: 0
     m_SerializedLabels:
     - Dll
