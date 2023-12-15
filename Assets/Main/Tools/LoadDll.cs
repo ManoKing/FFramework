@@ -7,6 +7,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.Networking;
+using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.SceneManagement;
 
 public class LoadDll : MonoBehaviour
@@ -28,7 +29,13 @@ public class LoadDll : MonoBehaviour
     void HotUpdatePrefab()
     {
         //Addressables.LoadSceneAsync("HotUpdateScene");
-        SceneManager.LoadScene(0);
+        //SceneManager.LoadScene(0);
+        var sceneAssetName = "Assets/GameMain/Scenes/GameStart/GameStart.unity";
+        AsyncOperationHandle asyncOperation = Addressables.LoadSceneAsync(sceneAssetName, LoadSceneMode.Additive);
+        asyncOperation.Completed += _ =>
+        {
+            SceneManager.UnloadSceneAsync(0);
+        };
     }
 
     /// <summary>

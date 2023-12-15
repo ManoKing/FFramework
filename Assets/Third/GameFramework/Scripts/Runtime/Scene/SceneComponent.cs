@@ -427,7 +427,7 @@ namespace UnityGameFramework.Runtime
             Scene lastActiveScene = SceneManager.GetActiveScene();
             if (lastActiveScene != activeScene)
             {
-                SceneManager.SetActiveScene(activeScene);
+                //SceneManager.SetActiveScene(activeScene);
                 m_EventComponent.Fire(this, ActiveSceneChangedEventArgs.Create(lastActiveScene, activeScene));
             }
 

@@ -70,7 +70,6 @@
     <type fullname="UnityEngine.Events.UnityEventBase" preserve="all" />
     <type fullname="UnityEngine.Events.UnityEvent`1" preserve="all" />
     <type fullname="UnityEngine.GameObject" preserve="all" />
-    <type fullname="UnityEngine.HideInInspector" preserve="all" />
     <type fullname="UnityEngine.KeyCode" preserve="all" />
     <type fullname="UnityEngine.LayerMask" preserve="all" />
     <type fullname="UnityEngine.Material" preserve="all" />
@@ -78,7 +77,6 @@
     <type fullname="UnityEngine.MeshRenderer" preserve="all" />
     <type fullname="UnityEngine.MonoBehaviour" preserve="all" />
     <type fullname="UnityEngine.Object" preserve="all" />
-    <type fullname="UnityEngine.Plane" preserve="all" />
     <type fullname="UnityEngine.Quaternion" preserve="all" />
     <type fullname="UnityEngine.Random" preserve="all" />
     <type fullname="UnityEngine.RangeAttribute" preserve="all" />
@@ -140,6 +138,8 @@
   <assembly fullname="UnityGameFramework.Runtime">
     <type fullname="AddressableResourceComponent" preserve="all" />
     <type fullname="BinaryExtension" preserve="all" />
+    <type fullname="Flower.CameraControl" preserve="all" />
+    <type fullname="Flower.LocalizationSerializableObject" preserve="all" />
     <type fullname="UnityExtension" preserve="all" />
     <type fullname="UnityGameFramework.Runtime.BaseComponent" preserve="all" />
     <type fullname="UnityGameFramework.Runtime.ConfigComponent" preserve="all" />

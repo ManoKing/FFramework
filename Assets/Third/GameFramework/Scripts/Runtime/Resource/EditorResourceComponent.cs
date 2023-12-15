@@ -16,6 +16,7 @@ using System.IO;
 using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.SceneManagement;
 
 namespace UnityGameFramework.Runtime
@@ -619,9 +620,9 @@ namespace UnityGameFramework.Runtime
                 while (current != null)
                 {
                     LoadSceneInfo loadSceneInfo = current.Value;
-                    if (loadSceneInfo.AsyncOperation.isDone)
+                    if (loadSceneInfo.AsyncOperation.IsDone)
                     {
-                        if (loadSceneInfo.AsyncOperation.allowSceneActivation)
+                        if (loadSceneInfo.AsyncOperation.IsValid())
                         {
                             if (loadSceneInfo.LoadSceneCallbacks.LoadSceneSuccessCallback != null)
                             {
@@ -644,7 +645,7 @@ namespace UnityGameFramework.Runtime
                     {
                         if (loadSceneInfo.LoadSceneCallbacks.LoadSceneUpdateCallback != null)
                         {
-                            loadSceneInfo.LoadSceneCallbacks.LoadSceneUpdateCallback(loadSceneInfo.SceneAssetName, loadSceneInfo.AsyncOperation.progress, loadSceneInfo.UserData);
+                            loadSceneInfo.LoadSceneCallbacks.LoadSceneUpdateCallback(loadSceneInfo.SceneAssetName, loadSceneInfo.AsyncOperation.PercentComplete, loadSceneInfo.UserData);
                         }
 
                         current = current.Next;
@@ -1113,14 +1114,17 @@ namespace UnityGameFramework.Runtime
             }
 
 #if UNITY_5_5_OR_NEWER
-            AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneAssetName, LoadSceneMode.Additive);
+            //AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneAssetName, LoadSceneMode.Additive);
+
+            // 场景加载
+            AsyncOperationHandle asyncOperation = Addressables.LoadSceneAsync(sceneAssetName, LoadSceneMode.Additive);
 #else
             AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(SceneComponent.GetSceneName(sceneAssetName), LoadSceneMode.Additive);
 #endif
-            if (asyncOperation == null)
-            {
-                return;
-            }
+            //if (asyncOperation == null)
+            //{
+            //    return;
+            //}
 
             m_LoadSceneInfos.AddLast(new LoadSceneInfo(asyncOperation, sceneAssetName, priority, DateTime.UtcNow, loadSceneCallbacks, userData));
         }
@@ -1664,14 +1668,14 @@ namespace UnityGameFramework.Runtime
         [StructLayout(LayoutKind.Auto)]
         private struct LoadSceneInfo
         {
-            private readonly AsyncOperation m_AsyncOperation;
+            private readonly AsyncOperationHandle m_AsyncOperation;
             private readonly string m_SceneAssetName;
             private readonly int m_Priority;
             private readonly DateTime m_StartTime;
             private readonly LoadSceneCallbacks m_LoadSceneCallbacks;
             private readonly object m_UserData;
 
-            public LoadSceneInfo(AsyncOperation asyncOperation, string sceneAssetName, int priority, DateTime startTime, LoadSceneCallbacks loadSceneCallbacks, object userData)
+            public LoadSceneInfo(AsyncOperationHandle asyncOperation, string sceneAssetName, int priority, DateTime startTime, LoadSceneCallbacks loadSceneCallbacks, object userData)
             {
                 m_AsyncOperation = asyncOperation;
                 m_SceneAssetName = sceneAssetName;
@@ -1681,7 +1685,7 @@ namespace UnityGameFramework.Runtime
                 m_UserData = userData;
             }
 
-            public AsyncOperation AsyncOperation
+            public AsyncOperationHandle AsyncOperation
             {
                 get
                 {
