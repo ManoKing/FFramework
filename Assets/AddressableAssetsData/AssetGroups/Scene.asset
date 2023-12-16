@@ -53,36 +53,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - Scene
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e7ffb4e960ce4974da5aa722eec06b1e
-    m_Address: Assets/GameMain/Scenes/Menu/Menu/LightingData.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Scene
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 2755130a89be3604db5471bc22e7ba33
-    m_Address: Assets/GameMain/Scenes/Menu/Menu/Lightmap-0_comp_dir.png
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Scene
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b80fca6a02f62444ea5f1a82bcfce2dd
-    m_Address: Assets/GameMain/Scenes/Menu/Menu/Lightmap-0_comp_light.exr
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Scene
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 36356b516d304b7479265f64647bde90
-    m_Address: Assets/GameMain/Scenes/Menu/Menu/Lightmap-0_comp_shadowmask.png
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Scene
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 8b988349d3373bd479a6c1cf5e79cbf0
-    m_Address: Assets/GameMain/Scenes/Menu/Menu/ReflectionProbe-0.exr
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Scene
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 384b67841c5396a4db0b83b4a08fe735
     m_Address: Assets/GameMain/Scenes/Menu/Menu.unity
     m_ReadOnly: 0

@@ -85,4 +85,52 @@ MonoBehaviour:
     m_importFrom: Assets/Scripts
     m_exportTo: 
     m_variantName: 
+  - m_assetDatabaseId: 0eaee01bfe8462b4a87370ff57f216a6
+    m_importFrom: Assets/GameMain/Res/Scenes/Levels/Menu
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 36356b516d304b7479265f64647bde90
+    m_importFrom: Assets/GameMain/Res/Scenes/Levels/Menu/Lightmap-0_comp_shadowmask.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8b988349d3373bd479a6c1cf5e79cbf0
+    m_importFrom: Assets/GameMain/Res/Scenes/Levels/Menu/ReflectionProbe-0.exr
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e7ffb4e960ce4974da5aa722eec06b1e
+    m_importFrom: Assets/GameMain/Res/Scenes/Levels/Menu/LightingData.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2755130a89be3604db5471bc22e7ba33
+    m_importFrom: Assets/GameMain/Res/Scenes/Levels/Menu/Lightmap-0_comp_dir.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b80fca6a02f62444ea5f1a82bcfce2dd
+    m_importFrom: Assets/GameMain/Res/Scenes/Levels/Menu/Lightmap-0_comp_light.exr
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5eda4f9705f51459b9621be5eedc4579
+    m_importFrom: Assets/GameMain/Res/Scenes/Levels/Level1/Level1/LightingData.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: be7aa0ed75cb94133b36c8126cc10667
+    m_importFrom: Assets/GameMain/Res/Scenes/Levels/Level2/Level2/LightingData.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0c28fb69ce16f4c178f21aa176ae9851
+    m_importFrom: Assets/GameMain/Res/Scenes/Levels/Level3/Level3/LightingData.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c4328e203dd114a27b40ce21db0f5619
+    m_importFrom: Assets/GameMain/Res/Scenes/Levels/Level4/Level4/LightingData.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 31e0501eeef9f41cd9a0ad30d4889a27
+    m_importFrom: Assets/GameMain/Res/Scenes/Levels/Level5/Level5/LightingData.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 384b67841c5396a4db0b83b4a08fe735
+    m_importFrom: Assets/GameMain/Scenes/Menu/Menu.unity
+    m_exportTo: 
+    m_variantName: 
   m_version: 2
