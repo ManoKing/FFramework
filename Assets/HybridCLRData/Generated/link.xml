@@ -136,11 +136,11 @@
     <type fullname="UnityEngine.RectTransformUtility" preserve="all" />
   </assembly>
   <assembly fullname="UnityGameFramework.Runtime">
-    <type fullname="AddressableResourceComponent" preserve="all" />
     <type fullname="BinaryExtension" preserve="all" />
     <type fullname="Flower.CameraControl" preserve="all" />
     <type fullname="Flower.LocalizationSerializableObject" preserve="all" />
     <type fullname="UnityExtension" preserve="all" />
+    <type fullname="UnityGameFramework.Runtime.AddressableResourceComponent" preserve="all" />
     <type fullname="UnityGameFramework.Runtime.BaseComponent" preserve="all" />
     <type fullname="UnityGameFramework.Runtime.ConfigComponent" preserve="all" />
     <type fullname="UnityGameFramework.Runtime.DataComponent" preserve="all" />

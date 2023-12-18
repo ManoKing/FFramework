@@ -18,19 +18,19 @@ MonoBehaviour:
   m_GUID: e3b1dce7aac07f64a99b1bf64701fe9b
   m_SerializeEntries:
   - m_GUID: c2d4e2ee7b56bf24e9d4b651be4950e7
-    m_Address: Assets/GameMain/Localization/ChineseSimplified/Dictionaries/Default.json
+    m_Address: Assets/GameRes/Localization/ChineseSimplified/Dictionaries/Default.json
     m_ReadOnly: 0
     m_SerializedLabels:
     - Localization
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bee7b15a9e66ce0419c4d7a7be10a5e1
-    m_Address: Assets/GameMain/Localization/ChineseTraditional/Dictionaries/Default.json
+    m_Address: Assets/GameRes/Localization/ChineseTraditional/Dictionaries/Default.json
     m_ReadOnly: 0
     m_SerializedLabels:
     - Localization
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e63c9c0622200794095d8095800730bf
-    m_Address: Assets/GameMain/Localization/English/Dictionaries/Default.json
+    m_Address: Assets/GameRes/Localization/English/Dictionaries/Default.json
     m_ReadOnly: 0
     m_SerializedLabels:
     - Localization

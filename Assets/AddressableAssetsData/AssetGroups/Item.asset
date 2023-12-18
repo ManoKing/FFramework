@@ -18,13 +18,13 @@ MonoBehaviour:
   m_GUID: 0b12e3ccb27b2084c839089cf57b26d3
   m_SerializeEntries:
   - m_GUID: c707bc95ab948454ca1e378dce5e9358
-    m_Address: Assets/GameMain/Item/PlacementTile.prefab
+    m_Address: Assets/GameRes/Item/PlacementTile.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Item
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: faa270e3d0214c242bcbde40d8acb7a9
-    m_Address: Assets/GameMain/Item/SinglePlacementTile.prefab
+    m_Address: Assets/GameRes/Item/SinglePlacementTile.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Item

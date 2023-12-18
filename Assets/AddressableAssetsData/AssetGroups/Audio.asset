@@ -18,301 +18,301 @@ MonoBehaviour:
   m_GUID: 135418ba01295ef42bfd1d11d62ea45a
   m_SerializeEntries:
   - m_GUID: e3a7c37db43d01046a0f853676853726
-    m_Address: Assets/GameMain/Sounds/GameMix.mixer
+    m_Address: Assets/GameRes/Sounds/GameMix.mixer
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6ce6d7c4d4f6140f68d2c18955f02e8c
-    m_Address: Assets/GameMain/Sounds/Music/Game Music.mp3
+    m_Address: Assets/GameRes/Sounds/Music/Game Music.mp3
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1e8f5015922b04dd1b862cf76c53775a
-    m_Address: Assets/GameMain/Sounds/Music/Menu Music.mp3
+    m_Address: Assets/GameRes/Sounds/Music/Menu Music.mp3
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 35e7666ce1d5bdf45a46447e9c108f62
-    m_Address: Assets/GameMain/Sounds/SFX/Base Attack/base_attack.wav
+    m_Address: Assets/GameRes/Sounds/SFX/Base Attack/base_attack.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 154fba15a6072fb4db21704a44e7fb05
-    m_Address: Assets/GameMain/Sounds/SFX/Base Attack/zone_enter.wav
+    m_Address: Assets/GameRes/Sounds/SFX/Base Attack/zone_enter.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 01befc377d267aa47a659fd688128509
-    m_Address: Assets/GameMain/Sounds/SFX/Enemies Exploding/Enemies Exploding 1.wav
+    m_Address: Assets/GameRes/Sounds/SFX/Enemies Exploding/Enemies Exploding 1.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3553810b91eba5440b10f0abdfcd2bab
-    m_Address: Assets/GameMain/Sounds/SFX/Enemies Exploding/Enemies Exploding 2.wav
+    m_Address: Assets/GameRes/Sounds/SFX/Enemies Exploding/Enemies Exploding 2.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6c61621905bdcec4b960f2f6fd92ee86
-    m_Address: Assets/GameMain/Sounds/SFX/Enemies Exploding/Enemies Exploding 3.wav
+    m_Address: Assets/GameRes/Sounds/SFX/Enemies Exploding/Enemies Exploding 3.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4f88d4301ee8ad14d86c544dced13f23
-    m_Address: Assets/GameMain/Sounds/SFX/Enemies Exploding/Enemies Exploding 4.wav
+    m_Address: Assets/GameRes/Sounds/SFX/Enemies Exploding/Enemies Exploding 4.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3697436845ba744408916597c5b5c50c
-    m_Address: Assets/GameMain/Sounds/SFX/Enemies Exploding/Enemies Exploding 5.wav
+    m_Address: Assets/GameRes/Sounds/SFX/Enemies Exploding/Enemies Exploding 5.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8c39c07e09be28e4dbbc18bbf5bb3f86
-    m_Address: Assets/GameMain/Sounds/SFX/Enemy Fire.wav
+    m_Address: Assets/GameRes/Sounds/SFX/Enemy Fire.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8acb99492380aeb49bb25d43dec1e648
-    m_Address: Assets/GameMain/Sounds/SFX/Macross Placement.wav
+    m_Address: Assets/GameRes/Sounds/SFX/Macross Placement.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 52813b4616870d743a86e8917a87b42a
-    m_Address: Assets/GameMain/Sounds/SFX/Tower Destruction/Destruction 1.wav
+    m_Address: Assets/GameRes/Sounds/SFX/Tower Destruction/Destruction 1.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 994878880e02bc4459198aaec0a5ebfe
-    m_Address: Assets/GameMain/Sounds/SFX/Tower Destruction/Destruction 2.wav
+    m_Address: Assets/GameRes/Sounds/SFX/Tower Destruction/Destruction 2.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 190a86d0a03bbbb42bc98caf6c500483
-    m_Address: Assets/GameMain/Sounds/SFX/Tower Destruction/Destruction 3.wav
+    m_Address: Assets/GameRes/Sounds/SFX/Tower Destruction/Destruction 3.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e97249d7f37fcb140bad429afb8c1018
-    m_Address: Assets/GameMain/Sounds/SFX/Tower Destruction/Destruction 4.wav
+    m_Address: Assets/GameRes/Sounds/SFX/Tower Destruction/Destruction 4.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ede4a4cc95325d44183336d9f166acbe
-    m_Address: Assets/GameMain/Sounds/SFX/Tower Destruction/Destruction 5.wav
+    m_Address: Assets/GameRes/Sounds/SFX/Tower Destruction/Destruction 5.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d9bc94d3d05608248a02a1b06ad2358a
-    m_Address: Assets/GameMain/Sounds/SFX/Towers/Laser/LaserFire.wav
+    m_Address: Assets/GameRes/Sounds/SFX/Towers/Laser/LaserFire.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: da00db877b7e8ec41bf83dcc6ba0edc8
-    m_Address: Assets/GameMain/Sounds/SFX/Towers/MachineGun/MG 1.wav
+    m_Address: Assets/GameRes/Sounds/SFX/Towers/MachineGun/MG 1.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ababca0ffcf5c2245b287ea882bbf20c
-    m_Address: Assets/GameMain/Sounds/SFX/Towers/MachineGun/MG 2.wav
+    m_Address: Assets/GameRes/Sounds/SFX/Towers/MachineGun/MG 2.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f4cf204343b91944aa36cf75ce6f4d19
-    m_Address: Assets/GameMain/Sounds/SFX/Towers/MachineGun/MG 3.wav
+    m_Address: Assets/GameRes/Sounds/SFX/Towers/MachineGun/MG 3.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 24361001568ff6043bed9d103572addb
-    m_Address: Assets/GameMain/Sounds/SFX/Towers/MachineGun/MG 4.wav
+    m_Address: Assets/GameRes/Sounds/SFX/Towers/MachineGun/MG 4.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 767e541ba9b8d154ba3e8a45aba8ff6b
-    m_Address: Assets/GameMain/Sounds/SFX/Towers/MachineGun/MG 5.wav
+    m_Address: Assets/GameRes/Sounds/SFX/Towers/MachineGun/MG 5.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ea66f874b31107f4497509197a5ea34e
-    m_Address: Assets/GameMain/Sounds/SFX/Towers/MachineGun/MG 6.wav
+    m_Address: Assets/GameRes/Sounds/SFX/Towers/MachineGun/MG 6.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 345d5c19a669de74caf5dd5c61c1e8b3
-    m_Address: Assets/GameMain/Sounds/SFX/Towers/MachineGun/MG 7.wav
+    m_Address: Assets/GameRes/Sounds/SFX/Towers/MachineGun/MG 7.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 43777447cf66e7e4a9acc74a83035555
-    m_Address: Assets/GameMain/Sounds/SFX/Towers/MachineGun/MG 8.wav
+    m_Address: Assets/GameRes/Sounds/SFX/Towers/MachineGun/MG 8.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2937e46b4cc55fd4891f3f3ab8c3f18b
-    m_Address: Assets/GameMain/Sounds/SFX/Towers/MachineGun/MG 9.wav
+    m_Address: Assets/GameRes/Sounds/SFX/Towers/MachineGun/MG 9.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1e64f1602ed529546b5d624245ad27b4
-    m_Address: Assets/GameMain/Sounds/SFX/Towers/MachineGun/MG 10.wav
+    m_Address: Assets/GameRes/Sounds/SFX/Towers/MachineGun/MG 10.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 27155cca3c0c5a5419d4c3c11f4a4060
-    m_Address: Assets/GameMain/Sounds/SFX/Towers/MachineGun/MG 11.wav
+    m_Address: Assets/GameRes/Sounds/SFX/Towers/MachineGun/MG 11.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 26f3a8e13948f6f45a8743289c6f25dd
-    m_Address: Assets/GameMain/Sounds/SFX/Towers/MachineGun/MG 12.wav
+    m_Address: Assets/GameRes/Sounds/SFX/Towers/MachineGun/MG 12.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: fff1ab3c8467b5647bd28d0233d308a5
-    m_Address: Assets/GameMain/Sounds/SFX/Towers/MachineGun/MG 13.wav
+    m_Address: Assets/GameRes/Sounds/SFX/Towers/MachineGun/MG 13.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f8ac83d6dce50644bb8d1a34fc5b287e
-    m_Address: Assets/GameMain/Sounds/SFX/Towers/MachineGun/MG 14.wav
+    m_Address: Assets/GameRes/Sounds/SFX/Towers/MachineGun/MG 14.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c73fe5387e987544ba174c742865ed84
-    m_Address: Assets/GameMain/Sounds/SFX/Towers/RocketLauncher/Rocket Tower Shoot.wav
+    m_Address: Assets/GameRes/Sounds/SFX/Towers/RocketLauncher/Rocket Tower Shoot.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ceed5926a63a2244085adb17f49b3b89
-    m_Address: Assets/GameMain/Sounds/SFX/Towers/SuperTower/Super Tower Shot 1.wav
+    m_Address: Assets/GameRes/Sounds/SFX/Towers/SuperTower/Super Tower Shot 1.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 610cc044cb888b74b9e4bb0114340538
-    m_Address: Assets/GameMain/Sounds/SFX/Towers/SuperTower/Super Tower Shot 2.wav
+    m_Address: Assets/GameRes/Sounds/SFX/Towers/SuperTower/Super Tower Shot 2.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ea02aff524dd2a44883d5a4f80892790
-    m_Address: Assets/GameMain/Sounds/SFX/Towers/SuperTower/Super Tower Shot 3.wav
+    m_Address: Assets/GameRes/Sounds/SFX/Towers/SuperTower/Super Tower Shot 3.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 57b31c5335be7fb41a1b4b1fa098785b
-    m_Address: Assets/GameMain/Sounds/SFX/Towers/SuperTower/Super Tower Shot 4.wav
+    m_Address: Assets/GameRes/Sounds/SFX/Towers/SuperTower/Super Tower Shot 4.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0d8eea74c36e49b4bbec75045042d923
-    m_Address: Assets/GameMain/Sounds/SFX/Towers/SuperTower/Super Tower Shot 5.wav
+    m_Address: Assets/GameRes/Sounds/SFX/Towers/SuperTower/Super Tower Shot 5.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 06f4152eb680617479812853ed8a581f
-    m_Address: Assets/GameMain/Sounds/SFX/Towers/SuperTower/Super Tower Shot 6.wav
+    m_Address: Assets/GameRes/Sounds/SFX/Towers/SuperTower/Super Tower Shot 6.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 80635ad12c1cfb34fad5483bfe75459d
-    m_Address: Assets/GameMain/Sounds/SFX/Towers/SuperTower/Super Tower Shot 7.wav
+    m_Address: Assets/GameRes/Sounds/SFX/Towers/SuperTower/Super Tower Shot 7.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7112532e3e9e3c246b2fe456781a9c28
-    m_Address: Assets/GameMain/Sounds/SFX/UI/TD Currency.wav
+    m_Address: Assets/GameRes/Sounds/SFX/UI/TD Currency.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f6bad708ea84eb74e8b328d6e6fa98a4
-    m_Address: Assets/GameMain/Sounds/SFX/UI/TD Defeat .wav
+    m_Address: Assets/GameRes/Sounds/SFX/UI/TD Defeat .wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 728fbe3d625a4d249ae167a2f8a7f077
-    m_Address: Assets/GameMain/Sounds/SFX/UI/TD EMP Idle.wav
+    m_Address: Assets/GameRes/Sounds/SFX/UI/TD EMP Idle.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 73badf10872f4af4396837e26b708838
-    m_Address: Assets/GameMain/Sounds/SFX/UI/TD Tower Sell.wav
+    m_Address: Assets/GameRes/Sounds/SFX/UI/TD Tower Sell.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7725ecb5bd0093c43969275f1109042d
-    m_Address: Assets/GameMain/Sounds/SFX/UI/TD Tower Upgrade.wav
+    m_Address: Assets/GameRes/Sounds/SFX/UI/TD Tower Upgrade.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 02c80739782053b46a95a7fc5da4de3b
-    m_Address: Assets/GameMain/Sounds/SFX/UI/TD Victory.wav
+    m_Address: Assets/GameRes/Sounds/SFX/UI/TD Victory.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2b49d6465fc4f394ab85c3513cd52ec2
-    m_Address: Assets/GameMain/Sounds/SFX/Weapon Placement 1.wav
+    m_Address: Assets/GameRes/Sounds/SFX/Weapon Placement 1.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5285fc074b525804aba3a58a1ecfc345
-    m_Address: Assets/GameMain/Sounds/SFX/Weapon Placement 2.wav
+    m_Address: Assets/GameRes/Sounds/SFX/Weapon Placement 2.wav
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 567f4800fefa8d843835478dc75616af
-    m_Address: Assets/GameMain/Sounds/UI/ui_sound_back.mp3
+    m_Address: Assets/GameRes/Sounds/UI/ui_sound_back.mp3
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 88d3ee3b94fdb764a9577770cbf88ae3
-    m_Address: Assets/GameMain/Sounds/UI/ui_sound_forward.mp3
+    m_Address: Assets/GameRes/Sounds/UI/ui_sound_forward.mp3
     m_ReadOnly: 0
     m_SerializedLabels:
     - Audio

@@ -18,43 +18,43 @@ MonoBehaviour:
   m_GUID: 9aa6a6e2a26e3cb438f84c94741de628
   m_SerializeEntries:
   - m_GUID: b13da774a1c144b498cc82fc5cb01e73
-    m_Address: Assets/GameMain/Scenes/GameStart/GameStart.unity
+    m_Address: Assets/GameRes/Scenes/GameStart/GameStart.unity
     m_ReadOnly: 0
     m_SerializedLabels:
     - Scene
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f7b8cccf982339a44b69647c8093dc6d
-    m_Address: Assets/GameMain/Scenes/Level1/Level1.unity
+    m_Address: Assets/GameRes/Scenes/Level1/Level1.unity
     m_ReadOnly: 0
     m_SerializedLabels:
     - Scene
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 703ea25111bccbd4db4d58a741d4699e
-    m_Address: Assets/GameMain/Scenes/Level2/Level2.unity
+    m_Address: Assets/GameRes/Scenes/Level2/Level2.unity
     m_ReadOnly: 0
     m_SerializedLabels:
     - Scene
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b58c1ce8197772c44b235fe060b3b66d
-    m_Address: Assets/GameMain/Scenes/Level3/Level3.unity
+    m_Address: Assets/GameRes/Scenes/Level3/Level3.unity
     m_ReadOnly: 0
     m_SerializedLabels:
     - Scene
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: da411bef1885c9c4fb241d192d02f27c
-    m_Address: Assets/GameMain/Scenes/Level4/Level4.unity
+    m_Address: Assets/GameRes/Scenes/Level4/Level4.unity
     m_ReadOnly: 0
     m_SerializedLabels:
     - Scene
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3a8ffd16aeae9fd4091c154184e0d5d5
-    m_Address: Assets/GameMain/Scenes/Level5/Level5.unity
+    m_Address: Assets/GameRes/Scenes/Level5/Level5.unity
     m_ReadOnly: 0
     m_SerializedLabels:
     - Scene
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 384b67841c5396a4db0b83b4a08fe735
-    m_Address: Assets/GameMain/Scenes/Menu/Menu.unity
+    m_Address: Assets/GameRes/Scenes/Menu/Menu.unity
     m_ReadOnly: 0
     m_SerializedLabels:
     - Scene
