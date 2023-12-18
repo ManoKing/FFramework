@@ -53,7 +53,7 @@ namespace Flower.Editor.DataTableTools
 
         private static string[] GetDataTableNames()
         {
-            string dataTablesPath = Application.dataPath + @"/GameMain/DataTables";
+            string dataTablesPath = Application.dataPath + @"/GameRes/DataTables";
             DirectoryInfo directoryInfo = new DirectoryInfo(dataTablesPath);
             FileInfo[] fis = directoryInfo.GetFiles("*.txt", SearchOption.AllDirectories);
             string[] dataTableNames = new string[fis.Length];
@@ -68,7 +68,7 @@ namespace Flower.Editor.DataTableTools
         //[MenuItem("Tools/Generate Config", false, 1)]
         //private static void GenerateConfig()
         //{
-        //    string configPath = Application.dataPath + @"/GameMain/Configs/DefaultConfig";
+        //    string configPath = Application.dataPath + @"/GameRes/Configs/DefaultConfig";
 
         //    DataTableProcessor dataTableProcessor = DataTableGenerator.CreateDataTableProcessor(configPath);
         //    if (!DataTableGenerator.CheckRawData(dataTableProcessor, configPath))

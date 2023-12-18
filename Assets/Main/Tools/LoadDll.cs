@@ -30,7 +30,7 @@ public class LoadDll : MonoBehaviour
     {
         //Addressables.LoadSceneAsync("HotUpdateScene");
         //SceneManager.LoadScene(0);
-        var sceneAssetName = "Assets/GameMain/Scenes/GameStart/GameStart.unity";
+        var sceneAssetName = "Assets/GameRes/Scenes/GameStart/GameStart.unity";
         AsyncOperationHandle asyncOperation = Addressables.LoadSceneAsync(sceneAssetName, LoadSceneMode.Additive);
         asyncOperation.Completed += _ =>
         {
