@@ -5,7 +5,7 @@ namespace PSDUIImporter
 {
     public class PSDImporterConst
     {
-        public const string __CONFIG_PATH = "Assets/PSD2UGUI/PSD2UGUIConfig.asset";
+        public const string __CONFIG_PATH = "Assets/Third/PSD2UGUI/PSD2UGUIConfig.asset";
 
         public const string BASE_FOLDER = "UI/";
         public const string PNG_SUFFIX = ".png";
@@ -14,7 +14,7 @@ namespace PSDUIImporter
         /// <summary>
         /// 公用图片路径，按需修改
         /// </summary>
-        public static string Globle_BASE_FOLDER = "Assets/Textures/HomeCommon/";
+        public static string Globle_BASE_FOLDER = "Assets/Third/Textures/HomeCommon/";
 
         /// <summary>
         /// 图集文件名
@@ -33,16 +33,16 @@ namespace PSDUIImporter
         /// <summary>
         /// 字体路径，按需修改
         /// </summary>
-        public static string FONT_FOLDER = "Assets/PSD2UGUI/Font/";
+        public static string FONT_FOLDER = "Assets/Third/PSD2UGUI/Font/";
 
-        public static string FONT_STATIC_FOLDER = "Assets/PSD2UGUI/Font/StaticFont/";
+        public static string FONT_STATIC_FOLDER = "Assets/Third/PSD2UGUI/Font/StaticFont/";
 
         public const string FONT_SUFIX = ".ttf";
 
         /// <summary>
         /// 修改资源模板加载路径,不能放在resources目录
         /// </summary>
-        public static string PSDUI_PATH = "Assets/PSD2UGUI/Template/UI/";
+        public static string PSDUI_PATH = "Assets/Third/PSD2UGUI/Template/UI/";
 
         public const string PSDUI_SUFFIX = ".prefab";
 
