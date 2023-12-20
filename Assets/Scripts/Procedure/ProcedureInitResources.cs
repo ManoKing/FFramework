@@ -23,14 +23,14 @@ namespace Flower
             base.OnEnter(procedureOwner);
             initResourceComplete = false;
 
-            GameEntry.Resource.InitResources(OnInitResourceComplete);
+           // GameEntry.Resource.InitResources(OnInitResourceComplete);
         }
 
         protected override void OnUpdate(ProcedureOwner procedureOwner, float elapseSeconds, float realElapseSeconds)
         {
             base.OnUpdate(procedureOwner, elapseSeconds, realElapseSeconds);
 
-            if (initResourceComplete)
+            //if (initResourceComplete)
                 ChangeState<ProcedurePreload>(procedureOwner);
         }
 

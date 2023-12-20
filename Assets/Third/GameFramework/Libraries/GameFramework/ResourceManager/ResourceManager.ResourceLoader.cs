@@ -5,8 +5,10 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
+using Codice.Client.BaseCommands;
 using GameFramework.FileSystem;
 using GameFramework.ObjectPool;
+using GameFramework.Scene;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -391,7 +393,9 @@ namespace GameFramework.Resource
 
                 AsyncOperationHandle asyncOperation = Addressables.LoadSceneAsync(sceneAssetName, LoadSceneMode.Additive);
 
-
+                asyncOperation.Completed += _ => {
+                    loadSceneCallbacks.LoadSceneSuccessCallback(sceneAssetName, 1, userData);
+                };
                 /*
                 ResourceInfo resourceInfo = null;
                 string[] dependencyAssetNames = null;
