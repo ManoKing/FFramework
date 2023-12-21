@@ -90,7 +90,7 @@ namespace Flower
 
         private IResourceGroup GetResourceGroup()
         {
-            if (GameEntry.Base.EditorResourceMode)
+            //if (GameEntry.Base.EditorResourceMode)
                 return null;
 
             if (levelData == null)
@@ -109,7 +109,7 @@ namespace Flower
 
         private bool GetResourceGroupIsReady()
         {
-            if (GameEntry.Base.EditorResourceMode)
+            //if (GameEntry.Base.EditorResourceMode)
                 return true;
 
             IResourceGroup resourceGroup = GetResourceGroup();
@@ -123,7 +123,7 @@ namespace Flower
 
         private float GetResourceGroupProgress()
         {
-            if (GameEntry.Base.EditorResourceMode)
+            //if (GameEntry.Base.EditorResourceMode)
                 return 1f;
 
             IResourceGroup resourceGroup = GetResourceGroup();
@@ -185,7 +185,7 @@ namespace Flower
 
         private void UpdateDownloadProgress()
         {
-            if (GameEntry.Base.EditorResourceMode)
+            //if (GameEntry.Base.EditorResourceMode)
                 return;
 
             if (!frameUpdate)

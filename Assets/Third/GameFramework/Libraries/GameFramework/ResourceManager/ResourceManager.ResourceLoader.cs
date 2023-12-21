@@ -304,7 +304,7 @@ namespace GameFramework.Resource
                 }
                 */
             }
-
+            public Dictionary<string, AsyncOperationHandle> sceneListLoad = new Dictionary<string, AsyncOperationHandle>();
             /// <summary>
             /// 异步加载资源。
             /// </summary>
@@ -320,6 +320,14 @@ namespace GameFramework.Resource
                 Addressables.LoadAssetAsync<UnityEngine.Object>(assetName).Completed += result => {
                     float elapseSeconds = (float)(DateTime.UtcNow - startTime).TotalSeconds;
                     loadAssetCallbacks.LoadAssetSuccessCallback(assetName, result.Result, elapseSeconds, userData);
+                    if (sceneListLoad.ContainsKey(result.Result.name))
+                    {
+                        sceneListLoad[result.Result.name] = result;
+                    }
+                    else
+                    {
+                        sceneListLoad.Add(result.Result.name, result);
+                    }
                 };
                 /*
                 ResourceInfo resourceInfo = null;
@@ -390,12 +398,12 @@ namespace GameFramework.Resource
             /// <param name="userData">用户自定义数据。</param>
             public void LoadScene(string sceneAssetName, int priority, LoadSceneCallbacks loadSceneCallbacks, object userData)
             {
-
                 AsyncOperationHandle asyncOperation = Addressables.LoadSceneAsync(sceneAssetName, LoadSceneMode.Additive);
 
                 asyncOperation.Completed += _ => {
                     loadSceneCallbacks.LoadSceneSuccessCallback(sceneAssetName, 1, userData);
                 };
+
                 /*
                 ResourceInfo resourceInfo = null;
                 string[] dependencyAssetNames = null;
@@ -455,6 +463,17 @@ namespace GameFramework.Resource
             /// <param name="userData">用户自定义数据。</param>
             public void UnloadScene(string sceneAssetName, UnloadSceneCallbacks unloadSceneCallbacks, object userData)
             {
+                foreach (var item in sceneListLoad)
+                {
+                    if (item.Key == sceneAssetName)
+                    {
+                        Addressables.UnloadSceneAsync(item.Value).Completed += _ => {
+                            unloadSceneCallbacks.UnloadSceneSuccessCallback(sceneAssetName, userData);
+                        };
+                    }
+                }
+                
+                return;
                 if (m_ResourceManager.m_ResourceHelper == null)
                 {
                     throw new GameFrameworkException("You must set resource helper first.");
