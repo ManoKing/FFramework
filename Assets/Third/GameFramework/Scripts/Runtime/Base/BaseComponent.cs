@@ -24,9 +24,6 @@ namespace UnityGameFramework.Runtime
 
         private float m_GameSpeedBeforePause = 1f;
 
-        //[SerializeField]
-        //private bool m_EditorResourceMode = true;
-
         [SerializeField]
         private Language m_EditorLanguage = Language.Unspecified;
 
@@ -53,21 +50,6 @@ namespace UnityGameFramework.Runtime
 
         [SerializeField]
         private bool m_NeverSleep = true;
-
-        /// <summary>
-        /// 获取或设置是否使用编辑器资源模式（仅编辑器内有效）。
-        /// </summary>
-        //public bool EditorResourceMode
-        //{
-        //    get
-        //    {
-        //        return m_EditorResourceMode;
-        //    }
-        //    set
-        //    {
-        //        m_EditorResourceMode = value;
-        //    }
-        //}
 
         /// <summary>
         /// 获取或设置编辑器语言（仅编辑器内有效）。
@@ -189,7 +171,6 @@ namespace UnityGameFramework.Runtime
             Log.Info("Game Version: {0} ({1})", GameFramework.Version.GameVersion, GameFramework.Version.InternalGameVersion.ToString());
             Log.Info("Unity Version: {0}", Application.unityVersion);
 
-#if UNITY_5_3_OR_NEWER || UNITY_5_3
             InitZipHelper();
             InitJsonHelper();
 
@@ -199,28 +180,14 @@ namespace UnityGameFramework.Runtime
                 Utility.Converter.ScreenDpi = DefaultDpi;
             }
 
-            //m_EditorResourceMode &= Application.isEditor;
-            //if (m_EditorResourceMode)
-            //{
-            //    Log.Info("During this run, Game Framework will use editor resource files, which you should validate first.");
-            //}
-
             Application.targetFrameRate = m_FrameRate;
             Time.timeScale = m_GameSpeed;
             Application.runInBackground = m_RunInBackground;
             Screen.sleepTimeout = m_NeverSleep ? SleepTimeout.NeverSleep : SleepTimeout.SystemSetting;
-#else
-            Log.Error("Game Framework only applies with Unity 5.3 and above, but current Unity version is {0}.", Application.unityVersion);
-            GameEntry.Shutdown(ShutdownType.Quit);
-#endif
-#if UNITY_5_6_OR_NEWER
+
             Application.lowMemory += OnLowMemory;
-#endif
         }
 
-        private void Start()
-        {
-        }
 
         private void Update()
         {
@@ -229,9 +196,7 @@ namespace UnityGameFramework.Runtime
 
         private void OnApplicationQuit()
         {
-#if UNITY_5_6_OR_NEWER
             Application.lowMemory -= OnLowMemory;
-#endif
             StopAllCoroutines();
         }
 

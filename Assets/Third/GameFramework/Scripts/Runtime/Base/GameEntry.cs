@@ -9,6 +9,8 @@ using GameFramework;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.SceneManagement;
 
 namespace UnityGameFramework.Runtime
@@ -101,7 +103,9 @@ namespace UnityGameFramework.Runtime
 
             if (shutdownType == ShutdownType.Restart)
             {
-                SceneManager.LoadScene(GameFrameworkSceneId);
+                //SceneManager.LoadScene(GameFrameworkSceneId);
+                var sceneAssetName = "Assets/GameRes/Scenes/GameStart/GameStart.unity";
+                AsyncOperationHandle asyncOperation = Addressables.LoadSceneAsync(sceneAssetName, LoadSceneMode.Single);
                 return;
             }
 
