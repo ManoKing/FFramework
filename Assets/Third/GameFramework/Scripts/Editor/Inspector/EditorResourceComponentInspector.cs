@@ -10,7 +10,7 @@ using UnityGameFramework.Runtime;
 
 namespace UnityGameFramework.Editor
 {
-    [CustomEditor(typeof(EditorResourceComponent))]
+    [CustomEditor(typeof(AddressableResourceComponent))]
     internal sealed class EditorResourceComponentInspector : GameFrameworkInspector
     {
         private SerializedProperty m_EnableCachedAssets = null;
@@ -24,7 +24,7 @@ namespace UnityGameFramework.Editor
 
             serializedObject.Update();
 
-            EditorResourceComponent t = (EditorResourceComponent)target;
+            AddressableResourceComponent t = (AddressableResourceComponent)target;
 
             if (EditorApplication.isPlaying && IsPrefabInHierarchy(t.gameObject))
             {

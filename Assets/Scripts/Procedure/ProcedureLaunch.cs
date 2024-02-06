@@ -54,7 +54,7 @@ namespace Flower
 
         private void InitLanguageSettings()
         {
-            if (GameEntry.Base.EditorResourceMode && GameEntry.Base.EditorLanguage != Language.Unspecified)
+            if (GameEntry.Base.EditorLanguage != Language.Unspecified)
             {
                 // 编辑器资源模式直接使用 Inspector 上设置的语言
                 GameEntry.Setting.SetInt(Constant.Setting.Language, (int)GameEntry.Base.EditorLanguage);

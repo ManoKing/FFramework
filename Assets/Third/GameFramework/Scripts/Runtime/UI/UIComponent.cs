@@ -197,14 +197,14 @@ namespace UnityGameFramework.Runtime
                 return;
             }
 
-            if (baseComponent.EditorResourceMode)
-            {
-                m_UIManager.SetResourceManager(baseComponent.EditorResourceHelper);
-            }
-            else
-            {
-                m_UIManager.SetResourceManager(GameFrameworkEntry.GetModule<IResourceManager>());
-            }
+            //if (baseComponent.EditorResourceMode)
+            //{
+            m_UIManager.SetResourceManager(baseComponent.EditorResourceHelper);
+            //}
+            //else
+            //{
+            //m_UIManager.SetResourceManager(GameFrameworkEntry.GetModule<IResourceManager>());
+            //}
 
             m_UIManager.SetObjectPoolManager(GameFrameworkEntry.GetModule<IObjectPoolManager>());
             m_UIManager.InstanceAutoReleaseInterval = m_InstanceAutoReleaseInterval;

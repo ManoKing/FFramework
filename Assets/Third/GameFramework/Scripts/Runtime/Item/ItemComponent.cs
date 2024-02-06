@@ -114,14 +114,14 @@ namespace UnityGameFramework.Runtime
                 return;
             }
 
-            if (baseComponent.EditorResourceMode)
-            {
+            //if (baseComponent.EditorResourceMode)
+            //{
                 m_ItemManager.SetResourceManager(baseComponent.EditorResourceHelper);
-            }
-            else
-            {
-                m_ItemManager.SetResourceManager(GameFrameworkEntry.GetModule<IResourceManager>());
-            }
+            //}
+            //else
+            //{
+            //    m_ItemManager.SetResourceManager(GameFrameworkEntry.GetModule<IResourceManager>());
+            //}
 
             m_ItemManager.SetObjectPoolManager(GameFrameworkEntry.GetModule<IObjectPoolManager>());
 

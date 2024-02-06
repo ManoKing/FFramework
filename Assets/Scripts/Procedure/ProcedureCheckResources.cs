@@ -21,7 +21,7 @@ namespace Flower
             m_UpdateResourceCount = 0;
             m_UpdateResourceTotalZipLength = 0L;
 
-            GameEntry.Resource.CheckResources(OnCheckResourcesComplete);
+            //GameEntry.Resource.CheckResources(OnCheckResourcesComplete);
         }
 
         protected override void OnUpdate(ProcedureOwner procedureOwner, float elapseSeconds, float realElapseSeconds)

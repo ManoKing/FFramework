@@ -1065,6 +1065,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2299f2e28f354c4885a746ca6ab3566, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_EventComponent: {fileID: 0}
+  m_EditorResourceMode: 0
+  m_ForceUnloadUnusedAssets: 0
+  m_PreorderUnloadUnusedAssets: 0
+  m_PerformGCCollect: 0
+  m_LastOperationElapse: 0
+  m_ResourceHelper: {fileID: 0}
+  m_ResourceMode: 1
+  m_ReadWritePathType: 0
+  m_UnloadUnusedAssetsInterval: 60
+  m_AssetAutoReleaseInterval: 60
+  m_AssetCapacity: 64
+  m_AssetExpireTime: 60
+  m_AssetPriority: 0
+  m_ResourceAutoReleaseInterval: 60
+  m_ResourceCapacity: 16
+  m_ResourceExpireTime: 60
+  m_ResourcePriority: 0
+  m_UpdatePrefixUri: 
+  m_GenerateReadWriteVersionListLength: 1048576
+  m_UpdateRetryCount: 3
+  m_InstanceRoot: {fileID: 0}
+  m_ResourceHelperTypeName: UnityGameFramework.Runtime.DefaultResourceHelper
+  m_CustomResourceHelper: {fileID: 0}
+  m_LoadResourceAgentHelperTypeName: UnityGameFramework.Runtime.DefaultLoadResourceAgentHelper
+  m_CustomLoadResourceAgentHelper: {fileID: 0}
+  m_LoadResourceAgentHelperCount: 3
 --- !u!1 &1747968940
 GameObject:
   m_ObjectHideFlags: 0
@@ -1331,7 +1358,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f98acd7d3bd2bf54dadf9644f60e5cb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EditorResourceMode: 1
   m_EditorLanguage: 0
   m_VersionHelperTypeName: UnityGameFramework.Runtime.DefaultVersionHelper
   m_LogHelperTypeName: UnityGameFramework.Runtime.DefaultLogHelper
