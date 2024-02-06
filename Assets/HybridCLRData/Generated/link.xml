@@ -18,11 +18,8 @@
     <type fullname="GameFramework.Procedure.IProcedureManager" preserve="all" />
     <type fullname="GameFramework.Procedure.ProcedureBase" preserve="all" />
     <type fullname="GameFramework.ReferencePool" preserve="all" />
-    <type fullname="GameFramework.Resource.CheckResourcesCompleteCallback" preserve="all" />
     <type fullname="GameFramework.Resource.CheckVersionListResult" preserve="all" />
     <type fullname="GameFramework.Resource.IResourceGroup" preserve="all" />
-    <type fullname="GameFramework.Resource.InitResourcesCompleteCallback" preserve="all" />
-    <type fullname="GameFramework.Resource.ResourceMode" preserve="all" />
     <type fullname="GameFramework.Resource.UpdateResourcesCompleteCallback" preserve="all" />
     <type fullname="GameFramework.Resource.UpdateVersionListCallbacks" preserve="all" />
     <type fullname="GameFramework.Resource.UpdateVersionListFailureCallback" preserve="all" />

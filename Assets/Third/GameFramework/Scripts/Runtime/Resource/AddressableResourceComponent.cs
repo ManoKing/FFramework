@@ -567,19 +567,19 @@ namespace UnityGameFramework.Runtime
                         if (asset == null)
                         {
 #if UNITY_EDITOR
-                            if (loadAssetInfo.AssetType != null)
-                            {
-                                asset = UnityEditor.AssetDatabase.LoadAssetAtPath(loadAssetInfo.AssetName, loadAssetInfo.AssetType);
-                            }
-                            else
-                            {
-                                asset = UnityEditor.AssetDatabase.LoadMainAssetAtPath(loadAssetInfo.AssetName);
-                            }
+                            //if (loadAssetInfo.AssetType != null)
+                            //{
+                            //    asset = UnityEditor.AssetDatabase.LoadAssetAtPath(loadAssetInfo.AssetName, loadAssetInfo.AssetType);
+                            //}
+                            //else
+                            //{
+                            //    asset = UnityEditor.AssetDatabase.LoadMainAssetAtPath(loadAssetInfo.AssetName);
+                            //}
 
-                            if (m_EnableCachedAssets && asset != null)
-                            {
-                                m_CachedAssets.Add(loadAssetInfo.AssetName, asset);
-                            }
+                            //if (m_EnableCachedAssets && asset != null)
+                            //{
+                            //    m_CachedAssets.Add(loadAssetInfo.AssetName, asset);
+                            //}
 #endif
                         }
 
@@ -885,17 +885,18 @@ namespace UnityGameFramework.Runtime
         /// <returns>检查资源是否存在的结果。</returns>
         public HasAssetResult HasAsset(string assetName)
         {
-#if UNITY_EDITOR
-            UnityEngine.Object obj = UnityEditor.AssetDatabase.LoadMainAssetAtPath(assetName);
-            if (obj == null)
-            {
-                return HasAssetResult.NotExist;
-            }
+            return HasAssetResult.AssetOnDisk;
+//#if UNITY_EDITOR
+//            UnityEngine.Object obj = UnityEditor.AssetDatabase.LoadMainAssetAtPath(assetName);
+//            if (obj == null)
+//            {
+//                return HasAssetResult.NotExist;
+//            }
 
-            return obj.GetType() == typeof(UnityEditor.DefaultAsset) ? HasAssetResult.BinaryOnDisk : HasAssetResult.AssetOnDisk;
-#else
-            return HasAssetResult.NotExist;
-#endif
+//            return obj.GetType() == typeof(UnityEditor.DefaultAsset) ? HasAssetResult.BinaryOnDisk : HasAssetResult.AssetOnDisk;
+//#else
+//            return HasAssetResult.NotExist;
+//#endif
         }
 
         /// <summary>
@@ -1267,6 +1268,7 @@ namespace UnityGameFramework.Runtime
         /// <param name="userData">用户自定义数据。</param>
         public void LoadBinary(string binaryAssetName, LoadBinaryCallbacks loadBinaryCallbacks, object userData)
         {
+            Debug.LogError("load binary... ");
             if (loadBinaryCallbacks == null)
             {
                 Log.Error("Load binary callbacks is invalid.");
@@ -1502,56 +1504,56 @@ namespace UnityGameFramework.Runtime
 
         private bool HasFile(string assetName)
         {
-            if (string.IsNullOrEmpty(assetName))
-            {
-                return false;
-            }
+            //if (string.IsNullOrEmpty(assetName))
+            //{
+            //    return false;
+            //}
 
-            if (HasCachedAsset(assetName))
-            {
-                return true;
-            }
+            //if (HasCachedAsset(assetName))
+            //{
+            //    return true;
+            //}
 
-            string assetFullName = Application.dataPath.Substring(0, Application.dataPath.Length - AssetsStringLength) + assetName;
-            if (string.IsNullOrEmpty(assetFullName))
-            {
-                return false;
-            }
+            //string assetFullName = Application.dataPath.Substring(0, Application.dataPath.Length - AssetsStringLength) + assetName;
+            //if (string.IsNullOrEmpty(assetFullName))
+            //{
+            //    return false;
+            //}
 
-            string[] splitedAssetFullName = assetFullName.Split('/');
-            string currentPath = Path.GetPathRoot(assetFullName);
-            for (int i = 1; i < splitedAssetFullName.Length - 1; i++)
-            {
-                string[] directoryNames = Directory.GetDirectories(currentPath, splitedAssetFullName[i]);
-                if (directoryNames.Length != 1)
-                {
-                    return false;
-                }
+            //string[] splitedAssetFullName = assetFullName.Split('/');
+            //string currentPath = Path.GetPathRoot(assetFullName);
+            //for (int i = 1; i < splitedAssetFullName.Length - 1; i++)
+            //{
+            //    string[] directoryNames = Directory.GetDirectories(currentPath, splitedAssetFullName[i]);
+            //    if (directoryNames.Length != 1)
+            //    {
+            //        return false;
+            //    }
 
-                currentPath = directoryNames[0];
-            }
+            //    currentPath = directoryNames[0];
+            //}
 
-            string[] fileNames = Directory.GetFiles(currentPath, splitedAssetFullName[splitedAssetFullName.Length - 1]);
-            if (fileNames.Length != 1)
-            {
-                return false;
-            }
+            //string[] fileNames = Directory.GetFiles(currentPath, splitedAssetFullName[splitedAssetFullName.Length - 1]);
+            //if (fileNames.Length != 1)
+            //{
+            //    return false;
+            //}
 
-            string fileFullName = Utility.Path.GetRegularPath(fileNames[0]);
-            if (fileFullName == null)
-            {
-                return false;
-            }
+            //string fileFullName = Utility.Path.GetRegularPath(fileNames[0]);
+            //if (fileFullName == null)
+            //{
+            //    return false;
+            //}
 
-            if (assetFullName != fileFullName)
-            {
-                if (assetFullName.ToLower() == fileFullName.ToLower())
-                {
-                    Log.Warning("The real path of the specific asset '{0}' is '{1}'. Check the case of letters in the path.", assetName, "Assets" + fileFullName.Substring(Application.dataPath.Length));
-                }
+            //if (assetFullName != fileFullName)
+            //{
+            //    if (assetFullName.ToLower() == fileFullName.ToLower())
+            //    {
+            //        Log.Warning("The real path of the specific asset '{0}' is '{1}'. Check the case of letters in the path.", assetName, "Assets" + fileFullName.Substring(Application.dataPath.Length));
+            //    }
 
-                return false;
-            }
+            //    return false;
+            //}
 
             return true;
         }
