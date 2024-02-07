@@ -53,7 +53,11 @@
 ### 渲染基于URP  
 基于URP渲染管线（开发中）  
 
-### Jenkins自动打包流程  
+### 自动打包流程  
+  
+![Image](ReadMe/AutoAPK.png)  
+   
+点击Build Android，即可在工程目录build文件夹下看到FFramework.apk  
 只需在Jenkins配置，Choice Parameter，即可实现打包自动化（开发中）   
 HotFixResources：热更资源；  ChannelPack：渠道包；  LocalPack：本地包；  FirstPack：首包；（渠道包和本地包基于首包的.bin输出）  
 
