@@ -10,54 +10,54 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Dll
+  m_Name: Dlls
   m_EditorClassIdentifier: 
-  m_GroupName: Dll
+  m_GroupName: Dlls
   m_Data:
     m_SerializedData: []
   m_GUID: 1bfca6017e1fad44dbd724cc9bb93e25
   m_SerializeEntries:
-  - m_GUID: 0faece4011ef67e4ea8a8fea45109648
-    m_Address: HotFix.dll
+  - m_GUID: 0ff00d66c9d9b3c48968d6041ca62ba6
+    m_Address: UnityEngine.CoreModule.dll
     m_ReadOnly: 0
     m_SerializedLabels:
-    - Dll
+    - Pre
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1cb863bac0515e04dba9591f70747e94
     m_Address: LitJson.dll
     m_ReadOnly: 0
     m_SerializedLabels:
-    - Dll
+    - Pre
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ff6a46ced8b26604da3ff971ff47cb50
-    m_Address: GameFramework.dll
+  - m_GUID: 0faece4011ef67e4ea8a8fea45109648
+    m_Address: HotFix.dll
     m_ReadOnly: 0
     m_SerializedLabels:
-    - Dll
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e216014128141c346bd9a71369ca23f0
-    m_Address: UnityGameFramework.Runtime.dll
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Dll
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 76b219059ebd59042b468c8a4bf64cff
-    m_Address: System.dll
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Dll
+    - Pre
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 13d1af0b53cd30449a64985aa182d812
     m_Address: mscorlib.dll
     m_ReadOnly: 0
     m_SerializedLabels:
-    - Dll
+    - Pre
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0ff00d66c9d9b3c48968d6041ca62ba6
-    m_Address: UnityEngine.CoreModule.dll
+  - m_GUID: e216014128141c346bd9a71369ca23f0
+    m_Address: UnityGameFramework.Runtime.dll
     m_ReadOnly: 0
     m_SerializedLabels:
-    - Dll
+    - Pre
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ff6a46ced8b26604da3ff971ff47cb50
+    m_Address: GameFramework.dll
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Pre
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 76b219059ebd59042b468c8a4bf64cff
+    m_Address: System.dll
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Pre
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 1470d3bd838b88244952159e263d8fed, type: 2}
