@@ -27,7 +27,7 @@ public class AutoHybridCLR
     {
         if (!HasInstalledHybridCLR())
         {
-            Debug.LogError("CheckHybridCLRInstall, HybridCLR未安装, 准备执行以下步骤");
+            Debug.LogWarning("CheckHybridCLRInstall, HybridCLR未安装, 准备执行以下步骤");
             HybridCLRInstall();
             HybridCLRGeneralAll();
         }   
