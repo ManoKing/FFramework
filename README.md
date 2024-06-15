@@ -2,7 +2,7 @@
 
 ## 工程介绍   
 
-此工程热更模块基于 HybridCLR + Addressable，并将主流的GameFramework修改，支持Addressable。  
+此工程热更模块基于 HybridCLR + Addressable，并将主流的GameFramework修改支持Addressable。  
 并实现，Jenkins自动多渠道打包，白名单灰度测试，一键发布热更资源及版本回退。  
 
 （1）代码热更基于[HybridCLR跳转](https://github.com/focus-creative-games/HybridCLR)  
@@ -31,9 +31,9 @@
 需要利用Addressables Hosting搭建一个本地服务器，确保手机和电脑处于同一网络，便可实现热更
 
 ### 其他
-(1)Unity 版本使用是2020.3.47f1  
+(1)Unity 版本使用是2021.3.26  
 (2)基于URP渲染管线(开发中)  
-(3)完善UI框架，psd2ui及代码自动生成工具  
+(3)完善UI框架，及代码自动生成工具  
 
 ---
 
@@ -57,7 +57,7 @@
   
 ![Image](ReadMe/AutoAPK.png)  
    
-点击Build Android，即可在工程目录build文件夹下看到FFramework.apk  
+点击Build Android，即可在工程目录build文件夹下看到FFramework.apk(有可能需要点击两次，第一次点击有可能失败)  
 只需在Jenkins配置，Choice Parameter，即可实现打包自动化（开发中）   
 HotFixResources：热更资源；  ChannelPack：渠道包；  LocalPack：本地包；  FirstPack：首包；（渠道包和本地包基于首包的.bin输出）  
 
