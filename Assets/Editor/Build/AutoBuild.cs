@@ -2,8 +2,6 @@ using HybridCLR.Editor;
 using System.Collections.Generic;
 using System.IO;
 using UnityEditor;
-using UnityEditor.AddressableAssets.Settings;
-using UnityEditor.AddressableAssets;
 using UnityEngine;
 
 public class AutoBuild : Editor
@@ -30,7 +28,7 @@ public class AutoBuild : Editor
     {
         AutoHybridCLR.CheckHybridCLRInstall();
         BuildAssetsCommand.BuildAndCopyABAOTHotUpdateDlls();
-        AutoAddressables.AutoUpdate();
+        //AutoAddressables.AutoUpdate();
     }
 
 
@@ -51,8 +49,8 @@ public class AutoBuild : Editor
 
 
         // 资源相关处理
-        AddressableAssetSettings settings = AddressableAssetSettingsDefaultObject.Settings;
-        AddressableAssetSettings.BuildPlayerContent();
+        //AddressableAssetSettings settings = AddressableAssetSettingsDefaultObject.Settings;
+        //AddressableAssetSettings.BuildPlayerContent();
 
 
         // 获取场景列表

@@ -6,10 +6,6 @@ using System.IO;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
-using UnityEditor.Graphs;
-using UnityEditor.AddressableAssets;
-using UnityEditor.AddressableAssets.Settings;
-using UnityEditor.AddressableAssets.Settings.GroupSchemas;
 
 namespace HybridCLR.Editor
 {
@@ -30,7 +26,7 @@ namespace HybridCLR.Editor
             AssetDatabase.Refresh();
 
             // 加入aa分组
-            AssignAddressableGroup();
+            //AssignAddressableGroup();
             AssetDatabase.Refresh();
             AssetDatabase.SaveAssets();
         }
@@ -77,59 +73,6 @@ namespace HybridCLR.Editor
             }
         }
 
-        public static void AssignAddressableGroup()
-        {
-            var addressableAssetSettings = AddressableAssetSettingsDefaultObject.Settings;
-
-            // 确认Dlls分组存在，如果不存在，就创建
-            var group = addressableAssetSettings.FindGroup("Dlls");
-            if (group == null)
-            {
-                group = addressableAssetSettings.CreateGroup("Dlls", false, false, true, new List<AddressableAssetGroupSchema>(), typeof(BundledAssetGroupSchema));
-            }
-
-            // 你要添加资源的文件夹路径，如 "Assets/MyFolder"
-            string myFolder = "Assets/GameRes/Dlls";
-
-            // 获取在你的文件夹路径下所有文件的路径
-            string[] allAssetPaths = Directory.GetFiles(myFolder, "*", SearchOption.AllDirectories);
-
-            foreach (var assetPath in allAssetPaths)
-            {
-                // 这个过滤条件可以根据实际需要修改
-                if (Path.GetExtension(assetPath) == ".meta") continue;
-
-                var guid = AssetDatabase.AssetPathToGUID(assetPath);
-                var entry = addressableAssetSettings.CreateOrMoveEntry(guid, group);
-                entry.address = assetPath;
-
-                // 将更改保存下来
-                addressableAssetSettings.SetDirty(AddressableAssetSettings.ModificationEvent.EntryMoved, entry, true);
-            }
-            SimplifyNames();
-        }
-
-        public static void SimplifyNames()
-        {
-            var addressableAssetSettings = AddressableAssetSettingsDefaultObject.Settings;
-
-            // 找到'Dlls'分组
-            var group = addressableAssetSettings.FindGroup("Dlls");
-            if (group == null)
-            {
-                return;
-            }
-
-            // 对分组下所有的entry进行处理
-            foreach (var entry in group.entries)
-            {
-                // 用资源文件的名字来作为Address，而不使用完整路径
-                entry.address = Path.GetFileNameWithoutExtension(entry.AssetPath);
-                entry.SetLabel("Pre", true);
-            }
-
-            // 将更改保存下来
-            addressableAssetSettings.SetDirty(AddressableAssetSettings.ModificationEvent.EntryMoved, null, true);
-        }
+       
     }
 }

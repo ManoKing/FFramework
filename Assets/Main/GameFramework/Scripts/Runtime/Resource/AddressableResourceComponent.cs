@@ -15,9 +15,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Runtime.InteropServices;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
-using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.SceneManagement;
+using YooAsset;
 
 namespace UnityGameFramework.Runtime
 {
@@ -623,7 +622,7 @@ namespace UnityGameFramework.Runtime
                     LoadSceneInfo loadSceneInfo = current.Value;
                     if (loadSceneInfo.AsyncOperation.IsDone)
                     {
-                        if (loadSceneInfo.AsyncOperation.IsValid())
+                        if (loadSceneInfo.AsyncOperation.IsValid)
                         {
                             if (loadSceneInfo.LoadSceneCallbacks.LoadSceneSuccessCallback != null)
                             {
@@ -646,7 +645,7 @@ namespace UnityGameFramework.Runtime
                     {
                         if (loadSceneInfo.LoadSceneCallbacks.LoadSceneUpdateCallback != null)
                         {
-                            loadSceneInfo.LoadSceneCallbacks.LoadSceneUpdateCallback(loadSceneInfo.SceneAssetName, loadSceneInfo.AsyncOperation.PercentComplete, loadSceneInfo.UserData);
+                            loadSceneInfo.LoadSceneCallbacks.LoadSceneUpdateCallback(loadSceneInfo.SceneAssetName, loadSceneInfo.AsyncOperation.Progress, loadSceneInfo.UserData);
                         }
 
                         current = current.Next;
@@ -989,49 +988,11 @@ namespace UnityGameFramework.Runtime
         public void LoadAsset(string assetName, Type assetType, int priority, LoadAssetCallbacks loadAssetCallbacks, object userData)
         {
             var startTime = DateTime.UtcNow;
-            Addressables.LoadAssetAsync<UnityEngine.Object>(assetName).Completed += result => {
+            YooAssets.LoadAssetAsync<UnityEngine.Object>(assetName).Completed += result => {
                 float elapseSeconds = (float)(DateTime.UtcNow - startTime).TotalSeconds;
-                loadAssetCallbacks.LoadAssetSuccessCallback(assetName, result.Result, elapseSeconds, userData);
+                loadAssetCallbacks.LoadAssetSuccessCallback(assetName, result.AssetObject, elapseSeconds, userData);
             };
-            /*
-            if (loadAssetCallbacks == null)
-            {
-                Log.Error("Load asset callbacks is invalid.");
-                return;
-            }
-
-            if (string.IsNullOrEmpty(assetName))
-            {
-                if (loadAssetCallbacks.LoadAssetFailureCallback != null)
-                {
-                    loadAssetCallbacks.LoadAssetFailureCallback(assetName, LoadResourceStatus.NotExist, "Asset name is invalid.", userData);
-                }
-
-                return;
-            }
-
-            if (!assetName.StartsWith("Assets/", StringComparison.Ordinal))
-            {
-                if (loadAssetCallbacks.LoadAssetFailureCallback != null)
-                {
-                    loadAssetCallbacks.LoadAssetFailureCallback(assetName, LoadResourceStatus.NotExist, Utility.Text.Format("Asset name '{0}' is invalid.", assetName), userData);
-                }
-
-                return;
-            }
-
-            if (!HasFile(assetName))
-            {
-                if (loadAssetCallbacks.LoadAssetFailureCallback != null)
-                {
-                    loadAssetCallbacks.LoadAssetFailureCallback(assetName, LoadResourceStatus.NotExist, Utility.Text.Format("Asset '{0}' is not exist.", assetName), userData);
-                }
-
-                return;
-            }
-
-            m_LoadAssetInfos.AddLast(new LoadAssetInfo(assetName, assetType, priority, DateTime.UtcNow, m_MinLoadAssetRandomDelaySeconds + (float)Utility.Random.GetRandomDouble() * (m_MaxLoadAssetRandomDelaySeconds - m_MinLoadAssetRandomDelaySeconds), loadAssetCallbacks, userData));
-            */
+            
         }
 
         /// <summary>
@@ -1124,7 +1085,7 @@ namespace UnityGameFramework.Runtime
             //AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneAssetName, LoadSceneMode.Additive);
 
             // 场景加载
-            AsyncOperationHandle asyncOperation = Addressables.LoadSceneAsync(sceneAssetName, LoadSceneMode.Additive);
+            SceneHandle asyncOperation = YooAssets.LoadSceneAsync(sceneAssetName, LoadSceneMode.Additive);
 #else
             AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(SceneComponent.GetSceneName(sceneAssetName), LoadSceneMode.Additive);
 #endif
@@ -1676,14 +1637,14 @@ namespace UnityGameFramework.Runtime
         [StructLayout(LayoutKind.Auto)]
         private struct LoadSceneInfo
         {
-            private readonly AsyncOperationHandle m_AsyncOperation;
+            private readonly SceneHandle m_AsyncOperation;
             private readonly string m_SceneAssetName;
             private readonly int m_Priority;
             private readonly DateTime m_StartTime;
             private readonly LoadSceneCallbacks m_LoadSceneCallbacks;
             private readonly object m_UserData;
 
-            public LoadSceneInfo(AsyncOperationHandle asyncOperation, string sceneAssetName, int priority, DateTime startTime, LoadSceneCallbacks loadSceneCallbacks, object userData)
+            public LoadSceneInfo(SceneHandle asyncOperation, string sceneAssetName, int priority, DateTime startTime, LoadSceneCallbacks loadSceneCallbacks, object userData)
             {
                 m_AsyncOperation = asyncOperation;
                 m_SceneAssetName = sceneAssetName;
@@ -1693,7 +1654,7 @@ namespace UnityGameFramework.Runtime
                 m_UserData = userData;
             }
 
-            public AsyncOperationHandle AsyncOperation
+            public SceneHandle AsyncOperation
             {
                 get
                 {

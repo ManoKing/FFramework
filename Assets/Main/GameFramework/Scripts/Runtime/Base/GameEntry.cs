@@ -9,9 +9,8 @@ using GameFramework;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
-using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.SceneManagement;
+using YooAsset;
 
 namespace UnityGameFramework.Runtime
 {
@@ -105,7 +104,7 @@ namespace UnityGameFramework.Runtime
             {
                 //SceneManager.LoadScene(GameFrameworkSceneId);
                 var sceneAssetName = "Assets/GameRes/Scenes/GameStart/GameStart.unity";
-                AsyncOperationHandle asyncOperation = Addressables.LoadSceneAsync(sceneAssetName, LoadSceneMode.Single);
+                SceneHandle asyncOperation = YooAssets.LoadSceneAsync(sceneAssetName, LoadSceneMode.Single);
                 return;
             }
 
