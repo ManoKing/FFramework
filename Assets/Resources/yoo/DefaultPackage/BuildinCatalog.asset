@@ -1,0 +1,167 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b05c83971e3dca94f9fa460d396385e5, type: 3}
+  m_Name: BuildinCatalog
+  m_EditorClassIdentifier: 
+  PackageName: DefaultPackage
+  PackageVersion: 2024-11-07-1088
+  Wrappers:
+  - BundleGUID: 1bdd08937ef2276edcc00569a1907c76
+    FileName: defaultpackage_assets_gameres_configs.bundle
+  - BundleGUID: 44b66824128bbdb88d66e4a5de268934
+    FileName: defaultpackage_assets_gameres_datatables.bundle
+  - BundleGUID: 8064d2b0cfa56cf38fd8b473356e6804
+    FileName: defaultpackage_assets_gameres_dlls.bundle
+  - BundleGUID: 1677e710eecb7e0af3889d85e8aea007
+    FileName: defaultpackage_assets_gameres_entity.bundle
+  - BundleGUID: 998c6fbf55e043a2ed35da8bd7390790
+    FileName: defaultpackage_assets_gameres_entity_assaultcannon.bundle
+  - BundleGUID: 5279a4866d0dbfc704e5b347a8b7624b
+    FileName: defaultpackage_assets_gameres_entity_empgenerator.bundle
+  - BundleGUID: eafc25455abc3a9482167e11da28f3a8
+    FileName: defaultpackage_assets_gameres_entity_enemies.bundle
+  - BundleGUID: 3477fbfa45b5fad8d164fd2a57568b02
+    FileName: defaultpackage_assets_gameres_entity_energypylon.bundle
+  - BundleGUID: b26adcce635ff5aadec6b1685f75730a
+    FileName: defaultpackage_assets_gameres_entity_missilearray.bundle
+  - BundleGUID: 44a09cfb0dfae03ccff5832ead67203d
+    FileName: defaultpackage_assets_gameres_entity_plasmalance.bundle
+  - BundleGUID: f993362a4db0412223582240c1c5a498
+    FileName: defaultpackage_assets_gameres_entity_rocketplatform.bundle
+  - BundleGUID: c2dbcb1bdf756f36785197c1251ba4b2
+    FileName: defaultpackage_assets_gameres_item.bundle
+  - BundleGUID: 0e779c577204b53d420b790e078791d6
+    FileName: defaultpackage_assets_gameres_localization_chinesesimplified_dictionaries.bundle
+  - BundleGUID: bc1a03b479c9a8cc797b0eef1a42c1af
+    FileName: defaultpackage_assets_gameres_localization_chinesetraditional_dictionaries.bundle
+  - BundleGUID: c574839bf001c791fb554c55f041d164
+    FileName: defaultpackage_assets_gameres_localization_english_dictionaries.bundle
+  - BundleGUID: 0954b69dc9bb6beaa8312fa4d529f402
+    FileName: defaultpackage_assets_gameres_scenes_gamestart.bundle
+  - BundleGUID: e0914d127bae9499a135a8d0bcee6d74
+    FileName: defaultpackage_assets_gameres_scenes_level1.bundle
+  - BundleGUID: 077216f98e2c8273ab767ea635c3aab9
+    FileName: defaultpackage_assets_gameres_scenes_level2.bundle
+  - BundleGUID: 9ef3530ca56b65df50514830d0ea4d47
+    FileName: defaultpackage_assets_gameres_scenes_level3.bundle
+  - BundleGUID: d34e5bc59c127ae5b903c115e9ed378d
+    FileName: defaultpackage_assets_gameres_scenes_level4.bundle
+  - BundleGUID: d366f8ed2105b4a5875b1341591edf45
+    FileName: defaultpackage_assets_gameres_scenes_level5.bundle
+  - BundleGUID: afc010ef0b2e653771a6a1c1dbfa8f84
+    FileName: defaultpackage_assets_gameres_scenes_menu.bundle
+  - BundleGUID: ba1a36b3fc071faa8bdeac938ec44681
+    FileName: defaultpackage_assets_gameres_sounds.bundle
+  - BundleGUID: 3205808a24a5c869186496cf4b84245f
+    FileName: defaultpackage_assets_gameres_sounds_music.bundle
+  - BundleGUID: e5864ce10168248d89ea82eb8025390e
+    FileName: defaultpackage_assets_gameres_sounds_sfx.bundle
+  - BundleGUID: 1ea26fe1dc48dd0833deb988c10953b9
+    FileName: defaultpackage_assets_gameres_sounds_sfx_base_attack.bundle
+  - BundleGUID: eb6b69b3709cced372978d059363ba12
+    FileName: defaultpackage_assets_gameres_sounds_sfx_enemies_exploding.bundle
+  - BundleGUID: 13e5d470845249614bc942267a05003e
+    FileName: defaultpackage_assets_gameres_sounds_sfx_towers_laser.bundle
+  - BundleGUID: 07485a4425ed4a6295b2b4e83f843451
+    FileName: defaultpackage_assets_gameres_sounds_sfx_towers_machinegun.bundle
+  - BundleGUID: e1b1010d4b738f8274454a9d45382880
+    FileName: defaultpackage_assets_gameres_sounds_sfx_towers_rocketlauncher.bundle
+  - BundleGUID: 94b66927685e6120ccf98ad079aa9dca
+    FileName: defaultpackage_assets_gameres_sounds_sfx_towers_supertower.bundle
+  - BundleGUID: 9916856cafa8b2c9d67ce17724831e10
+    FileName: defaultpackage_assets_gameres_sounds_sfx_tower_destruction.bundle
+  - BundleGUID: fb41f088e05560fbb62fa8b1e1c88ea2
+    FileName: defaultpackage_assets_gameres_sounds_sfx_ui.bundle
+  - BundleGUID: 2100dabebd2c4df15d41cc8ccaa36d5d
+    FileName: defaultpackage_assets_gameres_sounds_ui.bundle
+  - BundleGUID: d5711b9991cafc257bc46cea1e10be48
+    FileName: defaultpackage_assets_gameres_ui_dynamic.bundle
+  - BundleGUID: 2590014ea47291cc9d06973c89734c3b
+    FileName: defaultpackage_assets_gameres_ui_uiforms.bundle
+  - BundleGUID: 5e991e664e989a07228a47496d23ea2c
+    FileName: defaultpackage_share_assets_rawres_animations.bundle
+  - BundleGUID: 18e27235d0dcffaf14d730e6647c4c8c
+    FileName: defaultpackage_share_assets_rawres_fonts_roboto.bundle
+  - BundleGUID: 6ddd099510fa58c55ec2e05b84d82ee4
+    FileName: defaultpackage_share_assets_rawres_materials.bundle
+  - BundleGUID: 7ee5e3dab4814c47408b7836f56070cb
+    FileName: defaultpackage_share_assets_rawres_materials_levels.bundle
+  - BundleGUID: d118eabda9d6cca750292b4bde2c71ce
+    FileName: defaultpackage_share_assets_rawres_materials_particles.bundle
+  - BundleGUID: 3545ac5f21eed93806e7794322430ca0
+    FileName: defaultpackage_share_assets_rawres_materials_player.bundle
+  - BundleGUID: 480f6ff54022c09638f1ca93a162ae02
+    FileName: defaultpackage_share_assets_rawres_materials_projectiles.bundle
+  - BundleGUID: ebd948342154423dc73bdaa1ef65f89d
+    FileName: defaultpackage_share_assets_rawres_materials_towers.bundle
+  - BundleGUID: 806f4693fe9d255aa02d6ee7de46c693
+    FileName: defaultpackage_share_assets_rawres_materials_towers_emptower.bundle
+  - BundleGUID: 4da42e1a042c16c59cc08bf57b69dd95
+    FileName: defaultpackage_share_assets_rawres_materials_towers_energypylon.bundle
+  - BundleGUID: 708fadfd591938a5883ff3a008a87085
+    FileName: defaultpackage_share_assets_rawres_materials_towers_laser.bundle
+  - BundleGUID: 434c79617ad65ef833c1aecd86ad3210
+    FileName: defaultpackage_share_assets_rawres_materials_towers_machinegun.bundle
+  - BundleGUID: e4dfdf0367baff97e373f16f4ed9ee4f
+    FileName: defaultpackage_share_assets_rawres_materials_towers_rocket.bundle
+  - BundleGUID: afca03ea2c1fcfcf1a4028792361563f
+    FileName: defaultpackage_share_assets_rawres_materials_towers_supertower.bundle
+  - BundleGUID: 181a56c76d6f50cb81a5135e8e6de550
+    FileName: defaultpackage_share_assets_rawres_materials_ui.bundle
+  - BundleGUID: 4fda1a98acfa499e1999df8ec92623ac
+    FileName: defaultpackage_share_assets_rawres_materials_units.bundle
+  - BundleGUID: d3cc00841836850f8bc77737f1d41eb6
+    FileName: defaultpackage_share_assets_rawres_models_levels.bundle
+  - BundleGUID: d18d879ddb37791b264fa4be3ba5ed04
+    FileName: defaultpackage_share_assets_rawres_models_player.bundle
+  - BundleGUID: 6896f4e6a1bd54e801892da0a0b24d81
+    FileName: defaultpackage_share_assets_rawres_models_projectiles.bundle
+  - BundleGUID: 2a0a5d5babaf54bd2eda13beb8caf92b
+    FileName: defaultpackage_share_assets_rawres_models_towers_emptower.bundle
+  - BundleGUID: 032aebe9a70d2583a1dffd31e474bcb9
+    FileName: defaultpackage_share_assets_rawres_models_towers_emptower_materials.bundle
+  - BundleGUID: dc85fc652f46276ec9062e689d54eaac
+    FileName: defaultpackage_share_assets_rawres_models_towers_energypylon.bundle
+  - BundleGUID: d5dfa2efaee094b2c111eeefd9e20fef
+    FileName: defaultpackage_share_assets_rawres_models_towers_laser.bundle
+  - BundleGUID: 6efaf39dba65aba1b708ccd5c86f1fe7
+    FileName: defaultpackage_share_assets_rawres_models_towers_laser_materials.bundle
+  - BundleGUID: 0c197a28aaf3300c4e683c1653ac26e5
+    FileName: defaultpackage_share_assets_rawres_models_towers_machinegun.bundle
+  - BundleGUID: 8d60eae1d5d98248624c5c65851e199b
+    FileName: defaultpackage_share_assets_rawres_models_towers_rocket.bundle
+  - BundleGUID: 683222ffb0336756a541ac96389a595e
+    FileName: defaultpackage_share_assets_rawres_models_towers_supertower.bundle
+  - BundleGUID: 2eb5816672df5d2b36d66d5bacf5b316
+    FileName: defaultpackage_share_assets_rawres_models_units.bundle
+  - BundleGUID: 0422e9174e97ae035d2713cb06d1f4ba
+    FileName: defaultpackage_share_assets_rawres_models_units_materials.bundle
+  - BundleGUID: dc214ae039a3e435bbf17acd61b791d6
+    FileName: defaultpackage_share_assets_rawres_particles_textures.bundle
+  - BundleGUID: 5aea21e036094080da95376aa6072683
+    FileName: defaultpackage_share_assets_rawres_scenes_levels_level1_level1.bundle
+  - BundleGUID: 0d732a18fedb9b6e7c16c1701f1c1056
+    FileName: defaultpackage_share_assets_rawres_scenes_levels_level2_level2.bundle
+  - BundleGUID: 85bf43d786f07c7a0c6af7e55defb37b
+    FileName: defaultpackage_share_assets_rawres_scenes_levels_level3_level3.bundle
+  - BundleGUID: 6e9683a96d96a2b297803156ac3f47d8
+    FileName: defaultpackage_share_assets_rawres_scenes_levels_level4_level4.bundle
+  - BundleGUID: 06821e5acfdc9b46eabb6a28a8ecd8df
+    FileName: defaultpackage_share_assets_rawres_scenes_levels_level5_level5.bundle
+  - BundleGUID: 009a9e27c582a3f3ec45476c6272108f
+    FileName: defaultpackage_share_assets_rawres_scenes_levels_menu.bundle
+  - BundleGUID: c71dd5d184a5adede387cb10cc1e4a68
+    FileName: defaultpackage_share_assets_rawres_ui.bundle
+  - BundleGUID: 66eaf4155a7cf5b34b0681d9ff955a55
+    FileName: defaultpackage_share_packages_com_unity_render-pipelines_universal_runtime_materials.bundle
+  - BundleGUID: 88442af81e131f052de105c37a75e4d7
+    FileName: defaultpackage_unityshaders.bundle
