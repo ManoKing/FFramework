@@ -13,18 +13,21 @@ public class LoadDll : MonoBehaviour
 {
     void Start()
     {
-        StartGame();
-    }
-
-    void StartGame()
-    {
         LoadMetadataForAOTAssemblies();
 #if !UNITY_EDITOR
-        //var handleHotFix = Addressables.LoadAssetAsync<TextAsset>("HotFix.dll").WaitForCompletion();
-        //System.Reflection.Assembly.Load(handleHotFix.bytes);
+        LoadHotFix();
 #endif
         HotUpdatePrefab();
     }
+
+    async void LoadHotFix()
+    {
+        var op = YooAssets.LoadAssetAsync<TextAsset>("HotFix.dll");
+        await op.ToUniTask();
+        var handleHotFix = op.AssetObject as TextAsset;
+        System.Reflection.Assembly.Load(handleHotFix.bytes);
+    }
+
     void HotUpdatePrefab()
     {
         var sceneAssetName = "Assets/GameRes/Scenes/GameStart/GameStart.unity";
