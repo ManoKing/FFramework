@@ -2,12 +2,11 @@
 
 ## 工程介绍   
 
-此工程热更模块基于 HybridCLR + Addressable，并将主流的GameFramework修改支持Addressable。  
+此工程热更模块基于 HybridCLR + YooAsset，并将主流的GameFramework修改支持YooAsset。  
 并实现，Jenkins自动多渠道打包，白名单灰度测试，一键发布热更资源及版本回退。  
 
 （1）代码热更基于[HybridCLR跳转](https://github.com/focus-creative-games/HybridCLR)  
-（2）资源热更基于[Addressable跳转](https://docs.unity3d.com/Packages/com.unity.addressables@1.21/manual/index.html)     
-（3）资源管理基于[Asset Graph跳转](https://docs.unity3d.com/Packages/com.unity.assetgraph@1.7/manual/index.html)   
+（2）资源热更基于[YooAsset跳转](https://www.yooasset.com/)     
 
 ---
 
@@ -27,11 +26,12 @@
 (2)加载完资源会调用初始化LoadDll,加载热更Dll   
 (3)加载完Dll切换热更场景，进入热更模块   
 
-### Addressable 实现本地模拟
-需要利用Addressables Hosting搭建一个本地服务器，确保手机和电脑处于同一网络，便可实现热更
+### YooAsset 实现本地模拟
+需要利用HFS搭建一个本地服务器，确保手机和电脑处于同一网络，便可实现热更  
+[HFS跳转](https://github.com/rejetto/hfs)  
 
 ### 其他
-(1)Unity 版本使用是2021.3.26  
+(1)Unity 版本使用是2022.3.xx  
 (2)基于URP渲染管线(开发中)  
 (3)完善UI框架，及代码自动生成工具  
 
