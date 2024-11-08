@@ -1,9 +1,7 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using YooAsset;
-using static UnityEngine.Rendering.ReloadAttribute;
 public class Main : MonoBehaviour
 {
     public Text loadText;
@@ -11,7 +9,7 @@ public class Main : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(UpdateAddressablesContent()); 
+        StartCoroutine(UpdateAddressablesContent());
     }
 
     void StartGame()
