@@ -1,104 +1,51 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UniFramework.Event;
 using YooAsset;
+
 public class Main : MonoBehaviour
 {
-    public Text loadText;
-    public Slider loadSlider;
+    /// <summary>
+    /// 资源系统运行模式
+    /// </summary>
+    public EPlayMode PlayMode = EPlayMode.EditorSimulateMode;
 
-    void Start()
+    void Awake()
     {
-        StartCoroutine(UpdateAddressablesContent());
+        Debug.Log($"资源系统运行模式：{PlayMode}");
+        Application.targetFrameRate = 60;
+        Application.runInBackground = true;
+        DontDestroyOnLoad(this.gameObject);
     }
-
-    void StartGame()
+    IEnumerator Start()
     {
-        gameObject.AddComponent<LoadDll>();
-    }
+        // 游戏管理器
+        GameManager.Instance.Behaviour = this;
 
-    IEnumerator UpdateAddressablesContent()
-    {
+        // 初始化事件系统
+        UniEvent.Initalize();
+
         // 初始化资源系统
         YooAssets.Initialize();
-        var package = YooAssets.CreatePackage("DefaultPackage");
-        var createParameters = new OfflinePlayModeParameters();
-        createParameters.BuildinFileSystemParameters = FileSystemParameters.CreateDefaultBuildinFileSystemParameters();
-        var initializationOperation = package.InitializeAsync(createParameters);
-        yield return initializationOperation;
-        var operationVersion = package.RequestPackageVersionAsync();
-        yield return operationVersion;
-        var operationManifest = package.UpdatePackageManifestAsync(operationVersion.PackageVersion);
-        yield return operationManifest;
-        YooAssets.SetDefaultPackage(package);
 
-        Debug.Log("UpdateAddressablesContent");
-        //var initHandle = Addressables.InitializeAsync();
-        //yield return initHandle;
+        // 加载更新页面
+        var go = Resources.Load<GameObject>("PatchWindow");
+        GameObject.Instantiate(go);
 
-        //var handler = Addressables.CheckForCatalogUpdates(false);
-        //yield return handler;
+        // 开始补丁更新流程
+        PatchOperation operation = new PatchOperation("DefaultPackage", EDefaultBuildPipeline.ScriptableBuildPipeline.ToString(), PlayMode);
+        YooAssets.StartOperation(operation);
+        yield return operation;
 
-        //var catalogs = handler.Result;
-        //Debug.Log($"need update catalog:{catalogs.Count}"); 
-        //foreach (var catalog in catalogs)
-        //{
-        //    Debug.Log(catalog);
-        //}
+        // 设置默认的资源包
+        var gamePackage = YooAssets.GetPackage("DefaultPackage");
+        YooAssets.SetDefaultPackage(gamePackage);
 
-        //if (catalogs.Count > 0)
-        //{
-        //    var updateHandle = Addressables.UpdateCatalogs(catalogs, false);
-        //    yield return updateHandle;
-
-        //    var locators = updateHandle.Result;
-        //    foreach (var locator in locators)
-        //    {
-        //        foreach (var key in locator.Keys)
-        //        {
-        //            Debug.Log($"update {key}");
-        //        }
-        //    }
-        //}
-
-        //string downkey = "Pre";
-        //var sizeHandle = Addressables.GetDownloadSizeAsync(downkey);
-        //yield return sizeHandle;
-        //long totalDownloadSize = sizeHandle.Result;
-
-        //Debug.Log("NEED downLoad size:" + totalDownloadSize);    
-        //if (totalDownloadSize > 0)
-        //{
-        //    //var downloadHandle = Addressables.DownloadDependenciesAsync(downkey, Addressables.MergeMode.Union);
-        //    var downloadHandle = Addressables.DownloadDependenciesAsync(downkey, false);
-        //    while (downloadHandle.Status == AsyncOperationStatus.None)
-        //    {
-        //        float percent = downloadHandle.PercentComplete;  
-
-        //        var status = downloadHandle.GetDownloadStatus();
-        //        float progress = status.Percent;    
-        //        Debug.LogError($"已经下载：{(int)(totalDownloadSize * percent)}/{totalDownloadSize}");
-        //        Debug.LogError($"{progress * 100:0.0}" + "%"); 
-        //        loadText.text = $"正在为您下载和校验配置，请耐心等待：" + $"{progress * 100:0.0}" + "%";
-        //        loadSlider.gameObject.SetActive(true);
-        //        loadSlider.value = progress;  
-        //        yield return null;
-        //    }
-
-        //    if (downloadHandle.IsDone)
-        //    {
-        //        Debug.LogError("已经下载完成！！！");
-        //    }
-        //    if (downloadHandle.Status == AsyncOperationStatus.Succeeded)
-        //    {
-        //        Addressables.Release(downloadHandle);
-        //    }
-        //}
-        //Debug.Log("已经下载完成，准备进入游戏");
-        //Addressables.Release(handler);
-        Debug.Log("释放hander成功");
-        yield return null;
-        StartGame();
+        // 切换到主页面场景
+        //SceneEventDefine.ChangeToHomeScene.SendEventMessage();
+        gameObject.AddComponent<LoadDll>();
     }
 
 }
