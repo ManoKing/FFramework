@@ -26,11 +26,7 @@ public class LoadDll : MonoBehaviour
     void HotUpdatePrefab()
     {
         var sceneAssetName = "Assets/GameRes/Scenes/GameStart/GameStart.unity";
-        SceneHandle asyncOperation = YooAssets.LoadSceneAsync(sceneAssetName, LoadSceneMode.Additive);
-        asyncOperation.Completed += _ =>
-        {
-            SceneManager.UnloadSceneAsync(0);
-        };
+        SceneHandle asyncOperation = YooAssets.LoadSceneAsync(sceneAssetName, LoadSceneMode.Single);
     }
 
     /// <summary>
