@@ -108,7 +108,7 @@ namespace Flower
                     break;
             }
 
-            GameEntry.Resource.SetCurrentVariant(currentVariant);
+           // GameEntry.Resource.SetCurrentVariant(currentVariant);
             Log.Info("Init current variant complete.current variant :{0}.", currentVariant);
         }
     }

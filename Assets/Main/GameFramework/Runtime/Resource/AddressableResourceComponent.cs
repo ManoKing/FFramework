@@ -6,9 +6,6 @@
 //------------------------------------------------------------
 
 using GameFramework;
-using GameFramework.Download;
-using GameFramework.FileSystem;
-using GameFramework.ObjectPool;
 using GameFramework.Resource;
 using System;
 using System.Collections.Generic;
@@ -48,370 +45,6 @@ namespace UnityGameFramework.Runtime
         private GameFrameworkLinkedList<LoadSceneInfo> m_LoadSceneInfos = null;
         private GameFrameworkLinkedList<UnloadSceneInfo> m_UnloadSceneInfos = null;
 
-        /// <summary>
-        /// 获取资源只读区路径。
-        /// </summary>
-        public string ReadOnlyPath
-        {
-            get
-            {
-                return m_ReadOnlyPath;
-            }
-        }
-
-        /// <summary>
-        /// 获取资源读写区路径。
-        /// </summary>
-        public string ReadWritePath
-        {
-            get
-            {
-                return m_ReadWritePath;
-            }
-        }
-
-        /// <summary>
-        /// 获取当前变体。
-        /// </summary>
-        public string CurrentVariant
-        {
-            get
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// 获取当前资源适用的游戏版本号。
-        /// </summary>
-        public string ApplicableGameVersion
-        {
-            get
-            {
-                throw new NotSupportedException("ApplicableGameVersion");
-            }
-        }
-
-        /// <summary>
-        /// 获取当前内部资源版本号。
-        /// </summary>
-        public int InternalResourceVersion
-        {
-            get
-            {
-                throw new NotSupportedException("InternalResourceVersion");
-            }
-        }
-
-        /// <summary>
-        /// 获取已准备完毕资源数量。
-        /// </summary>
-        public int AssetCount
-        {
-            get
-            {
-                throw new NotSupportedException("AssetCount");
-            }
-        }
-
-        /// <summary>
-        /// 获取已准备完毕资源数量。
-        /// </summary>
-        public int ResourceCount
-        {
-            get
-            {
-                throw new NotSupportedException("ResourceCount");
-            }
-        }
-
-        /// <summary>
-        /// 获取资源组个数。
-        /// </summary>
-        public int ResourceGroupCount
-        {
-            get
-            {
-                throw new NotSupportedException("ResourceGroupCount");
-            }
-        }
-
-        /// <summary>
-        /// 获取或设置资源更新下载地址。
-        /// </summary>
-        public string UpdatePrefixUri
-        {
-            get
-            {
-                throw new NotSupportedException("UpdatePrefixUri");
-            }
-            set
-            {
-                throw new NotSupportedException("UpdatePrefixUri");
-            }
-        }
-
-        /// <summary>
-        /// 获取或设置每更新多少字节的资源，重新生成一次版本资源列表。
-        /// </summary>
-        public int GenerateReadWriteVersionListLength
-        {
-            get
-            {
-                throw new NotSupportedException("GenerateReadWriteVersionListLength");
-            }
-            set
-            {
-                throw new NotSupportedException("GenerateReadWriteVersionListLength");
-            }
-        }
-
-        /// <summary>
-        /// 获取正在应用的资源包路径。
-        /// </summary>
-        public string ApplyingResourcePackPath
-        {
-            get
-            {
-                throw new NotSupportedException("ApplyingResourcePackPath");
-            }
-        }
-
-        /// <summary>
-        /// 获取等待应用资源数量。
-        /// </summary>
-        public int ApplyWaitingCount
-        {
-            get
-            {
-                throw new NotSupportedException("ApplyWaitingCount");
-            }
-        }
-
-        /// <summary>
-        /// 获取或设置资源更新重试次数。
-        /// </summary>
-        public int UpdateRetryCount
-        {
-            get
-            {
-                throw new NotSupportedException("UpdateRetryCount");
-            }
-            set
-            {
-                throw new NotSupportedException("UpdateRetryCount");
-            }
-        }
-
-
-        /// <summary>
-        /// 获取等待更新资源个数。
-        /// </summary>
-        public int UpdateWaitingCount
-        {
-            get
-            {
-                throw new NotSupportedException("UpdateWaitingCount");
-            }
-        }
-
-        /// <summary>
-        /// 获取候选更新资源数量。
-        /// </summary>
-        public int UpdateCandidateCount
-        {
-            get
-            {
-                throw new NotSupportedException("UpdateCandidateCount");
-            }
-        }
-
-        /// <summary>
-        /// 获取正在更新资源个数。
-        /// </summary>
-        public int UpdatingCount
-        {
-            get
-            {
-                throw new NotSupportedException("UpdatingCount");
-            }
-        }
-
-        /// <summary>
-        /// 获取加载资源代理总个数。
-        /// </summary>
-        public int LoadTotalAgentCount
-        {
-            get
-            {
-                throw new NotSupportedException("LoadTotalAgentCount");
-            }
-        }
-
-        /// <summary>
-        /// 获取可用加载资源代理个数。
-        /// </summary>
-        public int LoadFreeAgentCount
-        {
-            get
-            {
-                throw new NotSupportedException("LoadFreeAgentCount");
-            }
-        }
-
-        /// <summary>
-        /// 获取工作中加载资源代理个数。
-        /// </summary>
-        public int LoadWorkingAgentCount
-        {
-            get
-            {
-                throw new NotSupportedException("LoadWorkingAgentCount");
-            }
-        }
-
-        /// <summary>
-        /// 获取等待加载资源任务个数。
-        /// </summary>
-        public int LoadWaitingTaskCount
-        {
-            get
-            {
-                throw new NotSupportedException("LoadWaitingTaskCount");
-            }
-        }
-
-        /// <summary>
-        /// 获取或设置资源对象池自动释放可释放对象的间隔秒数。
-        /// </summary>
-        public float AssetAutoReleaseInterval
-        {
-            get
-            {
-                throw new NotSupportedException("AssetAutoReleaseInterval");
-            }
-            set
-            {
-                throw new NotSupportedException("AssetAutoReleaseInterval");
-            }
-        }
-
-        /// <summary>
-        /// 获取或设置资源对象池的容量。
-        /// </summary>
-        public int AssetCapacity
-        {
-            get
-            {
-                throw new NotSupportedException("AssetCapacity");
-            }
-            set
-            {
-                throw new NotSupportedException("AssetCapacity");
-            }
-        }
-
-        /// <summary>
-        /// 获取或设置资源对象池对象过期秒数。
-        /// </summary>
-        public float AssetExpireTime
-        {
-            get
-            {
-                throw new NotSupportedException("AssetExpireTime");
-            }
-            set
-            {
-                throw new NotSupportedException("AssetExpireTime");
-            }
-        }
-
-        /// <summary>
-        /// 获取或设置资源对象池的优先级。
-        /// </summary>
-        public int AssetPriority
-        {
-            get
-            {
-                throw new NotSupportedException("AssetPriority");
-            }
-            set
-            {
-                throw new NotSupportedException("AssetPriority");
-            }
-        }
-
-        /// <summary>
-        /// 获取或设置资源对象池自动释放可释放对象的间隔秒数。
-        /// </summary>
-        public float ResourceAutoReleaseInterval
-        {
-            get
-            {
-                throw new NotSupportedException("ResourceAutoReleaseInterval");
-            }
-            set
-            {
-                throw new NotSupportedException("ResourceAutoReleaseInterval");
-            }
-        }
-
-        /// <summary>
-        /// 获取或设置资源对象池的容量。
-        /// </summary>
-        public int ResourceCapacity
-        {
-            get
-            {
-                throw new NotSupportedException("ResourceCapacity");
-            }
-            set
-            {
-                throw new NotSupportedException("ResourceCapacity");
-            }
-        }
-
-        /// <summary>
-        /// 获取或设置资源对象池对象过期秒数。
-        /// </summary>
-        public float ResourceExpireTime
-        {
-            get
-            {
-                throw new NotSupportedException("ResourceExpireTime");
-            }
-            set
-            {
-                throw new NotSupportedException("ResourceExpireTime");
-            }
-        }
-
-        /// <summary>
-        /// 获取或设置资源对象池的优先级。
-        /// </summary>
-        public int ResourcePriority
-        {
-            get
-            {
-                throw new NotSupportedException("ResourcePriority");
-            }
-            set
-            {
-                throw new NotSupportedException("ResourcePriority");
-            }
-        }
-
-        /// <summary>
-        /// 获取等待编辑器加载的资源数量。
-        /// </summary>
-        public int LoadWaitingAssetCount
-        {
-            get
-            {
-                return m_LoadAssetInfos.Count;
-            }
-        }
-
 
         protected override void Awake()
         {
@@ -429,16 +62,9 @@ namespace UnityGameFramework.Runtime
                 Log.Error("Can not find base component.");
                 return;
             }
-
-            //if (baseComponent.EditorResourceMode)
-            //{
             baseComponent.EditorResourceHelper = this;
             enabled = true;
-            //}
-            //else
-            //{
-            //    enabled = false;
-            //}
+
         }
 
         private void Update()
@@ -454,24 +80,6 @@ namespace UnityGameFramework.Runtime
                     if (elapseSeconds >= loadAssetInfo.DelaySeconds)
                     {
                         UnityEngine.Object asset = GetCachedAsset(loadAssetInfo.AssetName);
-                        if (asset == null)
-                        {
-#if UNITY_EDITOR
-                            //if (loadAssetInfo.AssetType != null)
-                            //{
-                            //    asset = UnityEditor.AssetDatabase.LoadAssetAtPath(loadAssetInfo.AssetName, loadAssetInfo.AssetType);
-                            //}
-                            //else
-                            //{
-                            //    asset = UnityEditor.AssetDatabase.LoadMainAssetAtPath(loadAssetInfo.AssetName);
-                            //}
-
-                            //if (m_EnableCachedAssets && asset != null)
-                            //{
-                            //    m_CachedAssets.Add(loadAssetInfo.AssetName, asset);
-                            //}
-#endif
-                        }
 
                         if (asset != null)
                         {
@@ -581,84 +189,9 @@ namespace UnityGameFramework.Runtime
 
         public void ForceUnloadUnusedAssets(bool isForce)
         {
-            
+
         }
 
-        /// <summary>
-        /// 设置资源只读区路径。
-        /// </summary>
-        /// <param name="readOnlyPath">资源只读区路径。</param>
-        public void SetReadOnlyPath(string readOnlyPath)
-        {
-            if (string.IsNullOrEmpty(readOnlyPath))
-            {
-                Log.Error("Readonly path is invalid.");
-                return;
-            }
-
-            m_ReadOnlyPath = readOnlyPath;
-        }
-
-        /// <summary>
-        /// 设置资源读写区路径。
-        /// </summary>
-        /// <param name="readWritePath">资源读写区路径。</param>
-        public void SetReadWritePath(string readWritePath)
-        {
-            if (string.IsNullOrEmpty(readWritePath))
-            {
-                Log.Error("Read-write path is invalid.");
-                return;
-            }
-
-            m_ReadWritePath = readWritePath;
-        }
-
-        /// <summary>
-        /// 设置当前变体。
-        /// </summary>
-        /// <param name="currentVariant">当前变体。</param>
-        public void SetCurrentVariant(string currentVariant)
-        {
-            throw new NotSupportedException("SetCurrentVariant");
-        }
-
-        /// <summary>
-        /// 设置对象池管理器。
-        /// </summary>
-        /// <param name="objectPoolManager">对象池管理器。</param>
-        public void SetObjectPoolManager(IObjectPoolManager objectPoolManager)
-        {
-            throw new NotSupportedException("SetObjectPoolManager");
-        }
-
-        /// <summary>
-        /// 设置文件系统管理器。
-        /// </summary>
-        /// <param name="fileSystemManager">文件系统管理器。</param>
-        public void SetFileSystemManager(IFileSystemManager fileSystemManager)
-        {
-            throw new NotSupportedException("SetFileSystemManager");
-        }
-
-        /// <summary>
-        /// 设置下载管理器。
-        /// </summary>
-        /// <param name="downloadManager">下载管理器。</param>
-        public void SetDownloadManager(IDownloadManager downloadManager)
-        {
-            throw new NotSupportedException("SetDownloadManager");
-        }
-
-        /// <summary>
-        /// 校验资源包。
-        /// </summary>
-        /// <param name="resourcePackPath">要校验的资源包路径。</param>
-        /// <returns>是否校验资源包成功。</returns>
-        public bool VerifyResourcePack(string resourcePackPath)
-        {
-            throw new NotSupportedException("VerifyResourcePack");
-        }
 
         /// <summary>
         /// 检查资源是否存在。
@@ -668,17 +201,6 @@ namespace UnityGameFramework.Runtime
         public HasAssetResult HasAsset(string assetName)
         {
             return HasAssetResult.AssetOnDisk;
-//#if UNITY_EDITOR
-//            UnityEngine.Object obj = UnityEditor.AssetDatabase.LoadMainAssetAtPath(assetName);
-//            if (obj == null)
-//            {
-//                return HasAssetResult.NotExist;
-//            }
-
-//            return obj.GetType() == typeof(UnityEditor.DefaultAsset) ? HasAssetResult.BinaryOnDisk : HasAssetResult.AssetOnDisk;
-//#else
-//            return HasAssetResult.NotExist;
-//#endif
         }
 
         /// <summary>
@@ -771,11 +293,12 @@ namespace UnityGameFramework.Runtime
         public void LoadAsset(string assetName, Type assetType, int priority, LoadAssetCallbacks loadAssetCallbacks, object userData)
         {
             var startTime = DateTime.UtcNow;
-            YooAssets.LoadAssetAsync<UnityEngine.Object>(assetName).Completed += result => {
+            YooAssets.LoadAssetAsync<UnityEngine.Object>(assetName).Completed += result =>
+            {
                 float elapseSeconds = (float)(DateTime.UtcNow - startTime).TotalSeconds;
                 loadAssetCallbacks.LoadAssetSuccessCallback(assetName, result.AssetObject, elapseSeconds, userData);
             };
-            
+
         }
 
         /// <summary>
@@ -864,18 +387,8 @@ namespace UnityGameFramework.Runtime
                 return;
             }
 
-#if UNITY_5_5_OR_NEWER
-            //AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneAssetName, LoadSceneMode.Additive);
-
             // 场景加载
             SceneHandle asyncOperation = YooAssets.LoadSceneAsync(sceneAssetName, LoadSceneMode.Additive);
-#else
-            AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(SceneComponent.GetSceneName(sceneAssetName), LoadSceneMode.Additive);
-#endif
-            //if (asyncOperation == null)
-            //{
-            //    return;
-            //}
 
             m_LoadSceneInfos.AddLast(new LoadSceneInfo(asyncOperation, sceneAssetName, priority, DateTime.UtcNow, loadSceneCallbacks, userData));
         }
@@ -1064,238 +577,9 @@ namespace UnityGameFramework.Runtime
             }
         }
 
-        /// <summary>
-        /// 从文件系统中加载二进制资源。
-        /// </summary>
-        /// <param name="binaryAssetName">要加载二进制资源的名称。</param>
-        /// <returns>存储加载二进制资源的二进制流。</returns>
-        public byte[] LoadBinaryFromFileSystem(string binaryAssetName)
-        {
-            throw new NotSupportedException("LoadBinaryFromFileSystem");
-        }
-
-        /// <summary>
-        /// 从文件系统中加载二进制资源。
-        /// </summary>
-        /// <param name="binaryAssetName">要加载二进制资源的名称。</param>
-        /// <param name="buffer">存储加载二进制资源的二进制流。</param>
-        /// <returns>实际加载了多少字节。</returns>
-        public int LoadBinaryFromFileSystem(string binaryAssetName, byte[] buffer)
-        {
-            throw new NotSupportedException("LoadBinaryFromFileSystem");
-        }
-
-        /// <summary>
-        /// 从文件系统中加载二进制资源。
-        /// </summary>
-        /// <param name="binaryAssetName">要加载二进制资源的名称。</param>
-        /// <param name="buffer">存储加载二进制资源的二进制流。</param>
-        /// <param name="startIndex">存储加载二进制资源的二进制流的起始位置。</param>
-        /// <returns>实际加载了多少字节。</returns>
-        public int LoadBinaryFromFileSystem(string binaryAssetName, byte[] buffer, int startIndex)
-        {
-            throw new NotSupportedException("LoadBinaryFromFileSystem");
-        }
-
-        /// <summary>
-        /// 从文件系统中加载二进制资源。
-        /// </summary>
-        /// <param name="binaryAssetName">要加载二进制资源的名称。</param>
-        /// <param name="buffer">存储加载二进制资源的二进制流。</param>
-        /// <param name="startIndex">存储加载二进制资源的二进制流的起始位置。</param>
-        /// <param name="length">存储加载二进制资源的二进制流的长度。</param>
-        /// <returns>实际加载了多少字节。</returns>
-        public int LoadBinaryFromFileSystem(string binaryAssetName, byte[] buffer, int startIndex, int length)
-        {
-            throw new NotSupportedException("LoadBinaryFromFileSystem");
-        }
-
-        /// <summary>
-        /// 从文件系统中加载二进制资源的片段。
-        /// </summary>
-        /// <param name="binaryAssetName">要加载片段的二进制资源的名称。</param>
-        /// <param name="length">要加载片段的长度。</param>
-        /// <returns>存储加载二进制资源片段内容的二进制流。</returns>
-        public byte[] LoadBinarySegmentFromFileSystem(string binaryAssetName, int length)
-        {
-            throw new NotSupportedException("LoadBinarySegmentFromFileSystem");
-        }
-
-        /// <summary>
-        /// 从文件系统中加载二进制资源的片段。
-        /// </summary>
-        /// <param name="binaryAssetName">要加载片段的二进制资源的名称。</param>
-        /// <param name="offset">要加载片段的偏移。</param>
-        /// <param name="length">要加载片段的长度。</param>
-        /// <returns>存储加载二进制资源片段内容的二进制流。</returns>
-        public byte[] LoadBinarySegmentFromFileSystem(string binaryAssetName, int offset, int length)
-        {
-            throw new NotSupportedException("LoadBinarySegmentFromFileSystem");
-        }
-
-        /// <summary>
-        /// 从文件系统中加载二进制资源的片段。
-        /// </summary>
-        /// <param name="binaryAssetName">要加载片段的二进制资源的名称。</param>
-        /// <param name="buffer">存储加载二进制资源片段内容的二进制流。</param>
-        /// <returns>实际加载了多少字节。</returns>
-        public int LoadBinarySegmentFromFileSystem(string binaryAssetName, byte[] buffer)
-        {
-            throw new NotSupportedException("LoadBinarySegmentFromFileSystem");
-        }
-
-        /// <summary>
-        /// 从文件系统中加载二进制资源的片段。
-        /// </summary>
-        /// <param name="binaryAssetName">要加载片段的二进制资源的名称。</param>
-        /// <param name="buffer">存储加载二进制资源片段内容的二进制流。</param>
-        /// <param name="length">要加载片段的长度。</param>
-        /// <returns>实际加载了多少字节。</returns>
-        public int LoadBinarySegmentFromFileSystem(string binaryAssetName, byte[] buffer, int length)
-        {
-            throw new NotSupportedException("LoadBinarySegmentFromFileSystem");
-        }
-
-        /// <summary>
-        /// 从文件系统中加载二进制资源的片段。
-        /// </summary>
-        /// <param name="binaryAssetName">要加载片段的二进制资源的名称。</param>
-        /// <param name="buffer">存储加载二进制资源片段内容的二进制流。</param>
-        /// <param name="startIndex">存储加载二进制资源片段内容的二进制流的起始位置。</param>
-        /// <param name="length">要加载片段的长度。</param>
-        /// <returns>实际加载了多少字节。</returns>
-        public int LoadBinarySegmentFromFileSystem(string binaryAssetName, byte[] buffer, int startIndex, int length)
-        {
-            throw new NotSupportedException("LoadBinarySegmentFromFileSystem");
-        }
-
-        /// <summary>
-        /// 从文件系统中加载二进制资源的片段。
-        /// </summary>
-        /// <param name="binaryAssetName">要加载片段的二进制资源的名称。</param>
-        /// <param name="offset">要加载片段的偏移。</param>
-        /// <param name="buffer">存储加载二进制资源片段内容的二进制流。</param>
-        /// <returns>实际加载了多少字节。</returns>
-        public int LoadBinarySegmentFromFileSystem(string binaryAssetName, int offset, byte[] buffer)
-        {
-            throw new NotSupportedException("LoadBinarySegmentFromFileSystem");
-        }
-
-        /// <summary>
-        /// 从文件系统中加载二进制资源的片段。
-        /// </summary>
-        /// <param name="binaryAssetName">要加载片段的二进制资源的名称。</param>
-        /// <param name="offset">要加载片段的偏移。</param>
-        /// <param name="buffer">存储加载二进制资源片段内容的二进制流。</param>
-        /// <param name="length">要加载片段的长度。</param>
-        /// <returns>实际加载了多少字节。</returns>
-        public int LoadBinarySegmentFromFileSystem(string binaryAssetName, int offset, byte[] buffer, int length)
-        {
-            throw new NotSupportedException("LoadBinarySegmentFromFileSystem");
-        }
-
-        /// <summary>
-        /// 从文件系统中加载二进制资源的片段。
-        /// </summary>
-        /// <param name="binaryAssetName">要加载片段的二进制资源的名称。</param>
-        /// <param name="offset">要加载片段的偏移。</param>
-        /// <param name="buffer">存储加载二进制资源片段内容的二进制流。</param>
-        /// <param name="startIndex">存储加载二进制资源片段内容的二进制流的起始位置。</param>
-        /// <param name="length">要加载片段的长度。</param>
-        /// <returns>实际加载了多少字节。</returns>
-        public int LoadBinarySegmentFromFileSystem(string binaryAssetName, int offset, byte[] buffer, int startIndex, int length)
-        {
-            throw new NotSupportedException("LoadBinarySegmentFromFileSystem");
-        }
-
-        /// <summary>
-        /// 检查资源组是否存在。
-        /// </summary>
-        /// <param name="resourceGroupName">要检查资源组的名称。</param>
-        /// <returns>资源组是否存在。</returns>
-        public bool HasResourceGroup(string resourceGroupName)
-        {
-            throw new NotSupportedException("HasResourceGroup");
-        }
-
-        /// <summary>
-        /// 获取所有加载资源任务的信息。
-        /// </summary>
-        /// <returns>所有加载资源任务的信息。</returns>
-        public TaskInfo[] GetAllLoadAssetInfos()
-        {
-            throw new NotSupportedException("GetAllLoadAssetInfos");
-        }
-
         private bool HasFile(string assetName)
         {
-            //if (string.IsNullOrEmpty(assetName))
-            //{
-            //    return false;
-            //}
-
-            //if (HasCachedAsset(assetName))
-            //{
-            //    return true;
-            //}
-
-            //string assetFullName = Application.dataPath.Substring(0, Application.dataPath.Length - AssetsStringLength) + assetName;
-            //if (string.IsNullOrEmpty(assetFullName))
-            //{
-            //    return false;
-            //}
-
-            //string[] splitedAssetFullName = assetFullName.Split('/');
-            //string currentPath = Path.GetPathRoot(assetFullName);
-            //for (int i = 1; i < splitedAssetFullName.Length - 1; i++)
-            //{
-            //    string[] directoryNames = Directory.GetDirectories(currentPath, splitedAssetFullName[i]);
-            //    if (directoryNames.Length != 1)
-            //    {
-            //        return false;
-            //    }
-
-            //    currentPath = directoryNames[0];
-            //}
-
-            //string[] fileNames = Directory.GetFiles(currentPath, splitedAssetFullName[splitedAssetFullName.Length - 1]);
-            //if (fileNames.Length != 1)
-            //{
-            //    return false;
-            //}
-
-            //string fileFullName = Utility.Path.GetRegularPath(fileNames[0]);
-            //if (fileFullName == null)
-            //{
-            //    return false;
-            //}
-
-            //if (assetFullName != fileFullName)
-            //{
-            //    if (assetFullName.ToLower() == fileFullName.ToLower())
-            //    {
-            //        Log.Warning("The real path of the specific asset '{0}' is '{1}'. Check the case of letters in the path.", assetName, "Assets" + fileFullName.Substring(Application.dataPath.Length));
-            //    }
-
-            //    return false;
-            //}
-
             return true;
-        }
-
-        private bool HasCachedAsset(string assetName)
-        {
-            if (!m_EnableCachedAssets)
-            {
-                return false;
-            }
-
-            if (string.IsNullOrEmpty(assetName))
-            {
-                return false;
-            }
-
-            return m_CachedAssets.ContainsKey(assetName);
         }
 
         private UnityEngine.Object GetCachedAsset(string assetName)
@@ -1317,6 +601,11 @@ namespace UnityGameFramework.Runtime
             }
 
             return null;
+        }
+
+        public int LoadBinaryFromFileSystem(string binaryAssetName, byte[] buffer)
+        {
+            throw new NotImplementedException();
         }
 
         [StructLayout(LayoutKind.Auto)]
