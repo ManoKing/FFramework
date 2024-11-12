@@ -133,14 +133,6 @@ namespace GameFramework.Resource
         }
 
         /// <summary>
-        /// 获取正在更新的资源组。
-        /// </summary>
-        IResourceGroup UpdatingResourceGroup
-        {
-            get;
-        }
-
-        /// <summary>
         /// 获取等待更新资源数量。
         /// </summary>
         int UpdateWaitingCount
@@ -610,18 +602,6 @@ namespace GameFramework.Resource
         /// <returns>资源组是否存在。</returns>
         bool HasResourceGroup(string resourceGroupName);
 
-        /// <summary>
-        /// 获取默认资源组。
-        /// </summary>
-        /// <returns>默认资源组。</returns>
-        IResourceGroup GetResourceGroup();
-
-        /// <summary>
-        /// 获取资源组。
-        /// </summary>
-        /// <param name="resourceGroupName">要获取的资源组名称。</param>
-        /// <returns>要获取的资源组。</returns>
-        IResourceGroup GetResourceGroup(string resourceGroupName);
 
         /// <summary>
         /// 获取所有加载资源任务的信息。

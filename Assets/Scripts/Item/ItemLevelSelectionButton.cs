@@ -51,23 +51,9 @@ namespace Flower
                 stars[i].gameObject.SetActive(i < currentStarCount);
             }
 
-            bool ready = GetResourceGroupIsReady();
-            float progress = GetResourceGroupProgress();
+            SetDownFinishState();
 
-            if (ready)
-                SetDownFinishState();
-            else
-                SetNeedDownloadState(progress);
 
-            if (ready)
-                return;
-
-            IResourceGroup resourceGroup = GetResourceGroup();
-            IResourceGroup updatingResouceGroup = GameEntry.Resource.UpdatingResourceGroup;
-            if (updatingResouceGroup != null && resourceGroup.Name == updatingResouceGroup.Name)
-            {
-                updateResourceGroup = true;
-            }
         }
 
 
@@ -81,53 +67,6 @@ namespace Flower
             SetDownFinishState();
 
             updateResourceGroup = false;
-        }
-
-        private IResourceGroup GetResourceGroup()
-        {
-            //if (GameEntry.Base.EditorResourceMode)
-                return null;
-
-            if (levelData == null)
-                return null;
-
-            string resouceGroupName = levelData.ResourceGroupName;
-            IResourceGroup resourceGroup = GameEntry.Resource.GetResourceGroup(resouceGroupName);
-            if (resourceGroup == null)
-            {
-                Log.Error("has no resource group '{0}',", resouceGroupName);
-                return null;
-            }
-
-            return resourceGroup;
-        }
-
-        private bool GetResourceGroupIsReady()
-        {
-            //if (GameEntry.Base.EditorResourceMode)
-                return true;
-
-            IResourceGroup resourceGroup = GetResourceGroup();
-            if (resourceGroup == null)
-            {
-                return false;
-            }
-
-            return resourceGroup.Ready;
-        }
-
-        private float GetResourceGroupProgress()
-        {
-            //if (GameEntry.Base.EditorResourceMode)
-                return 1f;
-
-            IResourceGroup resourceGroup = GetResourceGroup();
-            if (resourceGroup == null)
-            {
-                return 0f;
-            }
-
-            return resourceGroup.Progress;
         }
 
         private void SetNeedDownloadState(float currentProgress = 0)
@@ -154,53 +93,9 @@ namespace Flower
         {
             if (levelData == null)
                 return;
-   
-            if (!GetResourceGroupIsReady())
-            {
-                IResourceGroup resourceGroup = GetResourceGroup();
-                IResourceGroup updatingResouceGroup = GameEntry.Resource.UpdatingResourceGroup;
-                if (updatingResouceGroup != null && resourceGroup.Name != updatingResouceGroup.Name)
-                {
-                    Log.Error(string.Format("There is already a resource group '{0}' being updated.", updatingResouceGroup.Name));
-                    return;
-                }
-
-                if (!updateResourceGroup)
-                {
-                    updateResourceGroup = true;
-                    //GameEntry.Resource.UpdateResources(levelData.ResourceGroupName, OnUpdateResourcesComplete);
-                }
-
-                return;
-            }
 
             GameEntry.Sound.PlaySound(EnumSound.ui_sound_forward);
             GameEntry.Data.GetData<DataLevel>().LoadLevel(levelData.Id);
-        }
-
-        private void OnUpdateResourcesComplete(IResourceGroup resourceGroup, bool result)
-        {
-            //这里可能下载完的时候这个UI已经被销毁了，做个gameObject判空
-            if (gameObject == null || levelData == null)
-                return;
-
-            if (resourceGroup.Name != levelData.ResourceGroupName)
-            {
-                if (!GetResourceGroupIsReady())
-                    progressText.text = GameEntry.Localization.GetString("Download");
-
-                return;
-            }
-
-            if (result)
-            {
-                SetDownFinishState();
-                Log.Info("Update resources complete with no errors.");
-            }
-            else
-            {
-                Log.Error("Update resources complete with errors.");
-            }
         }
 
     }

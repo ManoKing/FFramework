@@ -214,16 +214,6 @@ namespace UnityGameFramework.Runtime
             }
         }
 
-        /// <summary>
-        /// 获取正在更新的资源组。
-        /// </summary>
-        public IResourceGroup UpdatingResourceGroup
-        {
-            get
-            {
-                throw new NotSupportedException("UpdatingResourceGroup");
-            }
-        }
 
         /// <summary>
         /// 获取等待更新资源个数。
@@ -1255,25 +1245,6 @@ namespace UnityGameFramework.Runtime
         public bool HasResourceGroup(string resourceGroupName)
         {
             throw new NotSupportedException("HasResourceGroup");
-        }
-
-        /// <summary>
-        /// 获取默认资源组。
-        /// </summary>
-        /// <returns>默认资源组。</returns>
-        public IResourceGroup GetResourceGroup()
-        {
-            throw new NotSupportedException("GetResourceGroup");
-        }
-
-        /// <summary>
-        /// 获取资源组。
-        /// </summary>
-        /// <param name="resourceGroupName">要获取的资源组名称。</param>
-        /// <returns>要获取的资源组。</returns>
-        public IResourceGroup GetResourceGroup(string resourceGroupName)
-        {
-            throw new NotSupportedException("GetResourceGroup");
         }
 
         /// <summary>
