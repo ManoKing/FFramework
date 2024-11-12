@@ -93,61 +93,6 @@ namespace UnityGameFramework.Runtime
         }
 
         /// <summary>
-        /// 获取单机模式版本资源列表序列化器。
-        /// </summary>
-        public PackageVersionListSerializer PackageVersionListSerializer
-        {
-            get
-            {
-                throw new NotSupportedException("ReadWriteVersionListSerializer");
-            }
-        }
-
-        /// <summary>
-        /// 获取可更新模式版本资源列表序列化器。
-        /// </summary>
-        public UpdatableVersionListSerializer UpdatableVersionListSerializer
-        {
-            get
-            {
-                throw new NotSupportedException("ReadWriteVersionListSerializer");
-            }
-        }
-
-        /// <summary>
-        /// 获取本地只读区版本资源列表序列化器。
-        /// </summary>
-        public ReadOnlyVersionListSerializer ReadOnlyVersionListSerializer
-        {
-            get
-            {
-                throw new NotSupportedException("ReadWriteVersionListSerializer");
-            }
-        }
-
-        /// <summary>
-        /// 获取本地读写区版本资源列表序列化器。
-        /// </summary>
-        public ReadWriteVersionListSerializer ReadWriteVersionListSerializer
-        {
-            get
-            {
-                throw new NotSupportedException("ReadWriteVersionListSerializer");
-            }
-        }
-
-        /// <summary>
-        /// 获取资源包版本资源列表序列化器。
-        /// </summary>
-        public ResourcePackVersionListSerializer ResourcePackVersionListSerializer
-        {
-            get
-            {
-                throw new NotSupportedException("ResourcePackVersionListSerializer");
-            }
-        }
-
-        /// <summary>
         /// 获取当前资源适用的游戏版本号。
         /// </summary>
         public string ApplicableGameVersion
@@ -803,16 +748,6 @@ namespace UnityGameFramework.Runtime
         public void InitResources(InitResourcesCompleteCallback initResourcesCompleteCallback)
         {
             throw new NotSupportedException("InitResources");
-        }
-
-        /// <summary>
-        /// 检查版本资源列表。
-        /// </summary>
-        /// <param name="latestInternalResourceVersion">最新的内部资源版本号。</param>
-        /// <returns>检查版本资源列表结果。</returns>
-        public CheckVersionListResult CheckVersionList(int latestInternalResourceVersion)
-        {
-            throw new NotSupportedException("CheckVersionList");
         }
 
         /// <summary>

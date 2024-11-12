@@ -1,19 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Flower.Data;
 using GameFramework;
 using GameFramework.Event;
-using GameFramework.Data;
-using UnityGameFramework.Runtime;
 using GameFramework.Procedure;
-using GameFramework.DataTable;
-using UnityEngine;
-using Flower.Data;
-
+using System.Collections.Generic;
+using UnityGameFramework.Runtime;
 using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
-using LoadDataTableSuccessEventArgs = UnityGameFramework.Runtime.LoadDataTableSuccessEventArgs;
-using LoadDataTableFailureEventArgs = UnityGameFramework.Runtime.LoadDataTableFailureEventArgs;
-
-using DataItem = Flower.Data.DataItem;
 
 namespace Flower
 {

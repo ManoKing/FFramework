@@ -1176,17 +1176,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AvailableProcedureTypeNames:
-  - Flower.ProcedureCheckResources
-  - Flower.ProcedureCheckVersion
-  - Flower.ProcedureInitResources
   - Flower.ProcedureLaunch
   - Flower.ProcedureLevel
   - Flower.ProcedureLoadingScene
   - Flower.ProcedureMenu
   - Flower.ProcedurePreload
   - Flower.ProcedureSplash
-  - Flower.ProcedureUpdateResources
-  - Flower.ProcedureUpdateVersion
   m_EntranceProcedureTypeName: Flower.ProcedureLaunch
 --- !u!114 &1753258678
 MonoBehaviour:

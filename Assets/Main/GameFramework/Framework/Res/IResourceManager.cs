@@ -50,46 +50,6 @@ namespace GameFramework.Resource
         }
 
         /// <summary>
-        /// 获取单机模式版本资源列表序列化器。
-        /// </summary>
-        PackageVersionListSerializer PackageVersionListSerializer
-        {
-            get;
-        }
-
-        /// <summary>
-        /// 获取可更新模式版本资源列表序列化器。
-        /// </summary>
-        UpdatableVersionListSerializer UpdatableVersionListSerializer
-        {
-            get;
-        }
-
-        /// <summary>
-        /// 获取本地只读区版本资源列表序列化器。
-        /// </summary>
-        ReadOnlyVersionListSerializer ReadOnlyVersionListSerializer
-        {
-            get;
-        }
-
-        /// <summary>
-        /// 获取本地读写区版本资源列表序列化器。
-        /// </summary>
-        ReadWriteVersionListSerializer ReadWriteVersionListSerializer
-        {
-            get;
-        }
-
-        /// <summary>
-        /// 获取资源包版本资源列表序列化器。
-        /// </summary>
-        ResourcePackVersionListSerializer ResourcePackVersionListSerializer
-        {
-            get;
-        }
-
-        /// <summary>
         /// 获取当前资源适用的游戏版本号。
         /// </summary>
         string ApplicableGameVersion
@@ -404,13 +364,6 @@ namespace GameFramework.Resource
         /// </summary>
         /// <param name="initResourcesCompleteCallback">使用单机模式并初始化资源完成时的回调函数。</param>
         void InitResources(InitResourcesCompleteCallback initResourcesCompleteCallback);
-
-        /// <summary>
-        /// 使用可更新模式并检查版本资源列表。
-        /// </summary>
-        /// <param name="latestInternalResourceVersion">最新的内部资源版本号。</param>
-        /// <returns>检查版本资源列表结果。</returns>
-        CheckVersionListResult CheckVersionList(int latestInternalResourceVersion);
 
         /// <summary>
         /// 使用可更新模式并更新版本资源列表。
