@@ -33,13 +33,6 @@ namespace GameFramework.Resource
             get;
         }
 
-        /// <summary>
-        /// 获取资源模式。
-        /// </summary>
-        ResourceMode ResourceMode
-        {
-            get;
-        }
 
         /// <summary>
         /// 获取当前变体。
@@ -273,11 +266,6 @@ namespace GameFramework.Resource
         /// <param name="readWritePath">资源读写区路径。</param>
         void SetReadWritePath(string readWritePath);
 
-        /// <summary>
-        /// 设置资源模式。
-        /// </summary>
-        /// <param name="resourceMode">资源模式。</param>
-        void SetResourceMode(ResourceMode resourceMode);
 
         /// <summary>
         /// 设置当前变体。
@@ -302,13 +290,6 @@ namespace GameFramework.Resource
         /// </summary>
         /// <param name="downloadManager">下载管理器。</param>
         void SetDownloadManager(IDownloadManager downloadManager);
-
-
-        /// <summary>
-        /// 设置资源辅助器。
-        /// </summary>
-        /// <param name="resourceHelper">资源辅助器。</param>
-        void SetResourceHelper(IResourceHelper resourceHelper);
 
 
         /// <summary>

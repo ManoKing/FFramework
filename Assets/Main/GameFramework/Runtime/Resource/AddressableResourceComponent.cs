@@ -71,17 +71,6 @@ namespace UnityGameFramework.Runtime
         }
 
         /// <summary>
-        /// 获取资源模式。
-        /// </summary>
-        public ResourceMode ResourceMode
-        {
-            get
-            {
-                return ResourceMode.Unspecified;
-            }
-        }
-
-        /// <summary>
         /// 获取当前变体。
         /// </summary>
         public string CurrentVariant
@@ -626,15 +615,6 @@ namespace UnityGameFramework.Runtime
         }
 
         /// <summary>
-        /// 设置资源模式。
-        /// </summary>
-        /// <param name="resourceMode">资源模式。</param>
-        public void SetResourceMode(ResourceMode resourceMode)
-        {
-            throw new NotSupportedException("SetResourceMode");
-        }
-
-        /// <summary>
         /// 设置当前变体。
         /// </summary>
         /// <param name="currentVariant">当前变体。</param>
@@ -668,15 +648,6 @@ namespace UnityGameFramework.Runtime
         public void SetDownloadManager(IDownloadManager downloadManager)
         {
             throw new NotSupportedException("SetDownloadManager");
-        }
-
-        /// <summary>
-        /// 设置资源辅助器。
-        /// </summary>
-        /// <param name="resourceHelper">资源辅助器。</param>
-        public void SetResourceHelper(IResourceHelper resourceHelper)
-        {
-            throw new NotSupportedException("SetResourceHelper");
         }
 
         /// <summary>
