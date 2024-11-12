@@ -433,39 +433,6 @@ namespace UnityGameFramework.Runtime
             }
         }
 
-#pragma warning disable 0067, 0414
-
-        /// <summary>
-        /// 资源应用成功事件。
-        /// </summary>
-        public event EventHandler<GameFramework.Resource.ResourceApplySuccessEventArgs> ResourceApplySuccess = null;
-
-        /// <summary>
-        /// 资源应用失败事件。
-        /// </summary>
-        public event EventHandler<GameFramework.Resource.ResourceApplyFailureEventArgs> ResourceApplyFailure = null;
-
-        /// <summary>
-        /// 资源更新开始事件。
-        /// </summary>
-        public event EventHandler<GameFramework.Resource.ResourceUpdateStartEventArgs> ResourceUpdateStart = null;
-
-        /// <summary>
-        /// 资源更新改变事件。
-        /// </summary>
-        public event EventHandler<GameFramework.Resource.ResourceUpdateChangedEventArgs> ResourceUpdateChanged = null;
-
-        /// <summary>
-        /// 资源更新成功事件。
-        /// </summary>
-        public event EventHandler<GameFramework.Resource.ResourceUpdateSuccessEventArgs> ResourceUpdateSuccess = null;
-
-        /// <summary>
-        /// 资源更新失败事件。
-        /// </summary>
-        public event EventHandler<GameFramework.Resource.ResourceUpdateFailureEventArgs> ResourceUpdateFailure = null;
-
-#pragma warning restore 0067, 0414
 
         protected override void Awake()
         {
@@ -730,15 +697,6 @@ namespace UnityGameFramework.Runtime
         public void SetResourceHelper(IResourceHelper resourceHelper)
         {
             throw new NotSupportedException("SetResourceHelper");
-        }
-
-        /// <summary>
-        /// 增加加载资源代理辅助器。
-        /// </summary>
-        /// <param name="loadResourceAgentHelper">要增加的加载资源代理辅助器。</param>
-        public void AddLoadResourceAgentHelper(ILoadResourceAgentHelper loadResourceAgentHelper)
-        {
-            throw new NotSupportedException("AddLoadResourceAgentHelper");
         }
 
         /// <summary>

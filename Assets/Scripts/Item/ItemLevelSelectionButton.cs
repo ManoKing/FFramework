@@ -67,12 +67,7 @@ namespace Flower
             if (updatingResouceGroup != null && resourceGroup.Name == updatingResouceGroup.Name)
             {
                 updateResourceGroup = true;
-                UpdateDownloadProgress();
             }
-
-            Subscribe(UnityGameFramework.Runtime.ResourceUpdateStartEventArgs.EventId, (sender, ge) => UpdateDownloadProgress());
-            Subscribe(UnityGameFramework.Runtime.ResourceUpdateChangedEventArgs.EventId, (sender, ge) => UpdateDownloadProgress());
-            Subscribe(UnityGameFramework.Runtime.ResourceUpdateSuccessEventArgs.EventId, (sender, ge) => UpdateDownloadProgress());
         }
 
 
@@ -181,24 +176,6 @@ namespace Flower
 
             GameEntry.Sound.PlaySound(EnumSound.ui_sound_forward);
             GameEntry.Data.GetData<DataLevel>().LoadLevel(levelData.Id);
-        }
-
-        private void UpdateDownloadProgress()
-        {
-            //if (GameEntry.Base.EditorResourceMode)
-                return;
-
-            if (!frameUpdate)
-                return;
-
-            float progress = GetResourceGroupProgress();
-
-            downloadProgress.fillAmount = progress;
-
-            if (updateResourceGroup)
-                progressText.text = string.Format("{0:N2}% ", progress * 100);
-
-            frameUpdate = false;
         }
 
         private void OnUpdateResourcesComplete(IResourceGroup resourceGroup, bool result)
