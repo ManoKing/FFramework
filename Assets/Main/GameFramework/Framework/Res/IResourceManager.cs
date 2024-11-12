@@ -311,39 +311,12 @@ namespace GameFramework.Resource
         /// <param name="downloadManager">下载管理器。</param>
         void SetDownloadManager(IDownloadManager downloadManager);
 
-        /// <summary>
-        /// 设置解密资源回调函数。
-        /// </summary>
-        /// <param name="decryptResourceCallback">要设置的解密资源回调函数。</param>
-        /// <remarks>如果不设置，将使用默认的解密资源回调函数。</remarks>
-        void SetDecryptResourceCallback(DecryptResourceCallback decryptResourceCallback);
 
         /// <summary>
         /// 设置资源辅助器。
         /// </summary>
         /// <param name="resourceHelper">资源辅助器。</param>
         void SetResourceHelper(IResourceHelper resourceHelper);
-
-
-        /// <summary>
-        /// 使用单机模式并初始化资源。
-        /// </summary>
-        /// <param name="initResourcesCompleteCallback">使用单机模式并初始化资源完成时的回调函数。</param>
-        void InitResources(InitResourcesCompleteCallback initResourcesCompleteCallback);
-
-        /// <summary>
-        /// 使用可更新模式并检查资源。
-        /// </summary>
-        /// <param name="ignoreOtherVariant">是否忽略处理其它变体的资源，若不忽略，将会移除其它变体的资源。</param>
-        /// <param name="checkResourcesCompleteCallback">使用可更新模式并检查资源完成时的回调函数。</param>
-        void CheckResources(bool ignoreOtherVariant, CheckResourcesCompleteCallback checkResourcesCompleteCallback);
-
-        /// <summary>
-        /// 使用可更新模式并应用资源包资源。
-        /// </summary>
-        /// <param name="resourcePackPath">要应用的资源包路径。</param>
-        /// <param name="applyResourcesCompleteCallback">使用可更新模式并应用资源包资源完成时的回调函数。</param>
-        void ApplyResources(string resourcePackPath, ApplyResourcesCompleteCallback applyResourcesCompleteCallback);
 
 
         /// <summary>

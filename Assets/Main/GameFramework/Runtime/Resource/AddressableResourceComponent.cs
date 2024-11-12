@@ -681,51 +681,12 @@ namespace UnityGameFramework.Runtime
         }
 
         /// <summary>
-        /// 设置解密资源回调函数。
-        /// </summary>
-        /// <param name="decryptResourceCallback">要设置的解密资源回调函数。</param>
-        /// <remarks>如果不设置，将使用默认的解密资源回调函数。</remarks>
-        public void SetDecryptResourceCallback(DecryptResourceCallback decryptResourceCallback)
-        {
-            throw new NotSupportedException("SetDecryptResourceCallback");
-        }
-
-        /// <summary>
         /// 设置资源辅助器。
         /// </summary>
         /// <param name="resourceHelper">资源辅助器。</param>
         public void SetResourceHelper(IResourceHelper resourceHelper)
         {
             throw new NotSupportedException("SetResourceHelper");
-        }
-
-        /// <summary>
-        /// 使用单机模式并初始化资源。
-        /// </summary>
-        /// <param name="initResourcesCompleteCallback">使用单机模式并初始化资源完成时的回调函数。</param>
-        public void InitResources(InitResourcesCompleteCallback initResourcesCompleteCallback)
-        {
-            throw new NotSupportedException("InitResources");
-        }
-
-        /// <summary>
-        /// 使用可更新模式并检查资源。
-        /// </summary>
-        /// <param name="ignoreOtherVariant">是否忽略处理其它变体的资源，若不忽略，将会移除其它变体的资源。</param>
-        /// <param name="checkResourcesCompleteCallback">使用可更新模式并检查资源完成时的回调函数。</param>
-        public void CheckResources(bool ignoreOtherVariant, CheckResourcesCompleteCallback checkResourcesCompleteCallback)
-        {
-            throw new NotSupportedException("CheckResources");
-        }
-
-        /// <summary>
-        /// 使用可更新模式并应用资源包资源。
-        /// </summary>
-        /// <param name="resourcePackPath">要应用的资源包路径。</param>
-        /// <param name="applyResourcesCompleteCallback">使用可更新模式并应用资源包资源完成时的回调函数。</param>
-        public void ApplyResources(string resourcePackPath, ApplyResourcesCompleteCallback applyResourcesCompleteCallback)
-        {
-            throw new NotSupportedException("ApplyResources");
         }
 
         /// <summary>
