@@ -168,7 +168,7 @@ namespace Flower
                 if (!updateResourceGroup)
                 {
                     updateResourceGroup = true;
-                    GameEntry.Resource.UpdateResources(levelData.ResourceGroupName, OnUpdateResourcesComplete);
+                    //GameEntry.Resource.UpdateResources(levelData.ResourceGroupName, OnUpdateResourcesComplete);
                 }
 
                 return;

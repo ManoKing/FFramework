@@ -332,16 +332,6 @@ namespace GameFramework.Resource
         void InitResources(InitResourcesCompleteCallback initResourcesCompleteCallback);
 
         /// <summary>
-        /// 使用可更新模式并更新版本资源列表。
-        /// </summary>
-        /// <param name="versionListLength">版本资源列表大小。</param>
-        /// <param name="versionListHashCode">版本资源列表哈希值。</param>
-        /// <param name="versionListZipLength">版本资源列表压缩后大小。</param>
-        /// <param name="versionListZipHashCode">版本资源列表压缩后哈希值。</param>
-        /// <param name="updateVersionListCallbacks">版本资源列表更新回调函数集。</param>
-        void UpdateVersionList(int versionListLength, int versionListHashCode, int versionListZipLength, int versionListZipHashCode, UpdateVersionListCallbacks updateVersionListCallbacks);
-
-        /// <summary>
         /// 使用可更新模式并检查资源。
         /// </summary>
         /// <param name="ignoreOtherVariant">是否忽略处理其它变体的资源，若不忽略，将会移除其它变体的资源。</param>
@@ -355,18 +345,6 @@ namespace GameFramework.Resource
         /// <param name="applyResourcesCompleteCallback">使用可更新模式并应用资源包资源完成时的回调函数。</param>
         void ApplyResources(string resourcePackPath, ApplyResourcesCompleteCallback applyResourcesCompleteCallback);
 
-        /// <summary>
-        /// 使用可更新模式并更新所有资源。
-        /// </summary>
-        /// <param name="updateResourcesCompleteCallback">使用可更新模式并更新默认资源组完成时的回调函数。</param>
-        void UpdateResources(UpdateResourcesCompleteCallback updateResourcesCompleteCallback);
-
-        /// <summary>
-        /// 使用可更新模式并更新指定资源组的资源。
-        /// </summary>
-        /// <param name="resourceGroupName">要更新的资源组名称。</param>
-        /// <param name="updateResourcesCompleteCallback">使用可更新模式并更新指定资源组完成时的回调函数。</param>
-        void UpdateResources(string resourceGroupName, UpdateResourcesCompleteCallback updateResourcesCompleteCallback);
 
         /// <summary>
         /// 校验资源包。
