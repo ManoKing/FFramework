@@ -149,14 +149,7 @@ namespace UnityGameFramework.Runtime
                 return;
             }
 
-            //if (baseComponent.EditorResourceMode)
-            //{
-            m_SoundManager.SetResourceManager(baseComponent.EditorResourceHelper);
-            //}
-            //else
-            //{
-            //m_SoundManager.SetResourceManager(GameFrameworkEntry.GetModule<IResourceManager>());
-            //}
+            m_SoundManager.SetResourceManager(baseComponent.ResourceHelper);
 
             SoundHelperBase soundHelper = Helper.CreateHelper(m_SoundHelperTypeName, m_CustomSoundHelper);
             if (soundHelper == null)

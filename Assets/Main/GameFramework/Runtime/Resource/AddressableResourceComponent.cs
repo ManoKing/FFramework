@@ -62,7 +62,7 @@ namespace UnityGameFramework.Runtime
                 Log.Error("Can not find base component.");
                 return;
             }
-            baseComponent.EditorResourceHelper = this;
+            baseComponent.ResourceHelper = this;
             enabled = true;
 
         }

@@ -131,14 +131,7 @@ namespace UnityGameFramework.Runtime
                 return;
             }
 
-            //if (baseComponent.EditorResourceMode)
-            //{
-            m_LocalizationManager.SetResourceManager(baseComponent.EditorResourceHelper);
-            //}
-            //else
-            //{
-            //m_LocalizationManager.SetResourceManager(GameFrameworkEntry.GetModule<IResourceManager>());
-            //}
+            m_LocalizationManager.SetResourceManager(baseComponent.ResourceHelper);
 
             LocalizationHelperBase localizationHelper = Helper.CreateHelper(m_LocalizationHelperTypeName, m_CustomLocalizationHelper);
             if (localizationHelper == null)

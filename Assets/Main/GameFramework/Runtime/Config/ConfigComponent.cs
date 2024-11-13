@@ -105,14 +105,7 @@ namespace UnityGameFramework.Runtime
                 return;
             }
 
-            //if (baseComponent.EditorResourceMode)
-            //{
-                m_ConfigManager.SetResourceManager(baseComponent.EditorResourceHelper);
-            //}
-            //else
-            //{
-            //    m_ConfigManager.SetResourceManager(GameFrameworkEntry.GetModule<IResourceManager>());
-            //}
+            m_ConfigManager.SetResourceManager(baseComponent.ResourceHelper);
 
             ConfigHelperBase configHelper = Helper.CreateHelper(m_ConfigHelperTypeName, m_CustomConfigHelper);
             if (configHelper == null)
