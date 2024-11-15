@@ -13,14 +13,14 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - PlacementLayer
+  - PlacementGhosts
+  - Towers
+  - GroundEnemies
+  - FriendlyProjectiles
+  - EnemyProjectiles
+  - FlyingEnemies
+  - GroundEnemyTargettingProjectiles
   - 
   - 
   - 

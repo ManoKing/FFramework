@@ -11,10 +11,10 @@ namespace Flower
         private float sphereCastRadius = 1;
         [SerializeField]
         private float dampSpeed = 5;
-        [SerializeField]
-        private LayerMask ghostWorldPlacementMask;
-        [SerializeField]
-        private LayerMask placementAreaMask;
+        [SerializeField] //TODO : Very strange hierarchical issue 
+        private LayerMask ghostWorldPlacementMask = 311;
+        [SerializeField] 
+        private LayerMask placementAreaMask = 256;
         [SerializeField]
         private Material material;
         [SerializeField]
