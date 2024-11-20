@@ -5,8 +5,13 @@
 此工程热更模块基于 HybridCLR + YooAsset，并将主流的GameFramework修改支持YooAsset。  
 并实现，Jenkins自动多渠道打包，白名单灰度测试，一键发布热更资源及版本回退。  
 
-（1）代码热更基于[HybridCLR跳转](https://github.com/focus-creative-games/HybridCLR)  
-（2）资源热更基于[YooAsset跳转](https://www.yooasset.com/)     
+通过这个项目可以了解到：  
+（1）框架为项目中提供基础功能，如资源管理、UI框架、网络通信、消息管理、场景管理、数据解析及存取等，同时定义了一系列规范包括编码的，例如参数命名、注释、缩进等  
+以及行为准则，例如加载场景必须用框架的xxx接口，贴图必须放在xxx文件夹下等  
+（2）性能优化：CPU,GPU,内存   
+
+代码热更基于[HybridCLR跳转](https://github.com/focus-creative-games/HybridCLR)  
+资源热更基于[YooAsset跳转](https://www.yooasset.com/)     
 
 ---
 
