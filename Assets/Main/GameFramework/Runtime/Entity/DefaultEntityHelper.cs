@@ -15,7 +15,7 @@ namespace UnityGameFramework.Runtime
     /// </summary>
     public class DefaultEntityHelper : EntityHelperBase
     {
-        private AddressableResourceComponent m_ResourceComponent = null;
+        private AssetsResourceComponent m_ResourceComponent = null;
 
         /// <summary>
         /// 实例化实体。
@@ -62,7 +62,7 @@ namespace UnityGameFramework.Runtime
 
         private void Start()
         {
-            m_ResourceComponent = GameEntry.GetComponent<AddressableResourceComponent>();
+            m_ResourceComponent = GameEntry.GetComponent<AssetsResourceComponent>();
             if (m_ResourceComponent == null)
             {
                 Log.Fatal("Resource component is invalid.");

@@ -21,7 +21,7 @@ namespace UnityGameFramework.Runtime
     {
         private static readonly string BytesAssetExtension = ".bytes";
 
-        private AddressableResourceComponent m_ResourceComponent = null;
+        private AssetsResourceComponent m_ResourceComponent = null;
 
         /// <summary>
         /// 读取数据表。
@@ -160,7 +160,7 @@ namespace UnityGameFramework.Runtime
 
         private void Start()
         {
-            m_ResourceComponent = GameEntry.GetComponent<AddressableResourceComponent>();
+            m_ResourceComponent = GameEntry.GetComponent<AssetsResourceComponent>();
             if (m_ResourceComponent == null)
             {
                 Log.Fatal("Resource component is invalid.");

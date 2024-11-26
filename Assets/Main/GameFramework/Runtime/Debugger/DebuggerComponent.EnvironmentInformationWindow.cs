@@ -18,7 +18,7 @@ namespace UnityGameFramework.Runtime
         private sealed class EnvironmentInformationWindow : ScrollableDebuggerWindowBase
         {
             private BaseComponent m_BaseComponent = null;
-            private AddressableResourceComponent m_ResourceComponent = null;
+            private AssetsResourceComponent m_ResourceComponent = null;
 
             public override void Initialize(params object[] args)
             {
@@ -29,7 +29,7 @@ namespace UnityGameFramework.Runtime
                     return;
                 }
 
-                m_ResourceComponent = GameEntry.GetComponent<AddressableResourceComponent>();
+                m_ResourceComponent = GameEntry.GetComponent<AssetsResourceComponent>();
                 if (m_ResourceComponent == null)
                 {
                     Log.Fatal("Resource component is invalid.");

@@ -21,7 +21,7 @@ namespace UnityGameFramework.Runtime
     /// 编辑器资源组件。
     /// </summary>
     [DisallowMultipleComponent]
-    public sealed class AddressableResourceComponent : GameFrameworkComponent, IResourceManager
+    public sealed class AssetsResourceComponent : GameFrameworkComponent, IResourceManager
     {
         private const int DefaultPriority = 0;
         private static readonly int AssetsStringLength = "Assets".Length;
