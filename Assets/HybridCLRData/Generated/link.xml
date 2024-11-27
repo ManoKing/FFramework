@@ -133,7 +133,7 @@
     <type fullname="Flower.CameraControl" preserve="all" />
     <type fullname="Flower.LocalizationSerializableObject" preserve="all" />
     <type fullname="UnityExtension" preserve="all" />
-    <type fullname="UnityGameFramework.Runtime.AddressableResourceComponent" preserve="all" />
+    <type fullname="UnityGameFramework.Runtime.AssetsResourceComponent" preserve="all" />
     <type fullname="UnityGameFramework.Runtime.BaseComponent" preserve="all" />
     <type fullname="UnityGameFramework.Runtime.ConfigComponent" preserve="all" />
     <type fullname="UnityGameFramework.Runtime.DataComponent" preserve="all" />
