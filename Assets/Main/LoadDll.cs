@@ -23,10 +23,27 @@ public class LoadDll : MonoBehaviour
         System.Reflection.Assembly.Load(handleHotFix.bytes);
     }
 
-    void HotUpdatePrefab()
+    async void HotUpdatePrefab()
     {
+        await ShaderVariantsWarmUp();
         var sceneAssetName = "Assets/GameRes/Scenes/GameStart/GameStart.unity";
         SceneHandle asyncOperation = YooAssets.LoadSceneAsync(sceneAssetName, LoadSceneMode.Single);
+    }
+
+    /// <summary>
+    /// 变体预热
+    /// </summary>
+    /// <returns></returns>
+    private async UniTask ShaderVariantsWarmUp()
+    {
+        var op = YooAssets.LoadAssetAsync<ShaderVariantCollection>("GameShaderVariants");
+        await op.ToUniTask();
+        var shaderVariants = op.AssetObject as ShaderVariantCollection;
+        if (!shaderVariants.isWarmedUp)
+        {
+            shaderVariants.WarmUp();
+        }
+        op.Release();
     }
 
     /// <summary>
