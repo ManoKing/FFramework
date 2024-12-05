@@ -12,9 +12,17 @@ public class NPCData : MonoBehaviour
     public Transform posDoor;
     public Transform posPlay;
     public Transform carEnd;
+    public Transform posPartDoor1;
+    public Transform posPartDoor2;
+    public Transform posPartDoor3;
+    public Transform posPartDoor4;
 
 
     // 数据结构设计
-    public Dictionary<Transform, bool> partList;
+    public Dictionary<Transform, bool> partList; // 停车场信息
+    public Queue<NPCDecisionCar> carQueue; // 大门排队车辆
+    public Dictionary<Transform, bool> carPosDic; // 大门排队位置
 
+    public Queue<GameObject> personDoorQueue; // npc大门排队
+    public Queue<GameObject> personPlayQueue; // npc游乐排队
 }
