@@ -1,5 +1,8 @@
 using Cysharp.Threading.Tasks;
+using System;
+using TMPro;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class NPCDecisionPerson 
 {
@@ -9,62 +12,40 @@ public class NPCDecisionPerson
         var person = factoryManager.CreatePerson("", part.position, Quaternion.identity);
         var personNav = person.GetComponent<NPCPersonNavigation>();
 
-        // 人出发
-        personNav.SetDestination(npcData.posDoor);
- 
-        // 人抵达
-        personNav.Arrive = async () =>
+        personNav.Arrive = () => { EndReturn(part, person, decision, navCar, npcData); };
+        // 人排队, 到大门决策点
+        npcData.posDoorEnd.GetComponent<NpcPointManager>().AddToQueue(person);
+
+
+    }
+
+    public void EndReturn(Transform part, GameObject person, NPCDecisionCar decision, NPCCarNavigation navCar, NPCData npcData)
+    {
+
+        var personNav = person.GetComponent<NPCPersonNavigation>();
+        //人离开
+        personNav.SetDestination(part);
+        personNav.isArrive = false;
+        ////人抵达
+        personNav.ArriveX = () =>
         {
-
-            // 人排队
-
-
-            // 排队结束
-            await UniTask.WaitForSeconds(2f);
-
-
-            // 人出发
-            personNav.SetDestination(npcData.posPlay);
-            personNav.isArrive = false;
-
-            // 人抵达
-            personNav.Arrive = async () =>
+            // 人消失
+            personNav.Pool();
+            ++decision.count;
+            if (decision.count == 2)
             {
-                // 人排队
+                // 车离开
+                navCar.SetDestination(npcData.carEnd);
+                navCar.isArrive = false;
 
-                // 排队结束
-                await UniTask.WaitForSeconds(2f);
-                // 人玩
+                npcData.partList[part] = true;
 
-                // 玩结束
-
-
-                // 人离开
-                personNav.SetDestination(part);
-                personNav.isArrive = false;
-                // 人抵达
-                personNav.Arrive = () =>
+                // 车消失
+                navCar.Arrive = () =>
                 {
-                    // 人消失
-                    personNav.Pool();
-                    ++decision.count;
-                    if (decision.count == 2)
-                    {
-                        // 车离开
-                        navCar.SetDestination(npcData.carEnd);
-                        navCar.isArrive = false;
-
-                        npcData.partList[part] = true;
-
-                        // 车消失
-                        navCar.Arrive = () =>
-                        {
-                            navCar.Pool();
-                        };
-                    }
+                    navCar.Pool();
                 };
-            };
+            }
         };
-
     }
 }

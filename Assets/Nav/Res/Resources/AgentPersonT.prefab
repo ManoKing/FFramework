@@ -92,10 +92,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8890530080663687610}
-  - component: {fileID: -3731371925844226973}
   - component: {fileID: 430485252506069082}
   m_Layer: 0
-  m_Name: AgentPerson
+  m_Name: AgentPersonT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -117,20 +116,6 @@ Transform:
   - {fileID: 4800937665522068463}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-3731371925844226973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8082363386405456640}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c982989ec47e53479cabefab172fd59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agent: {fileID: 0}
-  isArrive: 0
 --- !u!195 &430485252506069082
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -147,7 +132,7 @@ NavMeshAgent:
   m_AngularSpeed: 120
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 0
-  m_AutoBraking: 1
+  m_AutoBraking: 0
   m_AutoRepath: 0
   m_Height: 2
   m_BaseOffset: 0

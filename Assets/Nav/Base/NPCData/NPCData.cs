@@ -10,7 +10,9 @@ public class NPCData : MonoBehaviour
     public Transform initCarPart3;
     public Transform initCarPart4;
     public Transform posDoor;
+    public Transform posDoorEnd;
     public Transform posPlay;
+    public Transform posPlayEnd;
     public Transform carEnd;
     public Transform posPartDoor1;
     public Transform posPartDoor2;
