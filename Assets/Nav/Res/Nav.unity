@@ -517,10 +517,6 @@ MonoBehaviour:
   posPartDoor3: {fileID: 538989674}
   posPartDoor4: {fileID: 338009743}
   carEnd: {fileID: 603301773}
-  posDoor: {fileID: 1652891431}
-  posDoorEnd: {fileID: 245580588}
-  posPlay: {fileID: 1037882570}
-  posPlayEnd: {fileID: 187538507}
 --- !u!114 &115127915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -534,8 +530,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   queueEntranceEnter: {fileID: 245580589}
-  queueEntranceExit: {fileID: 0}
-  queueEntranceList: []
+  queueEntranceExit: {fileID: 1596663664}
+  queueEntranceList:
+  - {fileID: 187538508}
+  - {fileID: 507298611}
 --- !u!1 &149182950
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,7 +611,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   queuePoint: {fileID: 1037882570}
   releaseInterval: 0.1
-  nextQueueStart: {fileID: 603301773}
 --- !u!1 &219042394
 GameObject:
   m_ObjectHideFlags: 0
@@ -845,7 +842,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   queuePoint: {fileID: 1652891431}
   releaseInterval: 0.1
-  nextQueueStart: {fileID: 187538507}
 --- !u!1 &323356023
 GameObject:
   m_ObjectHideFlags: 0
@@ -1028,7 +1024,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   queuePoint: {fileID: 1425178189}
   releaseInterval: 0.1
-  nextQueueStart: {fileID: 603301773}
 --- !u!1 &538989673
 GameObject:
   m_ObjectHideFlags: 0
@@ -2480,6 +2475,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1596663663}
+  - component: {fileID: 1596663664}
   m_Layer: 0
   m_Name: PosDoorExit
   m_TagString: Untagged
@@ -2502,6 +2498,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 219042395}
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
+--- !u!114 &1596663664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596663662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2be2d4f29f009946a03f0169bfa37b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  queuePoint: {fileID: 0}
+  releaseInterval: 0.1
 --- !u!1 &1609247062
 GameObject:
   m_ObjectHideFlags: 0
