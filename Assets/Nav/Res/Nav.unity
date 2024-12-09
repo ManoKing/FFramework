@@ -508,14 +508,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initCarPos: {fileID: 149182954}
-  initCarPart1: {fileID: 990089414}
-  initCarPart2: {fileID: 1907744251}
-  initCarPart3: {fileID: 714354430}
-  initCarPart4: {fileID: 1770780162}
-  posPartDoor1: {fileID: 965081661}
-  posPartDoor2: {fileID: 1466517400}
-  posPartDoor3: {fileID: 538989674}
-  posPartDoor4: {fileID: 338009743}
+  carPartPosList:
+  - {fileID: 990089414}
+  - {fileID: 1907744251}
+  - {fileID: 714354430}
+  - {fileID: 1770780162}
+  carPartDoorList:
+  - {fileID: 965081661}
+  - {fileID: 1466517400}
+  - {fileID: 538989674}
+  - {fileID: 338009743}
   carEnd: {fileID: 603301773}
 --- !u!114 &115127915
 MonoBehaviour:

@@ -1,10 +1,6 @@
-using Cysharp.Threading.Tasks;
-using System.Collections;
-using System.Collections.Generic;
-using System.Xml.Linq;
 using UnityEngine;
 
-public class NPCDecisionCar 
+public class NPCDecisionCar
 {
     public int count;
     private GameObject car;
@@ -14,10 +10,10 @@ public class NPCDecisionCar
     /// <param name="factoryManager"></param>
     /// <param name="npcData"></param>
     /// <param name="part"></param>
-    public void SpawnCar(FactoryManager factoryManager, Transform part)
+    public void SpawnCarToPart(Transform part)
     {
         // 创建车
-        var car = factoryManager.CreateCar("", CarQueueData.instance.initCarPos.position, Quaternion.identity);
+        var car = FactoryManager.Instance.CreateCar("", CarQueueData.instance.initCarPos.position, Quaternion.identity);
         var navCar = car.GetComponent<NPCCarNavigation>();
 
         // 车出发，去停车场还是去排队
@@ -29,7 +25,7 @@ public class NPCDecisionCar
             count = 0;
             for (int i = 0; i < 2; i++)
             {
-                new NPCDecisionPerson().SpawnPerson(factoryManager, part, navCar, this);
+                new NPCDecisionPerson().SpawnPerson(part, navCar, this);
             }
         };
     }
@@ -40,10 +36,10 @@ public class NPCDecisionCar
     /// <param name="factoryManager"></param>
     /// <param name="npcData"></param>
     /// <param name="part"></param>
-    public void SpawnCarList(FactoryManager factoryManager, Transform part)
+    public void SpawnCarToQueue(Transform part)
     {
         // 创建车
-        car = factoryManager.CreateCar("", CarQueueData.instance.initCarPos.position, Quaternion.identity);
+        car = FactoryManager.Instance.CreateCar("", CarQueueData.instance.initCarPos.position, Quaternion.identity);
         var navCar = car.GetComponent<NPCCarNavigation>();
 
         // 车出发，去停车场还是去排队
@@ -57,7 +53,7 @@ public class NPCDecisionCar
     /// <param name="factoryManager"></param>
     /// <param name="npcData"></param>
     /// <param name="part"></param>
-    public void SpawnCarForwardList(FactoryManager factoryManager, Transform part)
+    public void QueueCarForward(Transform part)
     {
         var navCar = car.GetComponent<NPCCarNavigation>();
 
@@ -71,7 +67,7 @@ public class NPCDecisionCar
     /// <param name="factoryManager"></param>
     /// <param name="npcData"></param>
     /// <param name="part"></param>
-    public void SpawnCarListEnter(FactoryManager factoryManager, Transform part)
+    public void QueueCarEnterPart(Transform part)
     {
         var navCar = car.GetComponent<NPCCarNavigation>();
         navCar.isArrive = false;
@@ -84,7 +80,7 @@ public class NPCDecisionCar
             count = 0;
             for (int i = 0; i < 2; i++)
             {
-                new NPCDecisionPerson().SpawnPerson(factoryManager, part, navCar, this);
+                new NPCDecisionPerson().SpawnPerson(part, navCar, this);
             }
         };
 

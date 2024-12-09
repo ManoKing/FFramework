@@ -21,5 +21,4 @@ public class QueueEntranceManager : MonoBehaviour
     // 所有游乐场入口点
     public List<QueueEntrance> queueEntranceList = new List<QueueEntrance>();
 
-
 }

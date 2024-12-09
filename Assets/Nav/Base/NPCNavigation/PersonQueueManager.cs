@@ -81,7 +81,6 @@ public class PersonQueueManager : MonoBehaviour
                         // 回到车里
                         Debug.LogError("已经游玩所有项目，回去");
                         QueueEntranceManager.instance.queueEntranceExit.AddToQueue(npcData.npc);
-                        //npcData.npc.GetComponent<NPCPersonNavigation>().ReturnStart();
                     }
                     npcQueue.Remove(npcData);
                 }

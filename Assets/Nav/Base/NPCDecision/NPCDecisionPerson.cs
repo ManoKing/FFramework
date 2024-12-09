@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class NPCDecisionPerson
 {
-    public void SpawnPerson(FactoryManager factoryManager, Transform part, NPCCarNavigation navCar, NPCDecisionCar decision)
+    public void SpawnPerson(Transform part, NPCCarNavigation navCar, NPCDecisionCar decision)
     {
         // 人出生
-        var person = factoryManager.CreatePerson("", part.position, Quaternion.identity);
+        var person = FactoryManager.Instance.CreatePerson("", part.position, Quaternion.identity);
 
         // 创建出人，人要带有数据，要去哪些游乐场
         var personNav = person.GetComponent<NPCPersonNavigation>();
