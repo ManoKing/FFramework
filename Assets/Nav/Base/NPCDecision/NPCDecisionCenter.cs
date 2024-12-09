@@ -1,24 +1,19 @@
-using Cysharp.Threading.Tasks;
-using GameFramework.Data;
-using System;
 using System.Collections.Generic;
-using System.Xml.Linq;
 using UnityEngine;
 
 public class NPCDecisionCenter : MonoBehaviour
 {
-    
+
     private FactoryManager factoryManager;
-    private NPCData npcData;
-   
-    
+    private CarQueueData npcData;
+
     void Start()
     {
         // 初始化工厂管理器
         factoryManager = new FactoryManager();
 
         // 获取数据
-        npcData = GetComponent<NPCData>();
+        npcData = CarQueueData.instance;
 
         // 初始化停车场数据
         npcData.partList = new Dictionary<Transform, bool>();
@@ -50,7 +45,7 @@ public class NPCDecisionCenter : MonoBehaviour
             npcData.partList[spot] = false;
             if (npcData.carQueue.Count > 0) // 排队车辆进入停车场
             {
-                npcData.carQueue.Dequeue().SpawnCarListEnter(factoryManager, npcData, spot);
+                npcData.carQueue.Dequeue().SpawnCarListEnter(factoryManager, spot);
 
                 if (npcData.carQueue.Count < npcData.carPosDic.Count) // 排队车辆少于排队车辆限制，初始化车辆进入排队
                 {
@@ -60,40 +55,38 @@ public class NPCDecisionCenter : MonoBehaviour
                     {
                         if (index == 0)
                         {
-                            item.SpawnCarForwardList(factoryManager, npcData, npcData.posPartDoor1);
+                            item.SpawnCarForwardList(factoryManager, npcData.posPartDoor1);
                         }
                         else if (index == 1)
                         {
-                            item.SpawnCarForwardList(factoryManager, npcData, npcData.posPartDoor2);
+                            item.SpawnCarForwardList(factoryManager, npcData.posPartDoor2);
                         }
                         else if (index == 2)
                         {
-                            item.SpawnCarForwardList(factoryManager, npcData, npcData.posPartDoor3);
+                            item.SpawnCarForwardList(factoryManager, npcData.posPartDoor3);
                         }
                         index++;
                     }
 
-                    
-
                     // 从后方开进一个
-                    new NPCDecisionCar().SpawnCarList(factoryManager, npcData, npcData.posPartDoor4);
+                    new NPCDecisionCar().SpawnCarList(factoryManager, npcData.posPartDoor4);
                 }
             }
             else // 初始化车辆进入
             {
-                new NPCDecisionCar().SpawnCar(factoryManager, npcData, spot);
+                new NPCDecisionCar().SpawnCar(factoryManager, spot);
             }
 
         }
         else // 进入排队队列
         {
             // 排队大于排队队列，不再产生
-            if (npcData.carQueue.Count <= npcData.carPosDic.Count) 
+            if (npcData.carQueue.Count <= npcData.carPosDic.Count)
             {
                 var doorPos = FindEmptyParkingDoor();
                 if (doorPos != null)
                 {
-                    new NPCDecisionCar().SpawnCarList(factoryManager, npcData, doorPos);
+                    new NPCDecisionCar().SpawnCarList(factoryManager, doorPos);
                     npcData.carPosDic[doorPos] = false;
                 }
             }

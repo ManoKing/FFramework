@@ -25,10 +25,13 @@ public class NPCCarNavigation : MonoBehaviour
         if (!agent.pathPending && agent.remainingDistance < 0.5f && !isArrive)
         {
             isArrive = true;
-            Arrive();
+            Arrive?.Invoke();
         }
     }
 
+    /// <summary>
+    /// TODO 对象池
+    /// </summary>
     public void Pool()
     {
         Destroy(gameObject);

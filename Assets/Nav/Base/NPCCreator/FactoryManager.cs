@@ -4,6 +4,18 @@ public class FactoryManager
 {
     private CarFactory carFactory;
     private PersonFactory personFactory;
+    private static FactoryManager _instance;
+    public static FactoryManager Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = new FactoryManager();
+            }
+            return _instance;
+        }
+    }
 
     public FactoryManager()
     {
