@@ -17,6 +17,8 @@ public class NPCPersonNavigation : MonoBehaviour
     // npc导航信息
     [HideInInspector]
     public Transform initPos;
+
+    private int index = 0;
     
     void Awake()
     {
@@ -26,6 +28,25 @@ public class NPCPersonNavigation : MonoBehaviour
     public void SetDestination(Transform pos)
     {
         agent.destination = pos.position;//自动导航
+    }
+
+    /// <summary>
+    /// 获取下一个导航点
+    /// </summary>
+    public QueueEntrance GetNextPointInfo()
+    {
+        if (index >= QueueEntranceManager.instance.queueEntranceList.Count)
+        {
+            // 返回停车场
+            return null;
+        }
+        else
+        {
+            // 提供下一个排队点
+            var data = QueueEntranceManager.instance.queueEntranceList[index];
+            index++;
+            return data;
+        }
     }
 
     void Update()

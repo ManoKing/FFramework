@@ -11,7 +11,7 @@ public class PersonQueueManager : MonoBehaviour
     public int releaseCount = 1; // 放行数量
 
     private Transform queueStart; // 队伍起点
-    private Transform nextPos; // 放行位置
+    private QueueEntrance nextPos; // 下一个排队点
     [HideInInspector]
     public List<NPCData> npcQueue = new List<NPCData>();
 
@@ -43,7 +43,7 @@ public class PersonQueueManager : MonoBehaviour
         npcQueue.Add(new NPCData(npc, targetPosition));
     }
 
-    public void SetReleaseTargetPosition(Transform nextpos)
+    public void SetReleaseTargetPosition(QueueEntrance nextpos)
     {
         this.nextPos = nextpos;
     }
@@ -70,18 +70,18 @@ public class PersonQueueManager : MonoBehaviour
                 {
 
                     NPCData npcData = releasedNPCs[i];
-                    
 
                     // 排队结束
-                    if (nextPos.GetComponent<QueueEntrance>() != null)
+                    if (nextPos != null)
                     {
-                        nextPos.GetComponent<QueueEntrance>().AddToQueue(npcData.npc);
+                        nextPos.AddToQueue(npcData.npc);
                     }
                     else
                     {
                         // 回到车里
-                        Debug.LogError("没有决策点");
-                        npcData.npc.GetComponent<NPCPersonNavigation>().ReturnStart();
+                        Debug.LogError("已经游玩所有项目，回去");
+                        QueueEntranceManager.instance.queueEntranceExit.AddToQueue(npcData.npc);
+                        //npcData.npc.GetComponent<NPCPersonNavigation>().ReturnStart();
                     }
                     npcQueue.Remove(npcData);
                 }

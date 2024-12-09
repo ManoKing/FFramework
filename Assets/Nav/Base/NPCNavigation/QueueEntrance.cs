@@ -8,7 +8,6 @@ public class QueueEntrance : MonoBehaviour
 {
     public Transform queuePoint; // 排队点
     public float releaseInterval = 0.1f;// 放行间隔
-    public Transform nextQueueStart; // 下一个决策点
 
     private Transform queueStart; // 决策点
     private List<GameObject> npcQueue = new List<GameObject>();
@@ -49,20 +48,29 @@ public class QueueEntrance : MonoBehaviour
                 npcQueue.Remove(npcData);
 
                 // 做决策，离开还是进入队伍
-                var personQueueManager = queuePoint.GetComponent<PersonQueueManager>();
-                if (personQueueManager.npcQueue.Count < 3) // 排队队伍不满
+                var navigationInfo = npcData.GetComponent<NPCPersonNavigation>();
+                if (queuePoint == null)
                 {
-                    personQueueManager.AddToQueue(npcData);
-                    // 获取到npc信息，下一个点的信息 // TODO
-                    personQueueManager.SetReleaseTargetPosition(nextQueueStart);
+                    Debug.LogError("经过出口大门");
+                    // 经过点
+                    navigationInfo.ReturnStart();
                 }
-                else // 排队队伍满了
+                else
                 {
-                    Debug.LogError("队伍满了，离开");
-                    // 获取到npc信息，离开的信息
-                    npcData.GetComponent<NPCPersonNavigation>().ReturnStart();
+                    var personQueueManager = queuePoint.GetComponent<PersonQueueManager>();
+                    if (personQueueManager.npcQueue.Count < 3) // 排队队伍不满
+                    {
+                        personQueueManager.AddToQueue(npcData);
+                        // 获取到npc信息，下一个点的信息 // TODO
+                        personQueueManager.SetReleaseTargetPosition(navigationInfo.GetNextPointInfo());
+                    }
+                    else // 排队队伍满了
+                    {
+                        Debug.LogError("队伍满了，离开");
+                        // 获取到npc信息，离开的信息
+                        navigationInfo.ReturnStart();
+                    }
                 }
-
             }
         }
     }

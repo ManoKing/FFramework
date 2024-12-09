@@ -16,14 +16,6 @@ public class NPCData : MonoBehaviour
     public Transform posPartDoor4;
     public Transform carEnd;
 
-    // 人
-    public Transform posDoor;
-    public Transform posDoorEnd;
-    public Transform posPlay;
-    public Transform posPlayEnd;
-    
-
-
 
     // 数据结构设计
     public Dictionary<Transform, bool> partList; // 停车场信息

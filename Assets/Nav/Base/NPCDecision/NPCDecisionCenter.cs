@@ -36,8 +36,6 @@ public class NPCDecisionCenter : MonoBehaviour
 
         npcData.carQueue = new Queue<NPCDecisionCar>(); // 排队车辆
 
-        npcData.personDoorQueue = new Queue<GameObject>(); // 大门排队
-        npcData.personPlayQueue = new Queue<GameObject>(); // 游乐排队
 
         // 固定时间创建一辆车
         InvokeRepeating(nameof(LoopCar), 0f, 3f);
