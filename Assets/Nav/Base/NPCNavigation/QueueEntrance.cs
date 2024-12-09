@@ -4,26 +4,15 @@ using System.Collections.Generic;
 using UnityEngine.AI;
 using System;
 
-public class NpcPointManager : MonoBehaviour
+public class QueueEntrance : MonoBehaviour
 {
     public Transform queuePoint; // 排队点
     public float releaseInterval = 0.1f;// 放行间隔
     public Transform nextQueueStart; // 下一个决策点
 
     private Transform queueStart; // 决策点
-    private List<NPCData> npcQueue = new List<NPCData>();
+    private List<GameObject> npcQueue = new List<GameObject>();
 
-    private class NPCData
-    {
-        public GameObject npc;
-        public Vector3 targetPosition;
-
-        public NPCData(GameObject npc, Vector3 targetPosition)
-        {
-            this.npc = npc;
-            this.targetPosition = targetPosition;
-        }
-    }
 
     private void Start()
     {
@@ -36,7 +25,7 @@ public class NpcPointManager : MonoBehaviour
         NavMeshAgent agent = npc.GetComponent<NavMeshAgent>();
         agent.SetDestination(queueStart.position);
 
-        npcQueue.Add(new NPCData(npc, queueStart.position));
+        npcQueue.Add(npc);
     }
 
     private IEnumerator ReleaseNPCs()
@@ -45,10 +34,10 @@ public class NpcPointManager : MonoBehaviour
         {
             yield return new WaitForSeconds(releaseInterval);
 
-            List<NPCData> releasedNPCs = new List<NPCData>();
+            List<GameObject> releasedNPCs = new List<GameObject>();
             foreach (var npcData in npcQueue)
             {
-                if (HasReachedPosition(npcData.npc, npcData.targetPosition))
+                if (HasReachedPosition(npcData))
                 {
                     releasedNPCs.Add(npcData);
                 }
@@ -56,16 +45,29 @@ public class NpcPointManager : MonoBehaviour
 
             for (int i = 0; i < releasedNPCs.Count; i++)
             {
-                NPCData npcData = releasedNPCs[i];
+                GameObject npcData = releasedNPCs[i];
                 npcQueue.Remove(npcData);
 
-                queuePoint.GetComponent<PersonQueueManager>().AddToQueue(npcData.npc);
-                queuePoint.GetComponent<PersonQueueManager>().SetReleaseTargetPosition(nextQueueStart);
+                // 做决策，离开还是进入队伍
+                var personQueueManager = queuePoint.GetComponent<PersonQueueManager>();
+                if (personQueueManager.npcQueue.Count < 3) // 排队队伍不满
+                {
+                    personQueueManager.AddToQueue(npcData);
+                    // 获取到npc信息，下一个点的信息 // TODO
+                    personQueueManager.SetReleaseTargetPosition(nextQueueStart);
+                }
+                else // 排队队伍满了
+                {
+                    Debug.LogError("队伍满了，离开");
+                    // 获取到npc信息，离开的信息
+                    npcData.GetComponent<NPCPersonNavigation>().ReturnStart();
+                }
+
             }
         }
     }
 
-    private bool HasReachedPosition(GameObject npc, Vector3 targetPosition)
+    private bool HasReachedPosition(GameObject npc)
     {
         NavMeshAgent agent = npc.GetComponent<NavMeshAgent>();
         return !agent.pathPending && agent.remainingDistance <= agent.stoppingDistance;

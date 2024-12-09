@@ -10,7 +10,7 @@ public class NPCDecisionCenter : MonoBehaviour
     
     private FactoryManager factoryManager;
     private NPCData npcData;
-
+   
     
     void Start()
     {

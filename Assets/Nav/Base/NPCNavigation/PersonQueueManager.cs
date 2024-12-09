@@ -12,9 +12,10 @@ public class PersonQueueManager : MonoBehaviour
 
     private Transform queueStart; // 队伍起点
     private Transform nextPos; // 放行位置
-    private List<NPCData> npcQueue = new List<NPCData>();
+    [HideInInspector]
+    public List<NPCData> npcQueue = new List<NPCData>();
 
-    private class NPCData
+    public class NPCData
     {
         public GameObject npc;
         public Vector3 targetPosition;
@@ -72,15 +73,15 @@ public class PersonQueueManager : MonoBehaviour
                     
 
                     // 排队结束
-                    if (nextPos.GetComponent<NpcPointManager>() != null)
+                    if (nextPos.GetComponent<QueueEntrance>() != null)
                     {
-                        nextPos.GetComponent<NpcPointManager>().AddToQueue(npcData.npc);
+                        nextPos.GetComponent<QueueEntrance>().AddToQueue(npcData.npc);
                     }
                     else
                     {
                         // 回到车里
                         Debug.LogError("没有决策点");
-                        npcData.npc.GetComponent<NPCPersonNavigation>().Arrive();
+                        npcData.npc.GetComponent<NPCPersonNavigation>().ReturnStart();
                     }
                     npcQueue.Remove(npcData);
                 }
