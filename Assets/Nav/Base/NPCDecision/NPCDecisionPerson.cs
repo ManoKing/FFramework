@@ -34,7 +34,7 @@ public class NPCDecisionPerson
             if (decision.count == 2)
             {
                 // 车离开
-                navCar.SetDestination(CarQueueData.instance.carEnd);
+                navCar.SetDestination(CarQueueData.instance.carEnd, true);
                 navCar.isArrive = false;
 
                 CarQueueData.instance.partList[part] = true;
