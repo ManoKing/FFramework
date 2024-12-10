@@ -25,7 +25,7 @@ public class NPCDecisionCar
             count = 0;
             for (int i = 0; i < 2; i++)
             {
-                new NPCDecisionPerson().SpawnPerson(part, navCar, this);
+                new NPCDecisionPerson().SpawnPerson(part, navCar, this, i);
             }
         };
     }
@@ -80,7 +80,7 @@ public class NPCDecisionCar
             count = 0;
             for (int i = 0; i < 2; i++)
             {
-                new NPCDecisionPerson().SpawnPerson(part, navCar, this);
+                new NPCDecisionPerson().SpawnPerson(part, navCar, this, i);
             }
         };
 

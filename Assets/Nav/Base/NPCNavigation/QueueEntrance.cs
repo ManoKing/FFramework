@@ -11,7 +11,7 @@ public class QueueEntrance : MonoBehaviour
 
     private Transform queueStart; // 决策点
     private List<GameObject> npcQueue = new List<GameObject>();
-
+    private List<GameObject> releasedNPCs = new List<GameObject>();
 
     private void Start()
     {
@@ -33,7 +33,7 @@ public class QueueEntrance : MonoBehaviour
         {
             yield return new WaitForSeconds(releaseInterval);
 
-            List<GameObject> releasedNPCs = new List<GameObject>();
+            releasedNPCs.Clear();
             foreach (var npcData in npcQueue)
             {
                 if (HasReachedPosition(npcData))

@@ -14,7 +14,7 @@ public class PersonQueueManager : MonoBehaviour
     private QueueEntrance nextPos; // 下一个排队点
     [HideInInspector]
     public List<NPCData> npcQueue = new List<NPCData>();
-
+    private List<NPCData> releasedNPCs = new List<NPCData>();
     public class NPCData
     {
         public GameObject npc;
@@ -55,7 +55,7 @@ public class PersonQueueManager : MonoBehaviour
         {
             yield return new WaitForSeconds(releaseInterval);
 
-            List<NPCData> releasedNPCs = new List<NPCData>();
+            releasedNPCs.Clear();
             foreach (var npcData in npcQueue)
             {
                 if (HasReachedPosition(npcData.npc, npcData.targetPosition))
