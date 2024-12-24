@@ -11,7 +11,6 @@ namespace HybridCLR.Editor
 {
     public static class BuildAssetsCommand
     {
-
         [MenuItem("HybridCLR/Build/BuildAssetsAndCopyToRes")]
         public static void BuildAndCopyABAOTHotUpdateDlls()
         {
@@ -23,10 +22,7 @@ namespace HybridCLR.Editor
             BuildTarget target = EditorUserBuildSettings.activeBuildTarget;
             CompileDllCommand.CompileDll(target);
             CopyABAOTHotUpdateDlls(target);
-            AssetDatabase.Refresh();
 
-            // 加入aa分组
-            //AssignAddressableGroup();
             AssetDatabase.Refresh();
             AssetDatabase.SaveAssets();
         }
@@ -72,7 +68,5 @@ namespace HybridCLR.Editor
                 Debug.Log($"[CopyHotUpdateAssembliesToStreamingAssets] copy hotfix dll {dllPath} -> {dllBytesPath}");
             }
         }
-
-       
     }
 }
