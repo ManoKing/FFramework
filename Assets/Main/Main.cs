@@ -14,6 +14,9 @@ public class Main : MonoBehaviour
 
     void Awake()
     {
+#if !UNITY_EDITOR
+        PlayMode = EPlayMode.OfflinePlayMode;
+#endif
         Debug.Log($"资源系统运行模式：{PlayMode}");
         Application.targetFrameRate = 60;
         Application.runInBackground = true;
