@@ -9,7 +9,7 @@ using UnityEngine;
 public class JenkinsBuild
 {
     public static string targetPath = "./build/";
-    public static string packName = "FFramework";
+    public static string packName = "FFramework.apk";
 
     [MenuItem("Build/Build Android")]
     public static void BuildAndroidEditor()
@@ -85,13 +85,14 @@ public class JenkinsBuild
     {
         // 热更只上传资源
         var isHotFix = GetCommandLineArg("isHotFix");
-        Debug.Log($"isHotFix:{bool.Parse(isHotFix)}");
         var version = GetCommandLineArg("version");
+        Debug.Log($"isHotFix:{isHotFix} / version:{version}");
         Build(BuildTarget.Android, version);
     }
 
     public static void BuildiOS()
     {
+        packName = "FFrameworkProject";
         var isHotFix = GetCommandLineArg("isHotFix");
         var version = GetCommandLineArg("version");
         Build(BuildTarget.iOS, version);
