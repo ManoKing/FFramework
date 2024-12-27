@@ -14,6 +14,7 @@ public class AutoBuild : Editor
     [MenuItem("HybridCLR/Build/Build Android")]
     public static void BuildAndroid()
     {
+        EditorUserBuildSettings.exportAsGoogleAndroidProject = false;
         Build();
     }
 
