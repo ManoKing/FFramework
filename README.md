@@ -10,8 +10,6 @@
 以及行为准则，例如加载场景必须用框架的xxx接口，贴图必须放在xxx文件夹下等  
 （2）性能优化：CPU,GPU,内存   
 
-代码热更基于[HybridCLR跳转](https://github.com/focus-creative-games/HybridCLR)  
-资源热更基于[YooAsset跳转](https://www.yooasset.com/)     
 
 ---
 
@@ -40,7 +38,7 @@
 
 ### 其他
 (1)Unity 版本使用是2022.3.xx  
-(2)基于URP渲染管线(开发中)  
+(2)基于URP风格化渲染管线  
 (3)完善UI框架，及代码自动生成工具  
 
 ---
@@ -50,26 +48,33 @@
 #### 游戏介绍  
 基于GameFramework框架实现的塔防游戏，将资源模块改为Addressable，并接入HybridCLR代码热更。  
 
-![Image](ReadMe/TowerDefense.png)   
+![Image](Tools/ReadMe/TowerDefense.png)   
    
    
-![Image](ReadMe/TowerGame.png)
+![Image](Tools/ReadMe/TowerGame.png)
 
 ### 框架基于GameFramework  
 使用框架的架构思想，并加以改进，如需扩展开发，只需要对GameFramework进行简单了解，可快速实现    
 
 ### 渲染基于URP  
-基于URP渲染管线（开发中）  
+基于URP风格化渲染管线（开发中）  
 （1）通过判断设备，启动时加载对应的低中高管线  
 （2）采用非真实渲染NRP  
 
 ### 自动打包流程  
-  
-![Image](ReadMe/AutoAPK.png)  
-   
+（1）支持在编辑器内一键打包  
+
+![Image](Tools/ReadMe/AutoAPK.png)  
 点击Build Android，即可在工程目录build文件夹下看到FFramework.apk(有可能需要点击两次，第一次点击有可能失败)  
-只需在Jenkins配置，Choice Parameter，即可实现打包自动化（开发中）   
-HotFixResources：热更资源；  ChannelPack：渠道包；  LocalPack：本地包；  FirstPack：首包；（渠道包和本地包基于首包的.bin输出）  
+   
+（2）支持部署Jenkins，实现自动化打包流程
+  
+![Image](Tools/ReadMe/Jenkins.png)  
+-batchmode -nographics -quit -executeMethod JenkinsBuild.BuildAndroid -isHotFix $isHotFix -version $version  
+![Image](Tools/ReadMe/Apk.png)  
+  
+只需在Jenkins配置，Choice Parameter，即可实现打包自动化（）   
+isHotFix：热更资源；  version：版本号；  isLocalPack：本地包(分支验收)；
 
    
 ---
@@ -77,6 +82,9 @@ HotFixResources：热更资源；  ChannelPack：渠道包；  LocalPack：本�
 ## FAQ
 
 ### 问题
-(1)CDN服务器缓存问题，不能及时获取到hash, json（增加HTTP DNS，提高热更成功率）   
-(2)Addressables版本问题，资源依赖问题，不能实现增量更新（升级版本后解决）    
+(1)CDN服务器缓存问题，不能及时获取到hash, json（访问根节点耗时太久，改为文件名添加时间戳）   
+(2)版本灰度问题，白名单ID问题 （采用后端生成的uid，设备id有权限申请问题）    
 
+### 参考  
+代码热更基于[HybridCLR跳转](https://github.com/focus-creative-games/HybridCLR)  
+资源热更基于[YooAsset跳转](https://www.yooasset.com/)     
