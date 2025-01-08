@@ -2,14 +2,17 @@
 
 ## 工程介绍   
 
-此工程热更模块基于 HybridCLR + YooAsset，并将主流的GameFramework修改支持YooAsset。  
+此工程   
+1，代码热更模块基于HybridCLR。  
+2，资源热更及管理基于YooAsset。  
+3，框架基于GameFramework，并修改支持HybridCLR及YooAsset。  
 并实现，Jenkins自动多渠道打包，白名单灰度测试，一键发布热更资源及版本回退。  
 
 通过这个项目可以了解到：  
 （1）框架为项目中提供基础功能，如资源管理、UI框架、网络通信、消息管理、场景管理、数据解析及存取等，同时定义了一系列规范包括编码的，例如参数命名、注释、缩进等  
 以及行为准则，例如加载场景必须用框架的xxx接口，贴图必须放在xxx文件夹下等  
-（2）性能优化：CPU,GPU,内存   
-
+（2）性能优化：CPU；GPU；内存   
+（3）埋点及数据分析，协助运营及发行及时了解游戏运行状况。
 
 ---
 
@@ -23,10 +26,14 @@
    
 ![Image](Tools/ReadMe/TowerGame.png)
   
-
+### 愿景  
+  
+可以通过该框架，几乎可以了解到游戏开发的完整流程。  
+  
+  
 ---
   
-  
+
 ## 如何让项目运行并实现热更及资源管理  
 
 ### HybridCLR编辑器操作
@@ -97,10 +104,19 @@ isLocalPack：(bool git分支验收，将所有资源打入包内)；
 
 ## FAQ
 
-### 问题
+### 常见问题
 (1)CDN服务器缓存问题，不能及时获取到hash, json（访问根节点耗时太久，改为文件名添加时间戳）   
 (2)版本灰度问题，白名单ID问题 （采用后端生成的uid，设备id有权限申请问题）    
 
 ### 参考  
 代码热更基于[HybridCLR跳转](https://github.com/focus-creative-games/HybridCLR)  
 资源热更基于[YooAsset跳转](https://www.yooasset.com/)     
+框架基础基于[GameFramework跳转](https://github.com/EllanJiang/GameFramework)  
+
+### 行业信息  
+  
+##### 别只顾着赶路，记得停下来看一下沿途的风景  
+
+游戏行业数据[游鲨游戏行业数据跳转](https://www.kdocs.cn/l/ct4bcS9xHD3K)   
+游戏行业分析[sensortower跳转](https://sensortower.com/)   
+记得多玩游戏[steam跳转](https://store.steampowered.com/)   
