@@ -13,6 +13,16 @@
 
 ---
 
+## 项目包含一个完整的小游戏实例  
+
+### 游戏介绍  
+基于GameFramework框架实现的塔防游戏，将资源模块改为Addressable，并接入HybridCLR代码热更。  
+
+![Image](Tools/ReadMe/TowerDefense.png)   
+   
+   
+![Image](Tools/ReadMe/TowerGame.png)
+
 ## 如何让项目运行并实现热更及资源管理  
 
 ### HybridCLR编辑器操作
@@ -43,15 +53,7 @@
 
 ---
 
-## 项目包含一个完整的小游戏实例  
-
-#### 游戏介绍  
-基于GameFramework框架实现的塔防游戏，将资源模块改为Addressable，并接入HybridCLR代码热更。  
-
-![Image](Tools/ReadMe/TowerDefense.png)   
-   
-   
-![Image](Tools/ReadMe/TowerGame.png)
+## 框架介绍  
 
 ### 框架基于GameFramework  
 使用框架的架构思想，并加以改进，如需扩展开发，只需要对GameFramework进行简单了解，可快速实现    
