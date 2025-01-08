@@ -62,20 +62,30 @@
 （2）采用非真实渲染NRP  
 
 ### 自动打包流程  
-（1）支持在编辑器内一键打包  
 
-![Image](Tools/ReadMe/AutoAPK.png)  
-点击Build Android，即可在工程目录build文件夹下看到FFramework.apk(有可能需要点击两次，第一次点击有可能失败)  
-   
-（2）支持部署Jenkins，实现自动化打包流程
+版本发布CI&CD流程：  
+CI(Continuous integration持续集成）持续集成强调开发人员提交了新代码之后，立刻进行构建、（单元）测试。  
+CD(Continuous Delivery持续交付) 是在持续集成的基础上，将集成后的代码部署到更贴近真实运行环境(类生产环境)中CD(Continuous Delivery持续交付) 是在持续集成的基础上，将集成后的代码部署到更贴近真实运行环境(类生产环境)中。  
+Jenkins是开源CI&CD软件领导者， 提供超过1000个插件来支持构建、部署、自动化， 满足任何项目的需要。  
+Jenkins[安装教程](https://www.jenkins.io/doc/book/installing/windows/)  
+Unity Editor command line arguments[Unity命令参数](https://docs.unity3d.com/2022.3/Documentation/Manual/EditorCommandLineArguments.html)  
+
+（1）支持部署Jenkins，实现自动化打包流程
   
 ![Image](Tools/ReadMe/Jenkins.png)  
 -batchmode -nographics -quit -executeMethod JenkinsBuild.BuildAndroid -isHotFix $isHotFix -version $version  
 ![Image](Tools/ReadMe/Apk.png)  
   
-只需在Jenkins配置，Choice Parameter，即可实现打包自动化（）   
-isHotFix：热更资源；  version：版本号；  isLocalPack：本地包(分支验收)；
+只需在Jenkins配置相关打包参数，即可实现发布自动化比如：   
+isHotFix：（bool 是否热更资源，勾选后只将资源发布到CDN不出包）；  
+version：（string 版本号）；  
+isLocalPack：(bool git分支验收，将所有资源打入包内)； 
 
+
+（2）支持在编辑器内一键打包  
+
+![Image](Tools/ReadMe/AutoAPK.png)  
+点击Build Android，即可在工程目录build文件夹下看到FFramework.apk(有可能需要点击两次，第一次点击有可能失败)  
    
 ---
 
