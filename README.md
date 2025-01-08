@@ -2,23 +2,22 @@
 
 ## 一、工程介绍   
 
-此工程   
+### 介绍   
 1，代码热更模块基于HybridCLR。  
 2，资源热更及管理基于YooAsset。  
 3，框架基于GameFramework，并修改支持HybridCLR及YooAsset。  
 并实现，Jenkins自动多渠道打包，白名单灰度测试，一键发布热更资源及版本回退。  
 
-通过这个项目可以了解到：  
+### 通过这个项目可以了解到  
 （1）框架为项目中提供基础功能，如资源管理、UI框架、网络通信、消息管理、场景管理、数据解析及存取等，同时定义了一系列规范包括编码的，例如参数命名、注释、缩进等  
 以及行为准则，例如加载场景必须用框架的xxx接口，贴图必须放在xxx文件夹下等  
 （2）性能优化：CPU；GPU；内存   
 （3）埋点及数据分析，协助运营及发行及时了解游戏运行状况。  
 等一些列游戏项目开发中的知识点     
-[新手引导跳转](Tools/ReadMe/Guide.md)   
-[小红点跳转](Tools/ReadMe/Guide.md)   
-[SDK跳转](Tools/ReadMe/Guide.md)   
-[循环列表跳转](Tools/ReadMe/Guide.md)   
-
+[新手引导跳转](Tools/ReadMe/Guide.md)         [小红点跳转](Tools/ReadMe/Guide.md)    
+[SDK跳转](Tools/ReadMe/Guide.md)          [循环列表跳转](Tools/ReadMe/Guide.md)   
+  
+  
 ---
 
 ## 二、项目包含一个完整的小游戏实例  
@@ -66,7 +65,8 @@
 (1)Unity 版本使用是2022.3.xx  
 (2)基于URP风格化渲染管线  
 (3)完善UI框架，及代码自动生成工具  
-
+  
+    
 ---
 
 ## 四、框架介绍  
