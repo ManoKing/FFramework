@@ -14,8 +14,8 @@
 （2）性能优化：CPU；GPU；内存   
 （3）埋点及数据分析，协助运营及发行及时了解游戏运行状况。  
 等一些列游戏项目开发中的知识点     
-[新手引导跳转](Tools/ReadMe/Guide.md)         [小红点跳转](Tools/ReadMe/Guide.md)    
-[SDK跳转](Tools/ReadMe/Guide.md)          [循环列表跳转](Tools/ReadMe/Guide.md)   
+[新手引导跳转](Tools/ReadMe/Guide.md)             [小红点跳转](Tools/ReadMe/Guide.md)    
+[SDK跳转](Tools/ReadMe/Guide.md)              [循环列表跳转](Tools/ReadMe/Guide.md)   
   
   
 ---
@@ -123,5 +123,5 @@ isLocalPack：(bool git分支验收，将所有资源打入包内)；
 ##### 别只顾着赶路，记得停下来看一下沿途的风景  
 
 游戏行业数据[游鲨游戏行业数据跳转](https://www.kdocs.cn/l/ct4bcS9xHD3K)   
-游戏行业分析[sensortower跳转](https://sensortower.com/)   
-记得多玩游戏[steam跳转](https://store.steampowered.com/)   
+游戏行业分析[Sensortower跳转](https://sensortower.com/)   
+记得多玩游戏[Steam跳转](https://store.steampowered.com/)   
