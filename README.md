@@ -14,9 +14,9 @@
 （2）性能优化：CPU；GPU；内存   
 （3）埋点及数据分析，协助运营及发行及时了解游戏运行状况。  
 等一些列游戏项目开发中的知识点     
-[【新手引导跳转】](Tools/ReadMe/Guide.md)             [【小红点跳转】](Tools/ReadMe/Guide.md)    
-[【SDK跳转】](Tools/ReadMe/Guide.md)              [【循环列表跳转】](Tools/ReadMe/Guide.md)   
-  
+[【代码混淆】](Tools/ReadMe/UnityObfuscator.md)        [【小红点跳转】](Tools/ReadMe/Guide.md)    
+[【SDK跳转】](Tools/ReadMe/Guide.md)         [【循环列表跳转】](Tools/ReadMe/Guide.md)   
+[【新手引导跳转】](Tools/ReadMe/Guide.md) 
   
 ---
 
