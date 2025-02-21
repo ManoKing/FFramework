@@ -44,28 +44,28 @@ namespace Flower.UnityObfuscator
         /// <summary>
         /// 插件配置文件路径
         /// </summary>
-        public static readonly string ConfigAssetPath = @"Assets/Extensions/UnityObfuscator/Editor/ObfuscatorConfig.asset";
+        public static readonly string ConfigAssetPath = @"Assets/Plugins/UnityObfuscator/Editor/ObfuscatorConfig.asset";
 
         //白名单配置文件路径
-        public static readonly string WhiteList_NamespacePath = @"/Extensions/UnityObfuscator/Editor/Res/WhiteList/WhiteList-{0}-Namespace.txt";//名单内命名空间不混
-        public static readonly string WhiteList_NamespaceNameOnlyPath = @"/Extensions/UnityObfuscator/Editor/Res/WhiteList/WhiteList-{0}-NamespaceNameOnly.txt";//名单内命名空间的类都混，命名空间的名字不混
-        public static readonly string WhiteList_ClassPath = @"/Extensions/UnityObfuscator/Editor/Res/WhiteList/WhiteList-{0}-Class.txt";//名单内类不混
-        public static readonly string WhiteList_ClassNameOnlyPath = @"/Extensions/UnityObfuscator/Editor/Res/WhiteList/WhiteList-{0}-ClassNameOnly.txt";//名单内的类的成员都混，类名不混
-        public static readonly string WhiteList_MethodPath = @"/Extensions/UnityObfuscator/Editor/Res/WhiteList/WhiteList-{0}-Method.txt";//名单内的方法不混
-        public static readonly string WhiteList_MemberPath = @"/Extensions/UnityObfuscator/Editor/Res/WhiteList/WhiteList-{0}-ClassMember.txt";//名单内的类成员不混
+        public static readonly string WhiteList_NamespacePath = @"/Plugins/UnityObfuscator/Editor/Res/WhiteList/WhiteList-{0}-Namespace.txt";//名单内命名空间不混
+        public static readonly string WhiteList_NamespaceNameOnlyPath = @"/Plugins/UnityObfuscator/Editor/Res/WhiteList/WhiteList-{0}-NamespaceNameOnly.txt";//名单内命名空间的类都混，命名空间的名字不混
+        public static readonly string WhiteList_ClassPath = @"/Plugins/UnityObfuscator/Editor/Res/WhiteList/WhiteList-{0}-Class.txt";//名单内类不混
+        public static readonly string WhiteList_ClassNameOnlyPath = @"/Plugins/UnityObfuscator/Editor/Res/WhiteList/WhiteList-{0}-ClassNameOnly.txt";//名单内的类的成员都混，类名不混
+        public static readonly string WhiteList_MethodPath = @"/Plugins/UnityObfuscator/Editor/Res/WhiteList/WhiteList-{0}-Method.txt";//名单内的方法不混
+        public static readonly string WhiteList_MemberPath = @"/Plugins/UnityObfuscator/Editor/Res/WhiteList/WhiteList-{0}-ClassMember.txt";//名单内的类成员不混
 
         //混淆范围配置文件路径
-        public static readonly string ObfuscateList_NamespacePath = @"/Extensions/UnityObfuscator/Editor/Res/ObfuscateList/ObfuscateList-{0}-Namespace.txt";//名单内的命名空间所有类和类成员都混
-        public static readonly string ObfuscateList_NamespaceExceptNamespaceNamePath = @"/Extensions/UnityObfuscator/Editor/Res/ObfuscateList/ObfuscateList-{0}-NamespaceExceptNamespaceName.txt";//名单内命名空间的类都混，命名空间的名字不混
-        public static readonly string ObfuscateList_ClassPath = @"/Extensions/UnityObfuscator/Editor/Res/ObfuscateList/ObfuscateList-{0}-Class.txt";//名单内的类都混
-        public static readonly string ObfuscateList_ClassExceptClassNamePath = @"/Extensions/UnityObfuscator/Editor/Res/ObfuscateList/ObfuscateList-{0}-ClassExceptClassName.txt";//名单内的类的类成员都混，类名不混
-        public static readonly string ObfuscateList_MethodPath = @"/Extensions/UnityObfuscator/Editor/Res/ObfuscateList/ObfuscateList-{0}-Method.txt";//名单内的方法都混
-        public static readonly string ObfuscateList_MemberPath = @"/Extensions/UnityObfuscator/Editor/Res/ObfuscateList/ObfuscateList-{0}-ClassMember.txt";//名单内的类成员都混
+        public static readonly string ObfuscateList_NamespacePath = @"/Plugins/UnityObfuscator/Editor/Res/ObfuscateList/ObfuscateList-{0}-Namespace.txt";//名单内的命名空间所有类和类成员都混
+        public static readonly string ObfuscateList_NamespaceExceptNamespaceNamePath = @"/Plugins/UnityObfuscator/Editor/Res/ObfuscateList/ObfuscateList-{0}-NamespaceExceptNamespaceName.txt";//名单内命名空间的类都混，命名空间的名字不混
+        public static readonly string ObfuscateList_ClassPath = @"/Plugins/UnityObfuscator/Editor/Res/ObfuscateList/ObfuscateList-{0}-Class.txt";//名单内的类都混
+        public static readonly string ObfuscateList_ClassExceptClassNamePath = @"/Plugins/UnityObfuscator/Editor/Res/ObfuscateList/ObfuscateList-{0}-ClassExceptClassName.txt";//名单内的类的类成员都混，类名不混
+        public static readonly string ObfuscateList_MethodPath = @"/Plugins/UnityObfuscator/Editor/Res/ObfuscateList/ObfuscateList-{0}-Method.txt";//名单内的方法都混
+        public static readonly string ObfuscateList_MemberPath = @"/Plugins/UnityObfuscator/Editor/Res/ObfuscateList/ObfuscateList-{0}-ClassMember.txt";//名单内的类成员都混
 
         public static readonly string NameMapPath = @"UnityObfuscator-Name_Obfuscate_Map.txt";
         public static readonly string InjectInfoPath = @"UnityObfuscator-InjectInfo.txt";
 
-        public static readonly string NameListPath = @"/Extensions/UnityObfuscator/Editor/Res/NameList.txt";
+        public static readonly string NameListPath = @"/Plugins/UnityObfuscator/Editor/Res/NameList.txt";
 
         public static readonly string[] ResolverSearchDirs = new string[]
         {

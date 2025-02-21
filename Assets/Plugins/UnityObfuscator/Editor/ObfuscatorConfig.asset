@@ -12,17 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74f57c22403249a458bcae34665b38b9, type: 3}
   m_Name: ObfuscatorConfig
   m_EditorClassIdentifier: 
-  randomSeed: 123
-  useTimeSpan: 1
+  randomSeed: 7
+  useTimeSpan: 0
   enableCodeObfuscator: 1
   obfuscateNameType: 0
   enableNameObfuscate: 1
-  enableCodeInject: 0
+  enableCodeInject: 1
   nameObfuscateType: 1
   codeInjectType: 1
   GarbageMethodMultiplePerClass: 1
   InsertMethodCountPerMethod: 0
   obfuscateDllPaths:
-  - GameFrame
-  uselessCodeLibPath: Assets/Extensions/UnityObfuscator/Editor/GarbageCode/GarbageCode.dll
-  testOutputPath: "\u6DF7\u6DC6\u6D4B\u8BD5"
+  - HotFix
+  uselessCodeLibPath: Assets/Plugins/UnityObfuscator/GarbageCode/GarbageCode.dll
+  testOutputPath: UnityObfuscator
