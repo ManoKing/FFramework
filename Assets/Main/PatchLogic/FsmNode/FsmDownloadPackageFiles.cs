@@ -3,6 +3,7 @@ using UnityEngine;
 using UniFramework.Machine;
 using YooAsset;
 using Cysharp.Threading.Tasks;
+using static PatchEventDefine;
 
 /// <summary>
 /// 下载更新文件
@@ -17,7 +18,7 @@ public class FsmDownloadPackageFiles : IStateNode
     }
     async void IStateNode.OnEnter()
     {
-        PatchEventDefine.PatchStatesChange.SendEventMessage("开始下载补丁文件！");
+        PatchEventDefine.PatchStatesChange.SendEventMessage(this, "开始下载补丁文件！");
         await BeginDownload();
     }
     void IStateNode.OnUpdate()
@@ -30,8 +31,8 @@ public class FsmDownloadPackageFiles : IStateNode
     private async UniTask BeginDownload()
     {
         var downloader = (ResourceDownloaderOperation)_machine.GetBlackboardValue("Downloader");
-        downloader.OnDownloadErrorCallback = PatchEventDefine.WebFileDownloadFailed.SendEventMessage;
-        downloader.OnDownloadProgressCallback = PatchEventDefine.DownloadProgressUpdate.SendEventMessage;
+        downloader.OnDownloadErrorCallback = WebFileDownloadFailed;
+        downloader.OnDownloadProgressCallback = DownloadProgressUpdate;
         downloader.BeginDownload();
 
         await UniTask.WaitUntil(() => downloader.IsDone);
@@ -41,5 +42,15 @@ public class FsmDownloadPackageFiles : IStateNode
             return;
 
         _machine.ChangeState<FsmDownloadPackageOver>();
+    }
+
+    public void DownloadProgressUpdate(int totalDownloadCount, int currentDownloadCount, long totalDownloadSizeBytes, long currentDownloadSizeBytes)
+    {
+        PatchEventDefine.DownloadProgressUpdate.SendEventMessage(this, totalDownloadCount, currentDownloadCount, totalDownloadSizeBytes,  currentDownloadSizeBytes);
+    }
+
+    public void WebFileDownloadFailed(string fileName, string error)
+    {
+        PatchEventDefine.WebFileDownloadFailed.SendEventMessage(this, fileName, error);
     }
 }

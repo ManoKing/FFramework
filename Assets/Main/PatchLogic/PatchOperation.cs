@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using GameFramework;
+using GameFramework.Event;
 using UniFramework.Machine;
-using UniFramework.Event;
 using YooAsset;
 
 public class PatchOperation : GameAsyncOperation
@@ -15,18 +12,18 @@ public class PatchOperation : GameAsyncOperation
         Done,
     }
 
-    private readonly EventGroup _eventGroup = new EventGroup();
+    private IEventManager eventManager = GameFrameworkEntry.GetModule<IEventManager>();
     private readonly StateMachine _machine;
     private ESteps _steps = ESteps.None;
 
     public PatchOperation(string packageName, string buildPipeline, EPlayMode playMode)
     {
         // 注册监听事件
-        _eventGroup.AddListener<UserEventDefine.UserTryInitialize>(OnHandleEventMessage);
-        _eventGroup.AddListener<UserEventDefine.UserBeginDownloadWebFiles>(OnHandleEventMessage);
-        _eventGroup.AddListener<UserEventDefine.UserTryUpdatePackageVersion>(OnHandleEventMessage);
-        _eventGroup.AddListener<UserEventDefine.UserTryUpdatePatchManifest>(OnHandleEventMessage);
-        _eventGroup.AddListener<UserEventDefine.UserTryDownloadWebFiles>(OnHandleEventMessage);
+        eventManager.Subscribe(UserEventDefine.UserTryInitialize.EventId, EventMessage);
+        eventManager.Subscribe(UserEventDefine.UserBeginDownloadWebFiles.EventId, EventMessage);
+        eventManager.Subscribe(UserEventDefine.UserTryUpdatePackageVersion.EventId, EventMessage);
+        eventManager.Subscribe(UserEventDefine.UserTryUpdatePatchManifest.EventId, EventMessage);
+        eventManager.Subscribe(UserEventDefine.UserTryDownloadWebFiles.EventId, EventMessage);
 
         // 创建状态机
         _machine = new StateMachine(this);
@@ -43,6 +40,7 @@ public class PatchOperation : GameAsyncOperation
         _machine.SetBlackboardValue("PlayMode", playMode);
         _machine.SetBlackboardValue("BuildPipeline", buildPipeline);
     }
+
     protected override void OnStart()
     {
         _steps = ESteps.Update;
@@ -53,12 +51,12 @@ public class PatchOperation : GameAsyncOperation
         if (_steps == ESteps.None || _steps == ESteps.Done)
             return;
 
-        if(_steps == ESteps.Update)
+        if (_steps == ESteps.Update)
         {
             _machine.Update();
-            if(_machine.CurrentNode == typeof(FsmUpdaterDone).FullName)
+            if (_machine.CurrentNode == typeof(FsmUpdaterDone).FullName)
             {
-                _eventGroup.RemoveAllListener();
+                //_eventGroup.RemoveAllListener();
                 Status = EOperationStatus.Succeed;
                 _steps = ESteps.Done;
             }
@@ -68,34 +66,31 @@ public class PatchOperation : GameAsyncOperation
     {
     }
 
-    /// <summary>
-    /// 接收事件
-    /// </summary>
-    private void OnHandleEventMessage(IEventMessage message)
+    private void EventMessage(object sender, GameEventArgs args)
     {
-        if (message is UserEventDefine.UserTryInitialize)
+        if (args is UserEventDefine.UserTryInitialize)
         {
             _machine.ChangeState<FsmInitializePackage>();
         }
-        else if (message is UserEventDefine.UserBeginDownloadWebFiles)
+        else if (args is UserEventDefine.UserBeginDownloadWebFiles)
         {
             _machine.ChangeState<FsmDownloadPackageFiles>();
         }
-        else if (message is UserEventDefine.UserTryUpdatePackageVersion)
+        else if (args is UserEventDefine.UserTryUpdatePackageVersion)
         {
             _machine.ChangeState<FsmUpdatePackageVersion>();
         }
-        else if (message is UserEventDefine.UserTryUpdatePatchManifest)
+        else if (args is UserEventDefine.UserTryUpdatePatchManifest)
         {
             _machine.ChangeState<FsmUpdatePackageManifest>();
         }
-        else if (message is UserEventDefine.UserTryDownloadWebFiles)
+        else if (args is UserEventDefine.UserTryDownloadWebFiles)
         {
             _machine.ChangeState<FsmCreatePackageDownloader>();
         }
         else
         {
-            throw new System.NotImplementedException($"{message.GetType()}");
+            throw new System.NotImplementedException($"{args.GetType()}");
         }
     }
 }

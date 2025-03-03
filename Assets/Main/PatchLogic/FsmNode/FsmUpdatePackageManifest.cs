@@ -18,7 +18,7 @@ public class FsmUpdatePackageManifest : IStateNode
     }
     void IStateNode.OnEnter()
     {
-        PatchEventDefine.PatchStatesChange.SendEventMessage("更新资源清单！");
+        PatchEventDefine.PatchStatesChange.SendEventMessage(this, "更新资源清单！");
         UpdateManifest();
     }
     void IStateNode.OnUpdate()
@@ -40,7 +40,7 @@ public class FsmUpdatePackageManifest : IStateNode
         if (operation.Status != EOperationStatus.Succeed)
         {
             Debug.LogWarning(operation.Error);
-            PatchEventDefine.PatchManifestUpdateFailed.SendEventMessage();
+            PatchEventDefine.PatchManifestUpdateFailed.SendEventMessage(this);
             return;
         }
         else

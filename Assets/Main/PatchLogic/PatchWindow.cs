@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections;
+﻿using GameFramework;
+using GameFramework.Event;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UniFramework.Event;
 
 public class PatchWindow : MonoBehaviour
 {
@@ -53,7 +52,7 @@ public class PatchWindow : MonoBehaviour
     }
 
 
-    private readonly EventGroup _eventGroup = new EventGroup();
+    private IEventManager eventManager = GameFrameworkEntry.GetModule<IEventManager>();
     private readonly List<MessageBox> _msgBoxList = new List<MessageBox>();
 
     // UGUI相关
@@ -70,85 +69,82 @@ public class PatchWindow : MonoBehaviour
         _messageBoxObj = transform.Find("UIWindow/MessgeBox").gameObject;
         _messageBoxObj.SetActive(false);
 
-        _eventGroup.AddListener<PatchEventDefine.InitializeFailed>(OnHandleEventMessage);
-        _eventGroup.AddListener<PatchEventDefine.PatchStatesChange>(OnHandleEventMessage);
-        _eventGroup.AddListener<PatchEventDefine.FoundUpdateFiles>(OnHandleEventMessage);
-        _eventGroup.AddListener<PatchEventDefine.DownloadProgressUpdate>(OnHandleEventMessage);
-        _eventGroup.AddListener<PatchEventDefine.PackageVersionUpdateFailed>(OnHandleEventMessage);
-        _eventGroup.AddListener<PatchEventDefine.PatchManifestUpdateFailed>(OnHandleEventMessage);
-        _eventGroup.AddListener<PatchEventDefine.WebFileDownloadFailed>(OnHandleEventMessage);
+        eventManager.Subscribe(PatchEventDefine.InitializeFailed.EventId, EventMessage);
+        eventManager.Subscribe(PatchEventDefine.PatchStatesChange.EventId, EventMessage);
+        eventManager.Subscribe(PatchEventDefine.FoundUpdateFiles.EventId, EventMessage);
+        eventManager.Subscribe(PatchEventDefine.DownloadProgressUpdate.EventId, EventMessage);
+        eventManager.Subscribe(PatchEventDefine.PackageVersionUpdateFailed.EventId, EventMessage);
+        eventManager.Subscribe(PatchEventDefine.PatchManifestUpdateFailed.EventId, EventMessage);
+        eventManager.Subscribe(PatchEventDefine.WebFileDownloadFailed.EventId, EventMessage);
     }
     void OnDestroy()
     {
-        _eventGroup.RemoveAllListener();
+        //_eventGroup.RemoveAllListener();
     }
 
-    /// <summary>
-    /// 接收事件
-    /// </summary>
-    private void OnHandleEventMessage(IEventMessage message)
+    private void EventMessage(object sender, GameEventArgs args)
     {
-        if (message is PatchEventDefine.InitializeFailed)
+        if (args is PatchEventDefine.InitializeFailed)
         {
             System.Action callback = () =>
             {
-                UserEventDefine.UserTryInitialize.SendEventMessage();
+                UserEventDefine.UserTryInitialize.SendEventMessage(this);
             };
             ShowMessageBox($"Failed to initialize package !", callback);
         }
-        else if (message is PatchEventDefine.PatchStatesChange)
+        else if (args is PatchEventDefine.PatchStatesChange)
         {
-            var msg = message as PatchEventDefine.PatchStatesChange;
+            var msg = args as PatchEventDefine.PatchStatesChange;
             _tips.text = msg.Tips;
         }
-        else if (message is PatchEventDefine.FoundUpdateFiles)
+        else if (args is PatchEventDefine.FoundUpdateFiles)
         {
-            var msg = message as PatchEventDefine.FoundUpdateFiles;
+            var msg = args as PatchEventDefine.FoundUpdateFiles;
             System.Action callback = () =>
             {
-                UserEventDefine.UserBeginDownloadWebFiles.SendEventMessage();
+                UserEventDefine.UserBeginDownloadWebFiles.SendEventMessage(this);
             };
             float sizeMB = msg.TotalSizeBytes / 1048576f;
             sizeMB = Mathf.Clamp(sizeMB, 0.1f, float.MaxValue);
             string totalSizeMB = sizeMB.ToString("f1");
             ShowMessageBox($"Found update patch files, Total count {msg.TotalCount} Total szie {totalSizeMB}MB", callback);
         }
-        else if (message is PatchEventDefine.DownloadProgressUpdate)
+        else if (args is PatchEventDefine.DownloadProgressUpdate)
         {
-            var msg = message as PatchEventDefine.DownloadProgressUpdate;
+            var msg = args as PatchEventDefine.DownloadProgressUpdate;
             _slider.value = (float)msg.CurrentDownloadCount / msg.TotalDownloadCount;
             string currentSizeMB = (msg.CurrentDownloadSizeBytes / 1048576f).ToString("f1");
             string totalSizeMB = (msg.TotalDownloadSizeBytes / 1048576f).ToString("f1");
             _tips.text = $"{msg.CurrentDownloadCount}/{msg.TotalDownloadCount} {currentSizeMB}MB/{totalSizeMB}MB";
         }
-        else if (message is PatchEventDefine.PackageVersionUpdateFailed)
+        else if (args is PatchEventDefine.PackageVersionUpdateFailed)
         {
             System.Action callback = () =>
             {
-                UserEventDefine.UserTryUpdatePackageVersion.SendEventMessage();
+                UserEventDefine.UserTryUpdatePackageVersion.SendEventMessage(this);
             };
             ShowMessageBox($"Failed to update static version, please check the network status.", callback);
         }
-        else if (message is PatchEventDefine.PatchManifestUpdateFailed)
+        else if (args is PatchEventDefine.PatchManifestUpdateFailed)
         {
             System.Action callback = () =>
             {
-                UserEventDefine.UserTryUpdatePatchManifest.SendEventMessage();
+                UserEventDefine.UserTryUpdatePatchManifest.SendEventMessage(this);
             };
             ShowMessageBox($"Failed to update patch manifest, please check the network status.", callback);
         }
-        else if (message is PatchEventDefine.WebFileDownloadFailed)
+        else if (args is PatchEventDefine.WebFileDownloadFailed)
         {
-            var msg = message as PatchEventDefine.WebFileDownloadFailed;
+            var msg = args as PatchEventDefine.WebFileDownloadFailed;
             System.Action callback = () =>
             {
-                UserEventDefine.UserTryDownloadWebFiles.SendEventMessage();
+                UserEventDefine.UserTryDownloadWebFiles.SendEventMessage(this);
             };
             ShowMessageBox($"Failed to download file : {msg.FileName}", callback);
         }
         else
         {
-            throw new System.NotImplementedException($"{message.GetType()}");
+            throw new System.NotImplementedException($"{sender.GetType()}");
         }
     }
 

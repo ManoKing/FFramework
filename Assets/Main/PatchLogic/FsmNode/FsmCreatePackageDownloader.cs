@@ -17,7 +17,7 @@ public class FsmCreatePackageDownloader : IStateNode
     }
     void IStateNode.OnEnter()
     {
-        PatchEventDefine.PatchStatesChange.SendEventMessage("创建补丁下载器！");
+        PatchEventDefine.PatchStatesChange.SendEventMessage(this, "创建补丁下载器！");
         CreateDownloader();
     }
     void IStateNode.OnUpdate()

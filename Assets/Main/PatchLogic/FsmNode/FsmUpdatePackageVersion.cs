@@ -19,7 +19,7 @@ internal class FsmUpdatePackageVersion : IStateNode
     }
     async void IStateNode.OnEnter()
     {
-        PatchEventDefine.PatchStatesChange.SendEventMessage("获取最新的资源版本 !");
+        PatchEventDefine.PatchStatesChange.SendEventMessage(this, "获取最新的资源版本 !");
         await UpdatePackageVersion();
     }
     void IStateNode.OnUpdate()
@@ -40,7 +40,7 @@ internal class FsmUpdatePackageVersion : IStateNode
         if (operation.Status != EOperationStatus.Succeed)
         {
             Debug.LogWarning(operation.Error);
-            PatchEventDefine.PackageVersionUpdateFailed.SendEventMessage();
+            PatchEventDefine.PackageVersionUpdateFailed.SendEventMessage(this);
         }
         else
         {
