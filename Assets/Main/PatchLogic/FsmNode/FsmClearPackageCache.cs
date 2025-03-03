@@ -1,37 +1,45 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UniFramework.Machine;
+﻿using GameFramework;
+using GameFramework.Fsm;
 using YooAsset;
+using ProcedureOwner = GameFramework.Fsm.IFsm<PatchOperation>;
 
 /// <summary>
 /// 清理未使用的缓存文件
 /// </summary>
-internal class FsmClearPackageCache : IStateNode
+internal class FsmClearPackageCache : FsmState<PatchOperation>, IReference
 {
-    private StateMachine _machine;
-
-    void IStateNode.OnCreate(StateMachine machine)
+    private PatchOperation owner;
+    private ProcedureOwner procedure;
+    private void Operation_Completed(AsyncOperationBase obj)
     {
-        _machine = machine;
+        ChangeState<FsmUpdaterDone>(procedure);
     }
-    void IStateNode.OnEnter()
+
+    protected override void OnInit(ProcedureOwner procedureOwner)
     {
+        base.OnInit(procedureOwner);
+    }
+
+    protected override void OnEnter(ProcedureOwner procedureOwner)
+    {
+        base.OnEnter(procedureOwner);
+        procedure = procedureOwner;
+        owner = procedureOwner.Owner;
+
         PatchEventDefine.PatchStatesChange.SendEventMessage(this, "清理未使用的缓存文件！");
-        var packageName = (string)_machine.GetBlackboardValue("PackageName");
+        var packageName = owner.packageName;
         var package = YooAssets.GetPackage(packageName);
         var operation = package.ClearUnusedBundleFilesAsync();
         operation.Completed += Operation_Completed;
     }
-    void IStateNode.OnUpdate()
+    public static FsmClearPackageCache Create()
     {
-    }
-    void IStateNode.OnExit()
-    {
+        FsmClearPackageCache state = ReferencePool.Acquire<FsmClearPackageCache>();
+        return state;
     }
 
-    private void Operation_Completed(YooAsset.AsyncOperationBase obj)
+    public void Clear()
     {
-        _machine.ChangeState<FsmUpdaterDone>();
+        throw new System.NotImplementedException();
     }
 }

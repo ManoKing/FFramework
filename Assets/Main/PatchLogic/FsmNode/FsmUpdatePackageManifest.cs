@@ -1,37 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UniFramework.Machine;
+using ProcedureOwner = GameFramework.Fsm.IFsm<PatchOperation>;
 using YooAsset;
 using Cysharp.Threading.Tasks;
+using GameFramework.Fsm;
+using GameFramework;
 
 /// <summary>
 /// 更新资源清单
 /// </summary>
-public class FsmUpdatePackageManifest : IStateNode
+public class FsmUpdatePackageManifest : FsmState<PatchOperation>, IReference
 {
-    private StateMachine _machine;
+    private PatchOperation owner;
+    protected override void OnEnter(ProcedureOwner procedureOwner)
+    {
+        base.OnEnter(procedureOwner);
 
-    void IStateNode.OnCreate(StateMachine machine)
-    {
-        _machine = machine;
-    }
-    void IStateNode.OnEnter()
-    {
+        owner = procedureOwner.Owner;
+
         PatchEventDefine.PatchStatesChange.SendEventMessage(this, "更新资源清单！");
-        UpdateManifest();
-    }
-    void IStateNode.OnUpdate()
-    {
-    }
-    void IStateNode.OnExit()
-    {
+        UpdateManifest(procedureOwner);
     }
 
-    private async UniTask UpdateManifest()
+    private async UniTask UpdateManifest(ProcedureOwner procedureOwner)
     {
-        var packageName = (string)_machine.GetBlackboardValue("PackageName");
-        var packageVersion = (string)_machine.GetBlackboardValue("PackageVersion");
+        var packageName = owner.packageName;
+        var packageVersion = owner.packageVersion;
         var package = YooAssets.GetPackage(packageName);
         var operation = package.UpdatePackageManifestAsync(packageVersion);
 
@@ -45,7 +40,16 @@ public class FsmUpdatePackageManifest : IStateNode
         }
         else
         {
-            _machine.ChangeState<FsmCreatePackageDownloader>();
+            ChangeState<FsmCreatePackageDownloader>(procedureOwner);
         }
+    }
+    public static FsmUpdatePackageManifest Create()
+    {
+        FsmUpdatePackageManifest state = ReferencePool.Acquire<FsmUpdatePackageManifest>();
+        return state;
+    }
+    public void Clear()
+    {
+        throw new System.NotImplementedException();
     }
 }

@@ -1,45 +1,37 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using GameFramework;
+using GameFramework.Fsm;
 using UnityEngine;
-using UniFramework.Machine;
 using YooAsset;
+using ProcedureOwner = GameFramework.Fsm.IFsm<PatchOperation>;
 
 /// <summary>
 /// 创建文件下载器
 /// </summary>
-public class FsmCreatePackageDownloader : IStateNode
+public class FsmCreatePackageDownloader : FsmState<PatchOperation>, IReference
 {
-    private StateMachine _machine;
+    private PatchOperation owner;
+    protected override void OnEnter(ProcedureOwner procedureOwner)
+    {
+        base.OnEnter(procedureOwner);
 
-    void IStateNode.OnCreate(StateMachine machine)
-    {
-        _machine = machine;
-    }
-    void IStateNode.OnEnter()
-    {
+        owner = procedureOwner.Owner;
+
         PatchEventDefine.PatchStatesChange.SendEventMessage(this, "创建补丁下载器！");
-        CreateDownloader();
+        CreateDownloader(procedureOwner);
     }
-    void IStateNode.OnUpdate()
+    void CreateDownloader(ProcedureOwner procedureOwner)
     {
-    }
-    void IStateNode.OnExit()
-    {
-    }
-
-    void CreateDownloader()
-    {
-        var packageName = (string)_machine.GetBlackboardValue("PackageName");
+        var packageName = owner.packageName;
         var package = YooAssets.GetPackage(packageName);
         int downloadingMaxNum = 10;
         int failedTryAgain = 3;
         var downloader = package.CreateResourceDownloader(downloadingMaxNum, failedTryAgain);
-        _machine.SetBlackboardValue("Downloader", downloader);
+        owner.resourceDownloaderOperation = downloader;
 
         if (downloader.TotalDownloadCount == 0)
         {
             Debug.Log("Not found any download files !");
-            _machine.ChangeState<FsmUpdaterDone>();
+            ChangeState<FsmUpdaterDone>(procedureOwner);
         }
         else
         {
@@ -49,7 +41,16 @@ public class FsmCreatePackageDownloader : IStateNode
             //long totalDownloadBytes = downloader.TotalDownloadBytes;
             //PatchEventDefine.FoundUpdateFiles.SendEventMessage(totalDownloadCount, totalDownloadBytes);
 
-            _machine.ChangeState<FsmDownloadPackageFiles>();
+            ChangeState<FsmDownloadPackageFiles>(procedureOwner);
         }
+    }
+    public static FsmCreatePackageDownloader Create()
+    {
+        FsmCreatePackageDownloader state = ReferencePool.Acquire<FsmCreatePackageDownloader>();
+        return state;
+    }
+    public void Clear()
+    {
+        throw new System.NotImplementedException();
     }
 }

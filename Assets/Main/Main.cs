@@ -1,6 +1,4 @@
-﻿using GameFramework;
-using GameFramework.Event;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using YooAsset;
 

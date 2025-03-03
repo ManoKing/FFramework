@@ -1,36 +1,29 @@
-﻿using System.Collections;
-using UnityEngine;
-using UniFramework.Machine;
+﻿using ProcedureOwner = GameFramework.Fsm.IFsm<PatchOperation>;
 using YooAsset;
 using Cysharp.Threading.Tasks;
-using static PatchEventDefine;
+using GameFramework.Fsm;
+using GameFramework;
 
 /// <summary>
 /// 下载更新文件
 /// </summary>
-public class FsmDownloadPackageFiles : IStateNode
+public class FsmDownloadPackageFiles : FsmState<PatchOperation>, IReference
 {
-    private StateMachine _machine;
+    private PatchOperation owner;
 
-    void IStateNode.OnCreate(StateMachine machine)
+    protected async override void OnEnter(ProcedureOwner procedureOwner)
     {
-        _machine = machine;
-    }
-    async void IStateNode.OnEnter()
-    {
+        base.OnEnter(procedureOwner);
+
+        owner = procedureOwner.Owner;
+
         PatchEventDefine.PatchStatesChange.SendEventMessage(this, "开始下载补丁文件！");
-        await BeginDownload();
-    }
-    void IStateNode.OnUpdate()
-    {
-    }
-    void IStateNode.OnExit()
-    {
+        await BeginDownload(procedureOwner);
     }
 
-    private async UniTask BeginDownload()
+    private async UniTask BeginDownload(ProcedureOwner procedureOwner)
     {
-        var downloader = (ResourceDownloaderOperation)_machine.GetBlackboardValue("Downloader");
+        var downloader = owner.resourceDownloaderOperation;
         downloader.OnDownloadErrorCallback = WebFileDownloadFailed;
         downloader.OnDownloadProgressCallback = DownloadProgressUpdate;
         downloader.BeginDownload();
@@ -41,7 +34,7 @@ public class FsmDownloadPackageFiles : IStateNode
         if (downloader.Status != EOperationStatus.Succeed)
             return;
 
-        _machine.ChangeState<FsmDownloadPackageOver>();
+        ChangeState<FsmDownloadPackageOver>(procedureOwner);
     }
 
     public void DownloadProgressUpdate(int totalDownloadCount, int currentDownloadCount, long totalDownloadSizeBytes, long currentDownloadSizeBytes)
@@ -52,5 +45,14 @@ public class FsmDownloadPackageFiles : IStateNode
     public void WebFileDownloadFailed(string fileName, string error)
     {
         PatchEventDefine.WebFileDownloadFailed.SendEventMessage(this, fileName, error);
+    }
+    public static FsmDownloadPackageFiles Create()
+    {
+        FsmDownloadPackageFiles state = ReferencePool.Acquire<FsmDownloadPackageFiles>();
+        return state;
+    }
+    public void Clear()
+    {
+        throw new System.NotImplementedException();
     }
 }

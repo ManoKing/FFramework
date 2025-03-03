@@ -1,27 +1,30 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UniFramework.Machine;
+﻿using ProcedureOwner = GameFramework.Fsm.IFsm<PatchOperation>;
+using GameFramework.Fsm;
+using GameFramework;
+using dnlib.PE;
 
 /// <summary>
 /// 下载完毕
 /// </summary>
-internal class FsmDownloadPackageOver : IStateNode
+internal class FsmDownloadPackageOver : FsmState<PatchOperation>, IReference
 {
-    private StateMachine _machine;
+    private PatchOperation owner;
 
-    void IStateNode.OnCreate(StateMachine machine)
+    protected override void OnEnter(ProcedureOwner procedureOwner)
     {
-        _machine = machine;
+        base.OnEnter(procedureOwner);
+
+        owner = procedureOwner.Owner;
+
+        ChangeState<FsmClearPackageCache>(procedureOwner);
     }
-    void IStateNode.OnEnter()
+    public static FsmDownloadPackageOver Create()
     {
-        _machine.ChangeState<FsmClearPackageCache>();
+        FsmDownloadPackageOver state = ReferencePool.Acquire<FsmDownloadPackageOver>();
+        return state;
     }
-    void IStateNode.OnUpdate()
+    public void Clear()
     {
-    }
-    void IStateNode.OnExit()
-    {
+        throw new System.NotImplementedException();
     }
 }

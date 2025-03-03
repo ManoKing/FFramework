@@ -1,23 +1,28 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UniFramework.Machine;
+﻿using ProcedureOwner = GameFramework.Fsm.IFsm<PatchOperation>;
+using GameFramework.Fsm;
+using GameFramework;
 
 /// <summary>
 /// 流程更新完毕
 /// </summary>
-internal class FsmUpdaterDone : IStateNode
+internal class FsmUpdaterDone : FsmState<PatchOperation>, IReference
 {
-    void IStateNode.OnCreate(StateMachine machine)
+    private PatchOperation owner;
+    protected override void OnEnter(ProcedureOwner procedureOwner)
     {
+        base.OnEnter(procedureOwner);
+        owner = procedureOwner.Owner;
+        owner.SetStatus();
     }
-    void IStateNode.OnEnter()
+
+    public static FsmUpdaterDone Create()
     {
+        FsmUpdaterDone state = ReferencePool.Acquire<FsmUpdaterDone>();
+        return state;
     }
-    void IStateNode.OnUpdate()
+
+    public void Clear()
     {
-    }
-    void IStateNode.OnExit()
-    {
+        throw new System.NotImplementedException();
     }
 }

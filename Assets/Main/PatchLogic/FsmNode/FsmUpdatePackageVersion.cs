@@ -1,37 +1,31 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UniFramework.Machine;
-using YooAsset;
+﻿using Cysharp.Threading.Tasks;
+using GameFramework;
+using GameFramework.Fsm;
 using System;
-using Cysharp.Threading.Tasks;
+using UnityEngine;
+using YooAsset;
+using ProcedureOwner = GameFramework.Fsm.IFsm<PatchOperation>;
 
 /// <summary>
 /// 更新资源版本号
 /// </summary>
-internal class FsmUpdatePackageVersion : IStateNode
+internal class FsmUpdatePackageVersion : FsmState<PatchOperation>, IReference
 {
-    private StateMachine _machine;
+    private PatchOperation owner;
 
-    void IStateNode.OnCreate(StateMachine machine)
+    protected async override void OnEnter(ProcedureOwner procedureOwner)
     {
-        _machine = machine;
-    }
-    async void IStateNode.OnEnter()
-    {
+        base.OnEnter(procedureOwner);
+
+        owner = procedureOwner.Owner;
+
         PatchEventDefine.PatchStatesChange.SendEventMessage(this, "获取最新的资源版本 !");
-        await UpdatePackageVersion();
-    }
-    void IStateNode.OnUpdate()
-    {
-    }
-    void IStateNode.OnExit()
-    {
+        await UpdatePackageVersion(procedureOwner);
     }
 
-    private async UniTask UpdatePackageVersion()
+    private async UniTask UpdatePackageVersion(ProcedureOwner procedureOwner)
     {
-        var packageName = (string)_machine.GetBlackboardValue("PackageName");
+        var packageName = owner.packageName;
         var package = YooAssets.GetPackage(packageName);
         var operation = package.RequestPackageVersionAsync();
 
@@ -50,8 +44,17 @@ internal class FsmUpdatePackageVersion : IStateNode
                 PlayerPrefs.SetString("GAME_VERSION", operation.PackageVersion);
             }
             Debug.Log($"Request package version : {operation.PackageVersion}");
-            _machine.SetBlackboardValue("PackageVersion", operation.PackageVersion);
-            _machine.ChangeState<FsmUpdatePackageManifest>();
+            owner.packageVersion = operation.PackageVersion;
+            ChangeState<FsmUpdatePackageManifest>(procedureOwner);
         }
+    }
+    public static FsmUpdatePackageVersion Create()
+    {
+        FsmUpdatePackageVersion state = ReferencePool.Acquire<FsmUpdatePackageVersion>();
+        return state;
+    }
+    public void Clear()
+    {
+        throw new NotImplementedException();
     }
 }

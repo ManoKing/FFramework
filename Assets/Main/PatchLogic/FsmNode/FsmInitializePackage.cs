@@ -1,40 +1,34 @@
-﻿using System;
-using System.IO;
+﻿using Cysharp.Threading.Tasks;
+using GameFramework;
+using GameFramework.Fsm;
+using System;
 using System.Collections;
-using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
-using UniFramework.Machine;
 using YooAsset;
-using Cysharp.Threading.Tasks;
+using ProcedureOwner = GameFramework.Fsm.IFsm<PatchOperation>;
 
 /// <summary>
 /// 初始化资源包
 /// </summary>
-internal class FsmInitializePackage : IStateNode
+internal class FsmInitializePackage : FsmState<PatchOperation>, IReference
 {
-    private StateMachine _machine;
+    private PatchOperation owner;
 
-    void IStateNode.OnCreate(StateMachine machine)
+    protected async override void OnEnter(ProcedureOwner procedureOwner)
     {
-        _machine = machine;
-    }
-    async void IStateNode.OnEnter()
-    {
+        base.OnEnter(procedureOwner);
+
+        owner = procedureOwner.Owner;
         PatchEventDefine.PatchStatesChange.SendEventMessage(this, "初始化资源包！");
-        await InitPackage();
-    }
-    void IStateNode.OnUpdate()
-    {
-    }
-    void IStateNode.OnExit()
-    {
+        await InitPackage(procedureOwner);
     }
 
-    private async UniTask InitPackage()
+    private async UniTask InitPackage(ProcedureOwner procedureOwner)
     {
-        var playMode = (EPlayMode)_machine.GetBlackboardValue("PlayMode");
-        var packageName = (string)_machine.GetBlackboardValue("PackageName");
-        var buildPipeline = (string)_machine.GetBlackboardValue("BuildPipeline");
+        var playMode = owner.playMode;
+        var packageName = owner.packageName;
+        var buildPipeline = owner.buildPipeline;
 
         // 创建资源包裹类
         var package = YooAssets.TryGetPackage(packageName);
@@ -98,7 +92,8 @@ internal class FsmInitializePackage : IStateNode
         }
         else
         {
-            _machine.ChangeState<FsmUpdatePackageVersion>();
+            //_machine.ChangeState<FsmUpdatePackageVersion>();
+            ChangeState<FsmUpdatePackageVersion>(procedureOwner);
         }
     }
 
@@ -173,6 +168,15 @@ internal class FsmInitializePackage : IStateNode
         else
             return $"{hostServerIP}/CDN/PC/{appVersion}";
 #endif
+    }
+    public static FsmInitializePackage Create()
+    {
+        FsmInitializePackage state = ReferencePool.Acquire<FsmInitializePackage>();
+        return state;
+    }
+    public void Clear()
+    {
+        throw new NotImplementedException();
     }
 
     /// <summary>
