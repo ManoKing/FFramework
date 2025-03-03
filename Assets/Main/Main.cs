@@ -1,8 +1,7 @@
-﻿using System;
+﻿using GameFramework;
+using GameFramework.Event;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UniFramework.Event;
 using YooAsset;
 
 public class Main : MonoBehaviour
@@ -24,12 +23,6 @@ public class Main : MonoBehaviour
     }
     IEnumerator Start()
     {
-        // 游戏管理器
-        GameManager.Instance.Behaviour = this;
-
-        // 初始化事件系统
-        UniEvent.Initalize();
-
         // 初始化资源系统
         YooAssets.Initialize();
 
@@ -47,7 +40,6 @@ public class Main : MonoBehaviour
         YooAssets.SetDefaultPackage(gamePackage);
 
         // 切换到主页面场景
-        //SceneEventDefine.ChangeToHomeScene.SendEventMessage();
         gameObject.AddComponent<LoadDll>();
     }
 

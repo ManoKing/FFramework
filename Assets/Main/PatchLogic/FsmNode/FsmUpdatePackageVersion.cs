@@ -4,6 +4,7 @@ using UnityEngine;
 using UniFramework.Machine;
 using YooAsset;
 using System;
+using Cysharp.Threading.Tasks;
 
 /// <summary>
 /// 更新资源版本号
@@ -16,10 +17,10 @@ internal class FsmUpdatePackageVersion : IStateNode
     {
         _machine = machine;
     }
-    void IStateNode.OnEnter()
+    async void IStateNode.OnEnter()
     {
         PatchEventDefine.PatchStatesChange.SendEventMessage("获取最新的资源版本 !");
-        GameManager.Instance.StartCoroutine(UpdatePackageVersion());
+        await UpdatePackageVersion();
     }
     void IStateNode.OnUpdate()
     {
@@ -28,14 +29,13 @@ internal class FsmUpdatePackageVersion : IStateNode
     {
     }
 
-    private IEnumerator UpdatePackageVersion()
+    private async UniTask UpdatePackageVersion()
     {
-        yield return new WaitForSecondsRealtime(0.5f);
-
         var packageName = (string)_machine.GetBlackboardValue("PackageName");
         var package = YooAssets.GetPackage(packageName);
         var operation = package.RequestPackageVersionAsync();
-        yield return operation;
+
+        await UniTask.WaitUntil(() => operation.IsDone);
 
         if (operation.Status != EOperationStatus.Succeed)
         {

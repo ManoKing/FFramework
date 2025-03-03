@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UniFramework.Machine;
 using YooAsset;
+using Cysharp.Threading.Tasks;
 
 /// <summary>
 /// 初始化资源包
@@ -17,10 +18,10 @@ internal class FsmInitializePackage : IStateNode
     {
         _machine = machine;
     }
-    void IStateNode.OnEnter()
+    async void IStateNode.OnEnter()
     {
         PatchEventDefine.PatchStatesChange.SendEventMessage("初始化资源包！");
-        GameManager.Instance.StartCoroutine(InitPackage());
+        await InitPackage();
     }
     void IStateNode.OnUpdate()
     {
@@ -29,7 +30,7 @@ internal class FsmInitializePackage : IStateNode
     {
     }
 
-    private IEnumerator InitPackage()
+    private async UniTask InitPackage()
     {
         var playMode = (EPlayMode)_machine.GetBlackboardValue("PlayMode");
         var packageName = (string)_machine.GetBlackboardValue("PackageName");
@@ -85,8 +86,8 @@ internal class FsmInitializePackage : IStateNode
             initializationOperation = package.InitializeAsync(createParameters);
         }
 
-        yield return initializationOperation;
-
+        //yield return initializationOperation;
+        await UniTask.WaitUntil(() => initializationOperation.IsDone);
         //GameManager.Instance.StartCoroutine(GetLocalPackage());
 
         // 如果初始化失败弹出提示界面

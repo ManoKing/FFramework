@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UniFramework.Machine;
 using YooAsset;
+using Cysharp.Threading.Tasks;
 
 /// <summary>
 /// 更新资源清单
@@ -18,7 +19,7 @@ public class FsmUpdatePackageManifest : IStateNode
     void IStateNode.OnEnter()
     {
         PatchEventDefine.PatchStatesChange.SendEventMessage("更新资源清单！");
-        GameManager.Instance.StartCoroutine(UpdateManifest());
+        UpdateManifest();
     }
     void IStateNode.OnUpdate()
     {
@@ -27,21 +28,20 @@ public class FsmUpdatePackageManifest : IStateNode
     {
     }
 
-    private IEnumerator UpdateManifest()
+    private async UniTask UpdateManifest()
     {
-        yield return new WaitForSecondsRealtime(0.5f);
-
         var packageName = (string)_machine.GetBlackboardValue("PackageName");
         var packageVersion = (string)_machine.GetBlackboardValue("PackageVersion");
         var package = YooAssets.GetPackage(packageName);
         var operation = package.UpdatePackageManifestAsync(packageVersion);
-        yield return operation;
+
+        await UniTask.WaitUntil(() => operation.IsDone);
 
         if (operation.Status != EOperationStatus.Succeed)
         {
             Debug.LogWarning(operation.Error);
             PatchEventDefine.PatchManifestUpdateFailed.SendEventMessage();
-            yield break;
+            return;
         }
         else
         {
