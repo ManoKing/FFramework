@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using GameFramework.Localization;
+﻿using GameFramework.Localization;
 using GameFramework.Procedure;
-using UnityEngine;
 using UnityGameFramework.Runtime;
 using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
 
@@ -83,10 +80,10 @@ namespace Flower
         private void InitCurrentVariant()
         {
             //if (GameEntry.Base.EditorResourceMode)
-            {
-                // 编辑器资源模式不使用 AssetBundle，也就没有变体了
-                return;
-            }
+            //{
+            // 编辑器资源模式不使用 AssetBundle，也就没有变体了
+            //return;
+            //}
 
             string currentVariant = null;
             switch (GameEntry.Localization.Language)
@@ -108,7 +105,7 @@ namespace Flower
                     break;
             }
 
-           // GameEntry.Resource.SetCurrentVariant(currentVariant);
+            //GameEntry.Resource.SetCurrentVariant(currentVariant);
             Log.Info("Init current variant complete.current variant :{0}.", currentVariant);
         }
     }

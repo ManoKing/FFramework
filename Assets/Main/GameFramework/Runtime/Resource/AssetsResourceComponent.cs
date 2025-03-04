@@ -22,7 +22,7 @@ namespace UnityGameFramework.Runtime
         {
             base.Awake();
 
-            BaseComponent baseComponent = GetComponent<BaseComponent>();
+            BaseComponent baseComponent = transform.parent.GetComponent<BaseComponent>();
             if (baseComponent == null)
             {
                 Log.Error("Can not find base component.");
