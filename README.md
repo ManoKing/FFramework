@@ -1,13 +1,14 @@
 ---
 
 ## 一、工程介绍   
-
+**Gameplay的核心3C要素——角色（Character）、操控（Control）和镜头（Camera），定义了游戏的规则与状态；这些要素与用户界面共同构成了游戏玩法的基础框架。**  
 ### 介绍   
 1，代码热更模块基于HybridCLR。  
-2，资源热更及管理基于YooAsset。  
+2，资源热更及管理基于YooAsset
 3，框架基于GameFramework，并修改支持HybridCLR及YooAsset。  
 并实现，Jenkins自动多渠道打包，白名单灰度测试，一键发布热更资源及版本回退。  
-
+[【为什么不使用用Addressable，或者其他资源管理】](Tools/ReadMe/Resources.md) 。  
+  
 ### 通过这个项目可以了解到  
 （1）框架为项目中提供基础功能，如资源管理、UI框架、网络通信、消息管理、场景管理、数据解析及存取等，同时定义了一系列规范包括编码的，例如参数命名、注释、缩进等  
 以及行为准则，例如加载场景必须用框架的xxx接口，贴图必须放在xxx文件夹下等  
@@ -120,7 +121,7 @@ isLocalPack：(bool git分支验收，将所有资源打入包内)；
 
 ### 行业信息  
   
-##### 别只顾着赶路，记得停下来看一下沿途的风景  
+##### ​不要只顾低头赶路，还要抬头看行走方向  
 
 游戏行业数据[游鲨游戏行业数据跳转](https://www.kdocs.cn/l/ct4bcS9xHD3K)   
 游戏行业分析[Sensortower跳转](https://sensortower.com/)   
