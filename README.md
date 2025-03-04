@@ -6,7 +6,7 @@
   
 ### 介绍   
 1，代码热更模块基于HybridCLR。  
-2，资源热更及管理基于YooAsset
+2，资源热更及管理基于YooAsset  
 3，框架基于GameFramework，并修改支持HybridCLR及YooAsset。  
 并实现，Jenkins自动多渠道打包，白名单灰度测试，一键发布热更资源及版本回退。  
 [【为什么不使用用Addressable，或者其他资源管理】](Tools/ReadMe/Resources.md) 。  
