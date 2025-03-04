@@ -1,16 +1,7 @@
-﻿//------------------------------------------------------------
-// Game Framework
-// Copyright © 2013-2021 Jiang Yin. All rights reserved.
-// Homepage: https://gameframework.cn/
-// Feedback: mailto:ellan@gameframework.cn
-//------------------------------------------------------------
-
-using GameFramework;
+﻿using GameFramework;
 using GameFramework.Resource;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using YooAsset;
@@ -26,35 +17,10 @@ namespace UnityGameFramework.Runtime
         private const int DefaultPriority = 0;
         private static readonly int AssetsStringLength = "Assets".Length;
 
-        [SerializeField]
-        private bool m_EnableCachedAssets = true;
-
-        [SerializeField]
-        private int m_LoadAssetCountPerFrame = 1;
-
-        [SerializeField]
-        private float m_MinLoadAssetRandomDelaySeconds = 0f;
-
-        [SerializeField]
-        private float m_MaxLoadAssetRandomDelaySeconds = 0f;
-
-        private string m_ReadOnlyPath = null;
-        private string m_ReadWritePath = null;
-        private Dictionary<string, UnityEngine.Object> m_CachedAssets = null;
-        private GameFrameworkLinkedList<LoadAssetInfo> m_LoadAssetInfos = null;
-        private GameFrameworkLinkedList<LoadSceneInfo> m_LoadSceneInfos = null;
-        private GameFrameworkLinkedList<UnloadSceneInfo> m_UnloadSceneInfos = null;
-
 
         protected override void Awake()
         {
             base.Awake();
-            m_ReadOnlyPath = null;
-            m_ReadWritePath = null;
-            m_CachedAssets = new Dictionary<string, UnityEngine.Object>(StringComparer.Ordinal);
-            m_LoadAssetInfos = new GameFrameworkLinkedList<LoadAssetInfo>();
-            m_LoadSceneInfos = new GameFrameworkLinkedList<LoadSceneInfo>();
-            m_UnloadSceneInfos = new GameFrameworkLinkedList<UnloadSceneInfo>();
 
             BaseComponent baseComponent = GetComponent<BaseComponent>();
             if (baseComponent == null)
@@ -67,131 +33,10 @@ namespace UnityGameFramework.Runtime
 
         }
 
-        private void Update()
-        {
-            if (m_LoadAssetInfos.Count > 0)
-            {
-                int count = 0;
-                LinkedListNode<LoadAssetInfo> current = m_LoadAssetInfos.First;
-                while (current != null && count < m_LoadAssetCountPerFrame)
-                {
-                    LoadAssetInfo loadAssetInfo = current.Value;
-                    float elapseSeconds = (float)(DateTime.UtcNow - loadAssetInfo.StartTime).TotalSeconds;
-                    if (elapseSeconds >= loadAssetInfo.DelaySeconds)
-                    {
-                        UnityEngine.Object asset = GetCachedAsset(loadAssetInfo.AssetName);
-
-                        if (asset != null)
-                        {
-                            if (loadAssetInfo.LoadAssetCallbacks.LoadAssetSuccessCallback != null)
-                            {
-                                loadAssetInfo.LoadAssetCallbacks.LoadAssetSuccessCallback(loadAssetInfo.AssetName, asset, elapseSeconds, loadAssetInfo.UserData);
-                            }
-                        }
-                        else
-                        {
-                            if (loadAssetInfo.LoadAssetCallbacks.LoadAssetFailureCallback != null)
-                            {
-                                loadAssetInfo.LoadAssetCallbacks.LoadAssetFailureCallback(loadAssetInfo.AssetName, LoadResourceStatus.AssetError, "Can not load this asset from asset database.", loadAssetInfo.UserData);
-                            }
-                        }
-
-                        LinkedListNode<LoadAssetInfo> next = current.Next;
-                        m_LoadAssetInfos.Remove(loadAssetInfo);
-                        current = next;
-                        count++;
-                    }
-                    else
-                    {
-                        if (loadAssetInfo.LoadAssetCallbacks.LoadAssetUpdateCallback != null)
-                        {
-                            loadAssetInfo.LoadAssetCallbacks.LoadAssetUpdateCallback(loadAssetInfo.AssetName, elapseSeconds / loadAssetInfo.DelaySeconds, loadAssetInfo.UserData);
-                        }
-
-                        current = current.Next;
-                    }
-                }
-            }
-
-            if (m_LoadSceneInfos.Count > 0)
-            {
-                LinkedListNode<LoadSceneInfo> current = m_LoadSceneInfos.First;
-                while (current != null)
-                {
-                    LoadSceneInfo loadSceneInfo = current.Value;
-                    if (loadSceneInfo.AsyncOperation.IsDone)
-                    {
-                        if (loadSceneInfo.AsyncOperation.IsValid)
-                        {
-                            if (loadSceneInfo.LoadSceneCallbacks.LoadSceneSuccessCallback != null)
-                            {
-                                loadSceneInfo.LoadSceneCallbacks.LoadSceneSuccessCallback(loadSceneInfo.SceneAssetName, (float)(DateTime.UtcNow - loadSceneInfo.StartTime).TotalSeconds, loadSceneInfo.UserData);
-                            }
-                        }
-                        else
-                        {
-                            if (loadSceneInfo.LoadSceneCallbacks.LoadSceneFailureCallback != null)
-                            {
-                                loadSceneInfo.LoadSceneCallbacks.LoadSceneFailureCallback(loadSceneInfo.SceneAssetName, LoadResourceStatus.AssetError, "Can not load this scene from asset database.", loadSceneInfo.UserData);
-                            }
-                        }
-
-                        LinkedListNode<LoadSceneInfo> next = current.Next;
-                        m_LoadSceneInfos.Remove(loadSceneInfo);
-                        current = next;
-                    }
-                    else
-                    {
-                        if (loadSceneInfo.LoadSceneCallbacks.LoadSceneUpdateCallback != null)
-                        {
-                            loadSceneInfo.LoadSceneCallbacks.LoadSceneUpdateCallback(loadSceneInfo.SceneAssetName, loadSceneInfo.AsyncOperation.Progress, loadSceneInfo.UserData);
-                        }
-
-                        current = current.Next;
-                    }
-                }
-            }
-
-            if (m_UnloadSceneInfos.Count > 0)
-            {
-                LinkedListNode<UnloadSceneInfo> current = m_UnloadSceneInfos.First;
-                while (current != null)
-                {
-                    UnloadSceneInfo unloadSceneInfo = current.Value;
-                    if (unloadSceneInfo.AsyncOperation.isDone)
-                    {
-                        if (unloadSceneInfo.AsyncOperation.allowSceneActivation)
-                        {
-                            if (unloadSceneInfo.UnloadSceneCallbacks.UnloadSceneSuccessCallback != null)
-                            {
-                                unloadSceneInfo.UnloadSceneCallbacks.UnloadSceneSuccessCallback(unloadSceneInfo.SceneAssetName, unloadSceneInfo.UserData);
-                            }
-                        }
-                        else
-                        {
-                            if (unloadSceneInfo.UnloadSceneCallbacks.UnloadSceneFailureCallback != null)
-                            {
-                                unloadSceneInfo.UnloadSceneCallbacks.UnloadSceneFailureCallback(unloadSceneInfo.SceneAssetName, unloadSceneInfo.UserData);
-                            }
-                        }
-
-                        LinkedListNode<UnloadSceneInfo> next = current.Next;
-                        m_UnloadSceneInfos.Remove(unloadSceneInfo);
-                        current = next;
-                    }
-                    else
-                    {
-                        current = current.Next;
-                    }
-                }
-            }
-        }
-
         public void ForceUnloadUnusedAssets(bool isForce)
         {
-
+            // TODO
         }
-
 
         /// <summary>
         /// 检查资源是否存在。
@@ -295,10 +140,23 @@ namespace UnityGameFramework.Runtime
             var startTime = DateTime.UtcNow;
             YooAssets.LoadAssetAsync<UnityEngine.Object>(assetName).Completed += result =>
             {
-                float elapseSeconds = (float)(DateTime.UtcNow - startTime).TotalSeconds;
-                loadAssetCallbacks.LoadAssetSuccessCallback(assetName, result.AssetObject, elapseSeconds, userData);
+                switch (result.Status)
+                {
+                    case EOperationStatus.None:
+                        break;
+                    case EOperationStatus.Processing:
+                        break;
+                    case EOperationStatus.Succeed:
+                        float elapseSeconds = (float)(DateTime.UtcNow - startTime).TotalSeconds;
+                        loadAssetCallbacks.LoadAssetSuccessCallback(assetName, result.AssetObject, elapseSeconds, userData);
+                        break;
+                    case EOperationStatus.Failed:
+                        loadAssetCallbacks.LoadAssetFailureCallback(assetName, LoadResourceStatus.AssetError, result.LastError, userData);
+                        break;
+                    default:
+                        break;
+                }
             };
-
         }
 
         /// <summary>
@@ -363,7 +221,6 @@ namespace UnityGameFramework.Runtime
                 {
                     loadSceneCallbacks.LoadSceneFailureCallback(sceneAssetName, LoadResourceStatus.NotExist, "Scene asset name is invalid.", userData);
                 }
-
                 return;
             }
 
@@ -373,7 +230,6 @@ namespace UnityGameFramework.Runtime
                 {
                     loadSceneCallbacks.LoadSceneFailureCallback(sceneAssetName, LoadResourceStatus.NotExist, Utility.Text.Format("Scene asset name '{0}' is invalid.", sceneAssetName), userData);
                 }
-
                 return;
             }
 
@@ -383,14 +239,31 @@ namespace UnityGameFramework.Runtime
                 {
                     loadSceneCallbacks.LoadSceneFailureCallback(sceneAssetName, LoadResourceStatus.NotExist, Utility.Text.Format("Scene '{0}' is not exist.", sceneAssetName), userData);
                 }
-
                 return;
             }
 
             // 场景加载
+            var startTime = DateTime.Now;
             SceneHandle asyncOperation = YooAssets.LoadSceneAsync(sceneAssetName, LoadSceneMode.Additive);
-
-            m_LoadSceneInfos.AddLast(new LoadSceneInfo(asyncOperation, sceneAssetName, priority, DateTime.UtcNow, loadSceneCallbacks, userData));
+            asyncOperation.Completed += result =>
+            {
+                switch (result.Status)
+                {
+                    case EOperationStatus.None:
+                        break;
+                    case EOperationStatus.Processing:
+                        break;
+                    case EOperationStatus.Succeed:
+                        float elapseSeconds = (float)(DateTime.UtcNow - startTime).TotalSeconds;
+                        loadSceneCallbacks.LoadSceneSuccessCallback(sceneAssetName, elapseSeconds, userData);
+                        break;
+                    case EOperationStatus.Failed:
+                        loadSceneCallbacks.LoadSceneFailureCallback(sceneAssetName, LoadResourceStatus.AssetError, result.LastError, userData);
+                        break;
+                    default:
+                        break;
+                }
+            };
         }
 
         /// <summary>
@@ -409,7 +282,7 @@ namespace UnityGameFramework.Runtime
         /// <param name="sceneAssetName">要卸载场景资源的名称。</param>
         /// <param name="unloadSceneCallbacks">卸载场景回调函数集。</param>
         /// <param name="userData">用户自定义数据。</param>
-        public void UnloadScene(string sceneAssetName, UnloadSceneCallbacks unloadSceneCallbacks, object userData)
+        public async void UnloadScene(string sceneAssetName, UnloadSceneCallbacks unloadSceneCallbacks, object userData)
         {
             if (string.IsNullOrEmpty(sceneAssetName))
             {
@@ -435,30 +308,14 @@ namespace UnityGameFramework.Runtime
                 return;
             }
 
-#if UNITY_5_5_OR_NEWER
             AsyncOperation asyncOperation = SceneManager.UnloadSceneAsync(sceneAssetName);
-            if (asyncOperation == null)
+            if (asyncOperation != null)
             {
-                return;
-            }
-
-            m_UnloadSceneInfos.AddLast(new UnloadSceneInfo(asyncOperation, sceneAssetName, unloadSceneCallbacks, userData));
-#else
-            if (SceneManager.UnloadScene(SceneComponent.GetSceneName(sceneAssetName)))
-            {
-                if (unloadSceneCallbacks.UnloadSceneSuccessCallback != null)
+                asyncOperation.completed += result =>
                 {
                     unloadSceneCallbacks.UnloadSceneSuccessCallback(sceneAssetName, userData);
-                }
+                };
             }
-            else
-            {
-                if (unloadSceneCallbacks.UnloadSceneFailureCallback != null)
-                {
-                    unloadSceneCallbacks.UnloadSceneFailureCallback(sceneAssetName, userData);
-                }
-            }
-#endif
         }
 
         /// <summary>
@@ -582,227 +439,10 @@ namespace UnityGameFramework.Runtime
             return true;
         }
 
-        private UnityEngine.Object GetCachedAsset(string assetName)
-        {
-            if (!m_EnableCachedAssets)
-            {
-                return null;
-            }
-
-            if (string.IsNullOrEmpty(assetName))
-            {
-                return null;
-            }
-
-            UnityEngine.Object asset = null;
-            if (m_CachedAssets.TryGetValue(assetName, out asset))
-            {
-                return asset;
-            }
-
-            return null;
-        }
-
         public int LoadBinaryFromFileSystem(string binaryAssetName, byte[] buffer)
         {
             throw new NotImplementedException();
         }
 
-        [StructLayout(LayoutKind.Auto)]
-        private struct LoadAssetInfo
-        {
-            private readonly string m_AssetName;
-            private readonly Type m_AssetType;
-            private readonly int m_Priority;
-            private readonly DateTime m_StartTime;
-            private readonly float m_DelaySeconds;
-            private readonly LoadAssetCallbacks m_LoadAssetCallbacks;
-            private readonly object m_UserData;
-
-            public LoadAssetInfo(string assetName, Type assetType, int priority, DateTime startTime, float delaySeconds, LoadAssetCallbacks loadAssetCallbacks, object userData)
-            {
-                m_AssetName = assetName;
-                m_AssetType = assetType;
-                m_Priority = priority;
-                m_StartTime = startTime;
-                m_DelaySeconds = delaySeconds;
-                m_LoadAssetCallbacks = loadAssetCallbacks;
-                m_UserData = userData;
-            }
-
-            public string AssetName
-            {
-                get
-                {
-                    return m_AssetName;
-                }
-            }
-
-            public Type AssetType
-            {
-                get
-                {
-                    return m_AssetType;
-                }
-            }
-
-            public int Priority
-            {
-                get
-                {
-                    return m_Priority;
-                }
-            }
-
-            public DateTime StartTime
-            {
-                get
-                {
-                    return m_StartTime;
-                }
-            }
-
-            public float DelaySeconds
-            {
-                get
-                {
-                    return m_DelaySeconds;
-                }
-            }
-
-            public LoadAssetCallbacks LoadAssetCallbacks
-            {
-                get
-                {
-                    return m_LoadAssetCallbacks;
-                }
-            }
-
-            public object UserData
-            {
-                get
-                {
-                    return m_UserData;
-                }
-            }
-        }
-
-        [StructLayout(LayoutKind.Auto)]
-        private struct LoadSceneInfo
-        {
-            private readonly SceneHandle m_AsyncOperation;
-            private readonly string m_SceneAssetName;
-            private readonly int m_Priority;
-            private readonly DateTime m_StartTime;
-            private readonly LoadSceneCallbacks m_LoadSceneCallbacks;
-            private readonly object m_UserData;
-
-            public LoadSceneInfo(SceneHandle asyncOperation, string sceneAssetName, int priority, DateTime startTime, LoadSceneCallbacks loadSceneCallbacks, object userData)
-            {
-                m_AsyncOperation = asyncOperation;
-                m_SceneAssetName = sceneAssetName;
-                m_Priority = priority;
-                m_StartTime = startTime;
-                m_LoadSceneCallbacks = loadSceneCallbacks;
-                m_UserData = userData;
-            }
-
-            public SceneHandle AsyncOperation
-            {
-                get
-                {
-                    return m_AsyncOperation;
-                }
-            }
-
-            public string SceneAssetName
-            {
-                get
-                {
-                    return m_SceneAssetName;
-                }
-            }
-
-            public int Priority
-            {
-                get
-                {
-                    return m_Priority;
-                }
-            }
-
-            public DateTime StartTime
-            {
-                get
-                {
-                    return m_StartTime;
-                }
-            }
-
-            public LoadSceneCallbacks LoadSceneCallbacks
-            {
-                get
-                {
-                    return m_LoadSceneCallbacks;
-                }
-            }
-
-            public object UserData
-            {
-                get
-                {
-                    return m_UserData;
-                }
-            }
-        }
-
-        [StructLayout(LayoutKind.Auto)]
-        private struct UnloadSceneInfo
-        {
-            private readonly AsyncOperation m_AsyncOperation;
-            private readonly string m_SceneAssetName;
-            private readonly UnloadSceneCallbacks m_UnloadSceneCallbacks;
-            private readonly object m_UserData;
-
-            public UnloadSceneInfo(AsyncOperation asyncOperation, string sceneAssetName, UnloadSceneCallbacks unloadSceneCallbacks, object userData)
-            {
-                m_AsyncOperation = asyncOperation;
-                m_SceneAssetName = sceneAssetName;
-                m_UnloadSceneCallbacks = unloadSceneCallbacks;
-                m_UserData = userData;
-            }
-
-            public AsyncOperation AsyncOperation
-            {
-                get
-                {
-                    return m_AsyncOperation;
-                }
-            }
-
-            public string SceneAssetName
-            {
-                get
-                {
-                    return m_SceneAssetName;
-                }
-            }
-
-            public UnloadSceneCallbacks UnloadSceneCallbacks
-            {
-                get
-                {
-                    return m_UnloadSceneCallbacks;
-                }
-            }
-
-            public object UserData
-            {
-                get
-                {
-                    return m_UserData;
-                }
-            }
-        }
     }
 }
