@@ -19,7 +19,9 @@
 等一些列游戏项目开发中的知识点     
 [【代码混淆】](Tools/ReadMe/UnityObfuscator.md)        [【小红点跳转】](Tools/ReadMe/RedPoint.md)    
 [【SDK跳转】](Tools/ReadMe/SDK.md)         [【循环列表跳转】](Tools/ReadMe/LoopScrollRect.md)   
-[【新手引导跳转】](Tools/ReadMe/Guide.md) 
+[【新手引导跳转】](Tools/ReadMe/Guide.md)  [【相机控制跳转】](Tools/ReadMe/Camera.md)   
+[【导航模块跳转】](Tools/ReadMe/Nav.md)  [【技能系统跳转】](Tools/ReadMe/Skill.md)   
+[【动画模块跳转】](Tools/ReadMe/Animation.md)   [【网络模块跳转】](Tools/ReadMe/Net.md)   
   
 ---
 
@@ -123,7 +125,7 @@ isLocalPack：(bool git分支验收，将所有资源打入包内)；
 
 ### 行业信息  
   
-##### ​不要只顾低头赶路，还要抬头看行走方向  
+***​不要只顾低头赶路，也要抬头看看远方***   
 
 游戏行业数据[游鲨游戏行业数据跳转](https://www.kdocs.cn/l/ct4bcS9xHD3K)   
 游戏行业分析[Sensortower跳转](https://sensortower.com/)   
