@@ -1,7 +1,6 @@
-﻿using ProcedureOwner = GameFramework.Fsm.IFsm<PatchOperation>;
+﻿using GameFramework;
 using GameFramework.Fsm;
-using GameFramework;
-using dnlib.PE;
+using ProcedureOwner = GameFramework.Fsm.IFsm<PatchOperation>;
 
 /// <summary>
 /// 下载完毕

@@ -1,7 +1,5 @@
 ﻿using GameFramework;
 using GameFramework.Event;
-using static PatchEventDefine;
-
 public class UserEventDefine
 {
     /// <summary>
@@ -32,7 +30,7 @@ public class UserEventDefine
 
         public override void Clear()
         {
-             
+
         }
     }
 
@@ -64,7 +62,7 @@ public class UserEventDefine
 
         public override void Clear()
         {
-             
+
         }
     }
 
@@ -96,7 +94,7 @@ public class UserEventDefine
 
         public override void Clear()
         {
-             
+
         }
     }
 
@@ -128,7 +126,7 @@ public class UserEventDefine
 
         public override void Clear()
         {
-             
+
         }
     }
 
@@ -160,7 +158,7 @@ public class UserEventDefine
 
         public override void Clear()
         {
-             
+
         }
     }
 }

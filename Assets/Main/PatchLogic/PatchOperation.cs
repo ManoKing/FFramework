@@ -5,15 +5,7 @@ using System.Collections.Generic;
 using YooAsset;
 public class PatchOperation : GameAsyncOperation
 {
-    private enum ESteps
-    {
-        None,
-        Update,
-        Done,
-    }
-
     private IEventManager eventManager = GameFrameworkEntry.GetModule<IEventManager>();
-    private ESteps _steps = ESteps.None;
 
     protected IFsm<PatchOperation> fsm;
 
@@ -52,12 +44,8 @@ public class PatchOperation : GameAsyncOperation
 
     protected override void OnStart()
     {
-        _steps = ESteps.Update;
-        //_machine.Run<FsmInitializePackage>();
-
         fsm.Start<FsmInitializePackage>();
     }
-
 
     protected override void OnUpdate()
     {

@@ -18,7 +18,7 @@ public class PipelineSwitcher : MonoBehaviour
         GraphicsSettings.renderPipelineAsset = mediumPipelineAsset;
         GraphicsSettings.defaultRenderPipeline = mediumPipelineAsset;
 
-        SetRenderFeatureActive(mediumPipelineRendererData, "CatchOpaqueRT", false); // 开启指定的RenderFeature
+        SetRenderFeatureActive(mediumPipelineRendererData, "CatchOpaqueRT", false); // 寮�鍚寚瀹氱殑RenderFeature
     }
 
     //void SetPipelineBasedOnPerformance()
